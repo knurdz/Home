@@ -13,8 +13,8 @@ export const projects: Project[] = [
   {
     name: "Sonar Code Editor",
     slug: "sonar-code-editor",
-    branch: "main",
-    commit: "7a3d9f2",
+    branch: "development",
+    commit: "78dc070",
     description:
       "A secure, real-time collaborative coding environment designed specifically for supervised exams and technical interviews.",
     tags: ["Desktop App", "Web"],
@@ -23,18 +23,18 @@ export const projects: Project[] = [
   {
     name: "Nothing Dialer 1",
     slug: "nothing-dialer-1",
-    branch: "feature/mobile",
-    commit: "4b8e1c5",
+    branch: "release/beta",
+    commit: "1f125a2",
     description:
-      "A custom dialer app for Nothing OS with unique Glyph Interface animations for outgoing, ongoing, and incoming calls.",
+      "A Dialer app for Nothing OS with custom glyph for outgoing and ongoing calls also.",
     tags: ["Mobile", "IoT"],
     upcoming: false,
   },
   {
     name: "Diss-Master",
     slug: "diss-master",
-    branch: "webapp/v2",
-    commit: "9c2f6a1",
+    branch: "main",
+    commit: "da34852",
     description:
       "Diss-Master is a real-time multiplayer word game inspired by Codenames, the beloved board game designed by Vlaada Chvátil and published by Czech Games Edition.",
     tags: ["Web", "Game"],
@@ -45,17 +45,17 @@ export const projects: Project[] = [
   {
     name: "Project Titanic",
     slug: "project-titanic",
-    branch: "social/mobile",
+    branch: "feature/marketplace",
     commit: "5a2d9c9",
     description:
-      "A multipurpose application for university students featuring 6 core distinct features.",
+      "A multipurpose application for university students featuring 6 core distinc features",
     tags: ["Mobile", "Web"],
     upcoming: true,
   },
   {
     name: "Metal PaaS",
     slug: "metal-paas",
-    branch: "feature/platform",
+    branch: "main",
     commit: "1g6j9c9",
     description:
       "Metal is a high-performance, AI-Native Platform-as-a-Service (PaaS) that revolutionizes how students and developers build for the cloud.",
@@ -65,10 +65,10 @@ export const projects: Project[] = [
   {
     name: "Arduino Remote",
     slug: "arduino-remote",
-    branch: "product/remote",
+    branch: "development/alpha",
     commit: "4b8e1c5",
     description:
-      "Arduino IDE built from scratch, powered by Arduino CLI with built-in cloud-based OTA updates and remote debugging.",
+      "Aruido IDE built from scratch powered Arduino CLI with inbuilt cloud based OTA updates and remote debugging.",
     tags: ["Desktop", "IoT"],
     upcoming: true,
   },

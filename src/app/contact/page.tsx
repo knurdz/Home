@@ -61,12 +61,12 @@ export default function ContactPage() {
       {/* Navigation */}
       <nav className="fixed top-0 w-full z-50 bg-black/80 backdrop-blur-xl border-b border-white/10">
         <div className="container mx-auto px-6 py-4 flex items-center justify-between">
-          <Link href="/" className="flex items-center gap-3">
-            <span className="text-2xl font-bold mono-font tracking-tighter">
-              <span className="text-white">K</span>
-              <span className="text-gray-500">nurdz</span>
-              <span className="text-green-500">_</span>
-            </span>
+          <Link href="/" className="flex items-center gap-3 hover:opacity-80 transition-opacity">
+            <img
+              src="/logo/knurdz-logo-horizontal.svg"
+              alt="Knurdz"
+              className="h-14 w-auto"
+            />
           </Link>
           <div className="hidden md:flex items-center gap-8">
             <Link href="/" className="text-gray-400 hover:text-white transition-colors mono-font text-sm">
@@ -75,15 +75,18 @@ export default function ContactPage() {
             <Link href="/#projects" className="text-gray-400 hover:text-white transition-colors mono-font text-sm">
               /projects
             </Link>
-            <Link href="/#clients" className="text-gray-400 hover:text-white transition-colors mono-font text-sm">
-              /clients
+            <Link href="/#partners" className="text-gray-400 hover:text-white transition-colors mono-font text-sm">
+              /partners
+            </Link>
+            <Link href="/about" className="text-gray-400 hover:text-white transition-colors mono-font text-sm">
+              /about
             </Link>
             <ThemeToggle />
             <Link
               href="/contact"
               className="px-6 py-2 rounded border border-green-500 text-green-500 hover:bg-green-500 hover:text-black transition-all font-medium mono-font text-sm"
             >
-              git checkout contact
+              cd contact
             </Link>
           </div>
         </div>
@@ -259,10 +262,12 @@ export default function ContactPage() {
       {/* Footer */}
       <footer className="border-t border-white/10 py-8 px-6 bg-gray-950">
         <div className="container mx-auto max-w-7xl flex flex-col md:flex-row items-center justify-between gap-4">
-          <Link href="/" className="text-2xl font-bold mono-font tracking-tighter">
-            <span className="text-white">K</span>
-            <span className="text-gray-500">nurdz</span>
-            <span className="text-green-500">_</span>
+          <Link href="/" className="block hover:opacity-80 transition-opacity">
+            <img
+              src="/logo/knurdz-logo-horizontal.svg"
+              alt="Knurdz"
+              className="h-12 w-auto"
+            />
           </Link>
           <p className="text-gray-500 mono-font text-sm">
             &copy; {new Date().getFullYear()} Knurdz. All rights reserved.{" "}

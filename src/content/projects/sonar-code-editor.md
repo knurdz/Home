@@ -37,20 +37,20 @@ Real-time collaboration relies on **Yjs** for conflict-free replicated data type
 
 ```
 ┌─────────────────────────────┐
-│       Sonar Desktop App     │
-│   (Electron + Monaco + Yjs) │
-└────────────┬────────────────┘
-             │
-             │ WebSocket / REST
-             ▼
+│   Sonar Desktop App         │
+│ (Electron + Monaco + Yjs)   │
+└─────────────┬───────────────┘
+              │
+              │ WebSocket / REST
+              ▼
 ┌─────────────────────────────┐
-│      Appwrite Backend       │
-│  (Auth, Database, Functions)│
-└────────────┬────────────────┘
-             │
-             ▼
+│    Appwrite Backend         │
+│(Auth, Database, Functions)  │
+└─────────────┬───────────────┘
+              │
+              ▼
 ┌─────────────────────────────┐
-│    Web Dashboard (Website)  │
+│  Web Dashboard (Website)    │
 │      (SvelteKit)            │
 └─────────────────────────────┘
 ```

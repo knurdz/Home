@@ -6,9 +6,9 @@ This file serves as the source of truth for the projects displayed on the Knurdz
 
 | Name | Branch | Commit | Description | Tags |
 | :-- | :-- | :-- | :-- | :-- |
-| Sonar Code Editor | main | 7a3d9f2 | A secure, real-time collaborative coding environment designed specifically for supervised exams and technical interviews. | Desktop App, Web |
-| Nothing Dialer 1 | feature/mobile | 4b8e1c5 | A Dialer app for Nothing OS with custom glyph for outgoing and ongoing calls also. | Mobile, IoT |
-| Diss-Master | webapp/v2 | 9c2f6a1 | Diss-Master is a real-time multiplayer word game inspired by Codenames, the beloved board game designed by Vlaada Chvátil and published by Czech Games Edition. | Web, Game |
+| Sonar Code Editor | development | 78dc070 | A secure, real-time collaborative coding environment designed specifically for supervised exams and technical interviews. | Desktop App, Web |
+| Nothing Dialer 1 | release/beta | 1f125a2 | A Dialer app for Nothing OS with custom glyph for outgoing and ongoing calls also. | Mobile, IoT |
+| Diss-Master | main | da34852 | Diss-Master is a real-time multiplayer word game inspired by Codenames, the beloved board game designed by Vlaada Chvátil and published by Czech Games Edition. | Web, Game |
 
 ---
 
@@ -16,9 +16,9 @@ This file serves as the source of truth for the projects displayed on the Knurdz
 
 | Name | Branch | Commit | Description | Tags |
 | :-- | :-- | :-- | :-- | :-- |
-| Project Titanic | social/mobile | 5a2d9c9 | A multipurpose application for university students featuring 6 core distinc features | Mobile, Web |
-| Metal PaaS | feature/platform | 1g6j9c9 | Metal is a high-performance, AI-Native Platform-as-a-Service (PaaS) that revolutionizes how students and developers build for the cloud. | PaaS, Infrastructure |
-| Arduino Remote | product/remote | 4b8e1c5 | Aruido IDE built from scratch powered Arduino CLI with inbuilt cloud based OTA updates and remote debugging. | Desktop, IoT |
+| Project Titanic | feature/marketplace | 5a2d9c9 | A multipurpose application for university students featuring 6 core distinc features | Mobile, Web |
+| Metal PaaS | main | 1g6j9c9 | Metal is a high-performance, AI-Native Platform-as-a-Service (PaaS) that revolutionizes how students and developers build for the cloud. | PaaS, Infrastructure |
+| Arduino Remote | development/alpha | 4b8e1c5 | Aruido IDE built from scratch powered Arduino CLI with inbuilt cloud based OTA updates and remote debugging. | Desktop, IoT |
 ---
 
 ### Instructions for the AI Agent:

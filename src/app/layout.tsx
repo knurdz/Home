@@ -18,7 +18,9 @@ export const metadata: Metadata = {
   title: "Knurdz - Community & Projects",
   description: "Explore our innovative projects and meet our valued clients. Join the Knurdz community.",
   icons: {
-    icon: "/favicon.png",
+    icon: "/favicon.svg",
+    shortcut: "/favicon.svg",
+    apple: "/favicon.svg",
   },
 };
 

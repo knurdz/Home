@@ -38,13 +38,17 @@ Diss-Master uses a **Next.js** frontend paired with **Appwrite** for its backend
 
 ```text
 Browser (Next.js)
+
      │
      │  Appwrite Realtime Subscriptions
      ▼
+
 Appwrite Server
+
      │
      │  Read/Write
      ▼
+
 Database (Appwrite Collections)
 ```
 
