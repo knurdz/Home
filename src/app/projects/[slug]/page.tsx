@@ -4,7 +4,9 @@ import { notFound } from "next/navigation";
 import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
 import { getProjectBySlug, getAllProjectSlugs } from "@/lib/projects";
-import React from "react";
+import Logo from "@/components/LogoIcon"
+import BannerImage from "@/components/BannerImage";
+import React from 'react'
 
 import Navbar from "@/components/Navbar";
 
@@ -89,11 +91,11 @@ function ArchitectureDiagram({ boxes, connections }: { boxes: ArchitectureBox[];
           {/* Connection arrow (if not last box) */}
           {index < boxes.length - 1 && (
             <div className="flex flex-col items-center py-2">
-              <div className="w-px h-4 bg-gradient-to-b from-green-500/60 to-green-500/30" />
+              <div className="w-px h-4 bg-linear-to-b from-green-500/60 to-green-500/30" />
               {connections[index]?.label && (
                 <div className="text-xs text-muted mono-font py-1 px-2">{connections[index].label}</div>
               )}
-              <div className="w-px h-4 bg-gradient-to-b from-green-500/30 to-green-500/60" />
+              <div className="w-px h-4 bg-linear-to-b from-green-500/30 to-green-500/60" />
               <div className="text-green-500 text-sm">▼</div>
             </div>
           )}
@@ -135,18 +137,14 @@ export default async function ProjectPage({ params }: PageProps) {
       <Navbar activePage="projects" />
 
       {/* Banner */}
-      <div className="relative w-full h-[55vh] min-h-[320px] mt-0 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-background/40 to-background z-10" />
+      <div className="relative w-full h-[55vh] min-h-80 mt-0 overflow-hidden">
+        <div className="absolute inset-0 bg-linear-to-b from-transparent via-background/40 to-background z-10" />
         
         {frontmatter.banner ? (
-          <Image
-            src={frontmatter.banner}
-            alt={frontmatter.title}
-            fill
-            className="object-cover"
-            style={{ objectFit: "cover", objectPosition: "center" }}
-            priority
-            sizes="100vw"
+          <BannerImage 
+            srcDark={frontmatter.banner}
+            srcLight={frontmatter.bannerLight}
+            title={frontmatter.title}
           />
         ) : (
           <div className="absolute inset-0 bg-card">
@@ -162,20 +160,7 @@ export default async function ProjectPage({ params }: PageProps) {
               />
             </div>
             <div className="absolute inset-0 flex items-center justify-center opacity-20 grayscale">
-              <Image
-                src="/logo/knurdz-icon.svg"
-                alt="Knurdz Logo"
-                width={220}
-                height={220}
-                className="object-contain logo-dark"
-              />
-              <Image
-                src="/logo/knurdz-icon-light.svg"
-                alt="Knurdz Logo"
-                width={220}
-                height={220}
-                className="object-contain logo-light"
-              />
+              <Logo />
             </div>
           </div>
         )}

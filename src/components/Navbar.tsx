@@ -48,7 +48,7 @@ export default function Navbar({ activePage }: NavbarProps) {
           </Link>
           
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center gap-8">
+          <div className="hidden lg:flex items-center gap-8">
             <Link
               href="/"
               className={`${
@@ -97,7 +97,7 @@ export default function Navbar({ activePage }: NavbarProps) {
           {/* Mobile Menu Button */}
           <button
             type="button"
-            className="md:hidden p-3 text-foreground z-[60] touch-manipulation min-w-[48px] min-h-[48px] flex items-center justify-center active:opacity-70"
+            className="lg:hidden p-3 text-foreground z-60 touch-manipulation min-w-12 min-h-12 flex items-center justify-center active:opacity-70"
             onClick={(e) => {
               e.stopPropagation();
               setIsMenuOpen(!isMenuOpen);
@@ -129,7 +129,7 @@ export default function Navbar({ activePage }: NavbarProps) {
 
       {/* Mobile Menu Dropdown */}
       <div 
-        className={`md:hidden fixed top-[80px] left-0 w-full bg-background/95 backdrop-blur-xl border-b border-border shadow-2xl z-40 transition-all duration-300 ease-in-out transform origin-top ${
+        className={`lg:hidden fixed top-20 left-0 w-full bg-background/95 backdrop-blur-xl border-b border-border shadow-2xl z-40 transition-all duration-300 ease-in-out transform origin-top ${
           isMenuOpen 
             ? "translate-y-0 opacity-100 scale-y-100 visible" 
             : "-translate-y-4 opacity-0 scale-y-95 invisible pointer-events-none"

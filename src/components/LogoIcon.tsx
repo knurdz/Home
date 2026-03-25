@@ -3,7 +3,13 @@
 import Image from "next/image";
 import { useEffect, useState } from "react";
 
-export default function LogoIcon(props: { width?: number; height?: number; className?: string }) {
+interface LogoIconProps {
+    width?: number;
+    height?: number;
+    className?: string;
+}
+
+export default function LogoIcon({ width, height, className } : LogoIconProps) {
   const [theme, setTheme] = useState<"light" | "dark">("dark");
   const [mounted, setMounted] = useState(false);
 
@@ -54,9 +60,9 @@ export default function LogoIcon(props: { width?: number; height?: number; class
       key={theme}
       src={src}
       alt="Knurdz Logo"
-      width={props.width || 220}
-      height={props.height || 220}
-      className={props.className || "object-contain"}
+      width={width || 220}
+      height={height || 220}
+      className={className || "object-contain"}
       priority
     />
   );

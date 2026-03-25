@@ -1,6 +1,7 @@
 ---
 title: "Sonar Code Editor"
 banner: "/images/projects/sonar-code-editor/banner-6.png"
+bannerLight: "/images/projects/sonar-code-editor/banner-light-3.png"
 description: "A secure, real-time collaborative coding environment designed specifically for supervised exams and technical interviews."
 tags: ["Desktop App", "Web"]
 branch: "development"

@@ -7,6 +7,7 @@ const CONTENT_DIR = path.join(process.cwd(), "src/content/projects");
 export interface ProjectMatter {
   title: string;
   banner: string;
+  bannerLight?: string;
   description: string;
   tags: string[];
   branch: string;
