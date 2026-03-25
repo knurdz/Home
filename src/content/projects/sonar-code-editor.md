@@ -1,14 +1,15 @@
 ---
 title: "Sonar Code Editor"
-banner: "/images/projects/sonar-code-editor/banner-2.png"
+banner: "/images/projects/sonar-code-editor/banner-6.png"
 description: "A secure, real-time collaborative coding environment designed specifically for supervised exams and technical interviews."
 tags: ["Desktop App", "Web"]
 branch: "development"
 commit: "78dc070"
+license: "MIT"
 ---
 
-- **GitHub Repository**: [https://github.com/rkvishwa/Sonar-Code-Editor](https://github.com/rkvishwa/Sonar-Code-Editor)
-- **Website**: [https://sonar.knurdz.org/](https://sonar.knurdz.org/)
+- 🐙 **GitHub Repository**: [https://github.com/rkvishwa/Sonar-Code-Editor](https://github.com/rkvishwa/Sonar-Code-Editor)
+- 🌐 **Webview**: [https://sonar.knurdz.org/](https://sonar.knurdz.org/)
 
 
 ## Overview
@@ -50,7 +51,7 @@ Real-time collaboration relies on **Yjs** for conflict-free replicated data type
               │
               ▼
 ┌─────────────────────────────┐
-│  Web Dashboard (Website)    │
+│  Web Dashboard (Webview)    │
 │      (SvelteKit)            │
 └─────────────────────────────┘
 ```
@@ -71,4 +72,6 @@ Real-time collaboration relies on **Yjs** for conflict-free replicated data type
 
 Sonar is currently under active development on the `main` branch. An open beta is available for anyone to install, test, and contribute.
 
----
+## ⚖️ License
+
+This project is licensed under the MIT License.

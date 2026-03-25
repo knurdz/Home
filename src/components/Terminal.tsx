@@ -4,16 +4,16 @@ import { useEffect, useRef, useState } from "react";
 
 const TERMINAL_LINES = [
   { text: "$ git status", color: "text-green-500", delay: 600 },
-  { text: "On branch main", color: "text-gray-400", delay: 200 },
-  { text: "Your branch is up to date with 'origin/main'", color: "text-gray-400", delay: 400 },
+  { text: "On branch main", color: "text-muted", delay: 200 },
+  { text: "Your branch is up to date with 'origin/main'", color: "text-muted", delay: 400 },
   { text: "", color: "", delay: 150 },
   { text: "$ cat README.md", color: "text-green-500", delay: 600 },
-  { text: "# Knurdz - Building the Future", color: "text-gray-300", delay: 300 },
-  { text: "Innovation happens here.", color: "text-gray-400", delay: 300 },
+  { text: "# Knurdz - Building the Future", color: "text-foreground", delay: 300 },
+  { text: "Innovation happens here.", color: "text-muted", delay: 300 },
   { text: "", color: "", delay: 150 },
   { text: "$ npm run build", color: "text-green-500", delay: 600 },
-  { text: "✓ Building amazing things...", color: "text-gray-400", delay: 400 },
-  { text: "✓ Server running at localhost:3000", color: "text-green-400", delay: 450 },
+  { text: "✓ Building amazing things...", color: "text-muted", delay: 400 },
+  { text: "✓ Server running at localhost:3000", color: "text-green-500", delay: 450 },
 ];
 
 const NAV_COMMANDS: Record<string, string> = {
@@ -200,18 +200,18 @@ export default function Terminal() {
 
   // ── Render ────────────────────────────────────────────────────────────────
   return (
-    <div className="bg-black/95 backdrop-blur-sm rounded-xl border border-white/10 shadow-2xl overflow-visible">
+    <div data-terminal="true" className="bg-background-alt/95 backdrop-blur-sm rounded-xl border border-border shadow-2xl overflow-visible">
       {/* Header */}
-      <div className="bg-gray-950/90 backdrop-blur-sm px-6 py-3.5 flex items-center justify-between border-b border-white/10 rounded-t-xl">
+      <div className="bg-card/90 backdrop-blur-sm px-6 py-3.5 flex items-center justify-between border-b border-border rounded-t-xl">
         <div className="flex items-center gap-4">
           <div className="flex gap-2">
             <div className="w-3 h-3 rounded-full bg-red-500 hover:bg-red-400 transition-colors cursor-pointer" />
             <div className="w-3 h-3 rounded-full bg-yellow-500 hover:bg-yellow-400 transition-colors cursor-pointer" />
             <div className="w-3 h-3 rounded-full bg-green-500 hover:bg-green-400 transition-colors cursor-pointer" />
           </div>
-          <span className="text-gray-400 text-xs mono-font tracking-wide">knurdz@terminal</span>
+          <span className="text-muted text-xs mono-font tracking-wide">knurdz@terminal</span>
         </div>
-        <span className="text-gray-500 text-xs mono-font tracking-wide">~/projects</span>
+        <span className="text-muted text-xs mono-font tracking-wide">~/projects</span>
       </div>
 
       {/* Body */}
@@ -232,10 +232,10 @@ export default function Terminal() {
           {showInput && (
             <div className="text-green-500 mt-2 flex items-center relative">
               <span>$&nbsp;</span>
-              <span className="text-white">{currentInput}</span>
+              <span className="text-foreground">{currentInput}</span>
               <span className="blinking-cursor">█</span>
               {currentInput.length === 0 && (
-                <span className="text-gray-600">type / to navigate...</span>
+                <span className="text-muted">type / to navigate...</span>
               )}
 
               {/* Hidden input – only used for reliable character capture */}
@@ -259,14 +259,14 @@ export default function Terminal() {
               {/* Suggestion dropdown */}
               {suggestions.length > 0 && (
                 <div
-                  className="suggestion-box absolute left-4 px-1 py-3 z-50"
+                  className="suggestion-box absolute left-4 px-1 py-3 z-50 bg-card border border-border"
                   style={{ bottom: "100%", marginBottom: "8px" }}
                 >
                   {suggestions.map((cmd, idx) => (
                     <div
                       key={cmd}
                       className={`cursor-pointer py-1 px-2.5 text-xs mono-font transition-colors rounded ${
-                        idx === selectedSuggestion ? "text-green-500 bg-white/10" : "text-gray-300"
+                        idx === selectedSuggestion ? "text-green-500 bg-foreground/10" : "text-muted"
                       }`}
                       onMouseEnter={() => updateSelected(idx)}
                       onClick={(e) => {
@@ -286,7 +286,7 @@ export default function Terminal() {
           )}
 
           {message && (
-            <div className={`text-xs mt-2 ${message.type === "error" ? "text-red-400" : "text-gray-500"}`}>
+            <div className={`text-xs mt-2 ${message.type === "error" ? "text-red-400" : "text-muted"}`}>
               {message.text}
             </div>
           )}

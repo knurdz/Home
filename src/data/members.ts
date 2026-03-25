@@ -5,59 +5,120 @@ export interface Member {
   image: string;
   github?: string;
   linkedin?: string;
-  twitter?: string;
 }
 
 export const members: Member[] = [
   {
-    name: "John Doe",
-    role: "Lead Developer",
-    bio: "Full-stack engineer passionate about building scalable applications and mentoring the community.",
-    image: "/team/john-doe.jpg",
-    github: "https://github.com/johndoe",
-    linkedin: "https://linkedin.com/in/johndoe",
-    twitter: "https://twitter.com/johndoe"
+    name: "RKK Vishva Kumar",
+    role: "Knurdz Contributor",
+    bio: "",
+    image: "https://github.com/rkvishwa.png",
+    github: "https://github.com/rkvishwa",
+    linkedin: "https://www.linkedin.com/in/rkk-vishva/"
   },
   {
-    name: "Jane Smith",
-    role: "UI/UX Designer",
-    bio: "Creative designer with a focus on user-centered design and beautiful interfaces.",
-    image: "/team/jane-smith.jpg",
-    github: "https://github.com/janesmith",
-    linkedin: "https://linkedin.com/in/janesmith"
+    name: "Sadeepa N Herath",
+    role: "Knurdz Contributor",
+    bio: "",
+    image: "https://github.com/SadeepaNHerath.png",
+    github: "https://github.com/SadeepaNHerath",
+    linkedin: "https://www.linkedin.com/in/sadeepanherath/"
   },
   {
-    name: "Alex Johnson",
-    role: "Backend Engineer",
-    bio: "Backend specialist with expertise in distributed systems and cloud architecture.",
-    image: "/team/alex-johnson.jpg",
-    github: "https://github.com/alexjohnson",
-    linkedin: "https://linkedin.com/in/alexjohnson",
-    twitter: "https://twitter.com/alexjohnson"
+    name: "Kasun Kumara",
+    role: "Knurdz Contributor",
+    bio: "",
+    image: "https://github.com/Kasun-Kumara.png",
+    github: "https://github.com/Kasun-Kumara",
+    linkedin: "https://www.linkedin.com/in/kasun-kumara-30baaa338/"
   },
   {
-    name: "Sarah Williams",
-    role: "DevOps Engineer",
-    bio: "Infrastructure expert building reliable CI/CD pipelines and scalable cloud solutions.",
-    image: "/team/sarah-williams.jpg",
-    github: "https://github.com/sarahwilliams",
-    linkedin: "https://linkedin.com/in/sarahwilliams"
+    name: "Praveen R",
+    role: "Knurdz Contributor",
+    bio: "",
+    image: "https://github.com/Praveen-R-2518.png",
+    github: "https://github.com/Praveen-R-2518",
+    linkedin: "https://www.linkedin.com/in/praveen-r-b374612aa/"
   },
   {
-    name: "Mike Chen",
-    role: "Mobile Developer",
-    bio: "Mobile app developer creating seamless cross-platform experiences.",
-    image: "/team/mike-chen.jpg",
-    github: "https://github.com/mikechen",
-    twitter: "https://twitter.com/mikechen"
+    name: "Thesaru Praneeth",
+    role: "Knurdz Contributor",
+    bio: "",
+    image: "https://github.com/Thesaru-p.png",
+    github: "https://github.com/Thesaru-p",
+    linkedin: "https://www.linkedin.com/in/thesaru-p/"
   },
   {
-    name: "Emily Davis",
-    role: "Community Manager",
-    bio: "Building and nurturing our developer community through events and collaboration.",
-    image: "/team/emily-davis.jpg",
-    linkedin: "https://linkedin.com/in/emilydavis",
-    twitter: "https://twitter.com/emilydavis"
+    name: "Harsha Silva",
+    role: "Knurdz Contributor",
+    bio: "",
+    image: "https://github.com/harshasilva.png",
+    github: "https://github.com/harshasilva",
+    linkedin: "https://www.linkedin.com/in/harsha-silva-b59776357/"
+  },
+  {
+    name: "Senuka Deneth",
+    role: "Knurdz Contributor",
+    bio: "",
+    image: "https://github.com/Senuka-Deneth.png",
+    github: "https://github.com/Senuka-Deneth",
+    linkedin: "https://www.linkedin.com/in/senuka-deneth-70937a345/"
+  },
+  {
+    name: "Bhasilu Egodawatte",
+    role: "Knurdz Contributor",
+    bio: "",
+    image: "https://github.com/BhasiluEgodawatte.png",
+    github: "https://github.com/BhasiluEgodawatte",
+    linkedin: "https://www.linkedin.com/in/bhasilu-egodawatte-79bb70367/"
+  },
+  {
+    name: "Vinuth Karunathilaka",
+    role: "Knurdz Contributor",
+    bio: "",
+    image: "https://github.com/VinuthKarunathilaka.png",
+    github: "https://github.com/VinuthKarunathilaka",
+    linkedin: "https://www.linkedin.com/in/vinuth-karunathilaka-67160334a/"
+  },
+  {
+    name: "Kaveesha Ginodh",
+    role: "Knurdz Member",
+    bio: "",
+    image: "https://github.com/Kavee-ginty.png",
+    github: "https://github.com/Kavee-ginty",
+    linkedin: "https://www.linkedin.com/in/kaveesha-ginodh/"
+  },
+  {
+    name: "Ashen Tharindu",
+    role: "Knurdz Member",
+    bio: "",
+    image: "https://github.com/Senuka-Deneth.png",
+    github: "https://github.com/Senuka-Deneth",
+    linkedin: "https://www.linkedin.com/in/ashen-tharindu-041833365/"
+  },
+  {
+    name: "Praveen Fernando",
+    role: "Knurdz Member",
+    bio: "",
+    image: "https://github.com/ARSPFdo-2004.png",
+    github: "https://github.com/ARSPFdo-2004",
+    linkedin: "https://www.linkedin.com/in/senuka-deneth-70937a345/"
+  },
+  {
+    name: "Mahinsa Waththegedara",
+    role: "Knurdz Member",
+    bio: "",
+    image: "https://github.com/Mahinsa-Wattegedara.png",
+    github: "https://github.com/Mahinsa-Wattegedara",
+    linkedin: "https://www.linkedin.com/in/mahinsa-waththegedara-28b7b335a/"
+  },
+  {
+    name: "Dasun Jayasanka",
+    role: "Knurdz Member",
+    bio: "",
+    image: "",
+    github: "",
+    linkedin: "https://www.linkedin.com/in/dasunjayasanka/"
   }
 ];
 

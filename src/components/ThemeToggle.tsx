@@ -50,7 +50,7 @@ export default function ThemeToggle() {
   if (!mounted) {
     return (
       <button
-        className="p-2 rounded-lg hover:bg-gray-800 transition-colors border border-white/10"
+        className="p-2 rounded-lg hover:bg-muted/10 transition-colors border border-border text-muted"
         title="Toggle theme"
       >
         <div className="w-5 h-5" />
@@ -61,7 +61,7 @@ export default function ThemeToggle() {
   return (
     <button
       onClick={toggleTheme}
-      className="p-2 rounded-lg hover:bg-gray-800 transition-colors border border-white/10"
+      className="p-2 rounded-lg hover:bg-muted/10 transition-colors border border-border text-muted hover:text-foreground"
       title="Toggle theme"
     >
       {theme === "light" ? (

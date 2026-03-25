@@ -66,7 +66,7 @@ export default function ScrollIndicator() {
         onClick={handleClick}
       >
         {/* Background line (gray) */}
-        <div className="absolute inset-0 bg-gray-600 rounded-full"></div>
+        <div className="absolute inset-0 bg-muted/30 rounded-full"></div>
 
         {/* Progress line (green) that fills from bottom */}
         <div
@@ -78,17 +78,17 @@ export default function ScrollIndicator() {
         {positions.map((pos, index) => (
           <div
             key={index}
-            className={`absolute left-1/2 -translate-x-1/2 w-4 h-4 rounded-full border-2 bg-black transition-all duration-300`}
+            className={`absolute left-1/2 -translate-x-1/2 w-4 h-4 rounded-full border-2 bg-background transition-all duration-300 ${
+              activeNodes[index] ? "border-green-500" : "border-muted"
+            }`}
             style={{
               top: pos,
-              borderColor: activeNodes[index] ? "#22c55e" : "#4b5563",
             }}
           >
             <div
-              className="absolute inset-0.5 rounded-full bg-green-500 transition-transform duration-300"
-              style={{
-                transform: activeNodes[index] ? "scale(1)" : "scale(0)",
-              }}
+              className={`absolute inset-0.5 rounded-full bg-green-500 transition-transform duration-300 ${
+                activeNodes[index] ? "scale-100" : "scale-0"
+              }`}
             ></div>
           </div>
         ))}
@@ -97,7 +97,7 @@ export default function ScrollIndicator() {
         {labels.map((label, index) => (
           <div
             key={label}
-            className="absolute -left-16 opacity-0 hover:opacity-100 transition-opacity mono-font text-[10px] text-gray-500"
+            className="absolute -left-16 opacity-0 hover:opacity-100 transition-opacity mono-font text-[10px] text-muted"
             style={{ top: positions[index] }}
           >
             {label}

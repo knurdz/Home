@@ -32,7 +32,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${spaceGrotesk.variable} ${jetbrainsMono.variable} bg-black text-white antialiased transition-colors duration-300`}
+        className={`${spaceGrotesk.variable} ${jetbrainsMono.variable} bg-background text-foreground antialiased transition-colors duration-300`}
         style={{ fontFamily: "var(--font-space-grotesk), sans-serif" }}
       >
         {children}

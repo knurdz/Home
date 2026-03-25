@@ -40,6 +40,16 @@ export const projects: Project[] = [
     tags: ["Web", "Game"],
     upcoming: false,
   },
+  {
+    name: "Meta Scribe",
+    slug: "meta-scribe",
+    branch: "main",
+    commit: "fbb32e6",
+    description:
+      "A web-based SEO auditing tool that analyzes metadata, structured data, and on-page content quality to provide actionable optimization recommendations.",
+    tags: ["Web App", "SEO", "Developer Tool"],
+    upcoming: false,
+  },
 
   // ── Upcoming Projects ──────────────────────────────────────────────────────
   {

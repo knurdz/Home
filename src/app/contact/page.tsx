@@ -3,7 +3,8 @@
 import Link from "next/link";
 import { useState } from "react";
 import ScrollIndicator from "@/components/ScrollIndicator";
-import ThemeToggle from "@/components/ThemeToggle";
+import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
 
 type FormState = "idle" | "sending" | "success" | "error";
 
@@ -46,66 +47,23 @@ export default function ContactPage() {
     <>
       <ScrollIndicator />
 
-      {/* Grid Background */}
-      <div className="fixed inset-0 -z-10 opacity-[0.03]">
-        <div
-          className="absolute inset-0"
-          style={{
-            backgroundImage:
-              "linear-gradient(#ffffff 1px, transparent 1px), linear-gradient(90deg, #ffffff 1px, transparent 1px)",
-            backgroundSize: "50px 50px",
-          }}
-        />
-      </div>
-
       {/* Navigation */}
-      <nav className="fixed top-0 w-full z-50 bg-black/80 backdrop-blur-xl border-b border-white/10">
-        <div className="container mx-auto px-6 py-4 flex items-center justify-between">
-          <Link href="/" className="flex items-center gap-3 hover:opacity-80 transition-opacity">
-            <img
-              src="/logo/knurdz-logo-horizontal.svg"
-              alt="Knurdz"
-              className="h-14 w-auto"
-            />
-          </Link>
-          <div className="hidden md:flex items-center gap-8">
-            <Link href="/" className="text-gray-400 hover:text-white transition-colors mono-font text-sm">
-              /home
-            </Link>
-            <Link href="/#projects" className="text-gray-400 hover:text-white transition-colors mono-font text-sm">
-              /projects
-            </Link>
-            <Link href="/#partners" className="text-gray-400 hover:text-white transition-colors mono-font text-sm">
-              /partners
-            </Link>
-            <Link href="/about" className="text-gray-400 hover:text-white transition-colors mono-font text-sm">
-              /about
-            </Link>
-            <ThemeToggle />
-            <Link
-              href="/contact"
-              className="px-6 py-2 rounded border border-green-500 text-green-500 hover:bg-green-500 hover:text-black transition-all font-medium mono-font text-sm"
-            >
-              cd contact
-            </Link>
-          </div>
-        </div>
-      </nav>
+      <Navbar activePage="contact" />
 
-      <main className="min-h-screen pt-28 pb-20 px-6">
+      <main className="min-h-screen pt-32 pb-20 px-6">
         <div className="container mx-auto max-w-6xl">
 
           {/* Header */}
           <div className="mb-16 text-center lg:text-left">
-            <span className="inline-block px-4 py-2 rounded border border-white/20 text-gray-400 text-sm mono-font mb-6">
+            <span className="inline-block px-4 py-2 rounded border border-border text-muted text-sm mono-font mb-6">
               $ curl -X POST /contact --data &apos;{`{}`}&apos;
             </span>
             <h1 className="text-5xl md:text-7xl font-bold mono-font leading-tight">
-              <span className="text-white">Get in</span>{" "}
-              <span className="text-gray-600">Touch</span>
+              <span className="text-foreground">Get in</span>{" "}
+              <span className="text-faded">Touch</span>
               <span className="text-green-500">.</span>
             </h1>
-            <p className="mt-4 text-xl text-gray-400 max-w-xl">
+            <p className="mt-4 text-xl text-muted max-w-xl">
               Open a new issue — let&apos;s build something together.
             </p>
           </div>
@@ -116,35 +74,38 @@ export default function ContactPage() {
             <div className="lg:col-span-2 space-y-6">
 
               {/* Connection info card */}
-              <div className="bg-white/5 border border-white/10 rounded-lg p-6 space-y-4">
-                <p className="mono-font text-xs text-gray-500 mb-2">// connection.config</p>
+              <div className="bg-card border border-border rounded-lg p-6 space-y-4">
+                <p className="mono-font text-xs text-muted mb-2">// connection.config</p>
 
                 <div className="space-y-4">
                   <InfoRow icon="✉" label="email" value="hello@knurdz.com" href="mailto:hello@knurdz.com" />
-                  <InfoRow icon="🐦" label="twitter" value="@knurdz" href="https://twitter.com/knurdz" />
-                  <InfoRow icon="🔗" label="linkedin" value="/company/knurdz" href="https://linkedin.com/company/knurdz" />
+                  <InfoRow icon="�" label="linkedin" value="/company/knurdz" href="https://linkedin.com/company/knurdz" />
                   <InfoRow icon="🐙" label="github" value="github.com/knurdz" href="https://github.com/knurdz" />
+                  <InfoRow icon="🐦" label="X (Twitter)" value="@knurdz" href="https://twitter.com/knurdz" disabled />
+                  <InfoRow icon="📸" label="instagram" value="@knurdz" href="https://instagram.com/knurdz" disabled />
+                  <InfoRow icon="📘" label="facebook" value="@knurdz" href="https://facebook.com/knurdz" disabled />
+                  <InfoRow icon="▶️" label="youtube" value="@knurdz" href="https://youtube.com/knurdz" disabled />
                 </div>
               </div>
 
               {/* Response time card */}
-              <div className="bg-white/5 border border-white/10 rounded-lg p-6">
-                <p className="mono-font text-xs text-gray-500 mb-3">// process.status</p>
+              <div className="bg-card border border-border rounded-lg p-6">
+                <p className="mono-font text-xs text-muted mb-3">// process.status</p>
                 <div className="flex items-center gap-3 mb-3">
                   <span className="w-2.5 h-2.5 rounded-full bg-green-500 animate-pulse" />
                   <span className="mono-font text-sm text-green-500">online &amp; available</span>
                 </div>
-                <p className="text-gray-400 text-sm">
-                  We typically respond within <span className="text-white font-semibold">24 hours</span>.
+                <p className="text-muted text-sm">
+                  We typically respond within <span className="text-foreground font-semibold">24 hours</span>.
                 </p>
               </div>
 
               {/* Services card */}
-              <div className="bg-white/5 border border-white/10 rounded-lg p-6">
-                <p className="mono-font text-xs text-gray-500 mb-4">// services.list</p>
+              <div className="bg-card border border-border rounded-lg p-6">
+                <p className="mono-font text-xs text-muted mb-4">// services.list</p>
                 <ul className="space-y-2">
-                  {["Web Development", "Mobile Apps", "UI/UX Design", "AI Integration", "Consulting"].map((s) => (
-                    <li key={s} className="flex items-center gap-2 mono-font text-sm text-gray-300">
+                  {["Web Development", "Mobile Apps", "Desktop Application", "UI/UX Design", "AI Integration", "Consulting"].map((s) => (
+                    <li key={s} className="flex items-center gap-2 mono-font text-sm text-foreground">
                       <span className="text-green-500">›</span> {s}
                     </li>
                   ))}
@@ -154,13 +115,13 @@ export default function ContactPage() {
 
             {/* Right — Contact Form */}
             <div className="lg:col-span-3">
-              <div className="bg-white/5 border border-white/10 rounded-lg overflow-hidden">
+              <div className="bg-card border border-border rounded-lg overflow-hidden">
                 {/* Terminal title bar */}
-                <div className="flex items-center gap-2 px-4 py-3 border-b border-white/10 bg-white/[0.03]">
+                <div className="flex items-center gap-2 px-4 py-3 border-b border-border bg-background-alt">
                   <span className="w-3 h-3 rounded-full bg-red-500/70" />
                   <span className="w-3 h-3 rounded-full bg-yellow-500/70" />
                   <span className="w-3 h-3 rounded-full bg-green-500/70" />
-                  <span className="ml-3 mono-font text-xs text-gray-500">new-issue.sh</span>
+                  <span className="ml-3 mono-font text-xs text-muted">new-issue.sh</span>
                 </div>
 
                 <form onSubmit={handleSubmit} className="p-8 space-y-6">
@@ -188,7 +149,7 @@ export default function ContactPage() {
 
                   {/* Subject */}
                   <div className="space-y-2">
-                    <label className="mono-font text-xs text-gray-500">
+                    <label className="mono-font text-xs text-muted">
                       <span className="text-green-500">$</span> --subject
                     </label>
                     <select
@@ -196,20 +157,20 @@ export default function ContactPage() {
                       value={form.subject}
                       onChange={handleChange}
                       required
-                      className="w-full bg-white/5 border border-white/10 rounded px-4 py-3 mono-font text-sm text-white focus:outline-none focus:border-green-500/50 transition-colors"
+                      className="w-full bg-background-alt border border-border rounded px-4 py-3 mono-font text-sm text-foreground focus:outline-none focus:border-green-500/50 transition-colors"
                     >
-                      <option value="" className="bg-black">Select a topic...</option>
-                      <option value="project" className="bg-black">New Project</option>
-                      <option value="collaboration" className="bg-black">Collaboration</option>
-                      <option value="consulting" className="bg-black">Consulting</option>
-                      <option value="general" className="bg-black">General Inquiry</option>
-                      <option value="other" className="bg-black">Other</option>
+                      <option value="" className="bg-card text-foreground">Select a topic...</option>
+                      <option value="project" className="bg-card text-foreground">New Project</option>
+                      <option value="collaboration" className="bg-card text-foreground">Collaboration</option>
+                      <option value="consulting" className="bg-card text-foreground">Consulting</option>
+                      <option value="general" className="bg-card text-foreground">General Inquiry</option>
+                      <option value="other" className="bg-card text-foreground">Other</option>
                     </select>
                   </div>
 
                   {/* Message */}
                   <div className="space-y-2">
-                    <label className="mono-font text-xs text-gray-500">
+                    <label className="mono-font text-xs text-muted">
                       <span className="text-green-500">$</span> --message
                     </label>
                     <textarea
@@ -219,7 +180,7 @@ export default function ContactPage() {
                       required
                       rows={6}
                       placeholder="Describe your project or inquiry..."
-                      className="w-full bg-white/5 border border-white/10 rounded px-4 py-3 mono-font text-sm text-white placeholder-gray-600 focus:outline-none focus:border-green-500/50 transition-colors resize-none"
+                      className="w-full bg-background-alt border border-border rounded px-4 py-3 mono-font text-sm text-foreground placeholder-muted/50 focus:outline-none focus:border-green-500/50 transition-colors resize-none"
                     />
                   </div>
 
@@ -241,11 +202,11 @@ export default function ContactPage() {
                   <button
                     type="submit"
                     disabled={status === "sending"}
-                    className="w-full py-4 rounded bg-white text-black hover:bg-gray-200 disabled:opacity-50 disabled:cursor-not-allowed transition-all font-bold mono-font text-sm flex items-center justify-center gap-2"
+                    className="w-full py-4 rounded bg-foreground text-background hover:opacity-90 disabled:opacity-50 disabled:cursor-not-allowed transition-all font-bold mono-font text-sm flex items-center justify-center gap-2"
                   >
                     {status === "sending" ? (
                       <>
-                        <span className="w-4 h-4 border-2 border-black/30 border-t-black rounded-full animate-spin" />
+                        <span className="w-4 h-4 border-2 border-background/30 border-t-background rounded-full animate-spin" />
                         sending...
                       </>
                     ) : (
@@ -260,21 +221,7 @@ export default function ContactPage() {
       </main>
 
       {/* Footer */}
-      <footer className="border-t border-white/10 py-8 px-6 bg-gray-950">
-        <div className="container mx-auto max-w-7xl flex flex-col md:flex-row items-center justify-between gap-4">
-          <Link href="/" className="block hover:opacity-80 transition-opacity">
-            <img
-              src="/logo/knurdz-logo-horizontal.svg"
-              alt="Knurdz"
-              className="h-12 w-auto"
-            />
-          </Link>
-          <p className="text-gray-500 mono-font text-sm">
-            &copy; {new Date().getFullYear()} Knurdz. All rights reserved.{" "}
-            <span className="text-green-500">v1.0.0</span>
-          </p>
-        </div>
-      </footer>
+      <Footer />
     </>
   );
 }
@@ -300,7 +247,7 @@ function Field({
 }) {
   return (
     <div className="space-y-2">
-      <label className="mono-font text-xs text-gray-500">
+      <label className="mono-font text-xs text-muted">
         <span className="text-green-500">$</span> --{label}
       </label>
       <input
@@ -310,7 +257,7 @@ function Field({
         onChange={onChange}
         placeholder={placeholder}
         required={required}
-        className="w-full bg-white/5 border border-white/10 rounded px-4 py-3 mono-font text-sm text-white placeholder-gray-600 focus:outline-none focus:border-green-500/50 transition-colors"
+        className="w-full bg-background-alt border border-border rounded px-4 py-3 mono-font text-sm text-foreground placeholder-muted/50 focus:outline-none focus:border-green-500/50 transition-colors"
       />
     </div>
   );
@@ -321,12 +268,28 @@ function InfoRow({
   label,
   value,
   href,
+  disabled,
 }: {
   icon: string;
   label: string;
   value: string;
   href: string;
+  disabled?: boolean;
 }) {
+  if (disabled) {
+    return (
+      <div className="flex items-start gap-3 opacity-40 select-none cursor-not-allowed">
+        <span className="text-lg mt-0.5 grayscale">{icon}</span>
+        <div>
+          <p className="mono-font text-xs text-muted">// {label}</p>
+          <p className="mono-font text-sm text-muted">
+            {value}
+          </p>
+        </div>
+      </div>
+    );
+  }
+
   return (
     <a
       href={href}
@@ -336,8 +299,8 @@ function InfoRow({
     >
       <span className="text-lg mt-0.5">{icon}</span>
       <div>
-        <p className="mono-font text-xs text-gray-500">// {label}</p>
-        <p className="mono-font text-sm text-gray-300 group-hover:text-white transition-colors">
+        <p className="mono-font text-xs text-muted">// {label}</p>
+        <p className="mono-font text-sm text-foreground group-hover:text-green-500 transition-colors">
           {value}
         </p>
       </div>

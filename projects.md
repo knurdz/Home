@@ -9,6 +9,7 @@ This file serves as the source of truth for the projects displayed on the Knurdz
 | Sonar Code Editor | development | 78dc070 | A secure, real-time collaborative coding environment designed specifically for supervised exams and technical interviews. | Desktop App, Web |
 | Nothing Dialer 1 | release/beta | 1f125a2 | A Dialer app for Nothing OS with custom glyph for outgoing and ongoing calls also. | Mobile, IoT |
 | Diss-Master | main | da34852 | Diss-Master is a real-time multiplayer word game inspired by Codenames, the beloved board game designed by Vlaada Chvátil and published by Czech Games Edition. | Web, Game |
+| Meta Scribe | main | fbb32e6 | A web-based SEO auditing tool that analyzes metadata, structured data, and on-page content quality to provide actionable optimization recommendations. | Web App, SEO, Developer Tool |
 
 ---
 

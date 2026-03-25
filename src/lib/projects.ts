@@ -11,6 +11,7 @@ export interface ProjectMatter {
   tags: string[];
   branch: string;
   commit: string;
+  license?: string;
 }
 
 export interface ProjectContent {

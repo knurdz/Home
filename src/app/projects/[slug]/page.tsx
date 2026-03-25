@@ -1,11 +1,12 @@
 import type { Metadata } from "next";
-import Link from "next/link";
 import Image from "next/image";
 import { notFound } from "next/navigation";
 import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
 import { getProjectBySlug, getAllProjectSlugs } from "@/lib/projects";
 import React from "react";
+
+import Navbar from "@/components/Navbar";
 
 interface ArchitectureBox {
   title: string;
@@ -69,7 +70,7 @@ function ArchitectureDiagram({ boxes, connections }: { boxes: ArchitectureBox[];
         <React.Fragment key={index}>
           {/* Box */}
           <div className="relative w-full max-w-sm">
-            <div className="relative bg-gradient-to-br from-white/[0.08] to-white/[0.02] border border-white/20 rounded-lg p-4 backdrop-blur-sm">
+            <div className="relative bg-card border border-border rounded-lg p-4 backdrop-blur-sm shadow-sm">
               {/* Corner accents */}
               <div className="absolute top-0 left-0 w-3 h-3 border-t-2 border-l-2 border-green-500/60 rounded-tl-lg" />
               <div className="absolute top-0 right-0 w-3 h-3 border-t-2 border-r-2 border-green-500/60 rounded-tr-lg" />
@@ -77,9 +78,9 @@ function ArchitectureDiagram({ boxes, connections }: { boxes: ArchitectureBox[];
               <div className="absolute bottom-0 right-0 w-3 h-3 border-b-2 border-r-2 border-green-500/60 rounded-br-lg" />
 
               <div className="text-center">
-                <div className="text-white font-medium mono-font text-sm">{box.title}</div>
+                <div className="text-foreground font-medium mono-font text-sm">{box.title}</div>
                 {box.subtitle && (
-                  <div className="text-gray-500 text-xs mono-font mt-1">{box.subtitle}</div>
+                  <div className="text-muted text-xs mono-font mt-1">{box.subtitle}</div>
                 )}
               </div>
             </div>
@@ -90,7 +91,7 @@ function ArchitectureDiagram({ boxes, connections }: { boxes: ArchitectureBox[];
             <div className="flex flex-col items-center py-2">
               <div className="w-px h-4 bg-gradient-to-b from-green-500/60 to-green-500/30" />
               {connections[index]?.label && (
-                <div className="text-xs text-gray-500 mono-font py-1 px-2">{connections[index].label}</div>
+                <div className="text-xs text-muted mono-font py-1 px-2">{connections[index].label}</div>
               )}
               <div className="w-px h-4 bg-gradient-to-b from-green-500/30 to-green-500/60" />
               <div className="text-green-500 text-sm">▼</div>
@@ -129,48 +130,54 @@ export default async function ProjectPage({ params }: PageProps) {
   const { frontmatter, content } = project;
 
   return (
-    <div className="min-h-screen bg-black text-white">
+    <div className="min-h-screen bg-background text-foreground">
       {/* Navigation */}
-      <nav className="fixed top-0 w-full z-50 bg-black/80 backdrop-blur-xl border-b border-white/10">
-        <div className="container mx-auto px-6 py-4 flex items-center justify-between">
-          <Link href="/" className="flex items-center gap-3 hover:opacity-80 transition-opacity cursor-pointer">
-            <img
-              src="/logo/knurdz-logo-horizontal.svg"
-              alt="Knurdz"
-              className="h-14 w-auto"
-            />
-          </Link>
-          <Link
-            href="/#projects"
-            className="mono-font text-sm text-gray-400 hover:text-white transition-colors flex items-center gap-2 cursor-pointer"
-          >
-            ← git checkout projects
-          </Link>
-        </div>
-      </nav>
+      <Navbar activePage="projects" />
 
       {/* Banner */}
-      <div className="relative w-full h-[55vh] min-h-[320px] mt-0">
-        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-black/40 to-black z-10" />
-        <div className="absolute inset-0 bg-gray-900">
-          {/* Fallback pattern if image missing */}
-          <div
-            className="absolute inset-0 opacity-10"
-            style={{
-              backgroundImage:
-                "linear-gradient(#ffffff 1px, transparent 1px), linear-gradient(90deg, #ffffff 1px, transparent 1px)",
-              backgroundSize: "40px 40px",
-            }}
-          />
-        </div>
-        {frontmatter.banner && (
+      <div className="relative w-full h-[55vh] min-h-[320px] mt-0 overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-background/40 to-background z-10" />
+        
+        {frontmatter.banner ? (
           <Image
             src={frontmatter.banner}
             alt={frontmatter.title}
             fill
             className="object-cover"
+            style={{ objectFit: "cover", objectPosition: "center" }}
             priority
+            sizes="100vw"
           />
+        ) : (
+          <div className="absolute inset-0 bg-card">
+            <div className="absolute inset-0">
+              {/* Fallback pattern if image missing */}
+              <div
+                className="absolute inset-0 opacity-[0.08]"
+                style={{
+                  backgroundImage:
+                    "linear-gradient(var(--foreground) 1px, transparent 1px), linear-gradient(90deg, var(--foreground) 1px, transparent 1px)",
+                  backgroundSize: "40px 40px",
+                }}
+              />
+            </div>
+            <div className="absolute inset-0 flex items-center justify-center opacity-20 grayscale">
+              <Image
+                src="/logo/knurdz-icon.svg"
+                alt="Knurdz Logo"
+                width={220}
+                height={220}
+                className="object-contain logo-dark"
+              />
+              <Image
+                src="/logo/knurdz-icon-light.svg"
+                alt="Knurdz Logo"
+                width={220}
+                height={220}
+                className="object-contain logo-light"
+              />
+            </div>
+          </div>
         )}
       </div>
 
@@ -178,15 +185,15 @@ export default async function ProjectPage({ params }: PageProps) {
       <div className="relative -mt-24 z-20 container mx-auto max-w-4xl px-6 pb-4">
         <div className="mb-6 flex flex-wrap items-center gap-3 mono-font text-sm">
           <span className="text-green-500">●</span>
-          <span className="text-gray-400">{frontmatter.branch}</span>
-          <span className="text-gray-600">·</span>
-          <span className="text-gray-600">commit {frontmatter.commit}</span>
+          <span className="text-muted">{frontmatter.branch}</span>
+          <span className="text-faded">·</span>
+          <span className="text-faded">commit {frontmatter.commit}</span>
         </div>
 
-        <h1 className="text-4xl md:text-6xl font-bold mono-font mb-4">
+        <h1 className="text-4xl md:text-6xl font-bold mono-font mb-4 text-foreground">
           {frontmatter.title}
         </h1>
-        <p className="text-xl text-gray-400 mb-6 max-w-2xl">
+        <p className="text-xl text-muted mb-6 max-w-2xl">
           {frontmatter.description}
         </p>
 
@@ -194,14 +201,14 @@ export default async function ProjectPage({ params }: PageProps) {
           {frontmatter.tags?.map((tag) => (
             <span
               key={tag}
-              className="px-3 py-1 rounded border border-white/20 text-gray-400 text-xs mono-font"
+              className="px-3 py-1 rounded border border-border text-muted text-xs mono-font bg-background-alt"
             >
               {tag}
             </span>
           ))}
         </div>
 
-        <div className="mt-8 border-t border-white/10" />
+        <div className="mt-8 border-t border-border" />
       </div>
 
       {/* Markdown Content */}
@@ -211,24 +218,24 @@ export default async function ProjectPage({ params }: PageProps) {
             remarkPlugins={[remarkGfm]}
             components={{
               h2: ({ children }) => (
-                <h2 className="text-2xl md:text-3xl font-bold mono-font mt-12 mb-4 text-white">
+                <h2 className="text-2xl md:text-3xl font-bold mono-font mt-12 mb-4 text-foreground">
                   {children}
                 </h2>
               ),
               h3: ({ children }) => (
-                <h3 className="text-xl font-semibold mono-font mt-8 mb-3 text-white">
+                <h3 className="text-xl font-semibold mono-font mt-8 mb-3 text-foreground">
                   {children}
                 </h3>
               ),
               p: ({ children }) => (
-                <p className="text-gray-400 leading-relaxed mb-5 text-lg">
+                <p className="text-muted leading-relaxed mb-5 text-lg">
                   {children}
                 </p>
               ),
               code: ({ children, className }) => {
                 const isInline = !className;
                 return isInline ? (
-                  <code className="bg-white/10 text-green-400 mono-font text-sm px-2 py-0.5 rounded">
+                  <code className="bg-muted/20 text-green-400 dark:text-green-400 mono-font text-sm px-2 py-0.5 rounded">
                     {children}
                   </code>
                 ) : (
@@ -268,7 +275,7 @@ export default async function ProjectPage({ params }: PageProps) {
 
                 return (
                   <pre
-                    className="bg-white/5 border border-white/10 rounded-lg p-6 overflow-x-auto mb-8 text-green-400"
+                    className="bg-card border border-border rounded-lg p-6 overflow-x-auto mb-8 text-green-600 dark:text-green-400"
                     style={{
                       fontFamily: 'ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, "Liberation Mono", monospace',
                       fontSize: '14px',
@@ -288,13 +295,14 @@ export default async function ProjectPage({ params }: PageProps) {
                 <ul className="space-y-2 mb-6 list-none pl-0">{children}</ul>
               ),
               li: ({ children }) => (
-                <li className="text-gray-400 flex gap-3 leading-relaxed items-start">
+                // Note: changed text-muted for the items
+                <li className="text-muted flex items-start gap-3 leading-relaxed">
                   <span className="text-green-500 shrink-0">▸</span>
-                  <span>{children}</span>
+                  <span className="display-flex items-center gap-2">{children}</span>
                 </li>
               ),
               strong: ({ children }) => (
-                <strong className="text-white font-semibold">{children}</strong>
+                <strong className="text-foreground font-semibold">{children}</strong>
               ),
               table: ({ children }) => (
                 <div className="overflow-x-auto mb-6">
@@ -304,36 +312,38 @@ export default async function ProjectPage({ params }: PageProps) {
                 </div>
               ),
               thead: ({ children }) => (
-                <thead className="border-b border-white/20">{children}</thead>
+                <thead className="border-b border-border">{children}</thead>
               ),
               th: ({ children }) => (
-                <th className="text-left py-2 px-4 text-gray-300 font-semibold">
+                <th className="text-left py-2 px-4 text-foreground font-semibold">
                   {children}
                 </th>
               ),
               td: ({ children }) => (
-                <td className="py-2 px-4 text-gray-400 border-b border-white/5">
+                // Note: changed border-border
+                <td className="py-2 px-4 text-muted border-b border-border/50">
                   {children}
                 </td>
               ),
               blockquote: ({ children }) => (
-                <blockquote className="border-l-4 border-green-500 pl-6 my-6 text-gray-400 italic">
+                <blockquote className="border-l-4 border-green-500 pl-6 my-6 text-muted italic">
                   {children}
                 </blockquote>
               ),
-              hr: () => <hr className="border-white/10 my-10" />,
+              hr: () => <hr className="border-border my-10" />,
               a: ({ href, children }) => (
                 <a
                   href={href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 px-4 py-2 bg-green-500/10 hover:bg-green-500/20 border border-green-500/30 hover:border-green-500 text-green-400 hover:text-green-300 rounded-lg mono-font text-sm transition-all duration-200 no-underline"
+                  className="inline-flex max-w-full items-center gap-2 px-2 md:px-4 bg-green-500/10 hover:bg-green-500/20 border border-green-500/30 hover:border-green-500 text-green-400 dark:text-green-400 hover:text-green-500 rounded-lg mono-font text-xs md:text-sm transition-all duration-200 no-underline word-break whitespace-normal"
                 >
-                  {children}
+                  <span className="truncate">{children}</span>
+                  <svg xmlns="http://www.w3.org/2000/svg" className="w-4 h-4" viewBox="0 0 24 24" fill="currentColor"><path d="M10 6V8H5V19H16V14H18V20C18 20.5523 17.5523 21 17 21H4C3.44772 21 3 20.5523 3 20V7C3 6.44772 3.44772 6 4 6H10ZM21 3V12L17.206 8.207L11.2071 14.2071L9.79289 12.7929L15.792 6.793L12 3H21Z"></path></svg>
                 </a>
               ),
               img: ({ src, alt }) => (
-                <div className="relative w-full aspect-video my-8 rounded-lg overflow-hidden border border-white/10">
+                <div className="relative w-full aspect-video my-8 rounded-lg overflow-hidden border border-border">
                   {/* eslint-disable-next-line @next/next/no-img-element */}
                   <img
                     src={typeof src === "string" ? src : ""}

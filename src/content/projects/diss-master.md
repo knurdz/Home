@@ -1,6 +1,5 @@
 ---
 title: "Diss-Master"
-banner: "/images/projects/diss-master/banner.png"
 description: "A real-time multiplayer word game inspired by Codenames, designed for groups who want the fun without the cardboard."
 tags: ["Web", "Game"]
 branch: "main"
