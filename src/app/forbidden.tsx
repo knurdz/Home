@@ -11,7 +11,7 @@ export const metadata: Metadata = {
 export default function Forbidden() {
   return (
     <>
-      <Navbar activePage="" />
+      <Navbar />
       
       <section className="relative min-h-[calc(100vh-80px)] flex items-center justify-center px-6 pt-20">
         <div className="container mx-auto max-w-4xl text-center">
