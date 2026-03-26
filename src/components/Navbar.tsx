@@ -90,7 +90,7 @@ export default function Navbar({ activePage }: NavbarProps) {
                   : "border border-foreground hover:bg-foreground hover:text-background"
               } px-6 py-2 rounded transition-all font-medium mono-font text-sm`}
             >
-              ~cd contact
+              % cd contact
             </Link>
           </div>
 
@@ -216,7 +216,7 @@ export default function Navbar({ activePage }: NavbarProps) {
                 : "border-foreground text-foreground hover:bg-foreground hover:text-background"
             }`}
           >
-            ~cd contact_us
+            % cd contact_us
           </Link>
         </div>
       </div>
