@@ -87,8 +87,7 @@ export default function AboutPage() {
             <span className="text-green-500">.</span>
           </h1>
           <p className="text-xl md:text-2xl text-muted max-w-3xl mx-auto leading-relaxed">
-            We&apos;re a community of passionate creators, developers, and innovators
-            building the future of digital experiences together.
+            A collective of passionate creators engineering the future through code, hardware, and social innovation.
           </p>
           <p className="text-md md:text-lg text-muted max-w-2xl mx-auto mt-4">
             <span className="font-semibold text-green-500">Founded in 2025</span>, Knurdz began as a vision to unite creators and innovators under one community.
