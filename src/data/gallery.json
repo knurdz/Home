@@ -6,7 +6,7 @@
       "description": "Organized by IEEE WIE, SHErlock 3.0 is an immersive, team-based challenge centered on logic, intuition, and investigative thinking. Participants must step away from the digital world to solve a series of interactive tasks and complex puzzles in a race against the clock",
       "src": "/gallery/event-1.jpeg",
       "alt": "Event 1",
-      "date": "2026-03-15",
+      "date": "2026-02-07",
       "category": "Event",
       "tags": ["workshop", "technology", "community"]
     },
@@ -16,7 +16,7 @@
       "description": "Organized by IEEE WIE, SHErlock 3.0 is an immersive, team-based challenge centered on logic, intuition, and investigative thinking. Participants must step away from the digital world to solve a series of interactive tasks and complex puzzles in a race against the clock",
       "src": "/gallery/event-2.jpeg",
       "alt": "Event 2",
-      "date": "2026-03-10",
+      "date": "2026-02-07",
       "category": "Competition",
       "tags": ["meetup", "networking", "community"]
     },
@@ -36,7 +36,7 @@
       "description": "A high-energy meetup focused on builder culture and developer productivity. This session brought together local creators to dive deep into the Cursor IDE, sharing advanced strategies for optimizing coding workflows and AI-assisted development.",
       "src": "/gallery/event-3.jpg",
       "alt": "Event 3",
-      "date": "2026-03-05",
+      "date": "2026-01-24",
       "category": "Workshop",
       "tags": ["hackathon", "coding", "competition"]
     },
@@ -59,6 +59,16 @@
       "date": "2026-01-24",
       "category": "Workshop",
       "tags": ["workshop", "learning", "skills"]
+    },
+    {
+      "id": "event-21",
+      "title": "Road Legacy 2.0",
+      "description": "Designed specifically for IT-focused undergraduates, this inspiring event serves as a strategic roadmap for navigating the next 3–4 years of university life. It provides a unique space to bridge the gap between different academic institutions and foster a unified community of future tech leaders.",
+      "src": "/gallery/event-21.jpg",
+      "alt": "Event 5",
+      "date": "2025-05-31",
+      "category": "Conference",
+      "tags": ["conference", "tech", "innovation"]
     },
     {
       "id": "event-5",
@@ -209,6 +219,26 @@
       "date": "2025-12-15",
       "category": "Workshop",
       "tags": ["workshop", "closing", "review"]
+    },
+    {
+      "id": "event-22",
+      "title": "STEM education Awareness Session at Hendiyagala Maha Vidyalaya",
+      "description": "On March 5, 2025, Hendiyagala Maha Vidyalaya hosted an engaging *STEM Education Awareness Session*. The event aimed to inspire students by demystifying science, technology, engineering, and mathematics. Through interactive discussions, participants explored future career paths and the vital role of innovation in solving real-world challenges within their community.",
+      "src": "/gallery/event-22.jpg",
+      "alt": "Event 22",
+      "date": "2025-03-05",
+      "category": "Awareness Session",
+      "tags": ["meetup", "community", "networking"]
+    },
+    {
+      "id": "event-23",
+      "title": "Workshop on Systems Thinking by Prof. Zuern",
+      "description": "On February 10, 2025, Prof. Zuern conducted an insightful Workshop on Systems Thinking. The session introduced participants to viewing complex problems through a holistic lens rather than in isolation. Attendees explored interconnected loops, feedback dynamics, and practical tools to analyze and solve organizational and structural challenges effectively.",
+      "src": "/gallery/event-23.jpg",
+      "alt": "Event 23",
+      "date": "2025-02-10",
+      "category": "Workshop",
+      "tags": ["meetup", "community", "networking"]
     }
   ],
   "projects": [

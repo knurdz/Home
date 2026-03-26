@@ -6,7 +6,6 @@ import { useState, useRef, useEffect } from "react";
 import ScrollIndicator from "@/components/ScrollIndicator";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
-import ThemeToggle from "@/components/ThemeToggle";
 import { members, Member } from "@/data/members";
 import MemberAvatar from "@/components/MemberAvatar";
 import TeamMemberPreview from "@/components/TeamMemberPreview";
@@ -26,11 +25,15 @@ interface GalleryItem {
   group?: "event" | "project" | "team";
 }
 
-const allGalleryImages: GalleryItem[] = [
+const unsortedGalleryImages: GalleryItem[] = [
   ...galleryData.events.map((item) => ({ ...item, group: "event" as const })),
   ...galleryData.projects.map((item) => ({ ...item, group: "project" as const })),
   ...galleryData.team.map((item) => ({ ...item, group: "team" as const })),
 ];
+
+const allGalleryImages: GalleryItem[] = unsortedGalleryImages.sort((a, b) => {
+  return new Date(b.date).getTime() - new Date(a.date).getTime();
+});
 
 export default function AboutPage() {
   const [activeMember, setActiveMember] = useState<Member | null>(null);
@@ -86,6 +89,9 @@ export default function AboutPage() {
           <p className="text-xl md:text-2xl text-muted max-w-3xl mx-auto leading-relaxed">
             We&apos;re a community of passionate creators, developers, and innovators
             building the future of digital experiences together.
+          </p>
+          <p className="text-md md:text-lg text-muted max-w-2xl mx-auto mt-4">
+            <span className="font-semibold text-green-500">Founded in 2025</span>, Knurdz began as a vision to unite creators and innovators under one community.
           </p>
         </div>
       </section>
@@ -187,7 +193,7 @@ export default function AboutPage() {
             <div ref={scrollContainerRef} className="hidden md:flex relative w-full overflow-x-auto min-h-125 items-center scroll-smooth">
               <div className="flex items-center min-w-max px-20 relative pt-32 pb-40">
                   {/* Central Horizontal Line */}
-                  <div className="absolute top-1/2 left-0 right-0 h-0.5 bg-gradient-to-r from-transparent via-green-500/50 to-transparent transform -translate-y-1/2" />
+                  <div className="absolute top-1/2 left-0 right-0 h-0.5 bg-linear-to-r from-transparent via-green-500/50 to-transparent transform -translate-y-1/2" />
                   
                   {members.map((member, index) => (
                       <div key={member.name} className="relative mx-8 md:mx-16 group">
@@ -204,7 +210,7 @@ export default function AboutPage() {
                               <div className="bg-card/90 backdrop-blur-xl border border-border rounded-xl p-5 group-hover:border-green-500 transition-colors duration-300 relative overflow-visible shadow-xl group-hover:shadow-[0_0_20px_rgba(34,197,94,0.2)]">
                                   {/* Decorative Tech Elements */}
                                   <div className="absolute top-0 right-0 p-3 opacity-20 pointer-events-none text-[10px] font-mono text-green-500 text-right leading-tight">
-                                      {`ID: ${index.toString().padStart(3, '0')}\nUSR: ${member.name.split(' ')[0].toUpperCase()}`}
+                                      {`ID: ${index.toString().padStart(3, '0')}\nUSR: ${member.nickname ?? member.name.split(' ')[0].toUpperCase()}`}
                                   </div>
                                 
                                 <h3 className="text-xl font-bold text-foreground mb-1 mono-font">{member.name}</h3>
@@ -236,8 +242,8 @@ export default function AboutPage() {
                             </div>
                             
                             {/* Connector Line */}
-                            <div className={`absolute left-1/2 transform -translate-x-1/2 w-0.5 h-12 bg-gradient-to-b from-green-500/50 to-transparent ${
-                                index % 2 === 0 ? '-bottom-12 bg-gradient-to-t' : '-top-12'
+                            <div className={`absolute left-1/2 transform -translate-x-1/2 w-0.5 h-12 bg-linear-to-b from-green-500/50 to-transparent ${
+                                index % 2 === 0 ? '-bottom-12 bg-linear-to-t' : '-top-12'
                             }`} />
                         </div>
 
@@ -345,13 +351,13 @@ export default function AboutPage() {
                 className="group relative aspect-square cursor-pointer"
               >
                 {/* Decorative Frame */}
-                <div className="absolute -inset-2 bg-gradient-to-br from-green-500/20 via-transparent to-blue-500/20 rounded-xl blur-sm opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                <div className="absolute -inset-2 bg-linear-to-br from-green-500/20 via-transparent to-blue-500/20 rounded-xl blur-sm opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
 
                 {/* Outer Border Frame */}
                 <div className="relative bg-card/10 backdrop-blur-sm rounded-xl p-2 border border-border group-hover:border-foreground/40 transition-all duration-300 shadow-lg shadow-black/20">
 
                   {/* Inner Content Container */}
-                  <div className="relative aspect-square bg-card rounded-lg border-[12px] border-background-alt/95 group-hover:border-background-alt transition-all duration-300 overflow-hidden shadow-xl">
+                  <div className="relative aspect-square bg-card rounded-lg border-12 border-background-alt/95 group-hover:border-background-alt transition-all duration-300 overflow-hidden shadow-xl">
 
                     {/* Corner Decorations */}
                     <div className="absolute top-1 left-1 w-3 h-3 border-t-2 border-l-2 border-green-500 opacity-60 group-hover:opacity-100 transition-opacity duration-300" />
@@ -362,7 +368,7 @@ export default function AboutPage() {
                     {/* Skeleton loader */}
                     {imageLoading[image.id] !== false && (
                       <div
-                        className="absolute inset-0 bg-gradient-to-r from-card via-background-alt to-card"
+                        className="absolute inset-0 bg-linear-to-r from-card via-background-alt to-card"
                         style={{
                           backgroundSize: '200% 100%',
                           animation: 'shimmer 1.5s ease-in-out infinite'
@@ -396,7 +402,7 @@ export default function AboutPage() {
                     />
 
                     {/* Overlay */}
-                    <div className="absolute inset-0 bg-gradient-to-t from-background/95 via-background/40 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-300 flex items-end">
+                    <div className="absolute inset-0 bg-linear-to-t from-background/95 via-background/40 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-300 flex items-end">
                       <div className="p-4 w-full transform translate-y-2 group-hover:translate-y-0 transition-transform duration-300">
                         <span className="inline-block px-3 py-1 rounded-full text-xs mono-font bg-green-500/30 text-green-400 border border-green-500/50 mb-3 backdrop-blur-sm">
                           {image.category}
@@ -412,7 +418,7 @@ export default function AboutPage() {
 
                     {/* Scan Line Effect */}
                     <div className="absolute inset-0 opacity-0 group-hover:opacity-20 transition-opacity duration-300">
-                      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-green-500/10 to-transparent animate-pulse" />
+                      <div className="absolute inset-0 bg-linear-to-b from-transparent via-green-500/10 to-transparent animate-pulse" />
                     </div>
                   </div>
 
@@ -467,7 +473,7 @@ export default function AboutPage() {
       {/* Image Preview Modal */}
       {previewImage && (
         <div
-          className="fixed inset-0 z-[100] flex items-center justify-center bg-background/95 backdrop-blur-sm p-4 md:p-8"
+          className="fixed inset-0 z-200 flex items-center justify-center bg-background/95 backdrop-blur-sm p-4 md:p-8"
           onClick={() => setPreviewImage(null)}
         >
           {/* Close Button - Better Mobile Positioning */}
@@ -476,7 +482,7 @@ export default function AboutPage() {
               e.stopPropagation();
               setPreviewImage(null);
             }}
-            className="group absolute top-3 right-3 md:top-6 md:right-6 z-[102] p-2 md:p-3 rounded-full bg-card/80 border border-border text-foreground hover:bg-red-500 hover:border-red-500 hover:text-white transition-all shadow-lg"
+            className="group absolute top-3 right-3 md:top-6 md:right-6 z-102 p-2 md:p-3 rounded-full bg-card/80 border border-border text-foreground hover:bg-red-500 hover:border-red-500 hover:text-white transition-all shadow-lg"
             aria-label="Close preview"
           >
             <svg className="w-5 h-5 md:w-6 md:h-6 stroke-current group-hover:stroke-white" fill="none" viewBox="0 0 24 24">
@@ -502,7 +508,7 @@ export default function AboutPage() {
             </div>
 
             {/* Context Info - Stacked on Mobile, Overlay on Desktop */}
-            <div className="p-5 md:absolute md:bottom-0 md:left-0 md:right-0 md:bg-gradient-to-t md:from-black/90 md:via-black/50 md:to-transparent md:p-8 bg-card border-t border-border md:border-none">
+            <div className="p-5 md:absolute md:bottom-0 md:left-0 md:right-0 md:bg-linear-to-t md:from-black/90 md:via-black/50 md:to-transparent md:p-8 bg-card border-t border-border md:border-none">
                <div className="flex flex-wrap items-center gap-3 mb-2 md:mb-3">
                     <span className="inline-block px-2 py-0.5 rounded text-[10px] md:text-xs mono-font bg-green-500/20 text-green-500 border border-green-500/30">
                         {previewImage.category}

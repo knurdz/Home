@@ -3,6 +3,7 @@
 import Navbar from "@/components/Navbar";
 import ScrollIndicator from "@/components/ScrollIndicator";
 import { partners } from "@/data/partners";
+import Link from "next/link";
 
 export default function PartnersPage() {
   return (
@@ -49,14 +50,14 @@ export default function PartnersPage() {
                     <h3 className="text-xl md:text-2xl font-bold mb-2 mono-font text-foreground">
                       {partner.name}
                     </h3>
-                    <a
+                    <Link
                       href={partner.website}
                       target="_blank"
                       rel="noopener noreferrer"
                       className="text-green-500 hover:text-green-400 text-sm mono-font transition-colors break-all"
                     >
                       {partner.website.replace("https://", "")} ↗
-                    </a>
+                    </Link>
                   </div>
 
                   <p className="text-muted text-center mb-8 leading-relaxed">
@@ -74,9 +75,13 @@ export default function PartnersPage() {
                           key={project.name}
                           className="flex items-center justify-between p-3 rounded bg-background-alt border border-border hover:border-foreground/10 transition-colors"
                         >
-                          <span className="font-medium text-foreground">
+                          <Link 
+                            href={project.url}
+                            rel="noopener noreferrer"
+                            target="_blank" className="font-medium text-foreground"
+                          >
                             {project.name}
-                          </span>
+                          </Link>
                           <span
                             className={`text-xs px-2 py-1 rounded mono-font ${
                               project.status === "live"

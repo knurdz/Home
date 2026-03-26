@@ -1,5 +1,6 @@
 export interface Member {
   name: string;
+  nickname?: string;
   role: string;
   bio: string;
   image: string;
@@ -10,6 +11,7 @@ export interface Member {
 export const members: Member[] = [
   {
     name: "RKK Vishva Kumar",
+    nickname: "RVK",
     role: "Knurdz Contributor",
     bio: "",
     image: "https://github.com/rkvishwa.png",
@@ -92,8 +94,8 @@ export const members: Member[] = [
     name: "Ashen Tharindu",
     role: "Knurdz Member",
     bio: "",
-    image: "https://github.com/Senuka-Deneth.png",
-    github: "https://github.com/Senuka-Deneth",
+    image: "https://github.com/Azriel-prog.png",
+    github: "https://github.com/Azriel-prog",
     linkedin: "https://www.linkedin.com/in/ashen-tharindu-041833365/"
   },
   {
@@ -116,8 +118,8 @@ export const members: Member[] = [
     name: "Dasun Jayasanka",
     role: "Knurdz Member",
     bio: "",
-    image: "",
-    github: "",
+    image: "https://github.com/dasunjlk.png",
+    github: "https://github.com/dasunjlk",
     linkedin: "https://www.linkedin.com/in/dasunjayasanka/"
   }
 ];
