@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import Terminal from "@/components/Terminal";
 import ScrollIndicator from "@/components/ScrollIndicator";
@@ -6,9 +7,38 @@ import Footer from "@/components/Footer";
 import { featuredProjects, upcomingProjects } from "@/data/projects";
 import { partners } from "@/data/partners";
 
+const BASE_URL = "https://knurdz.org";
+
+export const metadata: Metadata = {
+  alternates: { canonical: BASE_URL },
+};
+
+const organizationJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  name: "Knurdz",
+  alternateName: "Knurdz Community",
+  url: BASE_URL,
+  logo: `${BASE_URL}/logo/knurdz-logo-horizontal.png`,
+  description:
+    "From code to silicon and social impact. A tech community building open-source projects that matter.",
+  email: "support@knurdz.org",
+  foundingDate: "2025",
+  sameAs: ["https://github.com/knurdz"],
+  contactPoint: {
+    "@type": "ContactPoint",
+    email: "support@knurdz.org",
+    contactType: "Customer Support",
+  },
+};
+
 export default function Home() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationJsonLd) }}
+      />
       {/* Custom Scroll Indicator - Git Branch Style */}
       <ScrollIndicator />
 
@@ -39,8 +69,7 @@ export default function Home() {
                 </span>
               </h1>
               <p className="text-xl md:text-2xl text-muted max-w-2xl leading-relaxed mx-auto lg:mx-0">
-                A community of creators building extraordinary digital
-                experiences. Fork, commit, deploy.
+                A community of creators building extraordinary experiences across the stack. From silicon to software and social impact—fork, commit, deploy.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start mono-font text-sm">
                 <Link href="/projects" className="px-8 py-4 rounded bg-foreground text-background hover:opacity-90 transition-all font-semibold text-center">
@@ -102,7 +131,10 @@ export default function Home() {
               {featuredProjects.map((project, index) => {
                 const isRight = index % 2 === 0;
                 const card = (
-                  <div className="group relative bg-card backdrop-blur-xl rounded-lg border border-border overflow-hidden hover:border-foreground/30 transition-all duration-300 p-8">
+                  <Link
+                    href={`/projects/${project.slug}`}
+                    className="group relative bg-card backdrop-blur-xl rounded-lg border border-border overflow-hidden hover:border-foreground/30 transition-all duration-300 p-8 block"
+                  >
                     <div className="flex items-start justify-between mb-4">
                       <div className="mono-font text-sm text-muted">
                         <span className="text-green-500">●</span> {project.branch}
@@ -111,11 +143,9 @@ export default function Home() {
                         commit {project.commit}
                       </span>
                     </div>
-                    <Link href={`/projects/${project.slug}`}>
-                      <h3 className="text-3xl font-bold mb-3 mono-font hover:opacity-75 transition-opacity cursor-pointer text-foreground">
-                        {project.name}
-                      </h3>
-                    </Link>
+                    <h3 className="text-3xl font-bold mb-3 mono-font hover:opacity-75 transition-opacity text-foreground">
+                      {project.name}
+                    </h3>
                     <p className="text-muted mb-4">{project.description}</p>
                     <div className="flex flex-wrap gap-2 mb-6">
                       {project.tags.map((tag: string) => (
@@ -127,13 +157,10 @@ export default function Home() {
                         </span>
                       ))}
                     </div>
-                    <Link
-                      href={`/projects/${project.slug}`}
-                      className="text-foreground font-semibold flex items-center gap-2 transition-all mono-font text-sm hover:gap-4 cursor-pointer"
-                    >
+                    <div className="text-foreground font-semibold flex items-center gap-2 transition-all mono-font text-sm group-hover:gap-4">
                       git show details →
-                    </Link>
-                  </div>
+                    </div>
+                  </Link>
                 );
 
                 return (

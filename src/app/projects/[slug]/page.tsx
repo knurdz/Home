@@ -9,6 +9,7 @@ import BannerImage from "@/components/BannerImage";
 import React from 'react'
 
 import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
 
 interface ArchitectureBox {
   title: string;
@@ -114,13 +115,40 @@ export async function generateStaticParams() {
   return slugs.map((slug) => ({ slug }));
 }
 
+const BASE_URL = "https://knurdz.org";
+
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
   const { slug } = await params;
   const project = getProjectBySlug(slug);
   if (!project) return { title: "Project Not Found" };
+
+  const { frontmatter } = project;
+  const url = `${BASE_URL}/projects/${slug}`;
+  const hasBanner = Boolean(frontmatter.banner);
+  const image = hasBanner
+    ? `${BASE_URL}${frontmatter.banner}`
+    : `${BASE_URL}/logo/knurdz-logo-horizontal.png`;
+  const imageWidth = hasBanner ? 1200 : 600;
+  const imageHeight = hasBanner ? 630 : 200;
+
   return {
-    title: `${project.frontmatter.title} — Knurdz`,
-    description: project.frontmatter.description,
+    title: frontmatter.title,
+    description: frontmatter.description,
+    alternates: { canonical: url },
+    openGraph: {
+      title: `${frontmatter.title} — Knurdz`,
+      description: frontmatter.description,
+      url,
+      siteName: "Knurdz",
+      type: "article",
+      images: [{ url: image, width: imageWidth, height: imageHeight, alt: frontmatter.title }],
+    },
+    twitter: {
+      card: hasBanner ? "summary_large_image" : "summary",
+      title: `${frontmatter.title} — Knurdz`,
+      description: frontmatter.description,
+      images: [image],
+    },
   };
 }
 
@@ -130,9 +158,49 @@ export default async function ProjectPage({ params }: PageProps) {
   if (!project) notFound();
 
   const { frontmatter, content } = project;
+  const url = `${BASE_URL}/projects/${slug}`;
+  const image = frontmatter.banner
+    ? `${BASE_URL}${frontmatter.banner}`
+    : `${BASE_URL}/logo/knurdz-logo-horizontal.png`;
+
+  const softwareAppJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    name: frontmatter.title,
+    description: frontmatter.description,
+    url,
+    image,
+    applicationCategory: "DeveloperApplication",
+    operatingSystem: "Web",
+    keywords: frontmatter.tags?.join(", "),
+    offers: { "@type": "Offer", price: "0", priceCurrency: "USD" },
+    publisher: {
+      "@type": "Organization",
+      name: "Knurdz",
+      url: BASE_URL,
+    },
+  };
+
+  const breadcrumbJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "Home", item: BASE_URL },
+      { "@type": "ListItem", position: 2, name: "Projects", item: `${BASE_URL}/projects` },
+      { "@type": "ListItem", position: 3, name: frontmatter.title, item: url },
+    ],
+  };
 
   return (
     <div className="min-h-screen bg-background text-foreground">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(softwareAppJsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
+      />
       {/* Navigation */}
       <Navbar activePage="projects" />
 
@@ -343,6 +411,8 @@ export default async function ProjectPage({ params }: PageProps) {
           </ReactMarkdown>
         </div>
       </article>
+
+      <Footer />
     </div>
   );
 }

@@ -14,25 +14,61 @@ const jetbrainsMono = JetBrains_Mono({
   weight: ["400", "500", "600", "700", "800"],
 });
 
+const BASE_URL = "https://knurdz.org";
+
 export const metadata: Metadata = {
-  title: "Knurdz - Community | Organization",
-  description: "Explore our innovative projects and meet our valued clients. Join the Knurdz community.",
+  metadataBase: new URL(BASE_URL),
+  title: {
+    default: "Knurdz — Tech Community & Open Source Organization",
+    template: "%s — Knurdz",
+  },
+  description:
+    "From code to silicon and social impact. Explore innovative projects, meet our partners, and join the Knurdz community in building tech that matters. Fork, commit, deploy.",
+  keywords: [
+    "Knurdz",
+    "tech community",
+    "open source",
+    "software projects",
+    "developers",
+  ],
+  authors: [{ name: "Knurdz", url: BASE_URL }],
+  creator: "Knurdz",
+  publisher: "Knurdz",
+  alternates: {
+    canonical: BASE_URL,
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
+  // Add your Google Search Console verification token below once you have it
+  // verification: {
+  //   google: "YOUR_GSC_VERIFICATION_TOKEN_HERE",
+  // },
   icons: {
     icon: "/favicon.svg",
     shortcut: "/favicon.svg",
     apple: "/favicon.svg",
   },
   openGraph: {
-    title: "Knurdz - Community | Organization",
-    description: "Explore our innovative projects and meet our valued clients. Join the Knurdz community.",
-    url: "https://knurdz.org/",
+    title: "Knurdz — Tech Community & Open Source Organization",
+    description:
+      "From code to silicon and social impact. Explore innovative projects, meet our partners, and join the Knurdz community in building tech that matters.",
+    url: BASE_URL,
     siteName: "Knurdz",
     images: [
       {
         url: "/logo/knurdz-logo-horizontal.png",
-        width: 1200,
-        height: 630,
-        alt: "Knurdz Logo",
+        width: 600,
+        height: 200,
+        alt: "Knurdz — Tech Community & Open Source Organization",
       },
     ],
     locale: "en_US",
@@ -40,12 +76,22 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Knurdz - Community | Organization",
-    description: "Explore our innovative projects and meet our valued clients. Join the Knurdz community.",
+    title: "Knurdz — Tech Community & Open Source Organization",
+    description:
+      "From code to silicon and social impact. Explore innovative projects, meet our partners, and join the Knurdz community in building tech that matters.",
     site: "@knurdzorg",
     creator: "@knurdzorg",
     images: ["/logo/knurdz-logo-horizontal.png"],
   },
+};
+
+const websiteJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  name: "Knurdz",
+  url: BASE_URL,
+  description:
+    "From code to silicon and social impact. A tech community building open-source projects that matter.",
 };
 
 export default function RootLayout({
@@ -59,6 +105,10 @@ export default function RootLayout({
         className={`${spaceGrotesk.variable} ${jetbrainsMono.variable} bg-background text-foreground antialiased transition-colors duration-300`}
         style={{ fontFamily: "var(--font-space-grotesk), sans-serif" }}
       >
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteJsonLd) }}
+        />
         {children}
       </body>
     </html>

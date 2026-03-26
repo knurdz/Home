@@ -1,6 +1,7 @@
 "use client";
 
 import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
 import ScrollIndicator from "@/components/ScrollIndicator";
 import { partners } from "@/data/partners";
 import Link from "next/link";
@@ -103,6 +104,8 @@ export default function PartnersPage() {
           </div>
         </section>
       </div>
+
+      <Footer />
     </>
   );
 }

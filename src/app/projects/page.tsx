@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
 import ScrollIndicator from "@/components/ScrollIndicator";
 import { featuredProjects, upcomingProjects } from "@/data/projects";
 
@@ -63,7 +64,10 @@ export default function ProjectsPage() {
                 {featuredProjects.map((project, index) => {
                   const isRight = index % 2 === 0;
                   const card = (
-                    <div className="group relative bg-card backdrop-blur-xl rounded-lg border border-border overflow-hidden hover:border-foreground/30 transition-all duration-300 p-8">
+                    <Link
+                      href={`/projects/${project.slug}`}
+                      className="group relative bg-card backdrop-blur-xl rounded-lg border border-border overflow-hidden hover:border-foreground/30 transition-all duration-300 p-8 block"
+                    >
                       <div className="flex items-start justify-between mb-4">
                         <div className="mono-font text-sm text-muted">
                           <span className="text-green-500">●</span>{" "}
@@ -73,11 +77,9 @@ export default function ProjectsPage() {
                           commit {project.commit}
                         </span>
                       </div>
-                      <Link href={`/projects/${project.slug}`}>
-                        <h3 className="text-3xl font-bold mb-3 mono-font hover:opacity-75 transition-opacity cursor-pointer text-foreground">
-                          {project.name}
-                        </h3>
-                      </Link>
+                      <h3 className="text-3xl font-bold mb-3 mono-font hover:opacity-75 transition-opacity text-foreground">
+                        {project.name}
+                      </h3>
                       <p className="text-muted mb-4">
                         {project.description}
                       </p>
@@ -91,13 +93,10 @@ export default function ProjectsPage() {
                           </span>
                         ))}
                       </div>
-                      <Link
-                        href={`/projects/${project.slug}`}
-                        className="text-foreground font-semibold flex items-center gap-2 transition-all mono-font text-sm hover:gap-4 cursor-pointer"
-                      >
+                      <div className="text-foreground font-semibold flex items-center gap-2 transition-all mono-font text-sm group-hover:gap-4">
                         git show details →
-                      </Link>
-                    </div>
+                      </div>
+                    </Link>
                   );
 
                   return (
@@ -184,6 +183,8 @@ export default function ProjectsPage() {
           </div>
         </section>
       </div>
+
+      <Footer />
     </>
   );
 }
