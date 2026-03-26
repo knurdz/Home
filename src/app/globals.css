@@ -309,8 +309,8 @@ body.light ::selection {
 }
 
 /* Partner logos */
-body.light img[src*="/partners/"] {
-    filter: invert(1) sepia(0.2) hue-rotate(210deg);
+body.light img[src*="/partner-logos/"] {
+    filter: brightness(0);
 }
 
 /* Fallback banner logos */
