@@ -19,7 +19,7 @@ const TERMINAL_LINES = [
 const NAV_COMMANDS: Record<string, string> = {
   home: "top",
   projects: "#projects",
-  clients: "#clients",
+  partners: "#partners",
   footer: "footer",
 };
 

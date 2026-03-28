@@ -53,7 +53,7 @@ export default function ScrollIndicator() {
     });
   };
 
-  const labels = ["hero", "projects", "clients", "cta", "footer"];
+  const labels = ["home", "projects", "partners", "cta", "footer"];
   const positions = ["0%", "25%", "50%", "75%", "100%"];
 
   return (
