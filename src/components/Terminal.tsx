@@ -17,12 +17,9 @@ const TERMINAL_LINES = [
 ];
 
 const NAV_COMMANDS: Record<string, string> = {
-  home: "#hero",
-  hero: "#hero",
+  home: "top",
   projects: "#projects",
   clients: "#clients",
-  cta: "#cta",
-  contact: "#cta",
   footer: "footer",
 };
 
@@ -94,7 +91,7 @@ export default function Terminal() {
 
   // Auto-focus hidden input after animation
   useEffect(() => {
-    if (showInput) inputElRef.current?.focus();
+    if (showInput) inputElRef.current?.focus({ preventScroll: true });
   }, [showInput]);
 
   // ── Suggestion computation ────────────────────────────────────────────────
@@ -118,7 +115,11 @@ export default function Terminal() {
     if (NAV_COMMANDS[key]) {
       setMessage({ text: `→ Navigating to ${key}...`, type: "success" });
       setTimeout(() => {
-        document.querySelector(NAV_COMMANDS[key])?.scrollIntoView({ behavior: "smooth", block: "start" });
+        if (NAV_COMMANDS[key] === "top") {
+          window.scrollTo({ top: 0, behavior: "smooth" });
+        } else {
+          document.querySelector(NAV_COMMANDS[key])?.scrollIntoView({ behavior: "smooth", block: "start" });
+        }
         setTimeout(() => { updateCurrentInput(""); setMessage(null); }, 1000);
       }, 300);
     } else {
