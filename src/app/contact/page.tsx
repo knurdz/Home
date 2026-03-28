@@ -79,12 +79,13 @@ export default function ContactPage() {
 
                 <div className="space-y-4">
                   <InfoRow icon="✉" label="email" value="hello@knurdz.com" href="mailto:hello@knurdz.com" />
-                  <InfoRow icon="�" label="linkedin" value="/company/knurdz" href="https://linkedin.com/company/knurdz" />
+                  <InfoRow icon="🔗" label="linkedin" value="/company/knurdz" href="https://linkedin.com/company/knurdz" />
                   <InfoRow icon="🐙" label="github" value="github.com/knurdz" href="https://github.com/knurdz" />
-                  <InfoRow icon="🐦" label="X (Twitter)" value="@knurdz" href="https://twitter.com/knurdz" disabled />
+                  <InfoRow icon="𝕏" label="X (Twitter)" value="@knurdz_org" href="https://x.com/knurdz_org" />
                   <InfoRow icon="📸" label="instagram" value="@knurdz" href="https://instagram.com/knurdz" disabled />
-                  <InfoRow icon="📘" label="facebook" value="@knurdz" href="https://facebook.com/knurdz" disabled />
-                  <InfoRow icon="▶️" label="youtube" value="@knurdz" href="https://youtube.com/knurdz" disabled />
+                  <InfoRow icon="📘" label="facebook" value="@knurdz" href="https://www.facebook.com/share/1AjqzPjqFa/" />
+                  <InfoRow icon="🎬" label="tiktok" value="@knurdz_org" href="https://www.tiktok.com/@knurdz_org" />
+                  <InfoRow icon="▶️" label="youtube" value="Knurdz" href="https://www.youtube.com/@knurdz" />
                 </div>
               </div>
 

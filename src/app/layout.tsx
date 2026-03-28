@@ -79,8 +79,8 @@ export const metadata: Metadata = {
     title: "Knurdz — Tech Community & Open Source Organization",
     description:
       "From code to silicon and social impact. Explore innovative projects, meet our partners, and join the Knurdz community in building tech that matters.",
-    site: "@knurdzorg",
-    creator: "@knurdzorg",
+    site: "@knurdz_org",
+    creator: "@knurdz_org",
     images: ["/logo/knurdz-logo-horizontal-bg.png"],
   },
 };

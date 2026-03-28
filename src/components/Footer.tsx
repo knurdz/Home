@@ -108,23 +108,48 @@ export default function Footer() {
                 </a>
               </li>
               <li>
-                <span className="opacity-50 cursor-not-allowed">
+                <a
+                  href="https://x.com/knurdz_org"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-foreground transition-colors"
+                >
                   X (twitter)
-                </span>
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://www.facebook.com/share/1AjqzPjqFa/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-foreground transition-colors"
+                >
+                  facebook
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://www.tiktok.com/@knurdz_org"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-foreground transition-colors"
+                >
+                  tiktok
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://www.youtube.com/@knurdz"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-foreground transition-colors"
+                >
+                  youtube
+                </a>
               </li>
               <li>
                 <span className="opacity-50 cursor-not-allowed">
                   instagram
-                </span>
-              </li>
-              <li>
-                <span className="opacity-50 cursor-not-allowed">
-                  facebook
-                </span>
-              </li>
-              <li>
-                <span className="opacity-50 cursor-not-allowed">
-                  tiktok
                 </span>
               </li>
             </ul>
