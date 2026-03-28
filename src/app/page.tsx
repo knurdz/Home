@@ -19,7 +19,7 @@ const organizationJsonLd = {
   name: "Knurdz",
   alternateName: "Knurdz Community",
   url: BASE_URL,
-  logo: `${BASE_URL}/logo/knurdz-logo-horizontal.png`,
+  logo: `${BASE_URL}/logo/knurdz-logo-horizontal-light-bg.png`,
   description:
     "From code to silicon and social impact. A tech community building open-source projects that matter.",
   email: "support@knurdz.org",
