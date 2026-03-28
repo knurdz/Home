@@ -65,7 +65,7 @@ export const metadata: Metadata = {
     siteName: "Knurdz",
     images: [
       {
-        url: "/logo/knurdz-logo-horizontal.png",
+        url: "/logo/knurdz-logo-horizontal-bg.png",
         width: 600,
         height: 200,
         alt: "Knurdz — Tech Community & Open Source Organization",
@@ -81,7 +81,7 @@ export const metadata: Metadata = {
       "From code to silicon and social impact. Explore innovative projects, meet our partners, and join the Knurdz community in building tech that matters.",
     site: "@knurdzorg",
     creator: "@knurdzorg",
-    images: ["/logo/knurdz-logo-horizontal.png"],
+    images: ["/logo/knurdz-logo-horizontal-bg.png"],
   },
 };
 
