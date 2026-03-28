@@ -20,6 +20,7 @@ const NAV_COMMANDS: Record<string, string> = {
   home: "top",
   projects: "#projects",
   partners: "#partners",
+  contact: "#cta",
   footer: "footer",
 };
 

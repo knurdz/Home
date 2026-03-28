@@ -85,7 +85,7 @@ export default function ContactPage() {
                   <InfoRow icon="📸" label="instagram" value="@knurdz" href="https://instagram.com/knurdz" disabled />
                   <InfoRow icon="📘" label="facebook" value="@knurdz" href="https://www.facebook.com/share/1AjqzPjqFa/" />
                   <InfoRow icon="🎬" label="tiktok" value="@knurdz_org" href="https://www.tiktok.com/@knurdz_org" />
-                  <InfoRow icon="▶️" label="youtube" value="Knurdz" href="https://www.youtube.com/@knurdz" />
+                  <InfoRow icon="▶️" label="youtube" value="@Knurdz" href="https://www.youtube.com/@knurdz" />
                 </div>
               </div>
 
