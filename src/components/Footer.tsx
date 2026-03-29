@@ -1,32 +1,26 @@
 "use client";
 
 import Link from "next/link";
-import { useEffect, useState } from "react";
 
 export default function Footer() {
-  const [theme, setTheme] = useState<"light" | "dark">("dark");
-
-  useEffect(() => {
-    const checkTheme = () => {
-      setTheme(document.body.classList.contains("light") ? "light" : "dark");
-    };
-    checkTheme();
-    const observer = new MutationObserver(checkTheme);
-    observer.observe(document.body, { attributes: true, attributeFilter: ["class"] });
-    return () => observer.disconnect();
-  }, []);
-
   return (
     <footer className="relative border-t border-border py-12 px-6 bg-background-alt">
       <div className="container mx-auto max-w-7xl">
         <div className="grid md:grid-cols-4 gap-12 mb-12">
           {/* Brand */}
           <div className="space-y-4">
-            <Link href="/" className="block hover:opacity-80 transition-opacity">
+            <Link href="/" aria-label="Knurdz home" className="block hover:opacity-80 transition-opacity">
               <img
-                src={theme === "light" ? "/logo/knurdz-logo-horizontal-light.svg" : "/logo/knurdz-logo-horizontal.svg"}
-                alt="Knurdz"
-                className="h-12 w-auto"
+                src="/logo/knurdz-logo-horizontal.png"
+                alt=""
+                aria-hidden="true"
+                className="logo-dark block h-12 w-auto"
+              />
+              <img
+                src="/logo/knurdz-logo-horizontal-light.png"
+                alt=""
+                aria-hidden="true"
+                className="logo-light block h-12 w-auto"
               />
             </Link>
             <p className="text-muted text-sm">

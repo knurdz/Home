@@ -9,18 +9,7 @@ interface NavbarProps {
 }
 
 export default function Navbar({ activePage }: NavbarProps) {
-  const [theme, setTheme] = useState<"light" | "dark">("dark");
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-
-  useEffect(() => {
-    const checkTheme = () => {
-      setTheme(document.body.classList.contains("light") ? "light" : "dark");
-    };
-    checkTheme();
-    const observer = new MutationObserver(checkTheme);
-    observer.observe(document.body, { attributes: true, attributeFilter: ["class"] });
-    return () => observer.disconnect();
-  }, []);
 
   // Prevent scrolling when menu is open
   useEffect(() => {
@@ -37,13 +26,21 @@ export default function Navbar({ activePage }: NavbarProps) {
         <div className="container mx-auto px-6 py-4 flex items-center justify-between relative">
           <Link
             href="/"
+            aria-label="Knurdz home"
             className="flex items-center gap-3 hover:opacity-80 transition-opacity z-10 relative"
             onClick={() => setIsMenuOpen(false)}
           >
             <img
-              src={theme === "light" ? "/logo/knurdz-logo-horizontal-light.svg" : "/logo/knurdz-logo-horizontal.svg"}
-              alt="Knurdz"
-              className="h-11 md:h-12 w-auto transition-transform"
+              src="/logo/knurdz-logo-horizontal.png"
+              alt=""
+              aria-hidden="true"
+              className="logo-dark block h-11 md:h-12 w-auto transition-transform"
+            />
+            <img
+              src="/logo/knurdz-logo-horizontal-light.png"
+              alt=""
+              aria-hidden="true"
+              className="logo-light block h-11 md:h-12 w-auto transition-transform"
             />
           </Link>
           
