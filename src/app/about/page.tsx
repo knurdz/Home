@@ -122,7 +122,7 @@ export default function AboutPage() {
             <div className="grid grid-cols-2 gap-6">
               <StatCard number="12+" label="Projects Delivered" />
               <StatCard number="14+" label="Community Members" />
-              <StatCard number="5+" label="Years Experience" />
+              <StatCard number="5+" label="Years Experience" duration={1000} />
               <StatCard number="10+" label="Active Contributors" />
             </div>
           </div>
@@ -535,46 +535,51 @@ export default function AboutPage() {
   );
 }
 
-function StatCard({ number, label }: { number: string; label: string }) {
+function StatCard({
+  number,
+  label,
+  duration = 2000,
+}: {
+  number: string;
+  label: string;
+  duration?: number;
+}) {
   const [displayNumber, setDisplayNumber] = useState("0");
   const ref = useRef<HTMLDivElement>(null);
   
   useEffect(() => {
+    let animationFrameId: number | null = null;
+
     const observer = new IntersectionObserver(
       (entries) => {
         if (entries[0].isIntersecting) {
-            const match = number.match(/^(\d+)(.*)$/);
-            if (!match) {
-                setDisplayNumber(number);
-                observer.disconnect();
-                return;
-            }
-            
-            const endValue = parseInt(match[1], 10);
-            const suffixStr = match[2];
-            
-            let startTimestamp: number | null = null;
-            const duration = 2000;
-            
-            const step = (timestamp: number) => {
-                if (!startTimestamp) startTimestamp = timestamp;
-                const progress = Math.min((timestamp - startTimestamp) / duration, 1);
-                
-                // Ease out cubic
-                const easeOut = 1 - Math.pow(1 - progress, 3);
-                
-                const current = Math.floor(easeOut * endValue);
-                setDisplayNumber(`${current}${suffixStr}`);
-                
-                if (progress < 1) {
-                    window.requestAnimationFrame(step);
-                } else {
-                    setDisplayNumber(number); // Ensure final value is exact
-                }
-            };
-            
-            window.requestAnimationFrame(step);
+          const match = number.match(/^(\d+)(.*)$/);
+          if (!match) {
+            setDisplayNumber(number);
             observer.disconnect();
+            return;
+          }
+
+          const endValue = parseInt(match[1], 10);
+          const suffixStr = match[2];
+
+          let startTimestamp: number | null = null;
+          const step = (timestamp: number) => {
+            if (!startTimestamp) startTimestamp = timestamp;
+            const progress = Math.min((timestamp - startTimestamp) / duration, 1);
+            const current = Math.floor(progress * endValue);
+
+            setDisplayNumber(`${current}${suffixStr}`);
+
+            if (progress < 1) {
+              animationFrameId = window.requestAnimationFrame(step);
+            } else {
+              setDisplayNumber(number);
+            }
+          };
+
+          animationFrameId = window.requestAnimationFrame(step);
+          observer.disconnect();
         }
       },
       { threshold: 0.1 }
@@ -584,8 +589,13 @@ function StatCard({ number, label }: { number: string; label: string }) {
       observer.observe(ref.current);
     }
     
-    return () => observer.disconnect();
-  }, [number]);
+    return () => {
+      observer.disconnect();
+      if (animationFrameId !== null) {
+        window.cancelAnimationFrame(animationFrameId);
+      }
+    };
+  }, [duration, number]);
 
   return (
     <div ref={ref} className="bg-card backdrop-blur-xl rounded-lg border border-border p-6 text-center group hover:border-green-500/50 transition-colors duration-300">
@@ -612,5 +622,3 @@ function ValueCard({ icon, title, description }: { icon: string; title: string; 
     </div>
   );
 }
-
-
