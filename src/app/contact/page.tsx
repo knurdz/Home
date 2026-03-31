@@ -78,7 +78,7 @@ export default function ContactPage() {
                 <p className="mono-font text-xs text-muted mb-2">// connection.config</p>
 
                 <div className="space-y-4">
-                  <InfoRow icon="✉" label="email" value="hello@knurdz.com" href="mailto:hello@knurdz.com" />
+                  <InfoRow icon="✉" label="email" value="hello@knurdz.org" href="mailto:hello@knurdz.org" />
                   <InfoRow icon="🔗" label="linkedin" value="/company/knurdz" href="https://linkedin.com/company/knurdz" />
                   <InfoRow icon="🐙" label="github" value="github.com/knurdz" href="https://github.com/knurdz" />
                   <InfoRow icon="𝕏" label="X (Twitter)" value="@knurdz_org" href="https://x.com/knurdz_org" />
