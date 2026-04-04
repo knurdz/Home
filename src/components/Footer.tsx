@@ -142,9 +142,14 @@ export default function Footer() {
                 </a>
               </li>
               <li>
-                <span className="opacity-50 cursor-not-allowed">
+                <a
+                  href="https://www.instagram.com/knurdz_org"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-foreground transition-colors"
+                >
                   instagram
-                </span>
+                </a>
               </li>
             </ul>
           </div>
