@@ -24,7 +24,7 @@ export default function Footer() {
               />
             </Link>
             <p className="text-muted text-sm">
-              Building extraordinary digital experiences for the world.
+              Engineering the future through code, hardware, and social innovation.
             </p>
           </div>
           {/* Links */}
@@ -83,7 +83,7 @@ export default function Footer() {
             <ul className="space-y-2 text-muted text-sm mono-font">
               <li>
                 <a
-                  href="https://linkedin.com/company/knurdz"
+                  href="https://www.linkedin.com/company/knurdz"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="hover:text-foreground transition-colors"
@@ -113,7 +113,7 @@ export default function Footer() {
               </li>
               <li>
                 <a
-                  href="https://www.facebook.com/share/1AjqzPjqFa/"
+                  href="https://www.facebook.com/people/Knurdz/61579574973113/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="hover:text-foreground transition-colors"
