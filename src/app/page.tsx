@@ -48,10 +48,10 @@ export default function Home() {
       {/* Hero Section */}
       <section
         id="hero"
-        className="relative min-h-[calc(100vh-80px)] md:min-h-screen flex items-center justify-center px-6 pt-20"
+        className="relative min-h-[calc(100vh-80px)] md:min-h-screen flex items-center justify-center px-6 pt-20 md:pt-24"
       >
         <div className="container mx-auto max-w-7xl">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
+          <div className="grid md:grid-cols-2 gap-12 items-center">
             {/* Left Content */}
             <div className="space-y-8 text-center lg:text-left">
               <div className="inline-block">
@@ -59,7 +59,7 @@ export default function Home() {
                   $ ./welcome --community
                 </span>
               </div>
-              <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold leading-tight mono-font">
+              <h1 className="text-4xl md:text-7xl lg:text-8xl font-bold leading-tight mono-font">
                 <span className="text-foreground">Build.</span>
                 <br />
                 <span className="text-faded">Innovate.</span>
@@ -81,7 +81,7 @@ export default function Home() {
               </div>
             </div>
             {/* Right Visual: Terminal-like */}
-            <div className="relative hidden lg:block">
+            <div className="relative hidden md:block">
               <Terminal />
             </div>
           </div>
@@ -165,11 +165,11 @@ export default function Home() {
 
                 return (
                   <div key={project.name} className="grid lg:grid-cols-2 gap-8 items-center">
-                    <div className={`lg:order-1 ${!isRight ? "block" : "hidden lg:block"}`}>
-                      {!isRight && card}
+                    <div className={`${isRight ? "lg:order-2" : "lg:order-1"}`}>
+                      {card}
                     </div>
-                    <div className={`lg:order-2 ${isRight ? "block" : "hidden lg:block"}`}>
-                      {isRight && card}
+                    <div className={`${isRight ? "lg:order-1" : "lg:order-2"} hidden lg:block`}>
+                      {/* Spacer for desktop branch visualization */}
                     </div>
                   </div>
                 );
@@ -242,7 +242,7 @@ export default function Home() {
       </section>
 
       {/* Partners Section */}
-      <section id="partners" className="relative py-32 px-6 bg-background-alt">
+      <section id="partners" className="relative py-16 md:py-32 px-6 bg-background-alt">
         <div className="container mx-auto max-w-7xl">
           {/* Section Header */}
           <div className="text-center mb-20">
@@ -381,7 +381,7 @@ export default function Home() {
       </section>
 
       {/* CTA Section */}
-      <section id="cta" className="relative py-32 px-6">
+      <section id="cta" className="relative py-16 md:py-32 px-6">
         <div className="container mx-auto max-w-5xl">
           <div className="relative bg-card rounded-lg border border-border p-8 md:p-20 text-center overflow-hidden">
             <div className="relative z-10 space-y-8">

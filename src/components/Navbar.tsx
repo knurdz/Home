@@ -22,12 +22,12 @@ export default function Navbar({ activePage }: NavbarProps) {
 
   return (
     <>
-      <nav className="fixed top-0 w-full z-50 bg-background/80 backdrop-blur-xl border-b border-border">
-        <div className="container mx-auto px-6 py-4 flex items-center justify-between relative">
+      <nav className="fixed top-0 w-full z-50 bg-background/80 backdrop-blur-xl shadow-[0_1px_0_var(--border)]">
+        <div className="container mx-auto max-w-7xl px-6 py-4 flex items-center justify-between relative">
           <Link
             href="/"
             aria-label="Knurdz home"
-            className="flex items-center gap-3 hover:opacity-80 transition-opacity z-10 relative"
+            className="block hover:opacity-80 transition-opacity z-10 relative"
             onClick={() => setIsMenuOpen(false)}
           >
             <img
@@ -126,13 +126,13 @@ export default function Navbar({ activePage }: NavbarProps) {
 
       {/* Mobile Menu Dropdown */}
       <div 
-        className={`lg:hidden fixed top-20 left-0 w-full bg-background/95 backdrop-blur-xl border-b border-border shadow-2xl z-40 transition-all duration-300 ease-in-out transform origin-top ${
+        className={`lg:hidden fixed top-20 left-0 w-full bg-background/95 backdrop-blur-xl shadow-[0_1px_0_var(--border)] shadow-2xl z-40 transition-all duration-300 ease-in-out transform origin-top ${
           isMenuOpen 
             ? "translate-y-0 opacity-100 scale-y-100 visible" 
             : "-translate-y-4 opacity-0 scale-y-95 invisible pointer-events-none"
         }`}
       >
-        <div className="container mx-auto px-6 py-6 flex flex-col gap-2">
+        <div className="container mx-auto max-w-7xl px-6 py-6 flex flex-col gap-2">
           <Link
             href="/"
             onClick={() => setIsMenuOpen(false)}

@@ -6,9 +6,9 @@ export default function Footer() {
   return (
     <footer className="relative border-t border-border py-12 px-6 bg-background-alt">
       <div className="container mx-auto max-w-7xl">
-        <div className="grid md:grid-cols-4 gap-12 mb-12">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-12 mb-12">
           {/* Brand */}
-          <div className="space-y-4">
+          <div className="col-span-2 md:col-span-1 space-y-4">
             <Link href="/" aria-label="Knurdz home" className="block hover:opacity-80 transition-opacity">
               <img
                 src="/logo/knurdz-logo-horizontal.png"

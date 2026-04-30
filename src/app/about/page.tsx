@@ -342,7 +342,7 @@ export default function AboutPage() {
           </div>
 
           {/* Gallery Grid - Enhanced Design */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-2 md:gap-3">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-3 md:gap-4">
             {filteredImages.map((image, index) => (
               <div
                 key={image.id}
@@ -350,7 +350,7 @@ export default function AboutPage() {
                 className="group relative aspect-square cursor-pointer"
               >
                 {/* Decorative Frame */}
-                <div className="absolute -inset-2 bg-linear-to-br from-green-500/20 via-transparent to-blue-500/20 rounded-xl blur-sm opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                <div className="absolute -inset-1 md:-inset-2 bg-linear-to-br from-green-500/20 via-transparent to-blue-500/20 rounded-xl blur-sm opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
 
                 {/* Outer Border Frame */}
                 <div className="relative bg-card/10 backdrop-blur-sm rounded-xl p-2 border border-border group-hover:border-foreground/40 transition-all duration-300 shadow-lg shadow-black/20">

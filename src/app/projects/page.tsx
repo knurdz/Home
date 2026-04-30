@@ -104,11 +104,11 @@ export default function ProjectsPage() {
                       key={project.name}
                       className="grid lg:grid-cols-2 gap-8 items-center"
                     >
-                      <div className={`lg:order-1 ${!isRight ? "block" : "hidden lg:block"}`}>
-                        {!isRight && card}
+                      <div className={`${isRight ? "lg:order-2" : "lg:order-1"}`}>
+                        {card}
                       </div>
-                      <div className={`lg:order-2 ${isRight ? "block" : "hidden lg:block"}`}>
-                        {isRight && card}
+                      <div className={`${isRight ? "lg:order-1" : "lg:order-2"} hidden lg:block`}>
+                        {/* Spacer for desktop branch visualization */}
                       </div>
                     </div>
                   );
