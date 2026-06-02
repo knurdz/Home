@@ -5,7 +5,7 @@ import ThemeToggle from "@/components/ThemeToggle";
 import { useEffect, useState } from "react";
 
 interface NavbarProps {
-  activePage?: "home" | "projects" | "partners" | "about" | "achievements" | "contact";
+  activePage?: "home" | "projects" | "partners" | "about" | "achievements" | "contact" | "join-us";
 }
 
 export default function Navbar({ activePage }: NavbarProps) {

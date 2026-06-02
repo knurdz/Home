@@ -6,7 +6,19 @@ import { ID } from "node-appwrite";
 const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 const whatsappPattern = /^07\d{8}$/;
 
-function validateSubmission(body: Record<string, unknown>) {
+type SubmissionData = {
+  name: string;
+  email: string;
+  whatsapp: string;
+  about: string;
+  why: string;
+};
+
+type ValidationResult =
+  | { success: false; error: string }
+  | { success: true; data: SubmissionData };
+
+function validateSubmission(body: Record<string, unknown>): ValidationResult {
   const name = typeof body.name === "string" ? body.name.trim() : "";
   const email = typeof body.email === "string" ? body.email.trim() : "";
   const whatsapp = typeof body.whatsapp === "string" ? body.whatsapp.trim() : "";
@@ -15,27 +27,27 @@ function validateSubmission(body: Record<string, unknown>) {
 
   if (!name || !email || !whatsapp || !about || !why) {
     return {
+      success: false,
       error: "Please fill in every field before submitting.",
-      data: null,
     };
   }
 
   if (!emailPattern.test(email)) {
     return {
+      success: false,
       error: "Please enter a valid email address.",
-      data: null,
     };
   }
 
   if (!whatsappPattern.test(whatsapp)) {
     return {
+      success: false,
       error: "WhatsApp number must start with 07 and contain exactly 10 digits.",
-      data: null,
     };
   }
 
   return {
-    error: null,
+    success: true,
     data: { name, email, whatsapp, about, why },
   };
 }
@@ -45,7 +57,7 @@ export async function POST(request: Request) {
     const body = await request.json();
     const validation = validateSubmission(body);
 
-    if (validation.error) {
+    if (!validation.success) {
       return NextResponse.json({ error: validation.error }, { status: 400 });
     }
 

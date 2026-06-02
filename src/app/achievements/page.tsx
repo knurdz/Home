@@ -71,7 +71,7 @@ export default function AchievementsPage() {
                               : undefined
                           }
                           sizes="(max-width: 768px) 100vw, 1280px"
-                          priority={achievement.order === 1}
+                          priority={achievement.frontmatter.order === 1}
                         />
                       </div>
                     ))}
