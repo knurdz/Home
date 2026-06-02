@@ -21,7 +21,7 @@ export default function JoinCommunityBanner() {
         </p>
         <Link
           href="/join-us"
-          className="shrink-0 px-4 py-1.5 rounded bg-white text-black hover:bg-white/90 transition-colors font-extrabold text-sm mono-font"
+          className="shrink-0 px-4 py-1.5 rounded bg-white text-black hover:bg-white/90 transition-colors font-bold text-sm mono-font"
         >
           Apply Now
         </Link>
