@@ -5,7 +5,7 @@ import ThemeToggle from "@/components/ThemeToggle";
 import { useEffect, useState } from "react";
 
 interface NavbarProps {
-  activePage?: "home" | "projects" | "partners" | "about" | "contact";
+  activePage?: "home" | "projects" | "partners" | "about" | "contact" | "join-us";
 }
 
 export default function Navbar({ activePage }: NavbarProps) {
@@ -77,6 +77,14 @@ export default function Navbar({ activePage }: NavbarProps) {
               } hover:text-foreground transition-colors mono-font text-sm`}
             >
               /about
+            </Link>
+            <Link
+              href="/join-us"
+              className={`${
+                activePage === "join-us" ? "text-foreground" : "text-muted"
+              } hover:text-foreground transition-colors mono-font text-sm`}
+            >
+              /join-us
             </Link>
             <ThemeToggle />
             <Link
@@ -195,6 +203,22 @@ export default function Navbar({ activePage }: NavbarProps) {
               /about
             </span>
             {activePage === "about" && <span className="text-xs">●</span>}
+          </Link>
+          
+          <Link
+            href="/join-us"
+            onClick={() => setIsMenuOpen(false)}
+            className={`group py-3 px-4 rounded-lg transition-all duration-200 mono-font flex items-center justify-between ${
+              activePage === "join-us" 
+                ? "bg-foreground text-background" 
+                : "text-foreground hover:bg-muted/10 border border-transparent hover:border-border"
+            }`}
+          >
+            <span className="flex items-center gap-3">
+              <span className={`text-xs ${activePage === "join-us" ? "text-background/60" : "text-muted"}`}>05.</span> 
+              /join-us
+            </span>
+            {activePage === "join-us" && <span className="text-xs">●</span>}
           </Link>
           
           <div className="h-px bg-border my-3 mx-2"></div>

@@ -5,7 +5,8 @@ export interface Partner {
   logo: string;
   website: string;
   description: string;
-  projects: {
+  type?: string;
+  projects?: {
     name: string;
     slug: string;
     url: string;
