@@ -136,7 +136,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     description: frontmatter.description,
     alternates: { canonical: url },
     openGraph: {
-      title: `${frontmatter.title} — Knurdz`,
+      title: `${frontmatter.title}, Knurdz`,
       description: frontmatter.description,
       url,
       siteName: "Knurdz",
@@ -145,7 +145,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     },
     twitter: {
       card: hasBanner ? "summary_large_image" : "summary",
-      title: `${frontmatter.title} — Knurdz`,
+      title: `${frontmatter.title}, Knurdz`,
       description: frontmatter.description,
       images: [image],
     },

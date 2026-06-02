@@ -5,9 +5,7 @@ description: "Knurdz members claimed 1st, 2nd, and 3rd on the Logic Sprint leade
 image: "/images/achievements/6.jpeg"
 category: "Competition"
 order: 6
-imageFit: contain
-imageWidth: 960
-imageHeight: 582
+imagePosition: top
 ---
 
 ## Result

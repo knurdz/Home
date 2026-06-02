@@ -19,21 +19,21 @@ brew install --cask rkvishwa/knurdz/sonar-code-editor
 ```
 ## Overview
 
-Sonar Code Editor is a purpose-built coding environment engineered for high-stakes scenarios — from university programming exams to technical hiring interviews. Unlike general-purpose IDEs, Sonar operates in a controlled, supervised mode that prevents candidates from accessing external resources while allowing proctors full visibility into in-progress code.
+Sonar Code Editor is a purpose-built coding environment engineered for high-stakes scenarios, from university programming exams to technical hiring interviews. Unlike general-purpose IDEs, Sonar operates in a controlled, supervised mode that prevents candidates from accessing external resources while allowing proctors full visibility into in-progress code.
 
 The editor supports real-time collaboration, meaning interviewers can observe and annotate code as it is being written, creating a natural and authentic interview experience.
 
 ## The Problem
 
-Traditional coding interviews rely on screen-sharing hacks, locked-down browsers, or proprietary platforms that feel alien to developers. Sonar bridges the gap: it feels like a real editor — keyboard shortcuts, syntax highlighting, multi-file support — while giving institutions the control they need.
+Traditional coding interviews rely on screen-sharing hacks, locked-down browsers, or proprietary platforms that feel alien to developers. Sonar bridges the gap: it feels like a real editor, keyboard shortcuts, syntax highlighting, multi-file support, while giving institutions the control they need.
 
 ## Key Features
 
-- **Real-time collaboration** — Google Docs-style live editing powered by Yjs (CRDT), featuring automated workspace sync and multi-colored shared cursors with conflict-free resolution.
-- **Supervised Exam Mode** — Enforces academic integrity via an admin dashboard that can globally disable auto-complete and snippets. Includes a strict localhost-only preview panel that silently blocks external navigation.
-- **Advanced Activity Monitoring** — Dual-layer monitoring tracks all restricted events (e.g., suspicious pastes, app blurring), syncing them to a real-time dashboard and allowing PDF exports of color-coded session logs.
-- **Multi-language support** — Powered by the Monaco Editor engine, supporting multiple programming languages (e.g., HTML, CSS, PHP, JavaScript, TypeScript, Python) with out-of-the-box syntax highlighting.
-- **Cross-platform Desktop App** — Ships as a secure, native desktop application (Electron-based) available for Windows, macOS, and Linux.
+- **Real-time collaboration**: Google Docs-style live editing powered by Yjs (CRDT), featuring automated workspace sync and multi-colored shared cursors with conflict-free resolution.
+- **Supervised Exam Mode**: Enforces academic integrity via an admin dashboard that can globally disable auto-complete and snippets. Includes a strict localhost-only preview panel that silently blocks external navigation.
+- **Advanced Activity Monitoring**: Dual-layer monitoring tracks all restricted events (e.g., suspicious pastes, app blurring), syncing them to a real-time dashboard and allowing PDF exports of color-coded session logs.
+- **Multi-language support**: Powered by the Monaco Editor engine, supporting multiple programming languages (e.g., HTML, CSS, PHP, JavaScript, TypeScript, Python) with out-of-the-box syntax highlighting.
+- **Cross-platform Desktop App**: Ships as a secure, native desktop application (Electron-based) available for Windows, macOS, and Linux.
 
 ## Technical Architecture
 

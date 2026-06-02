@@ -705,6 +705,25 @@ body.light #scrollProgress .inset-0\.5.rounded-full.bg-green-500 {
   padding-top: calc(8rem + var(--join-banner-height));
 }
 
+/* Exact offset from measured fixed header */
+.pt-site-header-exact {
+  padding-top: var(
+    --site-header-height,
+    calc(5rem + var(--join-banner-height))
+  );
+}
+
+@media (max-width: 767px) {
+  .pt-site-header-exact {
+    padding-top: max(
+      0px,
+      calc(
+        var(--site-header-height, calc(5rem + var(--join-banner-height))) - 0.5rem
+      )
+    );
+  }
+}
+
 .join-banner-scrim {
   background: linear-gradient(
     to right,
@@ -721,6 +740,31 @@ body.light #scrollProgress .inset-0\.5.rounded-full.bg-green-500 {
 
 .join-community-banner > .join-banner-content {
   line-height: normal;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem 0.75rem;
+}
+
+@media (max-width: 359px) {
+  .join-community-banner > .join-banner-content {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+  }
+
+  .join-community-banner .join-banner-text {
+    flex: none;
+    width: 100%;
+    text-align: center;
+  }
+
+  .join-community-banner .join-banner-btn {
+    margin-left: 0;
+  }
 }
 
 .join-banner-text {

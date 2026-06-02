@@ -5,9 +5,7 @@ description: "Team Knurdz advanced to the top 25 in Proxy Maze '26 after Challen
 image: "/images/achievements/5.jpeg"
 category: "Hackathon"
 order: 5
-imageFit: contain
-imageWidth: 1254
-imageHeight: 1254
+imagePosition: top
 ---
 
 ## Result

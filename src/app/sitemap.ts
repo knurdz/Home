@@ -1,4 +1,6 @@
 import type { MetadataRoute } from "next";
+import { getAllAchievementSlugs } from "@/lib/achievements";
+import { getAllEventSlugs } from "@/lib/events";
 import { getAllProjectSlugs } from "@/lib/projects";
 
 const BASE_URL = "https://knurdz.org";
@@ -43,6 +45,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "monthly",
       priority: 0.7,
     },
+    {
+      url: `${BASE_URL}/events`,
+      lastModified: new Date(),
+      changeFrequency: "monthly",
+      priority: 0.8,
+    },
   ];
 
   const projectRoutes: MetadataRoute.Sitemap = slugs.map((slug) => ({
@@ -52,5 +60,23 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.8,
   }));
 
-  return [...staticRoutes, ...projectRoutes];
+  const eventSlugs = getAllEventSlugs();
+  const eventRoutes: MetadataRoute.Sitemap = eventSlugs.map((slug) => ({
+    url: `${BASE_URL}/events/${slug}`,
+    lastModified: new Date(),
+    changeFrequency: "monthly" as const,
+    priority: 0.75,
+  }));
+
+  const achievementSlugs = getAllAchievementSlugs();
+  const achievementRoutes: MetadataRoute.Sitemap = achievementSlugs.map(
+    (slug) => ({
+      url: `${BASE_URL}/achievements/${slug}`,
+      lastModified: new Date(),
+      changeFrequency: "monthly" as const,
+      priority: 0.7,
+    })
+  );
+
+  return [...staticRoutes, ...projectRoutes, ...eventRoutes, ...achievementRoutes];
 }

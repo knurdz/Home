@@ -1,30 +1,40 @@
 "use client";
 
+import { useRouter } from "next/navigation";
 import { useEffect, useRef, useState } from "react";
 
 const TERMINAL_LINES = [
-  { text: "$ git status", color: "text-green-500", delay: 600 },
-  { text: "On branch main", color: "text-muted", delay: 200 },
-  { text: "Your branch is up to date with 'origin/main'", color: "text-muted", delay: 400 },
-  { text: "", color: "", delay: 150 },
-  { text: "$ cat README.md", color: "text-green-500", delay: 600 },
-  { text: "# Knurdz - Building the Future", color: "text-foreground", delay: 300 },
-  { text: "Innovation happens here.", color: "text-muted", delay: 300 },
-  { text: "", color: "", delay: 150 },
-  { text: "$ npm run build", color: "text-green-500", delay: 600 },
-  { text: "✓ Building amazing things...", color: "text-muted", delay: 400 },
-  { text: "✓ Server running at localhost:3000", color: "text-green-500", delay: 450 },
+  { text: "$ git status", color: "text-green-500", delay: 200 },
+  { text: "On branch main", color: "text-muted", delay: 70 },
+  { text: "Your branch is up to date with 'origin/main'", color: "text-muted", delay: 130 },
+  { text: "", color: "", delay: 50 },
+  { text: "$ cat README.md", color: "text-green-500", delay: 200 },
+  { text: "# Knurdz - Building the Future", color: "text-foreground", delay: 100 },
+  { text: "Innovation happens here.", color: "text-muted", delay: 100 },
+  { text: "", color: "", delay: 50 },
+  { text: "$ npm run build", color: "text-green-500", delay: 200 },
+  { text: "✓ Building amazing things...", color: "text-muted", delay: 130 },
+  { text: "✓ Server running at localhost:3000", color: "text-green-500", delay: 140 },
 ];
 
-const NAV_COMMANDS: Record<string, string> = {
-  home: "top",
-  projects: "#projects",
-  partners: "#partners",
-  contact: "#cta",
-  footer: "footer",
+type NavTarget =
+  | { type: "scroll"; target: "top" | "footer" }
+  | { type: "route"; path: string };
+
+const NAV_COMMANDS: Record<string, NavTarget> = {
+  home: { type: "scroll", target: "top" },
+  projects: { type: "route", path: "/projects" },
+  achievements: { type: "route", path: "/achievements" },
+  events: { type: "route", path: "/events" },
+  partners: { type: "route", path: "/partners" },
+  about: { type: "route", path: "/about" },
+  contact: { type: "route", path: "/contact" },
+  "join-us": { type: "route", path: "/join-us" },
+  footer: { type: "scroll", target: "footer" },
 };
 
 export default function Terminal() {
+  const router = useRouter();
   const inputElRef = useRef<HTMLInputElement>(null);
   const [lines, setLines] = useState<{ text: string; color: string }[]>([]);
   const [isTyping, setIsTyping] = useState(true);
@@ -76,7 +86,7 @@ export default function Terminal() {
       if (charIdx < line.text.length) {
         builtText += line.text[charIdx++];
         setLines([...committed, { text: builtText, color: line.color }]);
-        tid = setTimeout(tick, 30);
+        tid = setTimeout(tick, 12);
       } else {
         committed.push({ text: builtText, color: line.color });
         setLines([...committed]);
@@ -86,7 +96,7 @@ export default function Terminal() {
       }
     };
 
-    tid = setTimeout(tick, 500);
+    tid = setTimeout(tick, 200);
     return () => clearTimeout(tid);
   }, []);
 
@@ -113,13 +123,16 @@ export default function Terminal() {
     updateSelected(-1);
     if (!key) return;
 
-    if (NAV_COMMANDS[key]) {
+    const nav = NAV_COMMANDS[key];
+    if (nav) {
       setMessage({ text: `→ Navigating to ${key}...`, type: "success" });
       setTimeout(() => {
-        if (NAV_COMMANDS[key] === "top") {
+        if (nav.type === "route") {
+          router.push(nav.path);
+        } else if (nav.target === "top") {
           window.scrollTo({ top: 0, behavior: "smooth" });
         } else {
-          document.querySelector(NAV_COMMANDS[key])?.scrollIntoView({ behavior: "smooth", block: "start" });
+          document.querySelector("footer")?.scrollIntoView({ behavior: "smooth", block: "start" });
         }
         setTimeout(() => { updateCurrentInput(""); setMessage(null); }, 1000);
       }, 300);

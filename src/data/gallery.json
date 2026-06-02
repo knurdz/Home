@@ -379,6 +379,56 @@
       "date": "2026-05-16",
       "category": "Competition",
       "tags": ["competition", "hackathon", "ai"]
+    },
+    {
+      "id": "event-38",
+      "title": "IESL ROBOGAMES 25/26 - University Category",
+      "description": "IESL RoboGames is an annual event organized by the Department of Computer Science & Engineering of the University of Moratuwa in collaboration with The Institution of Engineers Sri Lanka (IESL) and SLT-Mobitel. The competition includes three main segments: School category, Undergraduate category and Open category. Competitors nationwide are eligible to enter their designated categories, and all enthusiasts are welcome to take part in the open BattleBot Challenge.",
+      "src": "/gallery/event-38.jpg",
+      "alt": "IESL RoboGames 25/26 university category image 38",
+      "date": "2026-04-26",
+      "category": "Competition",
+      "tags": ["competition", "robotics", "university"]
+    },
+    {
+      "id": "event-39",
+      "title": "IESL ROBOGAMES 25/26 - University Category",
+      "description": "IESL RoboGames is an annual event organized by the Department of Computer Science & Engineering of the University of Moratuwa in collaboration with The Institution of Engineers Sri Lanka (IESL) and SLT-Mobitel. The competition includes three main segments: School category, Undergraduate category and Open category. Competitors nationwide are eligible to enter their designated categories, and all enthusiasts are welcome to take part in the open BattleBot Challenge.",
+      "src": "/gallery/event-39.jpg",
+      "alt": "IESL RoboGames 25/26 university category image 39",
+      "date": "2026-04-26",
+      "category": "Competition",
+      "tags": ["competition", "robotics", "university"]
+    },
+    {
+      "id": "event-40",
+      "title": "IESL ROBOGAMES 25/26 - University Category",
+      "description": "IESL RoboGames is an annual event organized by the Department of Computer Science & Engineering of the University of Moratuwa in collaboration with The Institution of Engineers Sri Lanka (IESL) and SLT-Mobitel. The competition includes three main segments: School category, Undergraduate category and Open category. Competitors nationwide are eligible to enter their designated categories, and all enthusiasts are welcome to take part in the open BattleBot Challenge.",
+      "src": "/gallery/event-40.jpg",
+      "alt": "IESL RoboGames 25/26 university category image 40",
+      "date": "2026-04-26",
+      "category": "Competition",
+      "tags": ["competition", "robotics", "university"]
+    },
+    {
+      "id": "event-41",
+      "title": "IESL ROBOGAMES 25/26 - University Category",
+      "description": "IESL RoboGames is an annual event organized by the Department of Computer Science & Engineering of the University of Moratuwa in collaboration with The Institution of Engineers Sri Lanka (IESL) and SLT-Mobitel. The competition includes three main segments: School category, Undergraduate category and Open category. Competitors nationwide are eligible to enter their designated categories, and all enthusiasts are welcome to take part in the open BattleBot Challenge.",
+      "src": "/gallery/event-41.jpg",
+      "alt": "IESL RoboGames 25/26 university category image 41",
+      "date": "2026-04-26",
+      "category": "Competition",
+      "tags": ["competition", "robotics", "university"]
+    },
+    {
+      "id": "event-42",
+      "title": "IESL ROBOGAMES 25/26 - University Category",
+      "description": "IESL RoboGames is an annual event organized by the Department of Computer Science & Engineering of the University of Moratuwa in collaboration with The Institution of Engineers Sri Lanka (IESL) and SLT-Mobitel. The competition includes three main segments: School category, Undergraduate category and Open category. Competitors nationwide are eligible to enter their designated categories, and all enthusiasts are welcome to take part in the open BattleBot Challenge.",
+      "src": "/gallery/event-42.jpg",
+      "alt": "IESL RoboGames 25/26 university category image 42",
+      "date": "2026-04-26",
+      "category": "Competition",
+      "tags": ["competition", "robotics", "university"]
     }
   ],
   "projects": [

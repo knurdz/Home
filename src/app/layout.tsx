@@ -105,7 +105,7 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body
-        className={`${spaceGrotesk.variable} ${jetbrainsMono.variable} bg-background text-foreground antialiased transition-colors duration-300`}
+        className={`${spaceGrotesk.variable} ${jetbrainsMono.variable} bg-background text-foreground antialiased transition-colors duration-300 overflow-x-hidden`}
         style={{ fontFamily: "var(--font-space-grotesk), sans-serif" }}
       >
         <script

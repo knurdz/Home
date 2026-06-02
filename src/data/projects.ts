@@ -36,8 +36,18 @@ export const projects: Project[] = [
     branch: "main",
     commit: "c4e8a1f",
     description:
-      "Upload a PDF, scan a repo, or paste text — Origami streams an interactive explanation and generates a v0-powered MVP in seconds.",
+      "Upload a PDF, scan a repo, or paste text, Origami streams an interactive explanation and generates a v0-powered MVP in seconds.",
     tags: ["Web App", "AI", "Developer Tool"],
+    upcoming: false,
+  },
+  {
+    name: "MazeX",
+    slug: "mazex",
+    branch: "main",
+    commit: "a3m9x07",
+    description:
+      "Full-stack event platform for MazeX 1.0, an island-wide inter-university Micromouse competition with customizable organizer back-office and cloud infrastructure. Built and hosted by Knurdz as web partner for IEEE RAS & WIE, University of Moratuwa.",
+    tags: ["Web App", "Event Platform", "Robotics"],
     upcoming: false,
   },
   {
@@ -66,7 +76,7 @@ export const projects: Project[] = [
     branch: "main",
     commit: "f1c8d06",
     description:
-      "Revenue and AI engine for founders — monitors channels, scores leads, drafts responses, and automates CRM follow-ups through a six-step protocol.",
+      "Revenue and AI engine for founders, monitors channels, scores leads, drafts responses, and automates CRM follow-ups through a six-step protocol.",
     tags: ["Web App", "AI", "SaaS"],
     upcoming: false,
   },

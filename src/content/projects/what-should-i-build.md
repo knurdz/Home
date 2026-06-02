@@ -10,7 +10,7 @@ commit: "b7d3f92"
 
 ## Overview
 
-What Should I Build is an AI project idea generator. Tell it your skills, GitHub profile, available time, and career goals — or drop any context like a hackathon theme — and get a roadmap, stack recommendation, MVP scope, monetization paths, and an interactive workspace to ship from.
+What Should I Build is an AI project idea generator. Tell it your skills, GitHub profile, available time, and career goals, or drop any context like a hackathon theme, and get a roadmap, stack recommendation, MVP scope, monetization paths, and an interactive workspace to ship from.
 
 Not just a list of ideas: a full workspace with architecture, agent instructions, MVP previews, and chat.
 
@@ -20,22 +20,22 @@ Developers get stuck choosing what to build. Generic idea lists don't account fo
 
 ## Key Features
 
-- **Tailored idea generation** — 3 ideas from profile or context; add a seed or uploads for 5.
-- **Seed idea + file uploads** — Anchor with a concept or attach images, PDFs, and docs.
-- **Agentic & AI toggles** — Build with coding agents or AI inside the product.
-- **Live generation logs** — Phased SSE logs with no black box.
-- **Interactive workspace** — Ranked projects, attachments, and status tracking.
-- **Architecture canvas** — React Flow diagrams with validation.
-- **AGENTS.md generation** — Agent instructions for Cursor and other coding agents.
-- **v0 MVP preview** — Live UI preview before you write code.
-- **Per-project chat** — Streaming chat with full project context.
+- **Tailored idea generation**: 3 ideas from profile or context; add a seed or uploads for 5.
+- **Seed idea + file uploads**: Anchor with a concept or attach images, PDFs, and docs.
+- **Agentic & AI toggles**: Build with coding agents or AI inside the product.
+- **Live generation logs**: Phased SSE logs with no black box.
+- **Interactive workspace**: Ranked projects, attachments, and status tracking.
+- **Architecture canvas**: React Flow diagrams with validation.
+- **AGENTS.md generation**: Agent instructions for Cursor and other coding agents.
+- **v0 MVP preview**: Live UI preview before you write code.
+- **Per-project chat**: Streaming chat with full project context.
 
 ## How It Works
 
-1. **Describe your context** — Share skills, GitHub, time available, career goals, or freeform context like a hackathon theme.
-2. **Generate tailored ideas** — Get 3 or 5 project ideas with pitch, stack rationale, MVP scope, and phased roadmap.
-3. **Explore your workspace** — Each session becomes a workspace. Browse ranked projects and pick the idea worth building.
-4. **Ship with Agent, Canvas & MVP** — Generate AGENTS.md, edit the architecture canvas, preview the MVP, and refine via chat.
+1. **Describe your context**: Share skills, GitHub, time available, career goals, or freeform context like a hackathon theme.
+2. **Generate tailored ideas**: Get 3 or 5 project ideas with pitch, stack rationale, MVP scope, and phased roadmap.
+3. **Explore your workspace**: Each session becomes a workspace. Browse ranked projects and pick the idea worth building.
+4. **Ship with Agent, Canvas & MVP**: Generate AGENTS.md, edit the architecture canvas, preview the MVP, and refine via chat.
 
 ## Use Cases
 

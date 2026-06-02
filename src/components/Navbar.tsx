@@ -6,7 +6,7 @@ import JoinCommunityBanner from "@/components/JoinCommunityBanner";
 import { useEffect, useRef, useState } from "react";
 
 interface NavbarProps {
-  activePage?: "home" | "projects" | "partners" | "about" | "achievements" | "contact" | "join-us";
+  activePage?: "home" | "projects" | "partners" | "about" | "achievements" | "events" | "contact" | "join-us";
 }
 
 export default function Navbar({ activePage }: NavbarProps) {
@@ -24,20 +24,26 @@ export default function Navbar({ activePage }: NavbarProps) {
 
   useEffect(() => {
     const header = headerRef.current;
-    const banner = header?.firstElementChild;
-    if (!banner) return;
+    if (!header) return;
 
-    const syncBannerHeight = () => {
+    const syncHeaderMetrics = () => {
+      const banner = header.firstElementChild;
+      if (banner) {
+        document.documentElement.style.setProperty(
+          "--join-banner-height",
+          `${banner.getBoundingClientRect().height}px`,
+        );
+      }
       document.documentElement.style.setProperty(
-        "--join-banner-height",
-        `${banner.getBoundingClientRect().height}px`,
+        "--site-header-height",
+        `${header.getBoundingClientRect().height}px`,
       );
     };
 
-    syncBannerHeight();
+    syncHeaderMetrics();
 
-    const observer = new ResizeObserver(syncBannerHeight);
-    observer.observe(banner);
+    const observer = new ResizeObserver(syncHeaderMetrics);
+    observer.observe(header);
 
     return () => observer.disconnect();
   }, []);
@@ -47,7 +53,7 @@ export default function Navbar({ activePage }: NavbarProps) {
       <header ref={headerRef} className="fixed top-0 inset-x-0 z-50 flex flex-col">
         <JoinCommunityBanner />
         <nav className="w-full bg-background backdrop-blur-xl shadow-[0_1px_0_var(--border)]">
-        <div className="container mx-auto max-w-7xl px-6 py-4 flex items-center justify-between relative">
+        <div className="container mx-auto max-w-7xl min-w-0 px-4 sm:px-6 py-3 sm:py-4 flex items-center justify-between relative">
           <Link
             href="/"
             aria-label="Knurdz home"
@@ -87,6 +93,22 @@ export default function Navbar({ activePage }: NavbarProps) {
               /projects
             </Link>
             <Link
+              href="/achievements"
+              className={`${
+                activePage === "achievements" ? "text-foreground" : "text-muted"
+              } hover:text-foreground transition-colors mono-font text-sm`}
+            >
+              /achievements
+            </Link>
+            <Link
+              href="/events"
+              className={`${
+                activePage === "events" ? "text-foreground" : "text-muted"
+              } hover:text-foreground transition-colors mono-font text-sm`}
+            >
+              /events
+            </Link>
+            <Link
               href="/partners"
               className={`${
                 activePage === "partners" ? "text-foreground" : "text-muted"
@@ -103,15 +125,6 @@ export default function Navbar({ activePage }: NavbarProps) {
               /about
             </Link>
             <Link
-              href="/achievements"
-              className={`${
-                activePage === "achievements" ? "text-foreground" : "text-muted"
-              } hover:text-foreground transition-colors mono-font text-sm`}
-            >
-              /achievements
-            </Link>
-            <ThemeToggle />
-            <Link
               href="/contact"
               className={`${
                 activePage === "contact"
@@ -121,6 +134,7 @@ export default function Navbar({ activePage }: NavbarProps) {
             >
               % cd contact
             </Link>
+            <ThemeToggle />
           </div>
 
           {/* Mobile Menu Button */}
@@ -165,7 +179,7 @@ export default function Navbar({ activePage }: NavbarProps) {
             : "-translate-y-4 opacity-0 scale-y-95 invisible pointer-events-none"
         }`}
       >
-        <div className="container mx-auto max-w-7xl px-6 py-6 flex flex-col gap-2">
+        <div className="container mx-auto max-w-7xl min-w-0 px-4 sm:px-6 py-5 sm:py-6 flex flex-col gap-2">
           <Link
             href="/"
             onClick={() => setIsMenuOpen(false)}
@@ -199,6 +213,38 @@ export default function Navbar({ activePage }: NavbarProps) {
           </Link>
 
           <Link
+            href="/achievements"
+            onClick={() => setIsMenuOpen(false)}
+            className={`group py-3 px-4 rounded-lg transition-all duration-200 mono-font flex items-center justify-between ${
+              activePage === "achievements" 
+                ? "bg-foreground text-background" 
+                : "text-foreground hover:bg-muted/10 border border-transparent hover:border-border"
+            }`}
+          >
+            <span className="flex items-center gap-3">
+              <span className={`text-xs ${activePage === "achievements" ? "text-background/60" : "text-muted"}`}>03.</span> 
+              /achievements
+            </span>
+            {activePage === "achievements" && <span className="text-xs">●</span>}
+          </Link>
+
+          <Link
+            href="/events"
+            onClick={() => setIsMenuOpen(false)}
+            className={`group py-3 px-4 rounded-lg transition-all duration-200 mono-font flex items-center justify-between ${
+              activePage === "events" 
+                ? "bg-foreground text-background" 
+                : "text-foreground hover:bg-muted/10 border border-transparent hover:border-border"
+            }`}
+          >
+            <span className="flex items-center gap-3">
+              <span className={`text-xs ${activePage === "events" ? "text-background/60" : "text-muted"}`}>04.</span> 
+              /events
+            </span>
+            {activePage === "events" && <span className="text-xs">●</span>}
+          </Link>
+
+          <Link
             href="/partners"
             onClick={() => setIsMenuOpen(false)}
             className={`group py-3 px-4 rounded-lg transition-all duration-200 mono-font flex items-center justify-between ${
@@ -208,7 +254,7 @@ export default function Navbar({ activePage }: NavbarProps) {
             }`}
           >
             <span className="flex items-center gap-3">
-              <span className={`text-xs ${activePage === "partners" ? "text-background/60" : "text-muted"}`}>03.</span> 
+              <span className={`text-xs ${activePage === "partners" ? "text-background/60" : "text-muted"}`}>05.</span> 
               /partners
             </span>
             {activePage === "partners" && <span className="text-xs">●</span>}
@@ -224,34 +270,13 @@ export default function Navbar({ activePage }: NavbarProps) {
             }`}
           >
             <span className="flex items-center gap-3">
-              <span className={`text-xs ${activePage === "about" ? "text-background/60" : "text-muted"}`}>04.</span> 
+              <span className={`text-xs ${activePage === "about" ? "text-background/60" : "text-muted"}`}>06.</span> 
               /about
             </span>
             {activePage === "about" && <span className="text-xs">●</span>}
           </Link>
           
-          <Link
-            href="/achievements"
-            onClick={() => setIsMenuOpen(false)}
-            className={`group py-3 px-4 rounded-lg transition-all duration-200 mono-font flex items-center justify-between ${
-              activePage === "achievements" 
-                ? "bg-foreground text-background" 
-                : "text-foreground hover:bg-muted/10 border border-transparent hover:border-border"
-            }`}
-          >
-            <span className="flex items-center gap-3">
-              <span className={`text-xs ${activePage === "achievements" ? "text-background/60" : "text-muted"}`}>05.</span> 
-              /achievements
-            </span>
-            {activePage === "achievements" && <span className="text-xs">●</span>}
-          </Link>
-          
           <div className="h-px bg-border my-3 mx-2"></div>
-          
-          <div className="flex items-center justify-between px-4 py-2 mb-2">
-            <span className="text-sm mono-font text-muted">Appearance</span>
-            <ThemeToggle />
-          </div>
 
           <Link
             href="/contact"
@@ -264,6 +289,11 @@ export default function Navbar({ activePage }: NavbarProps) {
           >
             % cd contact_us
           </Link>
+
+          <div className="flex items-center justify-between px-4 py-2 mt-2">
+            <span className="text-sm mono-font text-muted">Appearance</span>
+            <ThemeToggle />
+          </div>
         </div>
       </div>
     </>

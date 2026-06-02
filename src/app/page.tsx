@@ -104,7 +104,7 @@ export default function Home() {
               Our <span className="text-faded">Partners</span>
             </h2>
             <p className="text-xl text-muted max-w-2xl mx-auto">
-              Collaborating with industry leaders to ship production-ready solutions
+              Collaborating with industry leaders and communities to ship production-ready solutions and partner on events
             </p>
           </div>
 

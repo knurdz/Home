@@ -14,14 +14,14 @@ export default function JoinCommunityBanner() {
         aria-hidden
       />
       <div className="join-banner-scrim absolute inset-0" />
-      <div className="join-banner-content relative container mx-auto max-w-7xl px-4 sm:px-6 py-2.5 flex flex-col sm:flex-row items-center justify-center sm:justify-between gap-2 sm:gap-3">
-        <p className="join-banner-text m-0 text-sm sm:text-base text-center sm:text-left leading-snug">
+      <div className="join-banner-content relative container mx-auto max-w-7xl px-4 sm:px-6 py-2.5">
+        <p className="join-banner-text m-0 flex-1 text-sm sm:text-base text-left leading-snug">
           Join the Knurdz community —{" "}
           <span className="join-banner-highlight inline-block font-semibold whitespace-nowrap">
             applications close soon.
           </span>
         </p>
-        <Link href="/join-us" className="join-banner-btn shrink-0 px-4 py-1.5 rounded font-bold text-sm mono-font">
+        <Link href="/join-us" className="join-banner-btn shrink-0 ml-auto px-4 py-1.5 rounded font-bold text-sm mono-font">
           Apply Now
         </Link>
       </div>

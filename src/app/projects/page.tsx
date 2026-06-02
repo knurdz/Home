@@ -126,7 +126,7 @@ export default function ProjectsPage() {
                   Upcoming <span className="text-faded">Projects</span>
                 </h2>
                 <p className="text-lg text-muted max-w-2xl mx-auto">
-                  In progress — currently being crafted in our dev branches
+                  In progress, currently being crafted in our dev branches
                 </p>
               </div>
 

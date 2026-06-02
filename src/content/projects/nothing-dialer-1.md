@@ -14,9 +14,9 @@ commit: "1f125a2"
 
 ## Overview
 
-Nothing Dialer 1 is a custom dialer application designed exclusively for **Nothing OS** — the minimalist, glyph-accented Android skin powering the Nothing Phone series. Where the stock dialer treats the Glyph Interface as a notification-only feature, Nothing Dialer 1 extends it to active, in-progress call states.
+Nothing Dialer 1 is a custom dialer application designed exclusively for **Nothing OS**, the minimalist, glyph-accented Android skin powering the Nothing Phone series. Where the stock dialer treats the Glyph Interface as a notification-only feature, Nothing Dialer 1 extends it to active, in-progress call states.
 
-When you place or receive a call, the phone's signature LED glyphs light up in choreographed patterns that convey call state — ringing, picked up, on hold, ended — making the back of your Nothing Phone a live, ambient call indicator.
+When you place or receive a call, the phone's signature LED glyphs light up in choreographed patterns that convey call state, ringing, picked up, on hold, ended, making the back of your Nothing Phone a live, ambient call indicator.
 
 ## Glyph Patterns
 
@@ -24,18 +24,18 @@ The app integrates with the `nothing_glyph_interface` to expose individual LED s
 
 | Call State | Glyph Behavior |
 |---|---|
-| Outgoing — Ringing | Configurable breath animations, custom interval progress |
+| Outgoing, Ringing | Configurable breath animations, custom interval progress |
 | Call Connected | In-call breath progress and custom interval behaviors |
 | Incoming Call | Fast strobe, outer ring |
 | Call Ended | LEDs turn off |
 
 ## Features
 
-- **Glyph-aware dialer** — Custom glyph animations for outgoing AND ongoing calls (the stock app only supports incoming).
-- **Minimal UI** — Built in Flutter but heavily adheres to the Nothing OS design language: pure, minimal, and typography-focused.
-- **Customizable Glyphs** — Fine-tune parameters like Breath Progress duration, interval speed, and active LED channels directly in the dialer settings.
-- **Cross-Sim Support** — Picks appropriate SIM and native controls seamlessly.
-- **Deep Android Integration** — Uses Android's `TelecomManager` and `InCallService` to completely replace the system dialer workflow.
+- **Glyph-aware dialer**: Custom glyph animations for outgoing AND ongoing calls (the stock app only supports incoming).
+- **Minimal UI**: Built in Flutter but heavily adheres to the Nothing OS design language: pure, minimal, and typography-focused.
+- **Customizable Glyphs**: Fine-tune parameters like Breath Progress duration, interval speed, and active LED channels directly in the dialer settings.
+- **Cross-Sim Support**: Picks appropriate SIM and native controls seamlessly.
+- **Deep Android Integration**: Uses Android's `TelecomManager` and `InCallService` to completely replace the system dialer workflow.
 
 ## Technical Details
 
@@ -72,7 +72,7 @@ void _triggerGlyphLights(String callState) async {
 
 ## Status
 
-Available on [Google Play](https://play.google.com/store/apps/details?id=com.rkkvishva.nothing_dialer&pcampaignid=web_share). Active development on `feature/mobile` — essential dialing, SIM selection, native `InCallService` integration, and Flutter MethodChannels are implemented. Refining ongoing call glyph synchronizations and the history log interface.
+Available on [Google Play](https://play.google.com/store/apps/details?id=com.rkkvishva.nothing_dialer&pcampaignid=web_share). Active development on `feature/mobile`, essential dialing, SIM selection, native `InCallService` integration, and Flutter MethodChannels are implemented. Refining ongoing call glyph synchronizations and the history log interface.
 ## Privacy Policy
 
 [View Privacy Policy](/nothing-dialer-1/privacy-policy)

@@ -77,6 +77,11 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
+                <Link href="/events" className="hover:text-foreground transition-colors">
+                  events
+                </Link>
+              </li>
+              <li>
                 <Link href="/contact" className="hover:text-foreground transition-colors">
                   contact
                 </Link>

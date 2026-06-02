@@ -50,31 +50,31 @@ export default function ContactPage() {
       {/* Navigation */}
       <Navbar activePage="contact" />
 
-      <main className="min-h-screen pt-site-header-lg pb-20 px-6">
-        <div className="container mx-auto max-w-6xl">
+      <main className="min-h-screen pt-site-header-lg pb-16 sm:pb-20 px-4 sm:px-6 overflow-x-hidden">
+        <div className="container mx-auto max-w-6xl min-w-0">
 
           {/* Header */}
-          <div className="mb-16 text-center lg:text-left">
-            <span className="inline-block px-4 py-2 rounded border border-border text-muted text-sm mono-font mb-6">
+          <div className="mb-10 sm:mb-16 text-center lg:text-left">
+            <span className="inline-block px-3 sm:px-4 py-1.5 sm:py-2 rounded border border-border text-muted text-xs sm:text-sm mono-font mb-4 sm:mb-6 break-all sm:break-normal">
               $ curl -X POST /contact --data &apos;{`{}`}&apos;
             </span>
-            <h1 className="text-5xl md:text-7xl font-bold mono-font leading-tight">
+            <h1 className="text-3xl sm:text-5xl md:text-7xl font-bold mono-font leading-tight text-balance">
               <span className="text-foreground">Get in</span>{" "}
               <span className="text-faded">Touch</span>
               <span className="text-green-500">.</span>
             </h1>
-            <p className="mt-4 text-xl text-muted max-w-xl">
+            <p className="mt-3 sm:mt-4 text-base sm:text-xl text-muted max-w-xl mx-auto lg:mx-0">
               Open a new issue — let&apos;s build something together.
             </p>
           </div>
 
-          <div className="grid lg:grid-cols-5 gap-12">
+          <div className="grid lg:grid-cols-5 gap-8 sm:gap-12">
 
             {/* Left — Info Panel */}
             <div className="lg:col-span-2 space-y-6">
 
               {/* Connection info card */}
-              <div className="bg-card border border-border rounded-lg p-6 space-y-4">
+              <div className="bg-card border border-border rounded-lg p-4 sm:p-6 space-y-4">
                 <p className="mono-font text-xs text-muted mb-2">// connection.config</p>
 
                 <div className="space-y-4">
@@ -90,7 +90,7 @@ export default function ContactPage() {
               </div>
 
               {/* Response time card */}
-              <div className="bg-card border border-border rounded-lg p-6">
+              <div className="bg-card border border-border rounded-lg p-4 sm:p-6">
                 <p className="mono-font text-xs text-muted mb-3">// process.status</p>
                 <div className="flex items-center gap-3 mb-3">
                   <span className="w-2.5 h-2.5 rounded-full bg-green-500 animate-pulse" />
@@ -99,18 +99,6 @@ export default function ContactPage() {
                 <p className="text-muted text-sm">
                   We typically respond within <span className="text-foreground font-semibold">24 hours</span>.
                 </p>
-              </div>
-
-              {/* Services card */}
-              <div className="bg-card border border-border rounded-lg p-6">
-                <p className="mono-font text-xs text-muted mb-4">// services.list</p>
-                <ul className="space-y-2">
-                  {["Web Development", "Mobile Apps", "Desktop Application", "UI/UX Design", "AI Integration", "Consulting"].map((s) => (
-                    <li key={s} className="flex items-center gap-2 mono-font text-sm text-foreground">
-                      <span className="text-green-500">›</span> {s}
-                    </li>
-                  ))}
-                </ul>
               </div>
             </div>
 
@@ -125,7 +113,7 @@ export default function ContactPage() {
                   <span className="ml-3 mono-font text-xs text-muted">new-issue.sh</span>
                 </div>
 
-                <form onSubmit={handleSubmit} className="p-8 space-y-6">
+                <form onSubmit={handleSubmit} className="p-4 sm:p-6 md:p-8 space-y-5 sm:space-y-6">
                   {/* Name + Email */}
                   <div className="grid sm:grid-cols-2 gap-6">
                     <Field
@@ -203,7 +191,7 @@ export default function ContactPage() {
                   <button
                     type="submit"
                     disabled={status === "sending"}
-                    className="w-full py-4 rounded bg-foreground text-background hover:opacity-90 disabled:opacity-50 disabled:cursor-not-allowed transition-all font-bold mono-font text-sm flex items-center justify-center gap-2"
+                    className="w-full min-h-11 py-3.5 sm:py-4 rounded bg-foreground text-background hover:opacity-90 active:opacity-80 disabled:opacity-50 disabled:cursor-not-allowed transition-all font-bold mono-font text-sm flex items-center justify-center gap-2 touch-manipulation"
                   >
                     {status === "sending" ? (
                       <>
@@ -301,7 +289,7 @@ function InfoRow({
       <span className="text-lg mt-0.5">{icon}</span>
       <div>
         <p className="mono-font text-xs text-muted">// {label}</p>
-        <p className="mono-font text-sm text-foreground group-hover:text-green-500 transition-colors">
+        <p className="mono-font text-sm text-foreground group-hover:text-green-500 transition-colors break-all">
           {value}
         </p>
       </div>

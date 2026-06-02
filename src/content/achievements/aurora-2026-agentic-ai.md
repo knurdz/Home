@@ -5,9 +5,7 @@ description: "Team Knurdz Neural was selected as a finalist in Aurora 2026's Age
 image: "/images/achievements/4.jpeg"
 category: "Competition"
 order: 4
-imageFit: contain
-imageWidth: 1080
-imageHeight: 1080
+imagePosition: top
 ---
 
 ## Result

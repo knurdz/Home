@@ -84,7 +84,7 @@ export const members: Member[] = [
   },
   {
     name: "Kaveesha Ginodh",
-    role: "Knurdz Member",
+    role: "Knurdz Contributor",
     bio: "",
     image: "https://github.com/Kavee-ginty.png",
     github: "https://github.com/Kavee-ginty",
@@ -92,7 +92,7 @@ export const members: Member[] = [
   },
   {
     name: "Ashen Tharindu",
-    role: "Knurdz Member",
+    role: "Knurdz Contributor",
     bio: "",
     image: "https://github.com/Azriel-prog.png",
     github: "https://github.com/Azriel-prog",
@@ -100,7 +100,7 @@ export const members: Member[] = [
   },
   {
     name: "Praveen Fernando",
-    role: "Knurdz Member",
+    role: "Knurdz Contributor",
     bio: "",
     image: "https://github.com/ARSPFdo-2004.png",
     github: "https://github.com/ARSPFdo-2004",
@@ -108,19 +108,11 @@ export const members: Member[] = [
   },
   {
     name: "Mahinsa Waththegedara",
-    role: "Knurdz Member",
+    role: "Knurdz Contributor",
     bio: "",
     image: "https://github.com/Mahinsa-Wattegedara.png",
     github: "https://github.com/Mahinsa-Wattegedara",
     linkedin: "https://www.linkedin.com/in/mahinsa-waththegedara-28b7b335a/"
-  },
-  {
-    name: "Dasun Jayasanka",
-    role: "Knurdz Member",
-    bio: "",
-    image: "https://github.com/dasunjlk.png",
-    github: "https://github.com/dasunjlk",
-    linkedin: "https://www.linkedin.com/in/dasunjayasanka/"
   }
 ];
 
