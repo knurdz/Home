@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export default function JoinCommunityBanner() {
   return (
-    <div className="relative w-full border-b border-border overflow-hidden h-14">
+    <div className="relative w-full border-b border-border overflow-hidden min-h-14">
       <Image
         src="/images/banner/banner.png"
         alt=""
@@ -14,15 +14,14 @@ export default function JoinCommunityBanner() {
         aria-hidden
       />
       <div className="join-banner-scrim absolute inset-0" />
-      <div className="relative container mx-auto max-w-7xl px-4 sm:px-6 h-full flex items-center justify-center sm:justify-between gap-3">
-        <p className="text-sm sm:text-base text-white/90 text-center sm:text-left leading-tight">
+      <div className="relative container mx-auto max-w-7xl px-4 sm:px-6 py-2.5 flex flex-col sm:flex-row items-center justify-center sm:justify-between gap-2 sm:gap-3">
+        <p className="join-banner-text text-sm sm:text-base text-center sm:text-left leading-snug">
           Join the Knurdz community —{" "}
-          <span className="text-[#afca52] font-semibold">applications close soon</span>.
+          <span className="join-banner-highlight inline-block font-semibold whitespace-nowrap">
+            applications close soon.
+          </span>
         </p>
-        <Link
-          href="/join-us"
-          className="shrink-0 px-4 py-1.5 rounded bg-white text-black hover:bg-white/90 transition-colors font-bold text-sm mono-font"
-        >
+        <Link href="/join-us" className="join-banner-btn shrink-0 px-4 py-1.5 rounded font-bold text-sm mono-font">
           Apply Now
         </Link>
       </div>

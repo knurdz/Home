@@ -714,6 +714,43 @@ body.light #scrollProgress .inset-0\.5.rounded-full.bg-green-500 {
   );
 }
 
+.join-banner-text {
+  color: rgba(255, 255, 255, 0.92);
+}
+
+.join-banner-highlight {
+  color: #afca52;
+}
+
+.join-banner-btn {
+  background-color: #ffffff;
+  color: #111111;
+  transition: background-color 0.2s ease;
+}
+
+.join-banner-btn:hover {
+  background-color: #f4f4f5;
+}
+
+body.light .join-banner-text {
+  color: rgba(255, 255, 255, 0.92) !important;
+}
+
+body.light .join-banner-highlight {
+  color: #afca52 !important;
+}
+
+body.light .join-banner-btn {
+  background-color: #ffffff !important;
+  color: #111111 !important;
+  border: 1px solid rgba(0, 0, 0, 0.14);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.08);
+}
+
+body.light .join-banner-btn:hover {
+  background-color: #f4f4f5 !important;
+}
+
 /* Banner slider — keep dark photo overlay in both themes */
 .banner-slider-scrim-main {
   height: 72%;

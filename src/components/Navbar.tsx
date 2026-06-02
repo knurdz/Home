@@ -3,7 +3,7 @@
 import Link from "next/link";
 import ThemeToggle from "@/components/ThemeToggle";
 import JoinCommunityBanner from "@/components/JoinCommunityBanner";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 interface NavbarProps {
   activePage?: "home" | "projects" | "partners" | "about" | "achievements" | "contact" | "join-us";
@@ -11,6 +11,7 @@ interface NavbarProps {
 
 export default function Navbar({ activePage }: NavbarProps) {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const headerRef = useRef<HTMLElement>(null);
 
   // Prevent scrolling when menu is open
   useEffect(() => {
@@ -22,12 +23,28 @@ export default function Navbar({ activePage }: NavbarProps) {
   }, [isMenuOpen]);
 
   useEffect(() => {
-    document.documentElement.style.setProperty("--join-banner-height", "3.5rem");
+    const header = headerRef.current;
+    const banner = header?.firstElementChild;
+    if (!banner) return;
+
+    const syncBannerHeight = () => {
+      document.documentElement.style.setProperty(
+        "--join-banner-height",
+        `${banner.getBoundingClientRect().height}px`,
+      );
+    };
+
+    syncBannerHeight();
+
+    const observer = new ResizeObserver(syncBannerHeight);
+    observer.observe(banner);
+
+    return () => observer.disconnect();
   }, []);
 
   return (
     <>
-      <header className="fixed top-0 inset-x-0 z-50">
+      <header ref={headerRef} className="fixed top-0 inset-x-0 z-50">
         <JoinCommunityBanner />
         <nav className="w-full bg-background/80 backdrop-blur-xl shadow-[0_1px_0_var(--border)]">
         <div className="container mx-auto max-w-7xl px-6 py-4 flex items-center justify-between relative">
