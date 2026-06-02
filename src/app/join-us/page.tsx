@@ -7,6 +7,43 @@ import Footer from "@/components/Footer";
 
 type FormState = "idle" | "sending" | "success" | "error";
 
+type DialogState = {
+  open: boolean;
+  title: string;
+  message: string;
+};
+
+const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+const whatsappPattern = /^07\d{8}$/;
+
+function validateForm(form: {
+  name: string;
+  email: string;
+  whatsapp: string;
+  about: string;
+  why: string;
+}) {
+  const name = form.name.trim();
+  const email = form.email.trim();
+  const whatsapp = form.whatsapp.trim();
+  const about = form.about.trim();
+  const why = form.why.trim();
+
+  if (!name || !email || !whatsapp || !about || !why) {
+    return "Please fill in every field before submitting.";
+  }
+
+  if (!emailPattern.test(email)) {
+    return "Please enter a valid email address.";
+  }
+
+  if (!whatsappPattern.test(whatsapp)) {
+    return "WhatsApp number must start with 07 and contain exactly 10 digits.";
+  }
+
+  return "";
+}
+
 export default function JoinUsPage() {
   const [form, setForm] = useState({
     name: "",
@@ -17,13 +54,35 @@ export default function JoinUsPage() {
   });
   const [status, setStatus] = useState<FormState>("idle");
   const [errorMsg, setErrorMsg] = useState("");
+  const [dialog, setDialog] = useState<DialogState>({
+    open: false,
+    title: "",
+    message: "",
+  });
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     setForm((prev) => ({ ...prev, [e.target.name]: e.target.value }));
   };
 
+  const showErrorDialog = (message: string) => {
+    setDialog({
+      open: true,
+      title: "Submission blocked",
+      message,
+    });
+  };
+
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+
+    const validationError = validateForm(form);
+    if (validationError) {
+      setStatus("error");
+      setErrorMsg(validationError);
+      showErrorDialog(validationError);
+      return;
+    }
+
     setStatus("sending");
     setErrorMsg("");
 
@@ -38,12 +97,16 @@ export default function JoinUsPage() {
         setStatus("success");
       } else {
         const data = await res.json();
-        setErrorMsg(data.error ?? "Unknown error");
+        const message = data.error ?? "Unknown error";
+        setErrorMsg(message);
         setStatus("error");
+        showErrorDialog(message);
       }
     } catch {
-      setErrorMsg("Network error. Please try again.");
+      const message = "Network error. Please try again.";
+      setErrorMsg(message);
       setStatus("error");
+      showErrorDialog(message);
     }
   };
 
@@ -102,7 +165,7 @@ export default function JoinUsPage() {
             </div>
           </div>
 
-          <div className="max-w-3xl">
+          <div className="mx-auto max-w-3xl">
             {status === "success" ? (
               <div className="bg-card border border-green-500/30 rounded-lg p-8 text-center space-y-4">
                 <div className="text-4xl">🚀</div>
@@ -118,7 +181,7 @@ export default function JoinUsPage() {
                 </button>
               </div>
             ) : (
-              <form onSubmit={handleSubmit} className="space-y-6">
+              <form noValidate onSubmit={handleSubmit} className="space-y-6">
                 <div className="grid md:grid-cols-2 gap-6">
                   <div className="space-y-2">
                     <label htmlFor="name" className="block text-sm font-medium mono-font text-muted">Name</label>
@@ -149,7 +212,7 @@ export default function JoinUsPage() {
                 </div>
 
                 <div className="space-y-2">
-                  <label htmlFor="whatsapp" className="block text-sm font-medium mono-font text-muted">WhatsApp No</label>
+                  <label htmlFor="whatsapp" className="block text-sm font-medium mono-font text-muted">WhatsApp Number</label>
                   <input
                     required
                     type="tel"
@@ -157,7 +220,7 @@ export default function JoinUsPage() {
                     name="whatsapp"
                     value={form.whatsapp}
                     onChange={handleChange}
-                    placeholder="+1 (234) 567-890"
+                    placeholder="0771234567"
                     className="w-full bg-card border border-border rounded px-4 py-3 focus:border-foreground transition-colors outline-none"
                   />
                 </div>
@@ -208,6 +271,47 @@ export default function JoinUsPage() {
           </div>
         </div>
       </main>
+
+      {dialog.open && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center px-4">
+          <button
+            type="button"
+            aria-label="Close dialog overlay"
+            className="absolute inset-0 bg-black/70 backdrop-blur-sm"
+            onClick={() => setDialog((prev) => ({ ...prev, open: false }))}
+          />
+          <div
+            role="alertdialog"
+            aria-modal="true"
+            aria-labelledby="join-us-dialog-title"
+            aria-describedby="join-us-dialog-message"
+            className="relative z-10 w-full max-w-lg rounded-2xl border border-red-500/20 bg-card p-6 shadow-2xl"
+          >
+            <div className="mb-4 flex items-start gap-3">
+              <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-red-500/10 text-red-500 text-xl">
+                !
+              </div>
+              <div>
+                <h2 id="join-us-dialog-title" className="text-xl font-bold mono-font text-foreground">
+                  {dialog.title}
+                </h2>
+                <p id="join-us-dialog-message" className="mt-2 text-sm leading-relaxed text-muted">
+                  {dialog.message}
+                </p>
+              </div>
+            </div>
+            <div className="flex justify-end">
+              <button
+                type="button"
+                onClick={() => setDialog((prev) => ({ ...prev, open: false }))}
+                className="px-5 py-2 rounded border border-border text-sm mono-font hover:bg-card/80 transition-colors"
+              >
+                OK
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
 
       <Footer />
     </>

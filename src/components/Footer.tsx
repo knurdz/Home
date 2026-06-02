@@ -37,9 +37,9 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
-                <span className="opacity-50 cursor-not-allowed">
+                <Link href="/join-us" className="hover:text-foreground transition-colors">
                   join_community.md
-                </span>
+                </Link>
               </li>
               <li>
                 <span className="opacity-50 cursor-not-allowed">

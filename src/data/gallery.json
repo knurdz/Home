@@ -239,6 +239,146 @@
       "date": "2025-02-10",
       "category": "Workshop",
       "tags": ["meetup", "community", "networking"]
+    },
+    {
+      "id": "event-24",
+      "title": "Github Copilot Dev Days Colombo",
+      "description": "Hosted by Microsoft and GitHub, this session offered a practical roadmap for how AI is reshaping the development lifecycle. From deep-diving into Copilot in VS Code to experimenting with the Copilot CLI, the event focused on hands-on workflows and real-world productivity gains.",
+      "src": "/gallery/event-24.jpg",
+      "alt": "GitHub Copilot Dev Days Colombo 24",
+      "date": "2026-03-30",
+      "category": "Workshop",
+      "tags": ["workshop", "ai", "development"]
+    },
+    {
+      "id": "event-25",
+      "title": "Github Copilot Dev Days Colombo",
+      "description": "Hosted by Microsoft and GitHub, this session offered a practical roadmap for how AI is reshaping the development lifecycle. From deep-diving into Copilot in VS Code to experimenting with the Copilot CLI, the event focused on hands-on workflows and real-world productivity gains.",
+      "src": "/gallery/event-25.jpg",
+      "alt": "GitHub Copilot Dev Days Colombo 25",
+      "date": "2026-03-30",
+      "category": "Workshop",
+      "tags": ["workshop", "ai", "development"]
+    },
+    {
+      "id": "event-26",
+      "title": "Github Copilot Dev Days Colombo",
+      "description": "Hosted by Microsoft and GitHub, this session offered a practical roadmap for how AI is reshaping the development lifecycle. From deep-diving into Copilot in VS Code to experimenting with the Copilot CLI, the event focused on hands-on workflows and real-world productivity gains.",
+      "src": "/gallery/event-26.jpg",
+      "alt": "GitHub Copilot Dev Days Colombo 26",
+      "date": "2026-03-30",
+      "category": "Workshop",
+      "tags": ["workshop", "ai", "development"]
+    },
+    {
+      "id": "event-27",
+      "title": "Github Copilot Dev Days Colombo",
+      "description": "Hosted by Microsoft and GitHub, this session offered a practical roadmap for how AI is reshaping the development lifecycle. From deep-diving into Copilot in VS Code to experimenting with the Copilot CLI, the event focused on hands-on workflows and real-world productivity gains.",
+      "src": "/gallery/event-27.jpg",
+      "alt": "GitHub Copilot Dev Days Colombo 27",
+      "date": "2026-03-30",
+      "category": "Workshop",
+      "tags": ["workshop", "ai", "development"]
+    },
+    {
+      "id": "event-28",
+      "title": "Cursor Meetup Colombo",
+      "description": "Hosted by Cursor, this launch event for Cursor 3.0 brought developers together from across Sri Lanka to explore the latest workflow upgrades and share practical ideas for building faster with AI.",
+      "src": "/gallery/event-28.jpg",
+      "alt": "Cursor Meetup Colombo 28",
+      "date": "2026-04-09",
+      "category": "Meetup",
+      "tags": ["meetup", "community", "networking"]
+    },
+    {
+      "id": "event-29",
+      "title": "Cursor Meetup Colombo",
+      "description": "Hosted by Cursor, this launch event for Cursor 3.0 brought developers together from across Sri Lanka to explore the latest workflow upgrades and share practical ideas for building faster with AI.",
+      "src": "/gallery/event-29.jpg",
+      "alt": "Cursor Meetup Colombo 29",
+      "date": "2026-04-09",
+      "category": "Meetup",
+      "tags": ["meetup", "community", "networking"]
+    },
+    {
+      "id": "event-30",
+      "title": "Cursor Meetup Colombo",
+      "description": "Hosted by Cursor, this launch event for Cursor 3.0 brought developers together from across Sri Lanka to explore the latest workflow upgrades and share practical ideas for building faster with AI.",
+      "src": "/gallery/event-30.jpg",
+      "alt": "Cursor Meetup Colombo 30",
+      "date": "2026-04-09",
+      "category": "Meetup",
+      "tags": ["meetup", "community", "networking"]
+    },
+    {
+      "id": "event-31",
+      "title": "𝐏𝐡𝐚𝐧𝐭𝐨𝐦 𝐒𝐞𝐫𝐢𝐞𝐬 𝐏𝟎𝟏",
+      "description": "Hosted by UnicornX, this exclusive pitching competition and expert learning session was designed for youth-led startups looking to sharpen their ideas, build confidence, and learn from experienced voices in the ecosystem.",
+      "src": "/gallery/event-31.jpg",
+      "alt": "Phantom Series P01 31",
+      "date": "2026-04-30",
+      "category": "Conference",
+      "tags": ["conference", "startup", "pitching"]
+    },
+    {
+      "id": "event-32",
+      "title": "𝐏𝐡𝐚𝐧𝐭𝐨𝐦 𝐒𝐞𝐫𝐢𝐞𝐬 𝐏𝟎𝟏",
+      "description": "Hosted by UnicornX, this exclusive pitching competition and expert learning session was designed for youth-led startups looking to sharpen their ideas, build confidence, and learn from experienced voices in the ecosystem.",
+      "src": "/gallery/event-32.jpg",
+      "alt": "Phantom Series P01 32",
+      "date": "2026-04-30",
+      "category": "Conference",
+      "tags": ["conference", "startup", "pitching"]
+    },
+    {
+      "id": "event-33",
+      "title": "Cursor 24hr Buildathon",
+      "description": "The Cursor Colombo Buildathon, held on May 16th–17th, 2026 at the Royal MAS Arena, was Sri Lanka's largest 24-hour university hackathon. Organized by Team TechTalk360 and headlined by Cursor, the event brought together over 500 builders, developers, and AI enthusiasts to ship under intense time pressure.",
+      "src": "/gallery/event-33.jpg",
+      "alt": "Cursor 24hr Buildathon 33",
+      "date": "2026-05-16",
+      "category": "Competition",
+      "tags": ["competition", "hackathon", "ai"]
+    },
+    {
+      "id": "event-34",
+      "title": "Cursor 24hr Buildathon",
+      "description": "The Cursor Colombo Buildathon, held on May 16th–17th, 2026 at the Royal MAS Arena, was Sri Lanka's largest 24-hour university hackathon. Organized by Team TechTalk360 and headlined by Cursor, the event brought together over 500 builders, developers, and AI enthusiasts to ship under intense time pressure.",
+      "src": "/gallery/event-34.jpg",
+      "alt": "Cursor 24hr Buildathon 34",
+      "date": "2026-05-16",
+      "category": "Competition",
+      "tags": ["competition", "hackathon", "ai"]
+    },
+    {
+      "id": "event-35",
+      "title": "Cursor 24hr Buildathon",
+      "description": "The Cursor Colombo Buildathon, held on May 16th–17th, 2026 at the Royal MAS Arena, was Sri Lanka's largest 24-hour university hackathon. Organized by Team TechTalk360 and headlined by Cursor, the event brought together over 500 builders, developers, and AI enthusiasts to ship under intense time pressure.",
+      "src": "/gallery/event-35.jpg",
+      "alt": "Cursor 24hr Buildathon 35",
+      "date": "2026-05-16",
+      "category": "Competition",
+      "tags": ["competition", "hackathon", "ai"]
+    },
+    {
+      "id": "event-36",
+      "title": "Cursor 24hr Buildathon",
+      "description": "The Cursor Colombo Buildathon, held on May 16th–17th, 2026 at the Royal MAS Arena, was Sri Lanka's largest 24-hour university hackathon. Organized by Team TechTalk360 and headlined by Cursor, the event brought together over 500 builders, developers, and AI enthusiasts to ship under intense time pressure.",
+      "src": "/gallery/event-36.jpg",
+      "alt": "Cursor 24hr Buildathon 36",
+      "date": "2026-05-16",
+      "category": "Competition",
+      "tags": ["competition", "hackathon", "ai"]
+    },
+    {
+      "id": "event-37",
+      "title": "Cursor 24hr Buildathon",
+      "description": "The Cursor Colombo Buildathon, held on May 16th–17th, 2026 at the Royal MAS Arena, was Sri Lanka's largest 24-hour university hackathon. Organized by Team TechTalk360 and headlined by Cursor, the event brought together over 500 builders, developers, and AI enthusiasts to ship under intense time pressure.",
+      "src": "/gallery/event-37.jpg",
+      "alt": "Cursor 24hr Buildathon 37",
+      "date": "2026-05-16",
+      "category": "Competition",
+      "tags": ["competition", "hackathon", "ai"]
     }
   ],
   "projects": [

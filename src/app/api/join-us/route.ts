@@ -3,18 +3,53 @@ import nodemailer from "nodemailer";
 import { createAdminClient } from "@/lib/appwrite";
 import { ID } from "node-appwrite";
 
+const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+const whatsappPattern = /^07\d{8}$/;
+
+function validateSubmission(body: Record<string, unknown>) {
+  const name = typeof body.name === "string" ? body.name.trim() : "";
+  const email = typeof body.email === "string" ? body.email.trim() : "";
+  const whatsapp = typeof body.whatsapp === "string" ? body.whatsapp.trim() : "";
+  const about = typeof body.about === "string" ? body.about.trim() : "";
+  const why = typeof body.why === "string" ? body.why.trim() : "";
+
+  if (!name || !email || !whatsapp || !about || !why) {
+    return {
+      error: "Please fill in every field before submitting.",
+      data: null,
+    };
+  }
+
+  if (!emailPattern.test(email)) {
+    return {
+      error: "Please enter a valid email address.",
+      data: null,
+    };
+  }
+
+  if (!whatsappPattern.test(whatsapp)) {
+    return {
+      error: "WhatsApp number must start with 07 and contain exactly 10 digits.",
+      data: null,
+    };
+  }
+
+  return {
+    error: null,
+    data: { name, email, whatsapp, about, why },
+  };
+}
+
 export async function POST(request: Request) {
   try {
     const body = await request.json();
-    const { name, email, whatsapp, about, why } = body;
+    const validation = validateSubmission(body);
 
-    // Basic validation
-    if (!name || !email || !whatsapp || !about || !why) {
-      return NextResponse.json(
-        { error: "All fields are required." },
-        { status: 400 }
-      );
+    if (validation.error) {
+      return NextResponse.json({ error: validation.error }, { status: 400 });
     }
+
+    const { name, email, whatsapp, about, why } = validation.data;
 
     // 1. Send to Appwrite Database
     try {
