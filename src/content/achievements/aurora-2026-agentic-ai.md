@@ -2,7 +2,7 @@
 title: "Aurora 2026 — Agentic AI Challenge"
 date: "2026-05-18"
 description: "Team Knurdz Neural was selected as a finalist in Aurora 2026's Agentic AI Challenge — the undergraduate track at the University of Sri Jayewardenepura."
-image: "/achievements/4.jpeg"
+image: "/images/achievements/4.jpeg"
 category: "Competition"
 order: 4
 imageFit: contain

@@ -2,7 +2,7 @@
 title: "Cursor 24H Buildathon 2026 — n8n Track Winner"
 date: "2026-05-17"
 description: "Team Knurdz 3.0 won the n8n partner track at Sri Lanka's Cursor Colombo 24 Hour Buildathon with Nexus OS, after 24 hours of building at Royal-MAS Arena."
-image: "/achievements/1.jpg"
+image: "/images/achievements/1.jpg"
 category: "Buildathon"
 order: 1
 ---

@@ -2,7 +2,7 @@
 title: "Proxy Maze '26 — Top 25 Teams"
 date: "2026-05-25"
 description: "Team Knurdz advanced to the top 25 in Proxy Maze '26 after Challenge 1 — Torch Proxies' 14-week university hackathon for proxy-based innovation."
-image: "/achievements/5.jpeg"
+image: "/images/achievements/5.jpeg"
 category: "Hackathon"
 order: 5
 imageFit: contain

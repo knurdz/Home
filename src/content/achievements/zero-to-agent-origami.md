@@ -2,7 +2,7 @@
 title: "Zero to Agent — 3rd Place Globally"
 date: "2026-05-05"
 description: "Knurdz placed third worldwide in Vercel's Zero to Agent build week with Origami — the highest-ranked submission from Sri Lanka in a field led by two international teams."
-image: "/achievements/2.jpg"
+image: "/images/achievements/2.jpg"
 category: "Hackathon"
 order: 2
 ---

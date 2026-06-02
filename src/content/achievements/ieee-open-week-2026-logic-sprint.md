@@ -2,7 +2,7 @@
 title: "IEEE Open Week 2026 — Logic Sprint"
 date: "2026-06-02"
 description: "Knurdz members claimed 1st, 2nd, and 3rd on the Logic Sprint leaderboard at IEEE Open Week 2026 — a four-day challenge hosted by the IEEE Student Branch, University of Moratuwa."
-image: "/achievements/6.jpeg"
+image: "/images/achievements/6.jpeg"
 category: "Competition"
 order: 6
 imageFit: contain

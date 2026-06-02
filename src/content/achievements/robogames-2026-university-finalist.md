@@ -2,7 +2,7 @@
 title: "IESL RoboGames 25/26 — University Category"
 date: "2026-04-01"
 description: "Team Knurdz was selected among the top teams in the IESL RoboGames University Category — Sri Lanka's undergraduate robotics challenge at the University of Moratuwa."
-image: "/achievements/3.jpeg"
+image: "/images/achievements/3.jpeg"
 category: "Robotics"
 order: 3
 ---
