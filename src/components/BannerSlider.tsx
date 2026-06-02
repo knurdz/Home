@@ -1,57 +1,51 @@
 "use client";
 
 import Image from "next/image";
-import Link from "next/link";
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { bannerSlides, type BannerSlide } from "@/data/banners";
 
 const AUTO_PLAY_MS = 5500;
 const TRANSITION_MS = 600;
 
+const slideAspectBase =
+  "aspect-[3/2] sm:aspect-[2/1] md:aspect-[11/4] lg:aspect-3/1";
+
 function buildExtendedSlides(slides: BannerSlide[]): BannerSlide[] {
   if (slides.length <= 1) return slides;
   return [slides[slides.length - 1], ...slides, slides[0]];
 }
 
-function SlideContent({
-  slide,
-  isActive = true,
-}: {
-  slide: BannerSlide;
-  isActive?: boolean;
-}) {
+function SlideContent({ slide }: { slide: BannerSlide }) {
   return (
     <>
-      <Image
-        src={slide.image}
-        alt={slide.title}
-        fill
-        priority
-        sizes="(max-width: 1280px) 100vw, 1280px"
-        className="object-cover"
-        style={{ objectPosition: slide.objectPosition ?? "center center" }}
-      />
+      <div
+        className="absolute inset-0"
+        style={
+          {
+            "--banner-object-pos": slide.objectPosition ?? "center 54%",
+          } as React.CSSProperties
+        }
+      >
+        <Image
+          src={slide.image}
+          alt={slide.title}
+          fill
+          priority
+          sizes="(max-width: 640px) 100vw, (max-width: 1024px) 90vw, 1280px"
+          className="banner-slider-image object-cover"
+        />
+      </div>
 
-      <div className="banner-slider-scrim-main absolute inset-x-0 bottom-0 h-[85%] pointer-events-none" />
-      <div className="banner-slider-scrim-base absolute inset-x-0 bottom-0 h-48 pointer-events-none" />
+      <div className="banner-slider-scrim-main absolute inset-x-0 bottom-0 pointer-events-none" />
+      <div className="banner-slider-scrim-base absolute inset-x-0 bottom-0 pointer-events-none" />
 
-      <div className="absolute inset-x-0 bottom-0 flex flex-col justify-end px-6 sm:px-10 md:px-14 pb-8 sm:pb-10 pt-16">
-        <h2 className="banner-slider-title text-xl sm:text-2xl md:text-3xl font-bold mono-font max-w-3xl leading-tight">
+      <div className="absolute inset-x-0 bottom-0 flex flex-col justify-end px-4 sm:px-8 md:px-14 pb-4 sm:pb-7 md:pb-10">
+        <h2 className="banner-slider-title text-lg sm:text-2xl md:text-3xl font-bold mono-font max-w-3xl leading-snug sm:leading-tight">
           {slide.title}
         </h2>
-        <p className="banner-slider-desc mt-2 sm:mt-3 text-sm sm:text-base max-w-2xl leading-relaxed">
+        <p className="banner-slider-desc mt-1.5 sm:mt-2 md:mt-3 text-xs sm:text-sm md:text-base max-w-2xl leading-relaxed line-clamp-2 md:line-clamp-none">
           {slide.description}
         </p>
-
-        {slide.link && slide.linkText && (
-          <Link
-            href={slide.link}
-            className="banner-slider-cta mt-4 sm:mt-6 inline-flex w-fit items-center gap-2 px-5 py-2.5 rounded border transition-all text-sm mono-font"
-            tabIndex={isActive ? 0 : -1}
-          >
-            {slide.linkText} →
-          </Link>
-        )}
       </div>
     </>
   );
@@ -132,7 +126,7 @@ export default function BannerSlider() {
   return (
     <section
       aria-label="Community announcements and highlights"
-      className="pt-20 md:pt-24 px-6"
+      className="pt-20 md:pt-24 px-4 sm:px-6"
       {...(isCarousel
         ? {
             onMouseEnter: () => setIsPaused(true),
@@ -162,15 +156,15 @@ export default function BannerSlider() {
               {extended.map((slide, index) => (
                 <article
                   key={`${slide.id}-${index}`}
-                  className="relative min-w-full aspect-21/9 sm:aspect-[2.8/1] md:aspect-3/1"
+                  className={`relative min-w-full ${slideAspectBase}`}
                   aria-hidden={index !== activeIndex ? true : undefined}
                 >
-                  <SlideContent slide={slide} isActive={index === activeIndex} />
+                  <SlideContent slide={slide} />
                 </article>
               ))}
             </div>
           ) : (
-            <article className="relative aspect-21/9 sm:aspect-[2.8/1] md:aspect-3/1">
+            <article className={`relative ${slideAspectBase}`}>
               <SlideContent slide={slides[0]} />
             </article>
           )}

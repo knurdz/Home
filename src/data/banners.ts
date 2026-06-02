@@ -6,8 +6,6 @@ export interface BannerSlide {
   title: string;
   description: string;
   badge: BannerBadge;
-  link?: string;
-  linkText?: string;
   /** CSS object-position for photo crop, e.g. "center 62%" */
   objectPosition?: string;
 }
@@ -20,8 +18,6 @@ export const bannerSlides: BannerSlide[] = [
     description:
       "Building open-source projects from code to silicon — join creators shipping real impact.",
     badge: "highlight",
-    link: "/about",
-    linkText: "explore community",
     objectPosition: "center 54%",
   },
   {
@@ -31,8 +27,6 @@ export const bannerSlides: BannerSlide[] = [
     description:
       "Fresh projects, events, and collaborations — stay tuned for the latest from our dev branches.",
     badge: "announcement",
-    link: "/projects",
-    linkText: "view projects",
     objectPosition: "center 54%",
   },
 ];

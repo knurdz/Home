@@ -683,22 +683,87 @@ body.light #scrollProgress .inset-0\.5.rounded-full.bg-green-500 {
   -webkit-line-clamp: 3;
 }
 
+@media (min-width: 768px) {
+  .md\:line-clamp-none {
+    overflow: visible;
+    display: block;
+    -webkit-line-clamp: unset;
+  }
+}
+
 /* Banner slider — keep dark photo overlay in both themes */
 .banner-slider-scrim-main {
+  height: 72%;
   background: linear-gradient(
     to top,
-    rgba(0, 0, 0, 0.95) 0%,
-    rgba(0, 0, 0, 0.8) 45%,
-    rgba(0, 0, 0, 0.4) 75%,
+    rgba(0, 0, 0, 0.96) 0%,
+    rgba(0, 0, 0, 0.78) 32%,
+    rgba(0, 0, 0, 0.48) 56%,
     transparent 100%
   );
 }
 .banner-slider-scrim-base {
+  height: 9.5rem;
   background: linear-gradient(
     to top,
-    rgba(0, 0, 0, 0.9) 0%,
+    rgba(0, 0, 0, 0.92) 0%,
     transparent 100%
   );
+}
+@media (min-width: 640px) {
+  .banner-slider-scrim-main {
+    height: 87%;
+  }
+  .banner-slider-scrim-base {
+    height: 11.5rem;
+  }
+}
+@media (min-width: 768px) {
+  .banner-slider-scrim-main {
+    height: 95%;
+    background: linear-gradient(
+      to top,
+      rgba(0, 0, 0, 0.95) 0%,
+      rgba(0, 0, 0, 0.85) 30%,
+      rgba(0, 0, 0, 0.6) 55%,
+      rgba(0, 0, 0, 0.28) 75%,
+      transparent 100%
+    );
+  }
+  .banner-slider-scrim-base {
+    height: 15.5rem;
+  }
+}
+@media (min-width: 1024px) {
+  .banner-slider-scrim-main {
+    height: 96%;
+    background: linear-gradient(
+      to top,
+      rgba(0, 0, 0, 0.97) 0%,
+      rgba(0, 0, 0, 0.91) 24%,
+      rgba(0, 0, 0, 0.78) 44%,
+      rgba(0, 0, 0, 0.55) 60%,
+      rgba(0, 0, 0, 0.32) 74%,
+      transparent 100%
+    );
+  }
+  .banner-slider-scrim-base {
+    height: 13rem;
+    background: linear-gradient(
+      to top,
+      rgba(0, 0, 0, 0.95) 0%,
+      rgba(0, 0, 0, 0.45) 55%,
+      transparent 100%
+    );
+  }
+}
+.banner-slider-image {
+  object-position: center 42%;
+}
+@media (min-width: 768px) {
+  .banner-slider-image {
+    object-position: var(--banner-object-pos, center 54%);
+  }
 }
 .banner-slider-title {
   color: #ffffff;
@@ -707,22 +772,5 @@ body.light #scrollProgress .inset-0\.5.rounded-full.bg-green-500 {
 .banner-slider-desc {
   color: rgba(255, 255, 255, 0.82);
   text-shadow: 0 1px 8px rgba(0, 0, 0, 0.35);
-}
-.banner-slider-cta {
-  color: #ffffff;
-  border-color: rgba(255, 255, 255, 0.28);
-  background-color: rgba(0, 0, 0, 0.2);
-}
-.banner-slider-cta:hover {
-  border-color: rgba(34, 197, 94, 0.55);
-  background-color: rgba(34, 197, 94, 0.12);
-  color: #ffffff;
-  opacity: 1;
-}
-body.light .banner-slider-cta:hover {
-  border-color: rgba(22, 163, 74, 0.55);
-  background-color: rgba(22, 163, 74, 0.12);
-  color: #ffffff;
-  opacity: 1;
 }
 
