@@ -5,7 +5,7 @@ import ThemeToggle from "@/components/ThemeToggle";
 import { useEffect, useState } from "react";
 
 interface NavbarProps {
-  activePage?: "home" | "projects" | "partners" | "about" | "contact" | "join-us";
+  activePage?: "home" | "projects" | "partners" | "about" | "achievements" | "contact";
 }
 
 export default function Navbar({ activePage }: NavbarProps) {
@@ -79,12 +79,12 @@ export default function Navbar({ activePage }: NavbarProps) {
               /about
             </Link>
             <Link
-              href="/join-us"
+              href="/achievements"
               className={`${
-                activePage === "join-us" ? "text-foreground" : "text-muted"
+                activePage === "achievements" ? "text-foreground" : "text-muted"
               } hover:text-foreground transition-colors mono-font text-sm`}
             >
-              /join-us
+              /achievements
             </Link>
             <ThemeToggle />
             <Link
@@ -206,19 +206,19 @@ export default function Navbar({ activePage }: NavbarProps) {
           </Link>
           
           <Link
-            href="/join-us"
+            href="/achievements"
             onClick={() => setIsMenuOpen(false)}
             className={`group py-3 px-4 rounded-lg transition-all duration-200 mono-font flex items-center justify-between ${
-              activePage === "join-us" 
+              activePage === "achievements" 
                 ? "bg-foreground text-background" 
                 : "text-foreground hover:bg-muted/10 border border-transparent hover:border-border"
             }`}
           >
             <span className="flex items-center gap-3">
-              <span className={`text-xs ${activePage === "join-us" ? "text-background/60" : "text-muted"}`}>05.</span> 
-              /join-us
+              <span className={`text-xs ${activePage === "achievements" ? "text-background/60" : "text-muted"}`}>05.</span> 
+              /achievements
             </span>
-            {activePage === "join-us" && <span className="text-xs">●</span>}
+            {activePage === "achievements" && <span className="text-xs">●</span>}
           </Link>
           
           <div className="h-px bg-border my-3 mx-2"></div>

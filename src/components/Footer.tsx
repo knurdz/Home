@@ -72,6 +72,11 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
+                <Link href="/achievements" className="hover:text-foreground transition-colors">
+                  achievements
+                </Link>
+              </li>
+              <li>
                 <Link href="/contact" className="hover:text-foreground transition-colors">
                   contact
                 </Link>

@@ -1,16 +1,17 @@
 [
   {
-    "name": "Brainvave Software Studios (PVT) LTD.",
-    "logo": "/partner-logos/brainvave.webp",
-    "type": "Strategic Partner",
-    "website": "https://brainvave.com",
-    "description": "Brainvave Software Studios is a project-based development firm dedicated to building high-performance web and mobile applications. We specialize in taking products from initial concept to full-scale deployment"
-  },
-  {
     "name": "IEEE Student Branch",
-    "logo": "/partner-logos/ieeesblogo-light2.png",
+    "logo": "/partner-logos/ieeesblogo-blue.webp",
     "website": "https://ieeesb.uom.lk/",
     "description": "The IEEE Student Branch fosters technological innovation and excellence for the benefit of humanity, providing students with opportunities for professional development and networking.",
+    "projects": []
+  },
+  {
+    "name": "Leo Club of University of Moratuwa",
+    "logo": "/partner-logos/leo-uom.jpeg",
+    "logoClassName": "h-16 md:h-20 w-16 md:w-20 rounded-full object-cover",
+    "website": "https://www.uomleos.org/",
+    "description": "UoM Leos is a university-based youth service organization affiliated with Lions Clubs International, developing leadership, fellowship, and social responsibility through community service among undergraduates since 2003.",
     "projects": []
   },
   {

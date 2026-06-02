@@ -3,6 +3,8 @@
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import ScrollIndicator from "@/components/ScrollIndicator";
+import StrategicPartnerSection from "@/components/StrategicPartnerSection";
+import PartnerLogo from "@/components/PartnerLogo";
 import { partners } from "@/data/partners";
 import Link from "next/link";
 
@@ -12,26 +14,28 @@ export default function PartnersPage() {
       <Navbar activePage="partners" />
       <ScrollIndicator />
 
-      <div className="pt-32 pb-20">
+      <main className="pt-28 sm:pt-32 pb-16 sm:pb-20">
+        <StrategicPartnerSection />
+
         {/* Partners Section */}
-        <section id="partners" className="relative px-6">
+        <section id="partners" className="relative px-4 sm:px-6 mt-4 sm:mt-8 md:mt-16 scroll-mt-28">
           <div className="container mx-auto max-w-7xl">
             {/* Section Header */}
-            <div className="text-center mb-20">
-              <span className="px-4 py-2 rounded border border-border text-muted text-sm mono-font">
+            <div className="text-center mb-12 sm:mb-16 md:mb-20">
+              <span className="inline-block px-3 py-1.5 sm:px-4 sm:py-2 rounded border border-border text-muted text-xs sm:text-sm mono-font">
                 $ cat partners.json
               </span>
-              <h2 className="text-4xl md:text-6xl font-bold mt-6 mb-4 mono-font text-foreground">
+              <h2 className="text-3xl sm:text-4xl md:text-6xl font-bold mt-4 sm:mt-6 mb-3 sm:mb-4 mono-font text-foreground leading-tight">
                 Our <span className="text-faded">Partners</span>
               </h2>
-              <p className="text-xl text-muted max-w-2xl mx-auto">
+              <p className="text-base sm:text-lg md:text-xl text-muted max-w-2xl mx-auto px-1 leading-relaxed">
                 Collaborating with industry leaders to ship production-ready
                 solutions
               </p>
             </div>
 
             {/* Partners Grid */}
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8">
               {partners.map((partner) => (
                 <div
                   key={partner.name}
@@ -39,10 +43,14 @@ export default function PartnersPage() {
                 >
                   {/* Logo - Centered at top */}
                   <div className="flex justify-center mb-8">
-                    <img
+                    <PartnerLogo
                       src={partner.logo}
+                      srcLight={partner.logoLight}
                       alt={`${partner.name} logo`}
-                      className="h-16 md:h-20 w-auto object-contain"
+                      className={
+                        partner.logoClassName ??
+                        "h-16 md:h-20 w-auto object-contain"
+                      }
                     />
                   </div>
 
@@ -110,7 +118,7 @@ export default function PartnersPage() {
             </div>
           </div>
         </section>
-      </div>
+      </main>
 
       <Footer />
     </>

@@ -5,6 +5,7 @@ import Image from "next/image";
 import { useState, useRef, useEffect } from "react";
 import ScrollIndicator from "@/components/ScrollIndicator";
 import Navbar from "@/components/Navbar";
+import BannerSlider from "@/components/BannerSlider";
 import Footer from "@/components/Footer";
 import { members, Member } from "@/data/members";
 import MemberAvatar from "@/components/MemberAvatar";
@@ -75,8 +76,10 @@ export default function AboutPage() {
       <Navbar activePage="about" />
       <ScrollIndicator />
 
+      <BannerSlider />
+
       {/* Hero Section */}
-      <section className="relative min-h-[60vh] flex items-center justify-center px-6 pt-32 pb-20">
+      <section className="relative min-h-[60vh] flex items-center justify-center px-6 pt-8 md:pt-12 pb-20">
         <div className="container mx-auto max-w-7xl text-center">
           <span className="inline-block px-4 py-2 rounded border border-border text-muted text-sm mono-font mb-6">
             $ cat about.md

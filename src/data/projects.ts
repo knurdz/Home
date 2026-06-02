@@ -13,7 +13,7 @@ export const projects: Project[] = [
   {
     name: "Sonar Code Editor",
     slug: "sonar-code-editor",
-    branch: "development",
+    branch: "production",
     commit: "78dc070",
     description:
       "A secure, real-time collaborative coding environment designed specifically for supervised exams and technical interviews.",
@@ -28,6 +28,46 @@ export const projects: Project[] = [
     description:
       "A Dialer app for Nothing OS with custom glyph for outgoing and ongoing calls also.",
     tags: ["Mobile", "IoT"],
+    upcoming: false,
+  },
+  {
+    name: "Origami",
+    slug: "origami",
+    branch: "main",
+    commit: "c4e8a1f",
+    description:
+      "Upload a PDF, scan a repo, or paste text — Origami streams an interactive explanation and generates a v0-powered MVP in seconds.",
+    tags: ["Web App", "AI", "Developer Tool"],
+    upcoming: false,
+  },
+  {
+    name: "What Should I Build",
+    slug: "what-should-i-build",
+    branch: "main",
+    commit: "b7d3f92",
+    description:
+      "AI project idea generator that turns your skills, GitHub, time, and goals into ranked ideas with roadmap, stack, and build-ready artifacts.",
+    tags: ["Web App", "AI", "Developer Tool"],
+    upcoming: false,
+  },
+  {
+    name: "The Defense Panel",
+    slug: "defense-panel",
+    branch: "main",
+    commit: "e9a2b14",
+    description:
+      "Live AI panel simulation with document-aware follow-ups, pressure-testing for startup pitches, academic vivas, and technical interviews.",
+    tags: ["Web App", "AI", "Education"],
+    upcoming: false,
+  },
+  {
+    name: "Nexus OS",
+    slug: "nexus-os",
+    branch: "main",
+    commit: "f1c8d06",
+    description:
+      "Revenue and AI engine for founders — monitors channels, scores leads, drafts responses, and automates CRM follow-ups through a six-step protocol.",
+    tags: ["Web App", "AI", "SaaS"],
     upcoming: false,
   },
   {
