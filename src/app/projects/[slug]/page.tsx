@@ -205,7 +205,7 @@ export default async function ProjectPage({ params }: PageProps) {
       <Navbar activePage="projects" />
 
       {/* Banner */}
-      <div className="relative w-full h-[55vh] min-h-80 mt-0 overflow-hidden">
+      <div className="relative w-full h-[40vh] md:h-[55vh] min-h-80 mt-0 overflow-hidden">
         <div className="absolute inset-0 bg-linear-to-b from-transparent via-background/40 to-background z-10" />
         
         {frontmatter.banner ? (

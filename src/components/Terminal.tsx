@@ -218,7 +218,7 @@ export default function Terminal() {
 
       {/* Body */}
       <div
-        className="p-8 mono-font text-sm cursor-text transition-all duration-300"
+        className="p-4 md:p-8 mono-font text-sm cursor-text transition-all duration-300"
         onClick={() => inputElRef.current?.focus()}
       >
         <div className="space-y-1 leading-relaxed">

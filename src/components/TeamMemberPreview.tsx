@@ -62,12 +62,12 @@ export default function TeamMemberPreview({ member, onClose }: TeamMemberPreview
     if (!member) return null;
 
     return (
-        <div className={`fixed inset-0 z-50 transition-colors duration-500 ${isVisible ? 'bg-background/80 backdrop-blur-sm' : 'bg-transparent pointer-events-none'}`}>
+        <div className={`fixed inset-0 z-50 flex flex-col md:block items-center justify-center p-4 overflow-y-auto transition-colors duration-500 ${isVisible ? 'bg-background/80 backdrop-blur-sm' : 'bg-transparent pointer-events-none'}`}>
             {/* Click Outside Handler */}
             <div className="absolute inset-0 w-full h-full" onClick={onClose} />
 
-            {/* SVG Connector Layer */}
-            <svg className="absolute inset-0 w-full h-full pointer-events-none z-40 overflow-visible">
+            {/* SVG Connector Layer - Desktop Only */}
+            <svg className="absolute inset-0 w-full h-full pointer-events-none z-40 overflow-visible hidden md:block">
                  <defs>
                     <linearGradient id="line-gradient" x1="0%" y1="0%" x2="100%" y2="0%">
                         <stop offset="0%" stopColor="#22c55e" stopOpacity="0.8" />
@@ -113,10 +113,10 @@ export default function TeamMemberPreview({ member, onClose }: TeamMemberPreview
                 )}
             </svg>
 
-            {/* Large Member Preview - Centered */}
+            {/* Large Member Preview - Centered on desktop, stacked on mobile */}
             <div 
                 ref={imageRef}
-                className={`absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-50 transition-all duration-500 ease-out ${isVisible ? 'scale-100 opacity-100' : 'scale-50 opacity-0'}`}
+                className={`relative md:absolute md:top-1/2 md:left-1/2 md:-translate-x-1/2 md:-translate-y-1/2 z-50 transition-all duration-500 ease-out ${isVisible ? 'scale-100 opacity-100' : 'scale-50 opacity-0'}`}
                 onClick={(e) => e.stopPropagation()} 
             >
                 <div className="relative w-64 h-64 md:w-112.5 md:h-112.5 rounded-full border-4 border-green-500 overflow-hidden shadow-[0_0_50px_rgba(34,197,94,0.4)] bg-card group cursor-default">
@@ -127,10 +127,10 @@ export default function TeamMemberPreview({ member, onClose }: TeamMemberPreview
                 </div>
             </div>
 
-            {/* Info Card - Top Right */}
+            {/* Info Card - Top Right on desktop, stacked on mobile */}
             <div 
                 ref={cardRef}
-                className={`absolute top-24 right-5 md:right-10 w-80 md:w-96 z-50 transition-all duration-500 delay-100 ease-out ${isVisible ? 'translate-x-0 opacity-100' : 'translate-x-20 opacity-0'}`}
+                className={`relative md:absolute mt-8 md:mt-0 md:top-24 md:right-10 w-full max-w-96 md:w-96 z-50 transition-all duration-500 delay-100 ease-out ${isVisible ? 'translate-x-0 opacity-100' : 'translate-x-20 opacity-0'}`}
                 onClick={(e) => e.stopPropagation()} 
             >
                 <div className="bg-card/90 backdrop-blur-xl border rounded-xl p-5 border-green-500 transition-colors duration-300 relative overflow-visible shadow-[0_0_20px_rgba(34,197,94,0.2)]">
