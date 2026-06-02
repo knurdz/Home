@@ -14,7 +14,7 @@ export default function PartnersPage() {
       <Navbar activePage="partners" />
       <ScrollIndicator />
 
-      <main className="pt-28 sm:pt-32 pb-16 sm:pb-20">
+      <main className="pt-site-header-lg pb-16 sm:pb-20">
         <StrategicPartnerSection />
 
         {/* Partners Section */}

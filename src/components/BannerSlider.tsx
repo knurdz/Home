@@ -126,7 +126,7 @@ export default function BannerSlider() {
   return (
     <section
       aria-label="Community announcements and highlights"
-      className="pt-20 md:pt-24 px-4 sm:px-6"
+      className="pt-site-header md:pt-site-header-md px-4 sm:px-6"
       {...(isCarousel
         ? {
             onMouseEnter: () => setIsPaused(true),

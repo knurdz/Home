@@ -14,7 +14,7 @@ export default function AchievementsPage() {
       <Navbar activePage="achievements" />
       <ScrollIndicator />
 
-      <div className="pt-32 pb-20">
+      <div className="pt-site-header-lg pb-20">
         <section className="relative px-6">
           <div className="container mx-auto max-w-7xl">
             <div className="text-center mb-20">

@@ -50,7 +50,7 @@ export default function Home() {
       {/* Hero Section */}
       <section
         id="hero"
-        className="relative min-h-[calc(100vh-80px)] md:min-h-screen flex items-center justify-center px-6 pt-20 md:pt-24"
+        className="relative min-h-[calc(100vh-80px)] md:min-h-screen flex items-center justify-center px-6 pt-site-header md:pt-site-header-md"
       >
         <div className="container mx-auto max-w-7xl">
           <div className="grid md:grid-cols-2 gap-12 items-center">

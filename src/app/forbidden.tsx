@@ -13,7 +13,7 @@ export default function Forbidden() {
     <>
       <Navbar />
       
-      <section className="relative min-h-[calc(100vh-80px)] flex items-center justify-center px-6 pt-20">
+      <section className="relative min-h-[calc(100vh-80px)] flex items-center justify-center px-6 pt-site-header">
         <div className="container mx-auto max-w-4xl text-center">
           <div className="inline-block mb-6">
             <span className="px-4 py-2 rounded border border-orange-500/30 text-orange-500/80 text-sm mono-font bg-orange-500/10">

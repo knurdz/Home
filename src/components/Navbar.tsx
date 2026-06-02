@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import ThemeToggle from "@/components/ThemeToggle";
+import JoinCommunityBanner from "@/components/JoinCommunityBanner";
 import { useEffect, useState } from "react";
 
 interface NavbarProps {
@@ -20,9 +21,15 @@ export default function Navbar({ activePage }: NavbarProps) {
     }
   }, [isMenuOpen]);
 
+  useEffect(() => {
+    document.documentElement.style.setProperty("--join-banner-height", "3.5rem");
+  }, []);
+
   return (
     <>
-      <nav className="fixed top-0 w-full z-50 bg-background/80 backdrop-blur-xl shadow-[0_1px_0_var(--border)]">
+      <header className="fixed top-0 inset-x-0 z-50">
+        <JoinCommunityBanner />
+        <nav className="w-full bg-background/80 backdrop-blur-xl shadow-[0_1px_0_var(--border)]">
         <div className="container mx-auto max-w-7xl px-6 py-4 flex items-center justify-between relative">
           <Link
             href="/"
@@ -130,11 +137,12 @@ export default function Navbar({ activePage }: NavbarProps) {
             </div>
           </button>
         </div>
-      </nav>
+        </nav>
+      </header>
 
       {/* Mobile Menu Dropdown */}
       <div 
-        className={`lg:hidden fixed top-20 left-0 w-full bg-background/95 backdrop-blur-xl shadow-[0_1px_0_var(--border)] shadow-2xl z-40 transition-all duration-300 ease-in-out transform origin-top ${
+        className={`lg:hidden fixed top-[calc(var(--join-banner-height)+5rem)] left-0 w-full bg-background/95 backdrop-blur-xl shadow-[0_1px_0_var(--border)] shadow-2xl z-40 transition-all duration-300 ease-in-out transform origin-top ${
           isMenuOpen 
             ? "translate-y-0 opacity-100 scale-y-100 visible" 
             : "-translate-y-4 opacity-0 scale-y-95 invisible pointer-events-none"

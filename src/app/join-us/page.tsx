@@ -117,7 +117,7 @@ export default function JoinUsPage() {
       {/* Navigation */}
       <Navbar activePage="join-us" />
 
-      <main className="min-h-screen pt-32 pb-20 px-6">
+      <main className="min-h-screen pt-site-header-lg pb-20 px-6">
         <div className="container mx-auto max-w-6xl">
 
           {/* Header */}

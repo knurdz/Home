@@ -13,6 +13,7 @@
 }
 
 :root {
+  --join-banner-height: 0px;
   --background: #000000;
   --foreground: #ffffff;
   --muted: #9ca3af;
@@ -689,6 +690,28 @@ body.light #scrollProgress .inset-0\.5.rounded-full.bg-green-500 {
     display: block;
     -webkit-line-clamp: unset;
   }
+}
+
+/* Fixed header offset (navbar + optional join banner) */
+.pt-site-header {
+  padding-top: calc(5rem + var(--join-banner-height));
+}
+@media (min-width: 768px) {
+  .md\:pt-site-header-md {
+    padding-top: calc(6rem + var(--join-banner-height));
+  }
+}
+.pt-site-header-lg {
+  padding-top: calc(8rem + var(--join-banner-height));
+}
+
+.join-banner-scrim {
+  background: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0.72) 0%,
+    rgba(0, 0, 0, 0.55) 50%,
+    rgba(0, 0, 0, 0.72) 100%
+  );
 }
 
 /* Banner slider — keep dark photo overlay in both themes */
