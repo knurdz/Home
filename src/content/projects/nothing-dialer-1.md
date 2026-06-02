@@ -71,3 +71,7 @@ void _triggerGlyphLights(String callState) async {
 ## Status
 
 Active development on `feature/mobile`. Essential dialing, SIM selection, native `InCallService` integration, and Flutter MethodChannels are implemented. Refining ongoing call glyph synchronizations and the history log interface.
+
+## Privacy Policy
+
+[View Privacy Policy](/nothing-dialer-1/privacy-policy)

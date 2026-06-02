@@ -275,6 +275,11 @@ export default function Home() {
 
                 {/* Partner Info */}
                 <div className="text-center mb-6">
+                  {partner.type && (
+                    <span className="inline-block px-3 py-1 mb-3 text-[10px] font-bold uppercase tracking-widest text-green-500 bg-green-500/10 border border-green-500/20 rounded-full mono-font">
+                      {partner.type}
+                    </span>
+                  )}
                   <h3 className="text-xl md:text-2xl font-bold mono-font text-foreground mb-3">
                     {partner.name}
                   </h3>
@@ -293,86 +298,88 @@ export default function Home() {
                 </div>
 
                 {/* Projects Section */}
-                <div className="mt-8 pt-6 border-t border-border">
-                  <div className="flex items-center gap-2 mb-6">
-                    <span className="text-xs mono-font text-muted uppercase tracking-wider">
-                      Projects ({partner.projects.length})
-                    </span>
-                    <div className="flex-1 h-px bg-card"></div>
-                  </div>
-                  <div className="space-y-3">
-                    {partner.projects.map((project) => {
-                      const statusConfig = {
-                        live: {
-                          color: "text-green-500",
-                          bg: "bg-green-500/10",
-                          border: "border-green-500/30",
-                          dotBg: "bg-green-500",
-                          label: "Live"
-                        },
-                        beta: {
-                          color: "text-orange-500",
-                          bg: "bg-orange-500/10",
-                          border: "border-orange-500/30",
-                          dotBg: "bg-orange-500",
-                          label: "Beta"
-                        },
-                        development: {
-                          color: "text-blue-500",
-                          bg: "bg-blue-500/10",
-                          border: "border-blue-500/30",
-                          dotBg: "bg-blue-500",
-                          label: "In Development"
-                        },
-                        design: {
-                          color: "text-purple-500",
-                          bg: "bg-purple-500/10",
-                          border: "border-purple-500/30",
-                          dotBg: "bg-purple-500",
-                          label: "In Design"
-                        },
-                        upcoming: {
-                          color: "text-yellow-500",
-                          bg: "bg-yellow-500/10",
-                          border: "border-yellow-500/30",
-                          dotBg: "bg-yellow-500",
-                          label: "Upcoming"
-                        }
-                      };
+                {partner.projects && partner.projects.length > 0 && (
+                  <div className="mt-8 pt-6 border-t border-border">
+                    <div className="flex items-center gap-2 mb-6">
+                      <span className="text-xs mono-font text-muted uppercase tracking-wider">
+                        Projects ({partner.projects.length})
+                      </span>
+                      <div className="flex-1 h-px bg-card"></div>
+                    </div>
+                    <div className="space-y-3">
+                      {partner.projects.map((project) => {
+                        const statusConfig = {
+                          live: {
+                            color: "text-green-500",
+                            bg: "bg-green-500/10",
+                            border: "border-green-500/30",
+                            dotBg: "bg-green-500",
+                            label: "Live"
+                          },
+                          beta: {
+                            color: "text-orange-500",
+                            bg: "bg-orange-500/10",
+                            border: "border-orange-500/30",
+                            dotBg: "bg-orange-500",
+                            label: "Beta"
+                          },
+                          development: {
+                            color: "text-blue-500",
+                            bg: "bg-blue-500/10",
+                            border: "border-blue-500/30",
+                            dotBg: "bg-blue-500",
+                            label: "In Development"
+                          },
+                          design: {
+                            color: "text-purple-500",
+                            bg: "bg-purple-500/10",
+                            border: "border-purple-500/30",
+                            dotBg: "bg-purple-500",
+                            label: "In Design"
+                          },
+                          upcoming: {
+                            color: "text-yellow-500",
+                            bg: "bg-yellow-500/10",
+                            border: "border-yellow-500/30",
+                            dotBg: "bg-yellow-500",
+                            label: "Upcoming"
+                          }
+                        };
 
-                      const status = statusConfig[project.status];
+                        const status = statusConfig[project.status as keyof typeof statusConfig] || statusConfig.development;
 
-                      return (
-                        <a
-                          key={project.slug}
-                          href={project.url}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="group/project block p-4 rounded-lg bg-card border border-border hover:border-green-500/50 hover:bg-green-500/5 transition-all"
-                        >
-                          <div className="flex items-center justify-between gap-3">
-                            <div className="flex-1">
-                              <div className="flex items-center gap-3 mb-1">
-                                <h4 className="font-semibold text-muted group-hover/project:text-foreground transition-colors mono-font">
-                                  {project.name}
-                                </h4>
+                        return (
+                          <a
+                            key={project.slug}
+                            href={project.url}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="group/project block p-4 rounded-lg bg-card border border-border hover:border-green-500/50 hover:bg-green-500/5 transition-all"
+                          >
+                            <div className="flex items-center justify-between gap-3">
+                              <div className="flex-1">
+                                <div className="flex items-center gap-3 mb-1">
+                                  <h4 className="font-semibold text-muted group-hover/project:text-foreground transition-colors mono-font">
+                                    {project.name}
+                                  </h4>
+                                </div>
+                              </div>
+                              <div className="flex items-center gap-3">
+                                <span className={`inline-flex items-center gap-1.5 px-3 py-1 rounded-full border text-xs mono-font ${status.bg} ${status.border} ${status.color}`}>
+                                  <span className={`w-1.5 h-1.5 rounded-full ${status.dotBg}`}></span>
+                                  {status.label}
+                                </span>
+                                <span className="text-faded group-hover/project:text-green-500 transition-colors text-xl">
+                                  ↗
+                                </span>
                               </div>
                             </div>
-                            <div className="flex items-center gap-3">
-                              <span className={`inline-flex items-center gap-1.5 px-3 py-1 rounded-full border text-xs mono-font ${status.bg} ${status.border} ${status.color}`}>
-                                <span className={`w-1.5 h-1.5 rounded-full ${status.dotBg}`}></span>
-                                {status.label}
-                              </span>
-                              <span className="text-faded group-hover/project:text-green-500 transition-colors text-xl">
-                                ↗
-                              </span>
-                            </div>
-                          </div>
-                        </a>
-                      );
-                    })}
+                          </a>
+                        );
+                      })}
+                    </div>
                   </div>
-                </div>
+                )}
               </div>
             ))}
           </div>

@@ -19,7 +19,7 @@ const BASE_URL = "https://knurdz.org";
 export const metadata: Metadata = {
   metadataBase: new URL(BASE_URL),
   title: {
-    default: "Knurdz — Tech Community & Open Source Organization",
+    default: "Knurdz — Tech Community | Organization",
     template: "%s — Knurdz",
   },
   description:
@@ -30,6 +30,9 @@ export const metadata: Metadata = {
     "open source",
     "software projects",
     "developers",
+    "University of Moratuwa",
+    "UoM",
+    "UOM",
   ],
   authors: [{ name: "Knurdz", url: BASE_URL }],
   creator: "Knurdz",
@@ -58,7 +61,7 @@ export const metadata: Metadata = {
     apple: "/favicon.svg",
   },
   openGraph: {
-    title: "Knurdz — Tech Community & Open Source Organization",
+    title: "Knurdz — Tech Community | Organization",
     description:
       "From code to silicon and social impact. Explore innovative projects, meet our partners, and join the Knurdz community in building tech that matters.",
     url: BASE_URL,
@@ -68,7 +71,7 @@ export const metadata: Metadata = {
         url: "/logo/knurdz-logo-horizontal-bg.png",
         width: 600,
         height: 200,
-        alt: "Knurdz — Tech Community & Open Source Organization",
+        alt: "Knurdz — Tech Community | Organization",
       },
     ],
     locale: "en_US",
@@ -76,7 +79,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Knurdz — Tech Community & Open Source Organization",
+    title: "Knurdz — Tech Community | Organization",
     description:
       "From code to silicon and social impact. Explore innovative projects, meet our partners, and join the Knurdz community in building tech that matters.",
     site: "@knurdz_org",
