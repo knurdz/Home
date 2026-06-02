@@ -48,6 +48,11 @@ export default function PartnersPage() {
 
                   {/* Partner Details */}
                   <div className="text-center mb-6">
+                    {partner.type && (
+                      <span className="inline-block px-3 py-1 mb-3 text-[10px] font-bold uppercase tracking-widest text-green-500 bg-green-500/10 border border-green-500/20 rounded-full mono-font">
+                        {partner.type}
+                      </span>
+                    )}
                     <h3 className="text-xl md:text-2xl font-bold mb-2 mono-font text-foreground">
                       {partner.name}
                     </h3>
@@ -66,38 +71,40 @@ export default function PartnersPage() {
                   </p>
 
                   {/* Collaboration Projects */}
-                  <div>
-                    <h4 className="text-xs font-semibold text-muted uppercase tracking-wider mb-4 mono-font text-center">
-                       collaborations //
-                    </h4>
-                    <div className="space-y-3">
-                      {partner.projects.map((project) => (
-                        <div
-                          key={project.name}
-                          className="flex items-center justify-between p-3 rounded bg-background-alt border border-border hover:border-foreground/10 transition-colors"
-                        >
-                          <Link 
-                            href={project.url}
-                            rel="noopener noreferrer"
-                            target="_blank" className="font-medium text-foreground"
+                  {partner.projects && partner.projects.length > 0 && (
+                    <div>
+                      <h4 className="text-xs font-semibold text-muted uppercase tracking-wider mb-4 mono-font text-center">
+                         collaborations //
+                      </h4>
+                      <div className="space-y-3">
+                        {partner.projects.map((project) => (
+                          <div
+                            key={project.name}
+                            className="flex items-center justify-between p-3 rounded bg-background-alt border border-border hover:border-foreground/10 transition-colors"
                           >
-                            {project.name}
-                          </Link>
-                          <span
-                            className={`text-xs px-2 py-1 rounded mono-font ${
-                              project.status === "live"
-                                ? "bg-green-500/10 text-green-500"
-                                : project.status === "development"
-                                ? "bg-blue-500/10 text-blue-500"
-                                : "bg-yellow-500/10 text-yellow-500"
-                            }`}
-                          >
-                            {project.status}
-                          </span>
-                        </div>
-                      ))}
+                            <Link 
+                              href={project.url}
+                              rel="noopener noreferrer"
+                              target="_blank" className="font-medium text-foreground"
+                            >
+                              {project.name}
+                            </Link>
+                            <span
+                              className={`text-xs px-2 py-1 rounded mono-font ${
+                                project.status === "live"
+                                  ? "bg-green-500/10 text-green-500"
+                                  : project.status === "development"
+                                  ? "bg-blue-500/10 text-blue-500"
+                                  : "bg-yellow-500/10 text-yellow-500"
+                              }`}
+                            >
+                              {project.status}
+                            </span>
+                          </div>
+                        ))}
+                      </div>
                     </div>
-                  </div>
+                  )}
                 </div>
               ))}
             </div>

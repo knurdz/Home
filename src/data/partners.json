@@ -2,51 +2,29 @@
   {
     "name": "Brainvave Software Studios (PVT) LTD.",
     "logo": "/partner-logos/brainvave.webp",
+    "type": "Strategic Partner",
     "website": "https://brainvave.com",
-    "description": "Brainvave Software Studios is a project-based development firm dedicated to building high-performance web and mobile applications. We specialize in taking products from initial concept to full-scale deployment",
-    "projects": [
-      {
-        "name": "Ayzack Global Education (PVT) LTD",
-        "slug": "ayzack",
-        "url": "https://ayzack.com",
-        "status": "live"
-      },
-      {
-        "name": "Prime Edu",
-        "slug": "prime-edu",
-        "url": "https://primeedu.lk",
-        "status": "live"
-      },
-      {
-        "name": "ItProLearners",
-        "slug": "itprolearner",
-        "url": "https://itprolearner.brainvave.com",
-        "status": "beta"
-      },
-      {
-        "name": "Pumpkin Tours (PVT) LTD",
-        "slug": "pumpkintours",
-        "url": "https://pumpkintours.com",
-        "status": "live"
-      },
-      {
-        "name": "Portal (PVT) LTD",
-        "slug": "portal",
-        "url": "https://portal.lk",
-        "status": "development"
-      },
-      {
-        "name": "IIPE.uk",
-        "slug": "iipe",
-        "url": "https://iipe.uk",
-        "status": "upcoming"
-      },
-      {
-        "name": "Uplect.com",
-        "slug": "uplect",
-        "url": "https://uplect.com",
-        "status": "upcoming"
-      }
-    ]
+    "description": "Brainvave Software Studios is a project-based development firm dedicated to building high-performance web and mobile applications. We specialize in taking products from initial concept to full-scale deployment"
+  },
+  {
+    "name": "IEEE Student Branch",
+    "logo": "/partner-logos/ieee.webp",
+    "website": "https://www.ieee.org",
+    "description": "The IEEE Student Branch fosters technological innovation and excellence for the benefit of humanity, providing students with opportunities for professional development and networking.",
+    "projects": []
+  },
+  {
+    "name": "IEEE RAS (Robotics & Automation Society)",
+    "logo": "/partner-logos/ieee-ras.webp",
+    "website": "https://www.ieee-ras.org",
+    "description": "IEEE Robotics and Automation Society (RAS) is dedicated to advancing the theory and practice of robotics and automation engineering and science.",
+    "projects": []
+  },
+  {
+    "name": "IEEE WIE (Women in Engineering)",
+    "logo": "/partner-logos/ieee-wie.webp",
+    "website": "https://wie.ieee.org",
+    "description": "IEEE Women in Engineering (WIE) is a global network of IEEE members and volunteers dedicated to promoting women engineers and scientists.",
+    "projects": []
   }
 ]
