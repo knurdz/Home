@@ -44,9 +44,9 @@ export default function Navbar({ activePage }: NavbarProps) {
 
   return (
     <>
-      <header ref={headerRef} className="fixed top-0 inset-x-0 z-50">
+      <header ref={headerRef} className="fixed top-0 inset-x-0 z-50 flex flex-col">
         <JoinCommunityBanner />
-        <nav className="w-full bg-background/80 backdrop-blur-xl shadow-[0_1px_0_var(--border)]">
+        <nav className="w-full bg-background backdrop-blur-xl shadow-[0_1px_0_var(--border)]">
         <div className="container mx-auto max-w-7xl px-6 py-4 flex items-center justify-between relative">
           <Link
             href="/"

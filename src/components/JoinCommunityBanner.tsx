@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export default function JoinCommunityBanner() {
   return (
-    <div className="relative w-full border-b border-border overflow-hidden min-h-14">
+    <div className="join-community-banner relative w-full overflow-hidden min-h-14">
       <Image
         src="/images/banner/banner.png"
         alt=""
@@ -14,8 +14,8 @@ export default function JoinCommunityBanner() {
         aria-hidden
       />
       <div className="join-banner-scrim absolute inset-0" />
-      <div className="relative container mx-auto max-w-7xl px-4 sm:px-6 py-2.5 flex flex-col sm:flex-row items-center justify-center sm:justify-between gap-2 sm:gap-3">
-        <p className="join-banner-text text-sm sm:text-base text-center sm:text-left leading-snug">
+      <div className="join-banner-content relative container mx-auto max-w-7xl px-4 sm:px-6 py-2.5 flex flex-col sm:flex-row items-center justify-center sm:justify-between gap-2 sm:gap-3">
+        <p className="join-banner-text m-0 text-sm sm:text-base text-center sm:text-left leading-snug">
           Join the Knurdz community —{" "}
           <span className="join-banner-highlight inline-block font-semibold whitespace-nowrap">
             applications close soon.

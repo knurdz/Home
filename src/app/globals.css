@@ -714,6 +714,15 @@ body.light #scrollProgress .inset-0\.5.rounded-full.bg-green-500 {
   );
 }
 
+.join-community-banner {
+  display: block;
+  line-height: 0;
+}
+
+.join-community-banner > .join-banner-content {
+  line-height: normal;
+}
+
 .join-banner-text {
   color: rgba(255, 255, 255, 0.92);
 }
