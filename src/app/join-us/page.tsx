@@ -72,6 +72,36 @@ export default function JoinUsPage() {
             </p>
           </div>
 
+          {/* Why Join Us Section */}
+          <div className="mb-20">
+            <h2 className="text-2xl md:text-3xl font-bold mono-font mb-10 flex items-center gap-4">
+              <span className="text-green-500">Why</span> Join Us<span className="text-green-500">?</span>
+            </h2>
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+              <div className="p-6 rounded-lg border border-border bg-card/30 hover:border-foreground/30 transition-colors group">
+                <div className="text-green-500 mb-4 text-2xl font-bold mono-font group-hover:translate-x-1 transition-transform inline-block">01/ Innovation</div>
+                <h3 className="text-xl font-bold mb-2 mono-font text-foreground">Future engineering</h3>
+                <p className="text-muted text-sm leading-relaxed">
+                  Join a community that experiments with the latest in code, hardware, and social innovation.
+                </p>
+              </div>
+              <div className="p-6 rounded-lg border border-border bg-card/30 hover:border-foreground/30 transition-colors group">
+                <div className="text-green-500 mb-4 text-2xl font-bold mono-font group-hover:translate-x-1 transition-transform inline-block">02/ Impact</div>
+                <h3 className="text-xl font-bold mb-2 mono-font text-foreground">Real-world solutions</h3>
+                <p className="text-muted text-sm leading-relaxed">
+                  We build tools and platforms that solve actual problems and create meaningful social change.
+                </p>
+              </div>
+              <div className="p-6 rounded-lg border border-border bg-card/30 hover:border-foreground/30 transition-colors group">
+                <div className="text-green-500 mb-4 text-2xl font-bold mono-font group-hover:translate-x-1 transition-transform inline-block">03/ Community</div>
+                <h3 className="text-xl font-bold mb-2 mono-font text-foreground">Collective growth</h3>
+                <p className="text-muted text-sm leading-relaxed">
+                  Work alongside passionate creators in a collaborative environment where everyone learns and grows.
+                </p>
+              </div>
+            </div>
+          </div>
+
           <div className="max-w-3xl">
             {status === "success" ? (
               <div className="bg-card border border-green-500/30 rounded-lg p-8 text-center space-y-4">
