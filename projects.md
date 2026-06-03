@@ -8,6 +8,7 @@ This file serves as the source of truth for the projects displayed on the Knurdz
 | :-- | :-- | :-- | :-- | :-- |
 | Sonar Code Editor | production | 78dc070 | A secure, real-time collaborative coding environment designed specifically for supervised exams and technical interviews. | Desktop App, Web |
 | Nothing Dialer 1 | release/beta | 1f125a2 | A Dialer app for Nothing OS with custom glyph for outgoing and ongoing calls also. | Mobile, IoT |
+| IEEE Student Branch Website | main | b8f2c31 | Official website for the IEEE Student Branch, University of Moratuwa — showcasing chapters, events, and community engagement for 1,000+ members. Built by Knurdz as web partner. | Web App, Education, Community |
 | Origami | main | c4e8a1f | Upload a PDF, scan a repo, or paste text — Origami streams an interactive explanation and generates a v0-powered MVP in seconds. | Web App, AI, Developer Tool |
 | MazeX | main | a3m9x07 | Full-stack event platform for MazeX 1.0 — an island-wide inter-university Micromouse competition with customizable organizer back-office and cloud infrastructure. Built and hosted by Knurdz as web partner for IEEE RAS & WIE, University of Moratuwa. | Web App, Event Platform, Robotics |
 | What Should I Build | main | b7d3f92 | AI project idea generator that turns your skills, GitHub, time, and goals into ranked ideas with roadmap, stack, and build-ready artifacts. | Web App, AI, Developer Tool |

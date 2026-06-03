@@ -31,6 +31,16 @@ export const projects: Project[] = [
     upcoming: false,
   },
   {
+    name: "IEEE Student Branch Website",
+    slug: "ieee-sb-uom-website",
+    branch: "main",
+    commit: "b8f2c31",
+    description:
+      "Official website for the IEEE Student Branch, University of Moratuwa — showcasing chapters, events, and community engagement for 1,000+ members. Built by Knurdz as web partner.",
+    tags: ["Web App", "Education", "Community"],
+    upcoming: false,
+  },
+  {
     name: "Origami",
     slug: "origami",
     branch: "main",

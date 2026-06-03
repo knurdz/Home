@@ -4,6 +4,7 @@ import path from "path";
 
 const projects = [
   { slug: "origami", url: "https://origami.knurdz.org" },
+  { slug: "ieee-sb-uom-website", url: "https://ieeesb.uom.lk" },
   { slug: "mazex", url: "https://mazex.knurdz.org" },
   { slug: "what-should-i-build", url: "https://whatshouldibuild.knurdz.org" },
   { slug: "defense-panel", url: "https://defense-panel-two.vercel.app/" },
