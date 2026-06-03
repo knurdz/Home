@@ -35,7 +35,7 @@ function AchievementBanner({ achievement }: { achievement: Achievement }) {
           className="absolute inset-0 z-[1] pointer-events-none bg-linear-to-t from-black/92 via-black/45 to-black/10"
           aria-hidden
         />
-        <div className="absolute bottom-0 left-0 right-0 p-4 sm:p-6 md:p-8 z-10">
+        <div className="absolute bottom-0 left-0 right-0 p-4 sm:p-6 md:p-8 z-10 on-dark-surface">
           <AchievementBannerMeta achievement={achievement} />
         </div>
       </div>
@@ -71,7 +71,7 @@ function AchievementBanner({ achievement }: { achievement: Achievement }) {
         className="absolute inset-0 z-[1] pointer-events-none bg-linear-to-t from-black/92 via-black/45 to-black/10"
         aria-hidden
       />
-      <div className="absolute bottom-0 left-0 right-0 p-4 sm:p-6 md:p-8 z-10">
+      <div className="absolute bottom-0 left-0 right-0 p-4 sm:p-6 md:p-8 z-10 on-dark-surface">
         <AchievementBannerMeta achievement={achievement} />
       </div>
     </div>

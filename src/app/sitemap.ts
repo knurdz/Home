@@ -1,5 +1,6 @@
 import type { MetadataRoute } from "next";
 import { getAllAchievementSlugs } from "@/lib/achievements";
+import { getAllBlogSlugs } from "@/lib/blog";
 import { getAllEventSlugs } from "@/lib/events";
 import { getAllProjectSlugs } from "@/lib/projects";
 
@@ -51,6 +52,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "monthly",
       priority: 0.8,
     },
+    {
+      url: `${BASE_URL}/blog`,
+      lastModified: new Date(),
+      changeFrequency: "weekly",
+      priority: 0.8,
+    },
   ];
 
   const projectRoutes: MetadataRoute.Sitemap = slugs.map((slug) => ({
@@ -78,5 +85,19 @@ export default function sitemap(): MetadataRoute.Sitemap {
     })
   );
 
-  return [...staticRoutes, ...projectRoutes, ...eventRoutes, ...achievementRoutes];
+  const blogSlugs = getAllBlogSlugs();
+  const blogRoutes: MetadataRoute.Sitemap = blogSlugs.map((slug) => ({
+    url: `${BASE_URL}/blog/${slug}`,
+    lastModified: new Date(),
+    changeFrequency: "monthly" as const,
+    priority: 0.75,
+  }));
+
+  return [
+    ...staticRoutes,
+    ...projectRoutes,
+    ...eventRoutes,
+    ...achievementRoutes,
+    ...blogRoutes,
+  ];
 }

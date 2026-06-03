@@ -4,6 +4,7 @@ import Link from "next/link";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import ScrollIndicator from "@/components/ScrollIndicator";
+import UpcomingProjectsSection from "@/components/UpcomingProjectsSection";
 import { featuredProjects, upcomingProjects } from "@/data/projects";
 
 export default function ProjectsPage() {
@@ -14,8 +15,8 @@ export default function ProjectsPage() {
 
       <div className="pt-site-header-lg pb-20">
         {/* Projects Section */}
-        <section id="projects" className="relative px-6">
-          <div className="container mx-auto max-w-7xl">
+        <section id="projects" className="relative px-4 sm:px-6 overflow-x-hidden">
+          <div className="container mx-auto max-w-7xl min-w-0">
             {/* Section Header */}
             <div className="text-center mb-20">
               <span className="px-4 py-2 rounded border border-border text-muted text-sm mono-font">
@@ -116,70 +117,11 @@ export default function ProjectsPage() {
               </div>
             </div>
 
-            {/* Upcoming Projects */}
-            <div className="mt-32">
-              <div className="text-center mb-12">
-                <span className="px-4 py-2 rounded border border-yellow-500/30 text-yellow-500/80 text-sm mono-font">
-                  $ git stash list --upcoming
-                </span>
-                <h2 className="text-3xl md:text-4xl font-bold mt-6 mb-4 mono-font text-foreground">
-                  Upcoming <span className="text-faded">Projects</span>
-                </h2>
-                <p className="text-lg text-muted max-w-2xl mx-auto">
-                  In progress, currently being crafted in our dev branches
-                </p>
-              </div>
-
-              <div className="grid md:grid-cols-2 gap-6">
-                {upcomingProjects.map((project) => (
-                  <div
-                    key={project.name}
-                    className="relative bg-card/40 backdrop-blur-xl rounded-lg border border-dashed border-border p-8 opacity-80"
-                  >
-                    {/* Integrated Header: Branch, Badge, Commit */}
-                    <div className="flex justify-between items-start mb-2">
-                      <div className="mono-font text-sm text-faded flex items-center gap-2">
-                        <span className="text-yellow-600">◐</span> {project.branch}
-                      </div>
-                      <span className="px-2 py-1 rounded text-xs mono-font bg-yellow-500/10 text-yellow-500/80 border border-yellow-500/20 whitespace-nowrap ml-2">
-                        // upcoming
-                      </span>
-                    </div>
-                    <div className="text-xs text-muted mono-font mb-4">
-                      commit {project.commit}
-                    </div>
-
-                    {/* Title Section */}
-                    <div className="mb-3">
-                      <h3 className="text-2xl font-bold mono-font text-foreground truncate">
-                        {project.name}
-                      </h3>
-                      {(project.slug === "project-titanic" ||
-                        project.slug === "arduino-remote") && (
-                        <div className="mt-2">
-                          <span className="inline-block text-xs font-normal mono-font text-faded border border-border rounded px-2 py-0.5 whitespace-nowrap">
-                            working title
-                          </span>
-                        </div>
-                      )}
-                    </div>
-                    <p className="text-muted mb-4 text-sm">
-                      {project.description}
-                    </p>
-                    <div className="flex flex-wrap gap-2">
-                      {project.tags.map((tag: string) => (
-                        <span
-                          key={tag}
-                          className="px-3 py-1 rounded border border-border text-faded text-xs mono-font"
-                        >
-                          {tag}
-                        </span>
-                      ))}
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </div>
+            <UpcomingProjectsSection
+              projects={upcomingProjects}
+              className="mt-16 sm:mt-24 md:mt-32 overflow-x-hidden"
+              headerClassName="text-center mb-8 sm:mb-10 md:mb-12"
+            />
           </div>
         </section>
       </div>

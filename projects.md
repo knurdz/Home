@@ -22,7 +22,8 @@ This file serves as the source of truth for the projects displayed on the Knurdz
 
 | Name | Branch | Commit | Description | Tags |
 | :-- | :-- | :-- | :-- | :-- |
-| Project Titanic | feature/marketplace | 5a2d9c9 | A multipurpose application for university students featuring 6 core distinc features | Mobile, Web |
+| IEEE SB Volunteer & Event Management System | development | d2e4f8a | A unified platform for IEEE Student Branch volunteer coordination, event operations, registrations, and committee workflows — built for student branches that outgrow spreadsheets. | Web App, Event Platform, Education |
+| Project Titanic | feature/marketplace | 5a2d9c9 | A multipurpose application for university students featuring 6 core distinct features | Mobile, Web |
 | Metal PaaS | main | 1g6j9c9 | Metal is a high-performance, AI-Native Platform-as-a-Service (PaaS) that revolutionizes how students and developers build for the cloud. | PaaS, Infrastructure |
 | Arduino Remote | development/alpha | 4b8e1c5 | Aruido IDE built from scratch powered Arduino CLI with inbuilt cloud based OTA updates and remote debugging. | Desktop, IoT |
 ---

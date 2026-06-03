@@ -1,10 +1,50 @@
 "use client";
 
-import { useEffect, useState, useCallback } from "react";
+import { useEffect, useState, useCallback, useMemo } from "react";
 
-export default function ScrollIndicator() {
+export interface ScrollSection {
+  label: string;
+  id?: string;
+}
+
+const DEFAULT_SECTIONS: ScrollSection[] = [
+  { label: "home", id: "hero" },
+  { label: "projects", id: "projects" },
+  { label: "partners", id: "partners" },
+  { label: "cta", id: "cta" },
+  { label: "footer" },
+];
+
+export const HOME_SCROLL_SECTIONS: ScrollSection[] = [
+  { label: "home", id: "hero" },
+  { label: "partners", id: "partners" },
+  { label: "projects", id: "projects" },
+  { label: "proof", id: "events" },
+  { label: "community", id: "community" },
+  { label: "cta", id: "cta" },
+  { label: "footer" },
+];
+
+interface ScrollIndicatorProps {
+  sections?: ScrollSection[];
+}
+
+export default function ScrollIndicator({ sections = DEFAULT_SECTIONS }: ScrollIndicatorProps) {
   const [scrollPercentage, setScrollPercentage] = useState(0);
-  const [activeNodes, setActiveNodes] = useState<boolean[]>([false, false, false, false, false]);
+  const [activeNodes, setActiveNodes] = useState<boolean[]>(() =>
+    sections.map(() => false),
+  );
+
+  const positions = useMemo(
+    () =>
+      sections.map((_, index) => {
+        if (sections.length === 1) return "50%";
+        // First section (home) at bottom; last section at top — matches line fill direction
+        const reversedIndex = sections.length - 1 - index;
+        return `${(reversedIndex / (sections.length - 1)) * 100}%`;
+      }),
+    [sections],
+  );
 
   const updateScrollIndicator = useCallback(() => {
     const windowHeight = window.innerHeight;
@@ -16,15 +56,15 @@ export default function ScrollIndicator() {
 
     setScrollPercentage(clampedPercentage);
 
-    const nodePositions = [0, 25, 50, 75, 100];
-    const newActiveNodes = nodePositions.map((pos) => {
-      const posFromBottom = 100 - pos;
+    const newActiveNodes = positions.map((pos) => {
+      const posFromBottom = 100 - parseFloat(pos);
       return clampedPercentage > posFromBottom - 1;
     });
     setActiveNodes(newActiveNodes);
-  }, []);
+  }, [positions]);
 
   useEffect(() => {
+    setActiveNodes(sections.map(() => false));
     window.addEventListener("scroll", updateScrollIndicator);
     window.addEventListener("resize", updateScrollIndicator);
     updateScrollIndicator();
@@ -33,9 +73,9 @@ export default function ScrollIndicator() {
       window.removeEventListener("scroll", updateScrollIndicator);
       window.removeEventListener("resize", updateScrollIndicator);
     };
-  }, [updateScrollIndicator]);
+  }, [sections, updateScrollIndicator]);
 
-  const handleClick = (e: React.MouseEvent<HTMLDivElement>) => {
+  const handleTrackClick = (e: React.MouseEvent<HTMLDivElement>) => {
     const rect = e.currentTarget.getBoundingClientRect();
     const clickY = e.clientY - rect.top;
     const clickPercentage = (clickY / rect.height) * 100;
@@ -53,8 +93,17 @@ export default function ScrollIndicator() {
     });
   };
 
-  const labels = ["home", "projects", "partners", "cta", "footer"];
-  const positions = ["0%", "25%", "50%", "75%", "100%"];
+  const handleNodeClick = (index: number, e: React.MouseEvent) => {
+    e.stopPropagation();
+    const section = sections[index];
+    if (section.id) {
+      document.getElementById(section.id)?.scrollIntoView({ behavior: "smooth" });
+      return;
+    }
+    if (index === sections.length - 1) {
+      window.scrollTo({ top: document.documentElement.scrollHeight, behavior: "smooth" });
+    }
+  };
 
   return (
     <div
@@ -63,44 +112,41 @@ export default function ScrollIndicator() {
     >
       <div
         className="relative h-[500px] w-0.5 cursor-pointer"
-        onClick={handleClick}
+        onClick={handleTrackClick}
       >
-        {/* Background line (gray) */}
         <div className="absolute inset-0 bg-muted/30 rounded-full"></div>
 
-        {/* Progress line (green) that fills from bottom */}
         <div
           className="absolute bottom-0 left-0 w-full bg-green-500 rounded-full transition-all duration-150 ease-out"
           style={{ height: `${scrollPercentage}%` }}
         ></div>
 
-        {/* Section nodes */}
         {positions.map((pos, index) => (
-          <div
-            key={index}
-            className={`absolute left-1/2 -translate-x-1/2 w-4 h-4 rounded-full border-2 bg-background transition-all duration-300 ${
+          <button
+            key={`${sections[index].label}-${index}`}
+            type="button"
+            onClick={(e) => handleNodeClick(index, e)}
+            className={`absolute left-1/2 -translate-x-1/2 w-4 h-4 rounded-full border-2 bg-background transition-all duration-300 cursor-pointer ${
               activeNodes[index] ? "border-green-500" : "border-muted"
             }`}
-            style={{
-              top: pos,
-            }}
+            style={{ top: pos }}
+            aria-label={`Scroll to ${sections[index].label}`}
           >
             <div
               className={`absolute inset-0.5 rounded-full bg-green-500 transition-transform duration-300 ${
                 activeNodes[index] ? "scale-100" : "scale-0"
               }`}
             ></div>
-          </div>
+          </button>
         ))}
 
-        {/* Section labels on hover */}
-        {labels.map((label, index) => (
+        {sections.map((section, index) => (
           <div
-            key={label}
-            className="absolute -left-16 opacity-0 hover:opacity-100 transition-opacity mono-font text-[10px] text-muted"
+            key={`label-${section.label}-${index}`}
+            className="absolute -left-16 opacity-0 hover:opacity-100 transition-opacity mono-font text-[10px] text-muted pointer-events-none"
             style={{ top: positions[index] }}
           >
-            {label}
+            {section.label}
           </div>
         ))}
       </div>

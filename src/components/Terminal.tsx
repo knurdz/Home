@@ -27,6 +27,7 @@ const NAV_COMMANDS: Record<string, NavTarget> = {
   achievements: { type: "route", path: "/achievements" },
   events: { type: "route", path: "/events" },
   partners: { type: "route", path: "/partners" },
+  blog: { type: "route", path: "/blog" },
   about: { type: "route", path: "/about" },
   contact: { type: "route", path: "/contact" },
   "join-us": { type: "route", path: "/join-us" },

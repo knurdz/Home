@@ -1,12 +1,15 @@
 ---
 title: "Origami"
+banner: "/images/projects/origami/banner.png"
 description: "Upload a PDF, scan a repo, or paste text, Origami streams an interactive explanation and generates a v0-powered MVP in seconds."
 tags: ["Web App", "AI", "Developer Tool"]
 branch: "main"
 commit: "c4e8a1f"
 ---
 
-- **Live Demo**: [https://origami.knurdz.org](https://origami.knurdz.org)
+## Links
+
+- [Live Demo](https://origami.knurdz.org)
 
 ## Overview
 

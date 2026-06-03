@@ -21,7 +21,7 @@ export default function JoinCommunityBanner() {
             applications close soon.
           </span>
         </p>
-        <Link href="/join-us" className="join-banner-btn shrink-0 ml-auto px-4 py-1.5 rounded font-bold text-sm mono-font">
+        <Link href="/join-us" className="join-banner-btn shrink-0 ml-auto px-4 py-1.5 rounded font-semibold text-sm mono-font">
           Apply Now
         </Link>
       </div>

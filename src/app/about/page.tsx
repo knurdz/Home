@@ -11,8 +11,12 @@ import GalleryNavArrow, {
   GalleryPreviewMobileNav,
 } from "@/components/GalleryNavArrow";
 import { members, Member } from "@/data/members";
+import { communityStats, vision, mission, alwaysBuildingLine } from "@/data/community";
 import MemberAvatar from "@/components/MemberAvatar";
 import TeamMemberPreview from "@/components/TeamMemberPreview";
+import StatCard from "@/components/StatCard";
+import ValuesSection from "@/components/ValuesSection";
+import ProtocolsSection from "@/components/ProtocolsSection";
 import galleryData from "@/data/gallery.json";
 
 type GalleryFilter = "all" | "event" | "project" | "team";
@@ -132,89 +136,89 @@ export default function AboutPage() {
       <BannerSlider />
 
       {/* Hero Section */}
-      <section className="relative min-h-[60vh] flex items-center justify-center px-6 pt-8 md:pt-12 pb-20">
-        <div className="container mx-auto max-w-7xl text-center">
-          <span className="inline-block px-4 py-2 rounded border border-border text-muted text-sm mono-font mb-6">
-            $ cat about.md
-          </span>
-          <h1 className="text-5xl md:text-7xl font-bold mono-font leading-tight mb-6">
-            <span className="text-foreground">About</span>{" "}
-            <span className="text-faded">Knurdz</span>
-            <span className="text-green-500">.</span>
-          </h1>
-          <p className="text-xl md:text-2xl text-muted max-w-3xl mx-auto leading-relaxed">
-            A collective of passionate creators engineering the future through code, hardware, and social innovation.
-          </p>
-          <p className="text-md md:text-lg text-muted max-w-2xl mx-auto mt-4">
-            <span className="font-semibold text-green-500">Founded in 2025</span>, Knurdz began as a vision to unite creators and innovators under one community.
-          </p>
+      <section className="relative flex items-center justify-center px-4 sm:px-6 pt-6 sm:pt-8 md:pt-12 pb-12 sm:pb-16 md:pb-20">
+        <div className="container mx-auto max-w-3xl text-center space-y-6 sm:space-y-8">
+          <div className="space-y-4 sm:space-y-6">
+            <span className="inline-block px-3 py-1.5 sm:px-4 sm:py-2 rounded border border-border text-muted text-xs sm:text-sm mono-font">
+              $ cat about.md
+            </span>
+            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mono-font leading-tight">
+              <span className="text-foreground">About</span>{" "}
+              <span className="text-faded">Knurdz</span>
+              <span className="text-green-500">.</span>
+            </h1>
+            <p className="text-base sm:text-lg md:text-xl text-muted max-w-2xl mx-auto leading-relaxed px-1">
+              A collective of passionate creators engineering the future through code, hardware, and social innovation.
+            </p>
+          </div>
+
+          <div className="mx-auto max-w-2xl rounded-lg border border-border bg-card/40 px-4 py-5 sm:px-6 sm:py-6 md:px-8 md:py-7 text-center space-y-4 sm:space-y-5">
+            <p className="text-sm sm:text-base text-muted leading-relaxed">
+              <span className="font-semibold text-green-500">Founded in 2025</span>
+              , uniting creators and innovators in one open community.
+            </p>
+            <div className="h-px w-12 bg-border mx-auto" aria-hidden />
+            <div className="space-y-2">
+              <p className="mono-font text-xs text-green-500/80">// always.building</p>
+              <p className="text-sm md:text-base text-muted leading-relaxed">{alwaysBuildingLine}</p>
+            </div>
+          </div>
         </div>
       </section>
 
       {/* Community Info Section */}
-      <section className="relative py-20 px-6">
+      <section className="relative py-12 sm:py-16 md:py-20 px-4 sm:px-6">
         <div className="container mx-auto max-w-6xl">
-          <div className="grid md:grid-cols-2 gap-12 items-center mb-20">
-            {/* Left - Mission */}
+          <div className="grid md:grid-cols-2 gap-8 sm:gap-10 md:gap-12 mb-10 sm:mb-12">
             <div>
-              <span className="px-4 py-2 rounded border border-border text-muted text-sm mono-font inline-block mb-6">
+              <span className="px-4 py-2 rounded border border-border text-muted text-sm mono-font inline-block mb-4 sm:mb-6">
+                $ cat vision.md
+              </span>
+              <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mono-font mb-4 sm:mb-6 text-foreground">
+                Our <span className="text-faded">Vision</span>
+              </h2>
+              <p className="text-muted text-base sm:text-lg leading-relaxed">{vision}</p>
+            </div>
+
+            <div>
+              <span className="px-4 py-2 rounded border border-border text-muted text-sm mono-font inline-block mb-4 sm:mb-6">
                 $ git log --mission
               </span>
-              <h2 className="text-4xl md:text-5xl font-bold mono-font mb-6 text-foreground">
+              <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mono-font mb-4 sm:mb-6 text-foreground">
                 Our <span className="text-faded">Mission</span>
               </h2>
-              <p className="text-muted text-lg leading-relaxed mb-4">
-                Knurdz is more than just a development community—we&apos;re a collective of
-                innovators committed to pushing the boundaries of what&apos;s possible in
-                technology.
-              </p>
-              <p className="text-muted text-lg leading-relaxed">
-                We believe in open collaboration, continuous learning, and building products
-                that make a real impact.
-              </p>
-            </div>
-
-            {/* Right - Stats */}
-            <div className="grid grid-cols-2 gap-6">
-              <StatCard number="12+" label="Projects Delivered" />
-              <StatCard number="14+" label="Community Members" />
-              <StatCard number="5+" label="Years Experience" duration={1000} />
-              <StatCard number="10+" label="Active Contributors" />
+              <p className="text-muted text-base sm:text-lg leading-relaxed">{mission}</p>
             </div>
           </div>
 
-          {/* Values */}
-          <div className="grid md:grid-cols-3 gap-6">
-            <ValueCard
-              icon="🚀"
-              title="Innovation First"
-              description="We embrace cutting-edge technologies and creative solutions to solve complex problems."
-            />
-            <ValueCard
-              icon="🤝"
-              title="Collaboration"
-              description="Building together makes us stronger. We share knowledge and support each other."
-            />
-            <ValueCard
-              icon="💡"
-              title="Continuous Learning"
-              description="Technology evolves, and so do we. We&apos;re committed to growth and learning."
-            />
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-3 sm:gap-4 md:gap-6 mb-2">
+            {communityStats.map((stat) => (
+              <StatCard
+                key={stat.label}
+                number={stat.number}
+                label={stat.label}
+                duration={stat.duration}
+              />
+            ))}
           </div>
+
+          <ValuesSection />
         </div>
       </section>
 
+      <ProtocolsSection />
+
       {/* Team Members Section */}
-      <section className="relative py-20 px-6 bg-background-alt">
+      <section id="team" className="relative py-12 sm:py-16 md:py-20 px-4 sm:px-6 bg-background-alt">
         <div className="container mx-auto max-w-7xl">
-          <div className="text-center mb-16">
-            <span className="px-4 py-2 rounded border border-border text-muted text-sm mono-font inline-block mb-6">
+          <div className="text-center mb-10 sm:mb-12 md:mb-16">
+            <span className="px-4 py-2 rounded border border-border text-muted text-sm mono-font inline-block mb-4 sm:mb-6">
               $ git log --contributors
             </span>
-            <h2 className="text-4xl md:text-6xl font-bold mono-font mb-4 text-foreground">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mono-font mb-3 sm:mb-4 text-foreground">
               Meet Our <span className="text-faded">Team</span>
             </h2>
-            <p className="text-xl text-muted max-w-2xl mx-auto">
+            <p className="text-base sm:text-lg md:text-xl text-muted max-w-2xl mx-auto px-1">
               The talented individuals making it all happen
             </p>
           </div>
@@ -318,15 +322,16 @@ export default function AboutPage() {
                 ))}
             </div>
           </div>
+          </div>
 
           {/* Mobile Grid View */}
-          <div className="md:hidden grid grid-cols-1 sm:grid-cols-2 gap-6 mt-8">
+          <div className="md:hidden grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6 mt-6 sm:mt-8">
             {members.map((member, index) => (
               <div 
                 key={member.name} 
                 className="bg-card/90 backdrop-blur-xl border border-border rounded-xl overflow-hidden shadow-lg hover:border-green-500 transition-colors duration-300"
               >
-                  <div className="flex flex-col items-center p-6 text-center">
+                  <div className="flex flex-col items-center p-5 sm:p-6 text-center">
                     <div className="relative w-24 h-24 mb-4 rounded-full border-4 border-green-500/20 overflow-hidden shadow-lg">
                         <MemberAvatar member={member} />
                     </div>
@@ -362,30 +367,29 @@ export default function AboutPage() {
             ))}
           </div>
         </div>
-      </div>
       </section>
 
       {/* Gallery Section */}
-      <section className="relative py-20 px-6">
+      <section className="relative py-12 sm:py-16 md:py-20 px-4 sm:px-6">
         <div className="container mx-auto max-w-7xl">
-          <div className="text-center mb-16">
-            <span className="px-4 py-2 rounded border border-border text-muted text-sm mono-font inline-block mb-6">
+          <div className="text-center mb-10 sm:mb-12 md:mb-16">
+            <span className="px-4 py-2 rounded border border-border text-muted text-sm mono-font inline-block mb-4 sm:mb-6">
               $ ls -la ./gallery/
             </span>
-            <h2 className="text-4xl md:text-6xl font-bold mono-font mb-4 text-foreground">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mono-font mb-3 sm:mb-4 text-foreground">
               Community <span className="text-faded">Gallery</span>
             </h2>
-            <p className="text-xl text-muted max-w-2xl mx-auto mb-8">
+            <p className="text-base sm:text-lg md:text-xl text-muted max-w-2xl mx-auto mb-6 sm:mb-8 px-1">
               Moments captured from our journey together
             </p>
 
             {/* Filter Tabs */}
-            <div className="flex flex-wrap gap-3 justify-center">
+            <div className="flex flex-wrap gap-2 sm:gap-3 justify-center px-1">
               {(['all', 'event', 'project', 'team'] as GalleryFilter[]).map((category) => (
                 <button
                   key={category}
                   onClick={() => setFilter(category)}
-                  className={`px-6 py-2 rounded border transition-all mono-font text-sm ${
+                  className={`px-4 sm:px-6 py-2 rounded border transition-all mono-font text-xs sm:text-sm ${
                     filter === category
                       ? 'border-green-500 bg-green-500/10 text-green-500'
                       : 'border-border text-muted hover:border-foreground/30 hover:text-foreground'
@@ -489,27 +493,27 @@ export default function AboutPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="relative py-20 px-6 bg-background-alt">
+      <section className="relative py-12 sm:py-16 md:py-20 px-4 sm:px-6 bg-background-alt">
         <div className="container mx-auto max-w-5xl">
-          <div className="relative bg-card rounded-lg border border-border p-12 md:p-16 text-center">
-            <div className="space-y-8">
-              <h2 className="text-4xl md:text-5xl font-bold mono-font text-foreground">
+          <div className="relative bg-card rounded-lg border border-border p-6 sm:p-8 md:p-12 lg:p-16 text-center">
+            <div className="space-y-6 sm:space-y-8">
+              <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mono-font text-foreground">
                 Join Our <span className="text-faded">Community</span>
                 <span className="text-green-500">!</span>
               </h2>
-              <p className="text-xl text-muted max-w-2xl mx-auto">
+              <p className="text-base sm:text-lg md:text-xl text-muted max-w-2xl mx-auto px-1">
                 Ready to collaborate, learn, and build amazing things together?
               </p>
-              <div className="flex flex-wrap gap-4 justify-center mono-font text-sm">
+              <div className="flex flex-col sm:flex-row flex-wrap gap-3 sm:gap-4 justify-center mono-font text-sm">
                 <Link
                   href="/contact"
-                  className="px-10 py-5 rounded bg-foreground text-background hover:opacity-90 transition-all font-bold"
+                  className="px-6 sm:px-10 py-3.5 sm:py-5 rounded bg-foreground text-background hover:opacity-90 transition-all font-bold text-center"
                 >
                   git init collaboration
                 </Link>
                 <Link
                   href="/#projects"
-                  className="px-10 py-5 rounded border-2 border-border hover:border-foreground transition-all font-bold text-foreground"
+                  className="px-6 sm:px-10 py-3.5 sm:py-5 rounded border-2 border-border hover:border-foreground transition-all font-bold text-foreground text-center"
                 >
                   explore projects
                 </Link>
@@ -629,93 +633,5 @@ export default function AboutPage() {
         </div>
       )}
     </>
-  );
-}
-
-function StatCard({
-  number,
-  label,
-  duration = 2000,
-}: {
-  number: string;
-  label: string;
-  duration?: number;
-}) {
-  const [displayNumber, setDisplayNumber] = useState("0");
-  const ref = useRef<HTMLDivElement>(null);
-  
-  useEffect(() => {
-    let animationFrameId: number | null = null;
-
-    const observer = new IntersectionObserver(
-      (entries) => {
-        if (entries[0].isIntersecting) {
-          const match = number.match(/^(\d+)(.*)$/);
-          if (!match) {
-            setDisplayNumber(number);
-            observer.disconnect();
-            return;
-          }
-
-          const endValue = parseInt(match[1], 10);
-          const suffixStr = match[2];
-
-          let startTimestamp: number | null = null;
-          const step = (timestamp: number) => {
-            if (!startTimestamp) startTimestamp = timestamp;
-            const progress = Math.min((timestamp - startTimestamp) / duration, 1);
-            const current = Math.floor(progress * endValue);
-
-            setDisplayNumber(`${current}${suffixStr}`);
-
-            if (progress < 1) {
-              animationFrameId = window.requestAnimationFrame(step);
-            } else {
-              setDisplayNumber(number);
-            }
-          };
-
-          animationFrameId = window.requestAnimationFrame(step);
-          observer.disconnect();
-        }
-      },
-      { threshold: 0.1 }
-    );
-    
-    if (ref.current) {
-      observer.observe(ref.current);
-    }
-    
-    return () => {
-      observer.disconnect();
-      if (animationFrameId !== null) {
-        window.cancelAnimationFrame(animationFrameId);
-      }
-    };
-  }, [duration, number]);
-
-  return (
-    <div ref={ref} className="bg-card backdrop-blur-xl rounded-lg border border-border p-6 text-center group hover:border-green-500/50 transition-colors duration-300">
-      <div className="text-4xl font-bold mono-font text-green-500 mb-2 tabular-nums">
-        {displayNumber}
-      </div>
-      <div className="text-sm text-muted mono-font group-hover:text-foreground transition-colors">
-        {label}
-      </div>
-    </div>
-  );
-}
-
-function ValueCard({ icon, title, description }: { icon: string; title: string; description: string }) {
-  return (
-    <div className="bg-card backdrop-blur-xl rounded-lg border border-border p-8 hover:border-foreground/30 transition-all group">
-      <div className="text-4xl mb-4">{icon}</div>
-      <h3 className="text-xl font-bold mono-font text-foreground mb-3 group-hover:text-green-500 transition-colors">
-        {title}
-      </h3>
-      <p className="text-muted text-sm leading-relaxed">
-        {description}
-      </p>
-    </div>
   );
 }

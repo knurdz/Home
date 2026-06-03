@@ -1,12 +1,16 @@
 ---
 title: "What Should I Build"
+banner: "/images/projects/what-should-i-build/banner-dark-v2.png"
+bannerLight: "/images/projects/what-should-i-build/banner-light-v2.png"
 description: "AI project idea generator that turns your skills, GitHub, time, and goals into ranked ideas with roadmap, stack, and build-ready artifacts."
 tags: ["Web App", "AI", "Developer Tool"]
 branch: "main"
 commit: "b7d3f92"
 ---
 
-- **Live Demo**: [https://whatshouldibuild.knurdz.org](https://whatshouldibuild.knurdz.org)
+## Links
+
+- [Live Demo](https://whatshouldibuild.knurdz.org)
 
 ## Overview
 

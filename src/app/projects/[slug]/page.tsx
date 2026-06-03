@@ -1,11 +1,11 @@
 import type { Metadata } from "next";
-import Image from "next/image";
 import { notFound } from "next/navigation";
 import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
 import { getProjectBySlug, getAllProjectSlugs } from "@/lib/projects";
-import Logo from "@/components/LogoIcon"
-import BannerImage from "@/components/BannerImage";
+import ProjectDetailHero from "@/components/ProjectDetailHero";
+import ReadingFontScope from "@/components/ReadingFontScope";
+import { BlogFontRoot } from "@/components/BlogFontSelector";
 import React from 'react'
 
 import Navbar from "@/components/Navbar";
@@ -205,37 +205,18 @@ export default async function ProjectPage({ params }: PageProps) {
       <Navbar activePage="projects" />
 
       {/* Banner */}
-      <div className="relative w-full h-[40vh] md:h-[55vh] min-h-80 mt-0 overflow-hidden">
-        <div className="absolute inset-0 bg-linear-to-b from-transparent via-background/40 to-background z-10" />
-        
-        {frontmatter.banner ? (
-          <BannerImage 
-            srcDark={frontmatter.banner}
-            srcLight={frontmatter.bannerLight}
-            title={frontmatter.title}
-          />
-        ) : (
-          <div className="absolute inset-0 bg-card">
-            <div className="absolute inset-0">
-              {/* Fallback pattern if image missing */}
-              <div
-                className="absolute inset-0 opacity-[0.08]"
-                style={{
-                  backgroundImage:
-                    "linear-gradient(var(--foreground) 1px, transparent 1px), linear-gradient(90deg, var(--foreground) 1px, transparent 1px)",
-                  backgroundSize: "40px 40px",
-                }}
-              />
-            </div>
-            <div className="absolute inset-0 flex items-center justify-center opacity-20 grayscale">
-              <Logo />
-            </div>
-          </div>
-        )}
-      </div>
+      <BlogFontRoot>
+      <ProjectDetailHero
+        banner={frontmatter.banner}
+        bannerLight={frontmatter.bannerLight}
+        title={frontmatter.title}
+        description={frontmatter.description}
+        tags={frontmatter.tags}
+      />
 
-      {/* Header */}
-      <div className="relative -mt-24 z-20 container mx-auto max-w-4xl px-6 pb-4">
+      {/* Header + content */}
+      <ReadingFontScope className="detail-reading-body min-w-0">
+      <div className="relative -mt-24 z-20 container mx-auto max-w-4xl px-6 pb-4 project-detail-header">
         <div className="mb-6 flex flex-wrap items-center gap-3 mono-font text-sm">
           <span className="text-green-500">●</span>
           <span className="text-muted">{frontmatter.branch}</span>
@@ -411,6 +392,8 @@ export default async function ProjectPage({ params }: PageProps) {
           </ReactMarkdown>
         </div>
       </article>
+      </ReadingFontScope>
+      </BlogFontRoot>
 
       <Footer />
     </div>

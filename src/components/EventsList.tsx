@@ -48,7 +48,7 @@ export default function EventsList({ events }: { events: EventData[] }) {
               className="absolute inset-0 z-[1] pointer-events-none bg-linear-to-t from-black/92 via-black/50 to-black/20"
               aria-hidden
             />
-            <div className="absolute bottom-0 left-0 right-0 p-4 sm:p-6 md:p-8 z-10 flex flex-col gap-3 sm:flex-row sm:items-end sm:gap-5 md:gap-6">
+            <div className="absolute bottom-0 left-0 right-0 p-4 sm:p-6 md:p-8 z-10 flex flex-col gap-3 sm:flex-row sm:items-end sm:gap-5 md:gap-6 on-dark-surface">
               <div className="flex items-center gap-2 sm:gap-3 shrink-0">
                 <Image
                   src={event.logo}

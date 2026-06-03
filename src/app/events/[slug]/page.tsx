@@ -3,10 +3,13 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
+import EventDetailHero from "@/components/EventDetailHero";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import ScrollIndicator from "@/components/ScrollIndicator";
 import EventGallery from "@/components/EventGallery";
+import ReadingFontScope from "@/components/ReadingFontScope";
+import { BlogFontRoot } from "@/components/BlogFontSelector";
 import { getEventStatusLabel, type EventStatus } from "@/lib/event-types";
 import { getAllEventSlugs, getEventBySlug } from "@/lib/events";
 
@@ -106,25 +109,13 @@ export default async function EventDetailPage({ params }: PageProps) {
   const event = getEventBySlug(slug);
   if (!event) notFound();
 
-  const isUpcoming = event.status === "upcoming";
-
   return (
     <>
       <Navbar activePage="events" />
       <ScrollIndicator />
 
-      <main className="pb-16 sm:pb-20 overflow-x-hidden">
-        <div className="relative w-full h-[28vh] min-h-[200px] sm:h-[38vh] sm:min-h-64 md:h-[42vh] lg:h-[48vh] overflow-hidden">
-          <Image
-            src={event.image}
-            alt={`${event.name}, ${event.tagline}`}
-            fill
-            className={`object-cover ${isUpcoming ? "opacity-85" : ""}`}
-            sizes="100vw"
-            priority
-          />
-          <div className="absolute inset-0 bg-linear-to-b from-background/20 via-background/50 to-background" />
-        </div>
+      <BlogFontRoot className="pb-16 sm:pb-20 overflow-x-hidden">
+        <EventDetailHero event={event} />
 
         <div className="relative -mt-14 sm:-mt-20 md:-mt-28 z-10 px-4 sm:px-6">
           <article className="container mx-auto max-w-4xl min-w-0">
@@ -135,6 +126,7 @@ export default async function EventDetailPage({ params }: PageProps) {
               ← back to /events
             </Link>
 
+            <ReadingFontScope className="detail-reading-body min-w-0">
             <div className="flex flex-col sm:flex-row sm:items-start gap-4 sm:gap-6 mb-6 sm:mb-8">
               <div className="flex items-center gap-2 sm:gap-3 shrink-0">
                 <EventLogo src={event.logo} alt={`${event.name} logo`} />
@@ -213,7 +205,7 @@ export default async function EventDetailPage({ params }: PageProps) {
               ))}
             </div>
 
-            <div className="border-t border-border pt-8 sm:pt-10 min-w-0">
+            <div className="border-t border-border pt-8 sm:pt-10 event-content min-w-0">
               {event.plannedHighlights && event.plannedHighlights.length > 0 && (
                 <>
                   <SectionTitle>What to Expect</SectionTitle>
@@ -359,7 +351,10 @@ export default async function EventDetailPage({ params }: PageProps) {
                 </blockquote>
               )}
 
-              <div className="flex flex-col sm:flex-row flex-wrap gap-3 sm:gap-4 pt-2 sm:pt-4">
+            </div>
+            </ReadingFontScope>
+
+            <div className="flex flex-col sm:flex-row flex-wrap gap-3 sm:gap-4 pt-8 sm:pt-10">
                 {event.url && (
                   <Link
                     href={event.url}
@@ -377,10 +372,9 @@ export default async function EventDetailPage({ params }: PageProps) {
                   All events
                 </Link>
               </div>
-            </div>
           </article>
         </div>
-      </main>
+      </BlogFontRoot>
 
       <Footer />
     </>

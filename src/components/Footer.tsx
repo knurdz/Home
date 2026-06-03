@@ -3,6 +3,15 @@
 import Link from "next/link";
 
 export default function Footer() {
+  const initialCommit = (
+    <>
+      initial commit ·{" "}
+      <time dateTime="2025-06-04" className="text-muted">
+        2025-06-04
+      </time>
+    </>
+  );
+
   return (
     <footer className="relative border-t border-border py-12 px-6 bg-background-alt">
       <div className="container mx-auto max-w-7xl">
@@ -28,7 +37,7 @@ export default function Footer() {
             </p>
           </div>
           {/* Links */}
-          <div>
+          <div className="col-span-2 md:col-span-1">
             <h3 className="font-semibold mb-4 mono-font text-sm text-foreground">/community</h3>
             <ul className="space-y-2 text-muted text-sm mono-font">
               <li>
@@ -42,9 +51,9 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
-                <span className="opacity-50 cursor-not-allowed">
+                <Link href="/blog" className="hover:text-foreground transition-colors">
                   blog.md
-                </span>
+                </Link>
               </li>
             </ul>
           </div>
@@ -69,6 +78,11 @@ export default function Footer() {
               <li>
                 <Link href="/partners" className="hover:text-foreground transition-colors">
                   partners
+                </Link>
+              </li>
+              <li>
+                <Link href="/blog" className="hover:text-foreground transition-colors">
+                  blog
                 </Link>
               </li>
               <li>
@@ -164,11 +178,21 @@ export default function Footer() {
             </ul>
           </div>
         </div>
-        <div className="border-t border-border pt-8 text-center text-muted mono-font text-sm">
-          <p>
-            &copy; {new Date().getFullYear()} Knurdz. All rights reserved.{" "}
-            <span className="text-green-500">v1.0.0</span>
-          </p>
+
+        <p className="md:hidden text-center text-xs text-muted/80 mono-font pb-8">
+          {initialCommit}
+        </p>
+
+        <div className="border-t border-border pt-8 text-muted mono-font text-sm">
+          <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-2 md:gap-4">
+            <p className="text-center md:text-left">
+              &copy; {new Date().getFullYear()} Knurdz. All rights reserved.{" "}
+              <span className="text-green-500">v1.5.0</span>
+            </p>
+            <p className="hidden md:block text-xs text-muted/80 text-right shrink-0">
+              {initialCommit}
+            </p>
+          </div>
         </div>
       </div>
     </footer>

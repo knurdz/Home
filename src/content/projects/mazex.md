@@ -1,12 +1,15 @@
 ---
 title: "MazeX"
+banner: "/images/projects/mazex/banner.png"
 description: "Full-stack event platform for MazeX 1.0, an island-wide inter-university Micromouse competition with customizable organizer back-office and cloud infrastructure. Built and hosted by Knurdz as web partner for IEEE RAS & WIE, University of Moratuwa."
 tags: ["Web App", "Event Platform", "Robotics"]
 branch: "main"
 commit: "a3m9x07"
 ---
 
-- **Live Site**: [https://mazex.knurdz.org](https://mazex.knurdz.org)
+## Links
+
+- [Live Site](https://mazex.knurdz.org)
 
 ## Overview
 

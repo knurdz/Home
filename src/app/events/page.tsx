@@ -20,11 +20,11 @@ export default function EventsPage() {
                 $ ls events/
               </span>
               <h1 className="text-3xl sm:text-4xl md:text-6xl font-bold mt-4 sm:mt-6 mb-3 sm:mb-4 mono-font text-foreground leading-tight">
-                Event <span className="text-faded">Solutions</span>
+                Events <span className="text-faded">Hosted & Partnered</span>
               </h1>
               <p className="text-base sm:text-lg md:text-xl text-muted max-w-2xl mx-auto px-1 leading-relaxed">
-                Web and software platforms we ship for competitions, workshops,
-                and partner-led events.
+                Hackathons, competitions, and workshops where we&apos;ve
+                co-organized or partnered.
               </p>
             </div>
 

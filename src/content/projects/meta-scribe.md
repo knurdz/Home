@@ -1,13 +1,16 @@
 ---
 title: "Meta Scribe"
+banner: "/images/projects/meta-scribe/banner.png"
 description: "A web-based SEO auditing tool that analyzes metadata, structured data, and on-page content quality to provide actionable optimization recommendations."
 tags: ["Web App", "SEO", "Developer Tool"]
 branch: "main"
 commit: "fbb32e6"
 ---
 
-- GitHub Repository: https://github.com/SadeepaNHerath/MetaScribe
-- Website: https://meta-scribe.vercel.app/
+## Links
+
+- [MetaScribe on GitHub](https://github.com/SadeepaNHerath/MetaScribe)
+- [Live Website](https://meta-scribe.vercel.app/)
 
 ## Overview
 

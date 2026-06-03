@@ -6,7 +6,7 @@ import JoinCommunityBanner from "@/components/JoinCommunityBanner";
 import { useEffect, useRef, useState } from "react";
 
 interface NavbarProps {
-  activePage?: "home" | "projects" | "partners" | "about" | "achievements" | "events" | "contact" | "join-us";
+  activePage?: "home" | "projects" | "partners" | "about" | "achievements" | "events" | "blog" | "contact" | "join-us";
 }
 
 export default function Navbar({ activePage }: NavbarProps) {
@@ -77,14 +77,6 @@ export default function Navbar({ activePage }: NavbarProps) {
           {/* Desktop Navigation */}
           <div className="hidden lg:flex items-center gap-8">
             <Link
-              href="/"
-              className={`${
-                activePage === "home" ? "text-foreground" : "text-muted"
-              } hover:text-foreground transition-colors mono-font text-sm`}
-            >
-              /home
-            </Link>
-            <Link
               href="/projects"
               className={`${
                 activePage === "projects" ? "text-foreground" : "text-muted"
@@ -115,6 +107,14 @@ export default function Navbar({ activePage }: NavbarProps) {
               } hover:text-foreground transition-colors mono-font text-sm`}
             >
               /partners
+            </Link>
+            <Link
+              href="/blog"
+              className={`${
+                activePage === "blog" ? "text-foreground" : "text-muted"
+              } hover:text-foreground transition-colors mono-font text-sm`}
+            >
+              /blog
             </Link>
             <Link
               href="/about"
@@ -181,22 +181,6 @@ export default function Navbar({ activePage }: NavbarProps) {
       >
         <div className="container mx-auto max-w-7xl min-w-0 px-4 sm:px-6 py-5 sm:py-6 flex flex-col gap-2">
           <Link
-            href="/"
-            onClick={() => setIsMenuOpen(false)}
-            className={`group py-3 px-4 rounded-lg transition-all duration-200 mono-font flex items-center justify-between ${
-              activePage === "home" 
-                ? "bg-foreground text-background" 
-                : "text-foreground hover:bg-muted/10 border border-transparent hover:border-border"
-            }`}
-          >
-            <span className="flex items-center gap-3">
-              <span className={`text-xs ${activePage === "home" ? "text-background/60" : "text-muted"}`}>01.</span> 
-              /home
-            </span>
-            {activePage === "home" && <span className="text-xs">●</span>}
-          </Link>
-
-          <Link
             href="/projects"
             onClick={() => setIsMenuOpen(false)}
             className={`group py-3 px-4 rounded-lg transition-all duration-200 mono-font flex items-center justify-between ${
@@ -206,7 +190,7 @@ export default function Navbar({ activePage }: NavbarProps) {
             }`}
           >
             <span className="flex items-center gap-3">
-              <span className={`text-xs ${activePage === "projects" ? "text-background/60" : "text-muted"}`}>02.</span> 
+              <span className={`text-xs ${activePage === "projects" ? "text-background/60" : "text-muted"}`}>01.</span> 
               /projects
             </span>
             {activePage === "projects" && <span className="text-xs">●</span>}
@@ -222,7 +206,7 @@ export default function Navbar({ activePage }: NavbarProps) {
             }`}
           >
             <span className="flex items-center gap-3">
-              <span className={`text-xs ${activePage === "achievements" ? "text-background/60" : "text-muted"}`}>03.</span> 
+              <span className={`text-xs ${activePage === "achievements" ? "text-background/60" : "text-muted"}`}>02.</span> 
               /achievements
             </span>
             {activePage === "achievements" && <span className="text-xs">●</span>}
@@ -238,7 +222,7 @@ export default function Navbar({ activePage }: NavbarProps) {
             }`}
           >
             <span className="flex items-center gap-3">
-              <span className={`text-xs ${activePage === "events" ? "text-background/60" : "text-muted"}`}>04.</span> 
+              <span className={`text-xs ${activePage === "events" ? "text-background/60" : "text-muted"}`}>03.</span> 
               /events
             </span>
             {activePage === "events" && <span className="text-xs">●</span>}
@@ -254,10 +238,26 @@ export default function Navbar({ activePage }: NavbarProps) {
             }`}
           >
             <span className="flex items-center gap-3">
-              <span className={`text-xs ${activePage === "partners" ? "text-background/60" : "text-muted"}`}>05.</span> 
+              <span className={`text-xs ${activePage === "partners" ? "text-background/60" : "text-muted"}`}>04.</span> 
               /partners
             </span>
             {activePage === "partners" && <span className="text-xs">●</span>}
+          </Link>
+
+          <Link
+            href="/blog"
+            onClick={() => setIsMenuOpen(false)}
+            className={`group py-3 px-4 rounded-lg transition-all duration-200 mono-font flex items-center justify-between ${
+              activePage === "blog" 
+                ? "bg-foreground text-background" 
+                : "text-foreground hover:bg-muted/10 border border-transparent hover:border-border"
+            }`}
+          >
+            <span className="flex items-center gap-3">
+              <span className={`text-xs ${activePage === "blog" ? "text-background/60" : "text-muted"}`}>05.</span> 
+              /blog
+            </span>
+            {activePage === "blog" && <span className="text-xs">●</span>}
           </Link>
           
           <Link

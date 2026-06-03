@@ -1,31 +1,23 @@
 ---
 title: "Nexus OS"
-description: "Revenue and AI engine for founders, monitors channels, scores leads, drafts responses, and automates CRM follow-ups through a six-step protocol."
+banner: "/images/projects/nexus-os/banner.png"
+description: "Revenue and AI engine for founders — monitors channels, scores leads, drafts responses, and automates CRM follow-ups through a six-step protocol."
 tags: ["Web App", "AI", "SaaS"]
 branch: "main"
 commit: "f1c8d06"
 ---
 
-- **Live Demo**: [https://roaring-mooncake-e0698a.netlify.app/](https://roaring-mooncake-e0698a.netlify.app/)
+## Links
+
+- [Live Demo](https://roaring-mooncake-e0698a.netlify.app/)
 
 ## Overview
 
-Nexus OS is the revenue and AI engine for modern founders. It continuously monitors communication channels, identifies high-value opportunities, and automates the follow-up workflow, so founders don't have to choose between saving time and saving revenue.
+Nexus OS is the revenue and AI engine for modern founders. It continuously monitors communication channels, identifies high-value opportunities, and automates the follow-up workflow — so founders don't have to choose between saving time and saving revenue.
 
 ## The Problem
 
 Founders juggle inbound leads, at-risk deals, and customer communication across multiple channels. Manual triage and response drafting consume hours that should go toward building. Nexus OS automates discovery through execution while keeping humans in the approval loop.
-
-## The Process
-
-A six-step protocol to reclaim time and revenue:
-
-1. **Discovery**: AI continuously monitors communication channels, instantly identifying high-value revenue opportunities and urgent customer needs before they escalate.
-2. **Intake**: Every incoming lead is automatically classified, scored for risk, and categorized by intent, ensuring your team focuses on what matters most.
-3. **Rescue**: Proactively flags at-risk deals and churn signals, instantly drafting context-aware, empathetic responses to save the relationship.
-4. **Approval**: Review, edit, and approve AI-drafted replies in a single click. Maintain your brand's voice while saving hours of manual drafting.
-5. **Execution**: Seamlessly integrates with your existing CRM to automate follow-ups, update deal stages, and ensure no opportunity slips through the cracks.
-6. **Growth**: Monitor saved revenue, team efficiency, and customer satisfaction metrics in real-time through your centralized Command Center.
 
 ## Key Features
 
@@ -37,8 +29,51 @@ A six-step protocol to reclaim time and revenue:
 - CRM integration for automated follow-ups and deal stage updates
 - Real-time Command Center for saved revenue and efficiency metrics
 
+## The Process
+
+A six-step protocol to reclaim time and revenue:
+
+1. **Discovery** — AI monitors communication channels for high-value opportunities and urgent needs.
+2. **Intake** — Leads are classified, risk-scored, and categorized by intent.
+3. **Rescue** — At-risk deals and churn signals trigger empathetic, context-aware draft responses.
+4. **Approval** — Review, edit, and approve AI-drafted replies in one click.
+5. **Execution** — CRM integration automates follow-ups and deal stage updates.
+6. **Growth** — Command Center tracks saved revenue, efficiency, and satisfaction metrics.
+
+## Technical Architecture
+
+Nexus OS orchestrates channel ingestion, AI analysis, human-in-the-loop approval, and CRM execution in a single pipeline.
+
+```text
+┌──────────────────────────────┐
+│   Channel Monitor (Ingest)   │
+└──────────────┬───────────────┘
+               │
+┌──────────────▼───────────────┐
+│   AI Scoring & Draft Engine  │
+└──────────────┬───────────────┘
+               │
+┌──────────────▼───────────────┐
+│   Approval Workflow (Human)  │
+└──────────────┬───────────────┘
+               │
+┌──────────────▼───────────────┐
+│   CRM Execution & Command Ctr│
+└──────────────────────────────┘
+```
+
+## Stack
+
+| Layer | Technology |
+|---|---|
+| Frontend | React / Next.js |
+| Deployment | Netlify |
+| AI | LLM-powered analysis and drafting |
+| Integrations | CRM connectors |
+| Analytics | Command Center dashboards |
+
 ## Status
 
-Live on Netlify at [roaring-mooncake-e0698a.netlify.app](https://roaring-mooncake-e0698a.netlify.app/).
+Live on Netlify at [roaring-mooncake-e0698a.netlify.app](https://roaring-mooncake-e0698a.netlify.app/). Winner of the n8n track at Cursor Colombo 24 Hour Buildathon 2026.
 
 ---

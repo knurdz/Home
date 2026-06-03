@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
-import { Space_Grotesk, JetBrains_Mono } from "next/font/google";
+import { Space_Grotesk, JetBrains_Mono, Source_Serif_4 } from "next/font/google";
+import { BlogFontProvider } from "@/hooks/useBlogFont";
+import { READING_FONT_INIT_SCRIPT } from "@/lib/blog-font";
 import "./globals.css";
 
 const spaceGrotesk = Space_Grotesk({
@@ -12,6 +14,12 @@ const jetbrainsMono = JetBrains_Mono({
   subsets: ["latin"],
   variable: "--font-jetbrains-mono",
   weight: ["400", "500", "600", "700", "800"],
+});
+
+const sourceSerif = Source_Serif_4({
+  subsets: ["latin"],
+  variable: "--font-source-serif",
+  weight: ["400", "600", "700"],
 });
 
 const BASE_URL = "https://knurdz.org";
@@ -104,15 +112,20 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
+      <head>
+        <script
+          dangerouslySetInnerHTML={{ __html: READING_FONT_INIT_SCRIPT }}
+        />
+      </head>
       <body
-        className={`${spaceGrotesk.variable} ${jetbrainsMono.variable} bg-background text-foreground antialiased transition-colors duration-300 overflow-x-hidden`}
+        className={`${spaceGrotesk.variable} ${jetbrainsMono.variable} ${sourceSerif.variable} bg-background text-foreground antialiased transition-colors duration-300 overflow-x-hidden`}
         style={{ fontFamily: "var(--font-space-grotesk), sans-serif" }}
       >
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteJsonLd) }}
         />
-        {children}
+        <BlogFontProvider>{children}</BlogFontProvider>
       </body>
     </html>
   );

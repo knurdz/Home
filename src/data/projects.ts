@@ -103,12 +103,22 @@ export const projects: Project[] = [
 
   // ── Upcoming Projects ──────────────────────────────────────────────────────
   {
+    name: "IEEE SB Volunteer & Event Management System",
+    slug: "ieee-sb-volunteer-event-management",
+    branch: "development",
+    commit: "d2e4f8a",
+    description:
+      "A unified platform for IEEE Student Branch volunteer coordination, event operations, registrations, and committee workflows — built for student branches that outgrow spreadsheets.",
+    tags: ["Web App", "Event Platform", "Education"],
+    upcoming: true,
+  },
+  {
     name: "Project Titanic",
     slug: "project-titanic",
     branch: "feature/marketplace",
     commit: "5a2d9c9",
     description:
-      "A multipurpose application for university students featuring 6 core distinc features",
+      "A multipurpose application for university students featuring 6 core distinct features",
     tags: ["Mobile", "Web"],
     upcoming: true,
   },

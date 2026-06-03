@@ -12,7 +12,7 @@ eventOrganizers:
   - "IEEE Women in Engineering (WIE)"
   - "IEEE Student Branch, University of Moratuwa"
 eventOrganizersNote: "Competition planning, workshops, schedules, delegate materials, and all event content are owned and produced by IEEE RAS and WIE. Knurdz provided software engineering and cloud infrastructure only."
-image: "/events/mazex/og-image.png"
+image: "/events/mazex/og-image.jpg"
 logo: "/events/mazex/logo.png"
 tags:
   - "Web Partner"

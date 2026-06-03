@@ -70,7 +70,7 @@ export const members: Member[] = [
     name: "Bhasilu Egodawatte",
     role: "Knurdz Contributor",
     bio: "",
-    image: "https://github.com/BhasiluEgodawatte.png",
+    image: "/team/BhasiluEgodawatte.jpeg",
     github: "https://github.com/BhasiluEgodawatte",
     linkedin: "https://www.linkedin.com/in/bhasilu-egodawatte-79bb70367/"
   },
@@ -86,7 +86,7 @@ export const members: Member[] = [
     name: "Kaveesha Ginodh",
     role: "Knurdz Contributor",
     bio: "",
-    image: "https://github.com/Kavee-ginty.png",
+    image: "/team/Kavee-ginty.jpg",
     github: "https://github.com/Kavee-ginty",
     linkedin: "https://www.linkedin.com/in/kaveesha-ginodh/"
   },

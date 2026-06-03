@@ -3,12 +3,12 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Events",
   description:
-    "Web and software solutions Knurdz builds for university events, competitions, and partner organizations.",
+    "Hackathons, competitions, and workshops where Knurdz has co-organized or partnered.",
   alternates: { canonical: "https://knurdz.org/events" },
   openGraph: {
     title: "Knurdz Events",
     description:
-      "Web and software solutions Knurdz builds for university events, competitions, and partner organizations.",
+      "Hackathons, competitions, and workshops where Knurdz has co-organized or partnered.",
     url: "https://knurdz.org/events",
   },
 };

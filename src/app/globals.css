@@ -32,6 +32,7 @@ body.light {
   --faded: #64748b;               /* slate-500 */
   --background-alt: #f3ede4;      /* warm parchment */
   --border: rgba(15, 23, 42, 0.12);
+  --blog-feed-divide: #f1ebe3;    /* solid warm gray for blog list dividers */
   --card: rgba(255, 252, 247, 0.92);
   --card-hover: rgba(255, 252, 247, 1);
   --grid-color: rgba(15, 23, 42, 0.05);
@@ -156,6 +157,109 @@ a, button {
 }
 .mono-font { font-family: 'JetBrains Mono', monospace; }
 
+/* Reading font applies to detail body content — not navbar, footer, or font picker chrome */
+
+:is(
+    .blog-content,
+    .achievement-content,
+    .project-content,
+    .event-content,
+    .blog-feed-excerpt,
+    .blog-feed-title,
+    .blog-feed-meta,
+    .detail-reading-body
+  ).reading-font-serif {
+  font-family: var(--font-source-serif), "Source Serif 4", Georgia, "Times New Roman", serif;
+}
+
+:is(
+    .blog-content,
+    .achievement-content,
+    .project-content,
+    .event-content,
+    .blog-feed-excerpt,
+    .blog-feed-title,
+    .blog-feed-meta,
+    .detail-reading-body
+  ).reading-font-sans {
+  font-family: var(--font-space-grotesk), "Space Grotesk", sans-serif;
+}
+
+:is(
+    .blog-content,
+    .achievement-content,
+    .project-content,
+    .event-content,
+    .blog-feed-excerpt,
+    .blog-feed-title,
+    .blog-feed-meta,
+    .detail-reading-body
+  ).reading-font-mono {
+  font-family: 'JetBrains Mono', monospace;
+}
+
+:is(.reading-font-serif, .reading-font-sans).detail-reading-body :is(h1, h2, h3, h4, p, li, blockquote, td, th, time),
+:is(.reading-font-serif, .reading-font-sans).detail-reading-body .mono-font,
+.reading-font-serif.blog-content :is(h2, h3, p, li, blockquote, td, th),
+.reading-font-serif.achievement-content :is(h2, h3, p, li, blockquote, td, th),
+.reading-font-serif.project-content :is(h2, h3, p, li, blockquote, td, th),
+.reading-font-serif.event-content :is(h2, h3, p, li, blockquote, td, th),
+.reading-font-sans.blog-content :is(h2, h3, p, li, blockquote, td, th),
+.reading-font-sans.achievement-content :is(h2, h3, p, li, blockquote, td, th),
+.reading-font-sans.project-content :is(h2, h3, p, li, blockquote, td, th),
+.reading-font-sans.event-content :is(h2, h3, p, li, blockquote, td, th) {
+  font-family: inherit;
+}
+
+:is(.blog-content, .achievement-content, .project-content, .event-content, .detail-reading-body) p,
+:is(.blog-content, .achievement-content, .project-content, .event-content, .detail-reading-body) li {
+  line-height: 1.75;
+}
+
+/* Mono: slightly smaller body text only — headings keep Tailwind sizes */
+.reading-font-mono.detail-reading-body :is(p, li),
+.reading-font-mono.blog-feed-excerpt,
+.reading-font-mono.blog-feed-meta {
+  font-size: 0.8125rem;
+}
+
+@media (min-width: 640px) {
+  .reading-font-mono.detail-reading-body :is(p, li),
+  .reading-font-mono.blog-feed-excerpt,
+  .reading-font-mono.blog-feed-meta {
+    font-size: 0.875rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .reading-font-mono.detail-reading-body :is(p, li),
+  .reading-font-mono.blog-feed-excerpt,
+  .reading-font-mono.blog-feed-meta {
+    font-size: 0.9375rem;
+  }
+}
+
+.reading-font-serif.detail-reading-body :is(h2, h3),
+.reading-font-serif :is(.blog-content, .achievement-content, .project-content, .event-content) :is(h2, h3) {
+  letter-spacing: -0.01em;
+}
+
+.reading-font-sans.detail-reading-body :is(h2, h3),
+.reading-font-mono.detail-reading-body :is(h2, h3),
+.reading-font-sans :is(.blog-content, .achievement-content, .project-content, .event-content) :is(h2, h3),
+.reading-font-mono :is(.blog-content, .achievement-content, .project-content, .event-content) :is(h2, h3),
+.reading-font-sans.blog-content :is(h2, h3),
+.reading-font-mono.blog-content :is(h2, h3) {
+  letter-spacing: 0;
+}
+
+.blog-content .blog-code-block,
+.blog-content .blog-code-block pre,
+.blog-content .blog-code-block code,
+.blog-content .blog-code-block pre code {
+  font-family: var(--font-jetbrains-mono), "JetBrains Mono", ui-monospace, monospace;
+}
+
 /* ── Light theme base ──────────────────────────────────── */
 body.light {
     background-color: #faf7f2;
@@ -208,6 +312,9 @@ body.light .bg-card\/10 {
 }
 body.light .border-border {
     border-color: rgba(15, 23, 42, 0.12) !important;
+}
+body.light .blog-feed-list > :not([hidden]) ~ :not([hidden]) {
+    border-top-color: var(--blog-feed-divide) !important;
 }
 body.light .border-foreground {
     border-color: #1a1a2e !important;
@@ -340,6 +447,27 @@ body.light .logo-dark {
 /* ── Hardcoded Tailwind colour overrides for light mode ── */
 body.light .text-white {
     color: var(--foreground) !important;
+}
+body.light .on-dark-surface.text-white,
+body.light .on-dark-surface .text-white {
+    color: #ffffff !important;
+}
+body.light .on-dark-surface .text-white\/85 {
+    color: rgba(255, 255, 255, 0.85) !important;
+}
+
+body.light .view-image-btn,
+body.light .blog-font-tool-btn {
+    background-color: rgba(255, 252, 247, 0.95) !important;
+    color: #1a1a2e !important;
+    border-color: rgba(15, 23, 42, 0.12) !important;
+    box-shadow: 0 1px 2px rgba(15, 23, 42, 0.06) !important;
+}
+body.light .view-image-btn:hover,
+body.light .blog-font-tool-btn:hover {
+    background-color: #ffffff !important;
+    color: #1a1a2e !important;
+    border-color: rgba(15, 23, 42, 0.22) !important;
 }
 body.light .text-gray-300 {
     color: var(--muted) !important;
@@ -733,6 +861,69 @@ body.light #scrollProgress .inset-0\.5.rounded-full.bg-green-500 {
   );
 }
 
+body.light .join-banner-scrim {
+  background: linear-gradient(
+    to right,
+    rgba(250, 247, 242, 0.72) 0%,
+    rgba(250, 247, 242, 0.55) 50%,
+    rgba(250, 247, 242, 0.72) 100%
+  );
+}
+
+.home-hero-scrim {
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.95) 0%,
+    rgba(0, 0, 0, 0.92) 45%,
+    rgba(0, 0, 0, 0.95) 100%
+  );
+}
+
+body.light .home-hero-scrim {
+  background: linear-gradient(
+    to bottom,
+    rgba(250, 247, 242, 0.95) 0%,
+    rgba(250, 247, 242, 0.88) 45%,
+    rgba(250, 247, 242, 0.95) 100%
+  );
+}
+
+.detail-banner-scrim {
+  background: linear-gradient(
+    to bottom,
+    color-mix(in srgb, var(--background) 20%, transparent) 0%,
+    color-mix(in srgb, var(--background) 50%, transparent) 45%,
+    var(--background) 100%
+  );
+}
+
+body.light .detail-banner-scrim {
+  background: linear-gradient(
+    to bottom,
+    color-mix(in srgb, var(--background) 8%, transparent) 0%,
+    color-mix(in srgb, var(--background) 22%, transparent) 45%,
+    var(--background) 100%
+  );
+}
+
+.detail-banner-scrim-soft-top {
+  background: linear-gradient(
+    to bottom,
+    transparent 0%,
+    color-mix(in srgb, var(--background) 40%, transparent) 45%,
+    var(--background) 100%
+  );
+}
+
+body.light .detail-banner-scrim-soft-top {
+  background: linear-gradient(
+    to bottom,
+    transparent 0%,
+    color-mix(in srgb, var(--background) 16%, transparent) 45%,
+    var(--background) 100%
+  );
+}
+
 .join-community-banner {
   display: block;
   line-height: 0;
@@ -786,11 +977,11 @@ body.light #scrollProgress .inset-0\.5.rounded-full.bg-green-500 {
 }
 
 body.light .join-banner-text {
-  color: rgba(255, 255, 255, 0.92) !important;
+  color: #111111 !important;
 }
 
 body.light .join-banner-highlight {
-  color: #afca52 !important;
+  color: #7aad00 !important;
 }
 
 body.light .join-banner-btn {
@@ -885,5 +1076,63 @@ body.light .join-banner-btn:hover {
 .banner-slider-desc {
   color: rgba(255, 255, 255, 0.82);
   text-shadow: 0 1px 8px rgba(0, 0, 0, 0.35);
+}
+
+/* Blog markdown code blocks */
+.blog-content .blog-code-block pre {
+  margin: 0;
+  background:
+    linear-gradient(135deg, rgba(34, 197, 94, 0.06) 0%, transparent 42%),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.02) 0%, transparent 100%);
+  border-left: 3px solid rgba(34, 197, 94, 0.45);
+}
+
+.blog-content .blog-code-block pre code {
+  display: block;
+  min-width: min-content;
+  color: #86efac;
+  font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas,
+    "Liberation Mono", monospace;
+  white-space: pre;
+  word-break: normal;
+  overflow-wrap: normal;
+}
+
+body.light .blog-content .blog-code-block,
+body.light .blog-content .blog-code-block * {
+  box-shadow: none !important;
+}
+
+body.light .blog-content .blog-code-block pre {
+  background: rgba(22, 163, 74, 0.06);
+}
+
+body.light .blog-content .blog-code-block pre code {
+  color: #15803d;
+}
+
+body.light .blog-content .blog-code-block .rounded-md {
+  color: #166534;
+  background: rgba(22, 101, 52, 0.1);
+  border-color: rgba(22, 101, 52, 0.25);
+}
+
+body.light .blog-content code.rounded-md {
+  color: #166534;
+  background: rgba(22, 101, 52, 0.1);
+  border-color: rgba(22, 101, 52, 0.25);
+}
+
+.blog-content .blog-code-block pre::-webkit-scrollbar {
+  height: 6px;
+}
+
+.blog-content .blog-code-block pre::-webkit-scrollbar-thumb {
+  background: rgba(34, 197, 94, 0.35);
+  border-radius: 999px;
+}
+
+.blog-content .blog-code-block pre::-webkit-scrollbar-track {
+  background: transparent;
 }
 

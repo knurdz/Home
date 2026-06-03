@@ -7,6 +7,8 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import ScrollIndicator from "@/components/ScrollIndicator";
 import AchievementHeroBanner from "@/components/AchievementHeroBanner";
+import ReadingFontScope from "@/components/ReadingFontScope";
+import BlogFontSelector, { BlogFontRoot } from "@/components/BlogFontSelector";
 import {
   getAchievementBySlug,
   getAllAchievementSlugs,
@@ -66,8 +68,16 @@ export default async function AchievementDetailPage({ params }: PageProps) {
       <Navbar activePage="achievements" />
       <ScrollIndicator />
 
-      <main className="pb-16 sm:pb-20 overflow-x-hidden">
+      <BlogFontRoot className="pb-16 sm:pb-20 overflow-x-hidden">
         <AchievementHeroBanner frontmatter={frontmatter} />
+
+        {!frontmatter.image && (
+          <div className="px-4 sm:px-6 lg:px-8 pt-site-header-lg">
+            <div className="container mx-auto max-w-4xl flex justify-start">
+              <BlogFontSelector />
+            </div>
+          </div>
+        )}
 
         <div
           className={`relative z-10 px-4 sm:px-6 lg:px-8 ${
@@ -84,27 +94,28 @@ export default async function AchievementDetailPage({ params }: PageProps) {
               ← back to /achievements
             </Link>
 
-            <div className="mb-6 sm:mb-8">
-              <div className="flex flex-wrap items-center gap-2 mb-3">
-                {frontmatter.category && (
-                  <span className="inline-block px-2.5 sm:px-3 py-1 text-[10px] font-bold uppercase tracking-widest text-green-500 bg-green-500/10 border border-green-500/20 rounded-full mono-font">
-                    {frontmatter.category}
+            <ReadingFontScope className="detail-reading-body min-w-0">
+              <div className="mb-6 sm:mb-8">
+                <div className="flex flex-wrap items-center gap-2 mb-3">
+                  {frontmatter.category && (
+                    <span className="inline-block px-2.5 sm:px-3 py-1 text-[10px] font-bold uppercase tracking-widest text-green-500 bg-green-500/10 border border-green-500/20 rounded-full mono-font">
+                      {frontmatter.category}
+                    </span>
+                  )}
+                  <span className="inline-block px-2.5 sm:px-3 py-1 text-[10px] font-bold uppercase tracking-widest text-blue-500 bg-blue-500/10 border border-blue-500/20 rounded-full mono-font">
+                    {formatDate(frontmatter.date)}
                   </span>
-                )}
-                <span className="inline-block px-2.5 sm:px-3 py-1 text-[10px] font-bold uppercase tracking-widest text-blue-500 bg-blue-500/10 border border-blue-500/20 rounded-full mono-font">
-                  {formatDate(frontmatter.date)}
-                </span>
+                </div>
+                <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mono-font text-foreground mb-3 sm:mb-4 leading-tight text-balance">
+                  {frontmatter.title}
+                </h1>
+                <p className="text-base sm:text-lg text-muted leading-relaxed text-pretty">
+                  {frontmatter.description}
+                </p>
               </div>
-              <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mono-font text-foreground mb-3 sm:mb-4 leading-tight text-balance">
-                {frontmatter.title}
-              </h1>
-              <p className="text-base sm:text-lg text-muted leading-relaxed text-pretty">
-                {frontmatter.description}
-              </p>
-            </div>
 
-            <div className="border-t border-border pt-8 sm:pt-10 achievement-content min-w-0">
-              <ReactMarkdown
+              <div className="border-t border-border pt-8 sm:pt-10 achievement-content min-w-0">
+                <ReactMarkdown
                 remarkPlugins={[remarkGfm]}
                 components={{
                   h2: ({ children }) => (
@@ -153,7 +164,8 @@ export default async function AchievementDetailPage({ params }: PageProps) {
               >
                 {content}
               </ReactMarkdown>
-            </div>
+              </div>
+            </ReadingFontScope>
 
             <div className="flex flex-col sm:flex-row flex-wrap gap-3 sm:gap-4 pt-8 sm:pt-10 mt-8 sm:mt-10 border-t border-border">
               <Link
@@ -165,7 +177,7 @@ export default async function AchievementDetailPage({ params }: PageProps) {
             </div>
           </article>
         </div>
-      </main>
+      </BlogFontRoot>
 
       <Footer />
     </>

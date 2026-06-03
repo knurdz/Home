@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { Member } from "@/data/members";
 
 interface MemberAvatarProps {
@@ -9,8 +9,10 @@ interface MemberAvatarProps {
     priority?: boolean;
 }
 
+const TEAM_IMAGE_EXTENSIONS = ["png", "jpg", "jpeg"] as const;
+
 export default function MemberAvatar({ member, priority = false }: MemberAvatarProps) {
-    // Priority: Local Image (using GitHub username) -> GitHub Avatar -> Initials
+    // Priority: explicit local path -> /team/{slug}.* -> GitHub avatar -> initials
     const getSlug = () => {
         if (member.github) {
             const parts = member.github.split('/').filter(Boolean);
@@ -20,18 +22,37 @@ export default function MemberAvatar({ member, priority = false }: MemberAvatarP
     };
 
     const slug = getSlug();
-    const localImage = `/team/${slug}.png`;
-    
-    // State to track current image source and loading status
-    const [imgSrc, setImgSrc] = useState(localImage);
+    const imageSources = useMemo(() => {
+        const sources: string[] = [];
+        if (member.image.startsWith("/")) {
+            sources.push(member.image);
+        }
+        for (const ext of TEAM_IMAGE_EXTENSIONS) {
+            const path = `/team/${slug}.${ext}`;
+            if (!sources.includes(path)) {
+                sources.push(path);
+            }
+        }
+        if (member.image && !member.image.startsWith("/") && !sources.includes(member.image)) {
+            sources.push(member.image);
+        }
+        return sources;
+    }, [member.image, slug]);
+
+    const [sourceIndex, setSourceIndex] = useState(0);
     const [hasError, setHasError] = useState(false);
 
+    useEffect(() => {
+        setSourceIndex(0);
+        setHasError(false);
+    }, [member.name, imageSources]);
+
+    const imgSrc = imageSources[sourceIndex];
+
     const handleError = () => {
-        if (imgSrc === localImage && member.image) {
-            // If local image fails, try member.image (GitHub)
-            setImgSrc(member.image);
+        if (sourceIndex < imageSources.length - 1) {
+            setSourceIndex((index) => index + 1);
         } else {
-            // If both fail, show fallback
             setHasError(true);
         }
     };

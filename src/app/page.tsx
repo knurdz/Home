@@ -1,13 +1,22 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import Terminal from "@/components/Terminal";
-import ScrollIndicator from "@/components/ScrollIndicator";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import PartnerLogo from "@/components/PartnerLogo";
 import StrategicPartnerSection from "@/components/StrategicPartnerSection";
+import CommunitySnapshotSection from "@/components/CommunitySnapshotSection";
+import EventsPreviewSection from "@/components/EventsPreviewSection";
+import AchievementsPreviewSection from "@/components/AchievementsPreviewSection";
+import FeaturedProjectsSection from "@/components/FeaturedProjectsSection";
+import ProtocolsSection from "@/components/ProtocolsSection";
+import ScrollIndicator, { HOME_SCROLL_SECTIONS } from "@/components/ScrollIndicator";
+import UpcomingProjectsSection from "@/components/UpcomingProjectsSection";
 import { featuredProjects, upcomingProjects } from "@/data/projects";
 import { partners } from "@/data/partners";
+import { getAllEvents } from "@/lib/events";
+import { getAllAchievements } from "@/lib/achievements";
 
 const BASE_URL = "https://knurdz.org";
 
@@ -35,6 +44,9 @@ const organizationJsonLd = {
 };
 
 export default function Home() {
+  const events = getAllEvents();
+  const achievements = getAllAchievements().slice(0, 3);
+
   return (
     <>
       <script
@@ -42,7 +54,7 @@ export default function Home() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationJsonLd) }}
       />
       {/* Custom Scroll Indicator - Git Branch Style */}
-      <ScrollIndicator />
+      <ScrollIndicator sections={HOME_SCROLL_SECTIONS} />
 
       {/* Navigation */}
       <Navbar activePage="home" />
@@ -50,18 +62,28 @@ export default function Home() {
       {/* Hero Section */}
       <section
         id="hero"
-        className="relative min-h-[calc(100vh-80px)] md:min-h-screen flex items-center justify-center px-6 pt-site-header md:pt-site-header-md"
+        className="relative min-h-[calc(100vh-80px)] md:min-h-screen flex items-center justify-center px-4 sm:px-6 pt-site-header md:pt-site-header-md pb-8 sm:pb-10 md:pb-12 overflow-hidden"
       >
-        <div className="container mx-auto max-w-7xl">
-          <div className="grid md:grid-cols-2 gap-12 items-center">
+        <Image
+          src="/images/banner/banner.png"
+          alt=""
+          fill
+          priority
+          sizes="100vw"
+          className="object-cover object-center"
+          aria-hidden
+        />
+        <div className="home-hero-scrim absolute inset-0" aria-hidden />
+        <div className="container relative z-10 mx-auto max-w-7xl">
+          <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-center">
             {/* Left Content */}
-            <div className="space-y-8 text-center lg:text-left">
+            <div className="space-y-6 sm:space-y-8 text-center lg:text-left">
               <div className="inline-block">
-                <span className="px-4 py-2 rounded border border-border text-muted text-sm mono-font">
+                <span className="px-3 py-1.5 sm:px-4 sm:py-2 rounded border border-border text-muted text-xs sm:text-sm mono-font">
                   $ ./welcome --community
                 </span>
               </div>
-              <h1 className="text-4xl md:text-7xl lg:text-8xl font-bold leading-tight mono-font">
+              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl xl:text-8xl font-bold leading-tight mono-font">
                 <span className="text-foreground">Build.</span>
                 <br />
                 <span className="text-faded">Innovate.</span>
@@ -70,14 +92,14 @@ export default function Home() {
                   Together<span className="text-green-500">.</span>
                 </span>
               </h1>
-              <p className="text-xl md:text-2xl text-muted max-w-2xl leading-relaxed mx-auto lg:mx-0">
+              <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-muted max-w-2xl leading-relaxed mx-auto lg:mx-0 px-1">
                 A community of creators building extraordinary experiences across the stack. From silicon to software and social impact—fork, commit, deploy.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start mono-font text-sm">
-                <Link href="/projects" className="px-8 py-4 rounded bg-foreground text-background hover:opacity-90 transition-all font-semibold text-center">
+              <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center lg:justify-start mono-font text-sm">
+                <Link href="/projects" className="px-6 sm:px-8 py-3.5 sm:py-4 rounded bg-foreground text-background hover:opacity-90 transition-all font-semibold text-center">
                   git clone projects
                 </Link>
-                <Link href="/about" className="px-8 py-4 rounded border-2 border-border hover:border-foreground transition-all font-semibold text-foreground text-center">
+                <Link href="/about" className="px-6 sm:px-8 py-3.5 sm:py-4 rounded border-2 border-border hover:border-foreground transition-all font-semibold text-foreground text-center">
                   man knurdz
                 </Link>
               </div>
@@ -90,32 +112,32 @@ export default function Home() {
         </div>
       </section>
 
-      <StrategicPartnerSection className="md:!py-32" />
+      <StrategicPartnerSection className="!py-12 sm:!py-16 md:!py-20 lg:!py-24" />
 
       {/* Partners Section */}
-      <section id="partners" className="relative py-16 md:py-32 px-6 bg-background-alt">
+      <section id="partners" className="relative py-12 sm:py-16 md:py-20 lg:py-24 px-4 sm:px-6 bg-background-alt">
         <div className="container mx-auto max-w-7xl">
           {/* Section Header */}
-          <div className="text-center mb-20">
+          <div className="text-center mb-10 sm:mb-12 md:mb-16">
             <span className="px-4 py-2 rounded border border-border text-muted text-sm mono-font">
               $ cat partners.json
             </span>
-            <h2 className="text-4xl md:text-6xl font-bold mt-6 mb-4 mono-font text-foreground">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mt-4 sm:mt-6 mb-3 sm:mb-4 mono-font text-foreground">
               Our <span className="text-faded">Partners</span>
             </h2>
-            <p className="text-xl text-muted max-w-2xl mx-auto">
+            <p className="text-base sm:text-lg md:text-xl text-muted max-w-2xl mx-auto px-1">
               Collaborating with industry leaders and communities to ship production-ready solutions and partner on events
             </p>
           </div>
 
           {/* Partners Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6 md:gap-8">
             {partners
               .filter((partner) => partner.type !== "Strategic Partner")
               .map((partner) => (
               <div
                 key={partner.name}
-                className="group relative bg-card backdrop-blur-xl rounded-lg border border-border hover:border-foreground/30 transition-all duration-300 p-6 md:p-10"
+                className="group relative bg-card backdrop-blur-xl rounded-lg border border-border hover:border-foreground/30 transition-all duration-300 p-5 sm:p-6 md:p-10"
               >
                 {/* Logo - Centered at top */}
                 <div className="flex justify-center mb-8">
@@ -211,17 +233,17 @@ export default function Home() {
                             href={project.url}
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="group/project block p-4 rounded-lg bg-card border border-border hover:border-green-500/50 hover:bg-green-500/5 transition-all"
+                            className="group/project block p-3 sm:p-4 rounded-lg bg-card border border-border hover:border-green-500/50 hover:bg-green-500/5 transition-all"
                           >
-                            <div className="flex items-center justify-between gap-3">
-                              <div className="flex-1">
+                            <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2 sm:gap-3">
+                              <div className="flex-1 min-w-0">
                                 <div className="flex items-center gap-3 mb-1">
-                                  <h4 className="font-semibold text-muted group-hover/project:text-foreground transition-colors mono-font">
+                                  <h4 className="font-semibold text-muted group-hover/project:text-foreground transition-colors mono-font truncate">
                                     {project.name}
                                   </h4>
                                 </div>
                               </div>
-                              <div className="flex items-center gap-3">
+                              <div className="flex items-center justify-between sm:justify-end gap-2 sm:gap-3 shrink-0">
                                 <span className={`inline-flex items-center gap-1.5 px-3 py-1 rounded-full border text-xs mono-font ${status.bg} ${status.border} ${status.color}`}>
                                   <span className={`w-1.5 h-1.5 rounded-full ${status.dotBg}`}></span>
                                   {status.label}
@@ -244,180 +266,42 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Projects Section */}
-      <section id="projects" className="relative py-16 md:py-32 px-6">
-        <div className="container mx-auto max-w-7xl">
-          {/* Section Header */}
-          <div className="text-center mb-12 md:mb-20">
-            <span className="px-4 py-2 rounded border border-border text-muted text-sm mono-font">
-              $ git log --graph --all
-            </span>
-            <h2 className="text-4xl md:text-6xl font-bold mt-6 mb-4 mono-font text-foreground">
-              Featured <span className="text-faded">Projects</span>
-            </h2>
-            <p className="text-xl text-muted max-w-2xl mx-auto">
-              Our repository of innovative solutions and shipped features
-            </p>
-          </div>
+      <FeaturedProjectsSection projects={featuredProjects.slice(0, 6)} />
 
-          {/* Git Branch Visualization - Featured */}
-          <div className="relative">
-            {/* Central Branch Line (SVG) */}
-            <div className="hidden lg:block absolute left-1/2 top-0 bottom-0 w-px -translate-x-1/2">
-              <svg
-                className="branch-svg w-full h-full"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <line
-                  x1="50%"
-                  y1="0"
-                  x2="50%"
-                  y2="100%"
-                  strokeWidth="2"
-                  className="git-branch-line"
-                />
-                <circle cx="50%" cy="15%" r="6" fill="#22c55e" className="git-dot" />
-                <circle cx="50%" cy="50%" r="6" fill="#22c55e" className="git-dot" style={{ animationDelay: "0.2s" }} />
-                <circle cx="50%" cy="85%" r="6" fill="#22c55e" className="git-dot" style={{ animationDelay: "0.4s" }} />
-              </svg>
-            </div>
+      <UpcomingProjectsSection projects={upcomingProjects} />
 
-            {/* Featured Projects Grid */}
-            <div className="space-y-16 lg:space-y-32 relative">
-              {featuredProjects.map((project, index) => {
-                const isRight = index % 2 === 0;
-                const card = (
-                  <Link
-                    href={`/projects/${project.slug}`}
-                    className="group relative bg-card backdrop-blur-xl rounded-lg border border-border overflow-hidden hover:border-foreground/30 transition-all duration-300 p-8 block"
-                  >
-                    <div className="flex items-start justify-between mb-4">
-                      <div className="mono-font text-sm text-muted">
-                        <span className="text-green-500">●</span> {project.branch}
-                      </div>
-                      <span className="text-xs text-faded mono-font">
-                        commit {project.commit}
-                      </span>
-                    </div>
-                    <h3 className="text-3xl font-bold mb-3 mono-font hover:opacity-75 transition-opacity text-foreground">
-                      {project.name}
-                    </h3>
-                    <p className="text-muted mb-4">{project.description}</p>
-                    <div className="flex flex-wrap gap-2 mb-6">
-                      {project.tags.map((tag: string) => (
-                        <span
-                          key={tag}
-                          className="px-3 py-1 rounded border border-border text-muted text-xs mono-font"
-                        >
-                          {tag}
-                        </span>
-                      ))}
-                    </div>
-                    <div className="text-foreground font-semibold flex items-center gap-2 transition-all mono-font text-sm group-hover:gap-4">
-                      git show details →
-                    </div>
-                  </Link>
-                );
+      <EventsPreviewSection events={events} />
 
-                return (
-                  <div key={project.name} className="grid lg:grid-cols-2 gap-8 items-center">
-                    <div className={`${isRight ? "lg:order-2" : "lg:order-1"}`}>
-                      {card}
-                    </div>
-                    <div className={`${isRight ? "lg:order-1" : "lg:order-2"} hidden lg:block`}>
-                      {/* Spacer for desktop branch visualization */}
-                    </div>
-                  </div>
-                );
-              })}
-            </div>
-          </div>
+      <AchievementsPreviewSection achievements={achievements} />
 
-          {/* Upcoming Projects */}
-          <div className="mt-32">
-            <div className="text-center mb-12">
-              <span className="px-4 py-2 rounded border border-yellow-500/30 text-yellow-500/80 text-sm mono-font">
-                $ git stash list --upcoming
-              </span>
-              <h2 className="text-3xl md:text-4xl font-bold mt-6 mb-4 mono-font text-foreground">
-                Upcoming <span className="text-faded">Projects</span>
-              </h2>
-              <p className="text-lg text-muted max-w-2xl mx-auto">
-                In progress — currently being crafted in our dev branches
-              </p>
-            </div>
+      <ProtocolsSection />
 
-            <div className="grid md:grid-cols-2 gap-6">
-              {upcomingProjects.map((project) => (
-                <div
-                  key={project.name}
-                  className="relative bg-card backdrop-blur-xl rounded-lg border border-dashed border-border p-8 opacity-80"
-                >
-                  {/* Integrated Header: Branch, Badge, Commit */}
-                  <div className="flex justify-between items-start mb-2">
-                    <div className="mono-font text-sm text-faded flex items-center gap-2">
-                      <span className="text-yellow-600">◐</span> {project.branch}
-                    </div>
-                    <span className="px-2 py-1 rounded text-xs mono-font bg-yellow-500/10 text-yellow-500/80 border border-yellow-500/20 whitespace-nowrap ml-2">
-                      // upcoming
-                    </span>
-                  </div>
-                  <div className="text-xs text-muted mono-font mb-4">
-                    commit {project.commit}
-                  </div>
-                  
-                  {/* Title Section */}
-                  <div className="mb-3">
-                    <h3 className="text-2xl font-bold mono-font text-foreground truncate">
-                      {project.name}
-                    </h3>
-                    {(project.slug === "project-titanic" || project.slug === "arduino-remote") && (
-                      <div className="mt-2">
-                        <span className="inline-block text-xs font-normal mono-font text-faded border border-border rounded px-2 py-0.5 whitespace-nowrap">
-                          working title
-                        </span>
-                      </div>
-                    )}
-                  </div>
-                  <p className="text-muted mb-4 text-sm">{project.description}</p>
-                  <div className="flex flex-wrap gap-2">
-                    {project.tags.map((tag: string) => (
-                      <span
-                        key={tag}
-                        className="px-3 py-1 rounded border border-border text-faded text-xs mono-font"
-                      >
-                        {tag}
-                      </span>
-                    ))}
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
+      <CommunitySnapshotSection />
 
       {/* CTA Section */}
-      <section id="cta" className="relative py-16 md:py-32 px-6">
+      <section id="cta" className="relative py-12 sm:py-16 md:py-20 lg:py-24 px-4 sm:px-6">
         <div className="container mx-auto max-w-5xl">
-          <div className="relative bg-card rounded-lg border border-border p-8 md:p-20 text-center overflow-hidden">
-            <div className="relative z-10 space-y-8">
-              <div className="mono-font text-sm text-green-500 mb-4">
+          <div className="relative bg-card rounded-lg border border-border p-6 sm:p-8 md:p-12 lg:p-20 text-center overflow-hidden">
+            <div className="relative z-10 space-y-6 sm:space-y-8">
+              <div className="mono-font text-sm text-green-500 mb-2 sm:mb-4">
                 $ ./ready_to_build.sh
               </div>
-              <h2 className="text-4xl md:text-6xl font-bold mono-font text-foreground">
+              <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mono-font text-foreground">
                 Ready to <span className="text-faded">Create</span>
                 <br />
                 Something Amazing<span className="text-green-500">?</span>
               </h2>
-              <p className="text-xl text-muted max-w-2xl mx-auto">
-                Join our community and let&apos;s build the future together
+              <p className="text-base sm:text-lg md:text-xl text-muted max-w-2xl mx-auto px-1">
+                Join our community of builders and help shape what we ship next.
               </p>
-              <div className="flex flex-wrap gap-4 justify-center mono-font text-sm">
-                <Link href="/projects" className="px-10 py-5 rounded bg-foreground text-background hover:opacity-90 transition-all font-bold">
+              <div className="flex flex-col sm:flex-row flex-wrap gap-3 sm:gap-4 justify-center mono-font text-sm">
+                <Link href="/join-us" className="px-6 sm:px-10 py-3.5 sm:py-5 rounded bg-foreground text-background hover:opacity-90 transition-all font-bold text-center">
+                  join community
+                </Link>
+                <Link href="/projects" className="px-6 sm:px-10 py-3.5 sm:py-5 rounded border-2 border-border hover:border-foreground transition-all font-bold text-foreground text-center">
                   git init project
                 </Link>
-                <Link href="/contact" className="px-10 py-5 rounded border-2 border-border hover:border-foreground transition-all font-bold text-foreground">
+                <Link href="/contact" className="px-6 sm:px-10 py-3.5 sm:py-5 rounded border-2 border-border hover:border-foreground transition-all font-bold text-foreground text-center">
                   curl -X POST /contact
                 </Link>
               </div>

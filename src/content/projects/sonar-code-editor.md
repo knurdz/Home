@@ -1,7 +1,7 @@
 ---
 title: "Sonar Code Editor"
-banner: "/images/projects/sonar-code-editor/banner-6.png"
-bannerLight: "/images/projects/sonar-code-editor/banner-light-3.png"
+banner: "/images/projects/sonar-code-editor/banner-new.png"
+bannerLight: "/images/projects/sonar-code-editor/banner-new-light.png"
 description: "A secure, real-time collaborative coding environment designed specifically for supervised exams and technical interviews."
 tags: ["Desktop App", "Web"]
 branch: "production"
@@ -9,14 +9,17 @@ commit: "78dc070"
 license: "MIT"
 ---
 
-- 🐙 **GitHub Repository**: [https://github.com/rkvishwa/Sonar-Code-Editor](https://github.com/rkvishwa/Sonar-Code-Editor)
-- 🌐 **Webview**: [https://sonar.knurdz.org/](https://sonar.knurdz.org/)
-- 🪟 **Microsoft Store**: [Sonar Code Editor on Windows](https://apps.microsoft.com/detail/9nffn07v94dz?ocid=webpdpshare)
-- 🍎 **macOS (Homebrew)**:
+## Links
+
+- [GitHub Repository](https://github.com/rkvishwa/Sonar-Code-Editor)
+- [Webview](https://sonar.knurdz.org/)
+- [Microsoft Store — Windows](https://apps.microsoft.com/detail/9nffn07v94dz?ocid=webpdpshare)
+- **macOS (Homebrew)**:
 
 ```bash
 brew install --cask rkvishwa/knurdz/sonar-code-editor
 ```
+
 ## Overview
 
 Sonar Code Editor is a purpose-built coding environment engineered for high-stakes scenarios, from university programming exams to technical hiring interviews. Unlike general-purpose IDEs, Sonar operates in a controlled, supervised mode that prevents candidates from accessing external resources while allowing proctors full visibility into in-progress code.
@@ -80,6 +83,7 @@ Sonar is in **production**. Install on Windows via the [Microsoft Store](https:/
 ```bash
 brew install --cask rkvishwa/knurdz/sonar-code-editor
 ```
-## ⚖️ License
+
+## License
 
 This project is licensed under the MIT License.
