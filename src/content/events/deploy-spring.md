@@ -10,7 +10,7 @@ eventOrganizers:
   - "Knurdz"
   - "Leo Club of University of Moratuwa"
 eventOrganizersNote: "Deploy Spring is a joint initiative between the Knurdz technical community and UoM Leos, combining hands-on engineering culture with university outreach and service leadership."
-image: "/events/deploy-spring/banner.png"
+image: "/images/events/deploy-spring/banner.png"
 logo: "/logo/knurdz-icon.png"
 secondaryLogo: "/partner-logos/leo-uom.jpeg"
 tags:
