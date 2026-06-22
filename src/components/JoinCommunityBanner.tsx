@@ -16,13 +16,16 @@ export default function JoinCommunityBanner() {
       <div className="join-banner-scrim absolute inset-0" />
       <div className="join-banner-content relative container mx-auto max-w-7xl px-4 sm:px-6 py-2.5">
         <p className="join-banner-text m-0 flex-1 text-sm sm:text-base text-left leading-snug">
-          Join the Knurdz community —{" "}
+          Deploy Sprint -{" "} 
           <span className="join-banner-highlight inline-block font-semibold whitespace-nowrap">
-            applications close soon.
+            Register Now
           </span>
         </p>
-        <Link href="/join-us" className="join-banner-btn shrink-0 ml-auto px-4 py-1.5 rounded font-semibold text-sm mono-font">
-          Apply Now
+        <Link
+          href="https://deploysprint.knurdz.org/register"
+          className="join-banner-btn shrink-0 ml-auto px-4 py-1.5 rounded font-semibold text-sm mono-font"
+        >
+          Register
         </Link>
       </div>
     </div>
