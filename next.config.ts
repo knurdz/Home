@@ -12,6 +12,8 @@ const nextConfig: NextConfig = {
     ]
   },
   images: {
+    loader: "custom",
+    loaderFile: "./src/lib/appwrite-image-loader.ts",
     localPatterns: [
       {
         pathname: '/team/**',
@@ -33,7 +35,17 @@ const nextConfig: NextConfig = {
       {
         protocol: 'https',
         hostname: 'www.github.com'
-      }
+      },
+      {
+        protocol: 'https',
+        hostname: 'sgp.cloud.appwrite.io',
+        pathname: '/v1/storage/buckets/**',
+      },
+      {
+        protocol: 'https',
+        hostname: 'cloud.appwrite.io',
+        pathname: '/v1/storage/buckets/**',
+      },
     ],
   },
   turbopack: {

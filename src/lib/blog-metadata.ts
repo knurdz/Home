@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import type { BlogMatter } from "@/lib/blog";
+import { resolveAssetUrlForMetadata } from "@/lib/static-assets";
 
 export const BLOG_SITE_URL = "https://knurdz.org";
 
@@ -12,8 +13,11 @@ export function getBlogPostOgImage(frontmatter: BlogMatter) {
 
   return {
     url: hasImage
-      ? `${BLOG_SITE_URL}${frontmatter.image}`
-      : `${BLOG_SITE_URL}/logo/knurdz-logo-horizontal.png`,
+      ? resolveAssetUrlForMetadata(frontmatter.image!, BLOG_SITE_URL)
+      : resolveAssetUrlForMetadata(
+          "/logo/knurdz-logo-horizontal.png",
+          BLOG_SITE_URL,
+        ),
     width: frontmatter.imageWidth ?? (hasImage ? 1200 : 600),
     height: frontmatter.imageHeight ?? (hasImage ? 630 : 200),
     alt: frontmatter.title,

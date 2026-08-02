@@ -4,6 +4,7 @@ import type { Element } from "hast";
 import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
 import { getProjectBySlug, getAllProjectSlugs } from "@/lib/projects";
+import { resolveAssetUrlForMetadata } from "@/lib/static-assets";
 import ProjectDetailHero from "@/components/ProjectDetailHero";
 import ReadingFontScope from "@/components/ReadingFontScope";
 import { BlogFontRoot } from "@/components/BlogFontSelector";
@@ -146,8 +147,11 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   const url = `${BASE_URL}/projects/${slug}`;
   const hasBanner = Boolean(frontmatter.banner);
   const image = hasBanner
-    ? `${BASE_URL}${frontmatter.banner}`
-    : `${BASE_URL}/logo/knurdz-logo-horizontal.png`;
+    ? resolveAssetUrlForMetadata(frontmatter.banner!, BASE_URL)
+    : resolveAssetUrlForMetadata(
+        "/logo/knurdz-logo-horizontal.png",
+        BASE_URL,
+      );
   const imageWidth = hasBanner ? 1200 : 600;
   const imageHeight = hasBanner ? 630 : 200;
 
@@ -180,8 +184,11 @@ export default async function ProjectPage({ params }: PageProps) {
   const { frontmatter, content } = project;
   const url = `${BASE_URL}/projects/${slug}`;
   const image = frontmatter.banner
-    ? `${BASE_URL}${frontmatter.banner}`
-    : `${BASE_URL}/logo/knurdz-logo-horizontal.png`;
+    ? resolveAssetUrlForMetadata(frontmatter.banner, BASE_URL)
+    : resolveAssetUrlForMetadata(
+        "/logo/knurdz-logo-horizontal.png",
+        BASE_URL,
+      );
 
   const softwareAppJsonLd = {
     "@context": "https://schema.org",

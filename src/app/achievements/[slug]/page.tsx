@@ -14,6 +14,7 @@ import {
   getAchievementBySlug,
   getAllAchievementSlugs,
 } from "@/lib/achievements";
+import { resolveAssetUrlForMetadata } from "@/lib/static-assets";
 
 interface PageProps {
   params: Promise<{ slug: string }>;
@@ -41,7 +42,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   const { frontmatter } = achievement;
   const url = `${BASE_URL}/achievements/${slug}`;
   const image = frontmatter.image
-    ? `${BASE_URL}${frontmatter.image}`
+    ? resolveAssetUrlForMetadata(frontmatter.image, BASE_URL)
     : `${BASE_URL}/logo/knurdz-logo-horizontal.png`;
 
   return {

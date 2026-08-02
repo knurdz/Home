@@ -9,7 +9,8 @@
     "lint": "next lint",
     "import:medium": "node scripts/import-medium-posts.mjs",
     "import:gallery": "node scripts/import-gallery-images.mjs",
-    "import:drive": "node scripts/import-drive-media.mjs"
+    "import:drive": "node scripts/import-drive-media.mjs",
+    "upload:static": "node scripts/upload-static-assets.mjs"
   },
   "dependencies": {
     "gray-matter": "^4.0.3",

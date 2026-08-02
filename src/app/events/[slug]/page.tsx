@@ -12,6 +12,7 @@ import ReadingFontScope from "@/components/ReadingFontScope";
 import { BlogFontRoot } from "@/components/BlogFontSelector";
 import { getEventStatusLabel, type EventStatus } from "@/lib/event-types";
 import { getAllEventSlugs, getEventBySlug } from "@/lib/events";
+import { resolveAssetUrlForMetadata } from "@/lib/static-assets";
 
 interface PageProps {
   params: Promise<{ slug: string }>;
@@ -99,7 +100,12 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
       title: `${event.name} | Knurdz Events`,
       description: event.summary,
       url,
-      images: [{ url: `${BASE_URL}${event.image}`, alt: event.name }],
+      images: [
+        {
+          url: resolveAssetUrlForMetadata(event.image, BASE_URL),
+          alt: event.name,
+        },
+      ],
     },
   };
 }

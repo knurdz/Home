@@ -1,0 +1,1027 @@
+{
+  "bucketId": "site-static",
+  "endpoint": "https://sgp.cloud.appwrite.io/v1",
+  "projectId": "697b8f42002a34ba04b3",
+  "files": {
+    "/banner/bootcamp-group-pic.jpg": {
+      "fileId": "c45069090dd846a690d5b03ce4dc58a0b7c1"
+    },
+    "/banner/community-highlight.jpg": {
+      "fileId": "fb30cadcb06869ef8bf6ed103cc3894041df"
+    },
+    "/banner/cover-image.jpg": {
+      "fileId": "a725fafb3976c78fd2649d918cd77f818f27"
+    },
+    "/banner/octaii-team-circle-v2.jpg": {
+      "fileId": "5965b0c7cdb84b91633fd983c82eeb5d96d1"
+    },
+    "/events/deploy-sprint/banner.jpg": {
+      "fileId": "2e7d04ba7664b0a8e746fe1f3ede30a4ebcb"
+    },
+    "/events/deploy-sprint/bootcamp/01.jpeg": {
+      "fileId": "d6d029a778eed6b103b7a3a0aeee4f6c4474"
+    },
+    "/events/deploy-sprint/bootcamp/02.jpg": {
+      "fileId": "c0d735e1b4bcd4bcd910bf149770e2bfa665"
+    },
+    "/events/deploy-sprint/bootcamp/03.jpg": {
+      "fileId": "14795cf5b32726832037adb3568e06ba2677"
+    },
+    "/events/deploy-sprint/bootcamp/04.jpg": {
+      "fileId": "bb5950534d4f068a68b60169e36cf39ba33c"
+    },
+    "/events/deploy-sprint/bootcamp/05.jpg": {
+      "fileId": "831dcf91e7b31f4127f798667e0b3f046544"
+    },
+    "/events/deploy-sprint/bootcamp/06.jpg": {
+      "fileId": "55344bff4f06b0559d3074fefa11fe58269f"
+    },
+    "/events/deploy-sprint/bootcamp/07.jpg": {
+      "fileId": "f4922d275d034cc64ace7471249401b786e8"
+    },
+    "/events/deploy-sprint/bootcamp/08.jpg": {
+      "fileId": "4449537748efb43d9ea3c3384d86b24339f3"
+    },
+    "/events/deploy-sprint/bootcamp/knurdz-ds26-042.jpg": {
+      "fileId": "8cc0e42982b6659415f0d71aa39d21cf0589"
+    },
+    "/events/deploy-sprint/bootcamp/knurdz-ds26-091.jpg": {
+      "fileId": "ee1ce057e52ed1553234b97fdeba17612295"
+    },
+    "/events/deploy-sprint/finale/01.jpg": {
+      "fileId": "331469b3621bda15e2850137e8a6a8859ee1"
+    },
+    "/events/deploy-sprint/finale/02.jpg": {
+      "fileId": "88e1f171146435d716462b1c5d88de88c679"
+    },
+    "/events/deploy-sprint/finale/03.jpg": {
+      "fileId": "016d856b777972da944bc67d0b4c4bcc5c99"
+    },
+    "/events/deploy-sprint/finale/img-4736.jpg": {
+      "fileId": "53e4627005a3f0b49c89a3293e4d769ef2a3"
+    },
+    "/events/deploy-sprint/finale/img-4763.jpg": {
+      "fileId": "000703ee9db20958e542abe9c2ea7712cd82"
+    },
+    "/events/deploy-sprint/finale/img-4810.jpg": {
+      "fileId": "e0d136feea97aa3c17c8fc165e4a7ed2f1a4"
+    },
+    "/events/deploy-sprint/finale/img-5020.jpg": {
+      "fileId": "fd7769bd484d52123872d822a861f957b729"
+    },
+    "/events/deploy-sprint/finale/img-5030.jpg": {
+      "fileId": "45cf9926ec3cc0bb2fd7f80b4c3722a3f622"
+    },
+    "/events/deploy-sprint/online-workshop-1.jpg": {
+      "fileId": "49727d2c8b568aa6e8878a163e8771671c24"
+    },
+    "/events/deploy-sprint/online-workshop-2.jpg": {
+      "fileId": "de5606aa585bef7af1b9fbbd38df29e1b384"
+    },
+    "/events/octaii/banner.jpg": {
+      "fileId": "14fd6331248f70c2c04b5434f0f8688095ba"
+    },
+    "/events/octaii/gallery/01.jpg": {
+      "fileId": "d25a16212a71c14a66eb6076ea1345e1139f"
+    },
+    "/events/octaii/gallery/02.jpg": {
+      "fileId": "1385e29bf7fdb5ce47e1205241e89d90d99a"
+    },
+    "/events/octaii/gallery/03.jpg": {
+      "fileId": "e6cf1679dca11b77349c9dab21e0dfaf25c0"
+    },
+    "/events/octaii/gallery/04.jpg": {
+      "fileId": "da45ab1567095d88f1bcdd6e0a9641c45a1b"
+    },
+    "/events/octaii/gallery/05.jpg": {
+      "fileId": "db7c86a0963e5d2ba196da8c295836551c02"
+    },
+    "/events/octaii/gallery/06.jpg": {
+      "fileId": "4e4bb61b88722fe3a57ab341eb20deface78"
+    },
+    "/events/octaii/gallery/07.jpg": {
+      "fileId": "ffff2c92d0e1ac34a600b02f138906adc1cc"
+    },
+    "/events/octaii/gallery/08.jpg": {
+      "fileId": "a237725bf6bd0c5779e123a925a1b3a27b16"
+    },
+    "/events/octaii/gallery/09.jpg": {
+      "fileId": "75207a11d0eb86a0e3402be1ddc2e537ffbf"
+    },
+    "/events/octaii/gallery/10.jpg": {
+      "fileId": "be71aeebd1395d35f26c908854ac1583f4a1"
+    },
+    "/events/octaii/gallery/11.jpg": {
+      "fileId": "1b3476b189c5dbe8c96238ab4105cbe02c37"
+    },
+    "/events/octaii/gallery/12.jpg": {
+      "fileId": "0e044be49cb986540bbbfbc49bf0945c5b55"
+    },
+    "/events/octaii/gallery/13.jpg": {
+      "fileId": "bfd58181e6e2dd4f4ff681c8f31d24aedc06"
+    },
+    "/events/octaii/gallery/14.jpg": {
+      "fileId": "ef468940532cc6640615149f329787429ca1"
+    },
+    "/events/octaii/gallery/15.jpg": {
+      "fileId": "b440f343962e86be6ac4fde828ddc2bd7fd7"
+    },
+    "/events/octaii/gallery/16.jpg": {
+      "fileId": "3b7246c6c888a140f5d3de9a41a9f4ef9a21"
+    },
+    "/events/octaii/gallery/17.jpg": {
+      "fileId": "10c42ad286e9b141ed512b95f342611a1916"
+    },
+    "/events/octaii/gallery/18.jpg": {
+      "fileId": "e701945064ece268c57861ee8924b5c3d495"
+    },
+    "/events/octaii/gallery/19.jpg": {
+      "fileId": "e008cb9b3a5133bafd03d13eb1f077f65a2c"
+    },
+    "/events/octaii/gallery/20.jpg": {
+      "fileId": "de4a545a541d0a18d990fc57021df558e003"
+    },
+    "/events/octaii/gallery/21.jpg": {
+      "fileId": "ff27f416b83994f2f7569c65e43844b882ee"
+    },
+    "/events/octaii/gallery/22.jpg": {
+      "fileId": "0aa92ab818454cc00c06815baedc03eab8fa"
+    },
+    "/events/octaii/gallery/23.jpg": {
+      "fileId": "cb98e319d09fd84f1d5a0c4aaa5e8a4ff1f3"
+    },
+    "/events/octaii/gallery/24.jpg": {
+      "fileId": "3e1fb106a4e90232f92ff41b671816b93552"
+    },
+    "/events/octaii/gallery/25.jpg": {
+      "fileId": "63f9ad685495ef1e6f5c246dcfc8f9c8a013"
+    },
+    "/events/octaii/gallery/26.jpg": {
+      "fileId": "6e463817a191b0e961af4d948cd1cb8fe78e"
+    },
+    "/events/octaii/gallery/27.jpg": {
+      "fileId": "bffdb0cb5d28aa9340b5b6cd89b7f1a33a1a"
+    },
+    "/events/octaii/gallery/28.jpg": {
+      "fileId": "0a0ae07904afeeaa648c04aea413a79bfe6f"
+    },
+    "/events/octaii/gallery/29.jpg": {
+      "fileId": "595e39e302b6a24ed85e19124c68dc9eb08e"
+    },
+    "/events/octaii/gallery/30.jpg": {
+      "fileId": "499affae00d69055914f533c9c45685ca033"
+    },
+    "/gallery/event-1.jpeg": {
+      "fileId": "9b1405d6ab620d941ea869eae7c51ec958a7"
+    },
+    "/gallery/event-10.jpg": {
+      "fileId": "cc8dafeb8fb55fa939d3d57fba6379c8a6fa"
+    },
+    "/gallery/event-11.jpg": {
+      "fileId": "afe3404a0e313e9e597c30d3f18584fe1c8a"
+    },
+    "/gallery/event-12.jpg": {
+      "fileId": "6d0d44293e0d2679b72c16e4548baa430a85"
+    },
+    "/gallery/event-13.jpg": {
+      "fileId": "b9073db8c1b2e356323e782012bed700e134"
+    },
+    "/gallery/event-14.jpg": {
+      "fileId": "19b30d1a4b6a439d49b19e648a4eeffa62cf"
+    },
+    "/gallery/event-15.jpg": {
+      "fileId": "abee02c99a63b9f58cda2513814aa7f39e1e"
+    },
+    "/gallery/event-16.jpg": {
+      "fileId": "3dc8689163adea705c7069d5d44571d52c3d"
+    },
+    "/gallery/event-17.jpg": {
+      "fileId": "f27e1bdd84c6f1581bd742f87aac1d0fba3e"
+    },
+    "/gallery/event-18.jpg": {
+      "fileId": "cd3dfd1872690852e583ea408320ef74b551"
+    },
+    "/gallery/event-19.jpg": {
+      "fileId": "6a0459393c993888699b604780c7e2814975"
+    },
+    "/gallery/event-2.jpeg": {
+      "fileId": "2d4219d567c98e62c5d10b980ea8ee846bb9"
+    },
+    "/gallery/event-2.jpg": {
+      "fileId": "c87ecb88a5e489026ada24cdd7dbc9e659c5"
+    },
+    "/gallery/event-20.jpg": {
+      "fileId": "6ad363f7224836dff4817f4e02b832b4970a"
+    },
+    "/gallery/event-21.jpg": {
+      "fileId": "dace078ad68304ac167be7ff0d1e33197de6"
+    },
+    "/gallery/event-22.jpg": {
+      "fileId": "343eb56802efd97198717280d817ca1de5eb"
+    },
+    "/gallery/event-23.jpg": {
+      "fileId": "a62c7884e0f1b1dbb50c035ef142af56f4f7"
+    },
+    "/gallery/event-24.jpg": {
+      "fileId": "e92c25702f705f552e75a577246272d310f0"
+    },
+    "/gallery/event-25.jpg": {
+      "fileId": "86b0762760588cb574b0f95f1961363328a9"
+    },
+    "/gallery/event-26.jpg": {
+      "fileId": "848c0e024341714165ab3141cd2b5b9d5f9e"
+    },
+    "/gallery/event-27.jpg": {
+      "fileId": "dd1e6cc2ca4be23f63513fa479ebe64b797d"
+    },
+    "/gallery/event-28.jpg": {
+      "fileId": "63f05609a3f3e0f5778756bf06a60932390e"
+    },
+    "/gallery/event-29.jpg": {
+      "fileId": "9b5f6d0c47dfca86591a3dd2cc4d3aa7a8f9"
+    },
+    "/gallery/event-3.jpg": {
+      "fileId": "de6b23b3ac26a16898823c6cd885b4e94d62"
+    },
+    "/gallery/event-30.jpg": {
+      "fileId": "cc3792434d23d4a9e3af48ad0e1048bd4c91"
+    },
+    "/gallery/event-31.jpg": {
+      "fileId": "5bc45950cab652b51cc841aad971734ec7db"
+    },
+    "/gallery/event-32.jpg": {
+      "fileId": "222c6b49c3ea8a639497fca6cba4500b1279"
+    },
+    "/gallery/event-33.jpg": {
+      "fileId": "2bf7eea209b5ed9e1f61b9bdcfc2b3e75ada"
+    },
+    "/gallery/event-34.jpg": {
+      "fileId": "273f5c172cecafbc61d2b9f8893a9cd57123"
+    },
+    "/gallery/event-35.jpg": {
+      "fileId": "43e5722db44c4c73c7023e3ccb74996f300f"
+    },
+    "/gallery/event-36.jpg": {
+      "fileId": "05b59a522ae72db23e0f330b95cbc74e455a"
+    },
+    "/gallery/event-37.jpg": {
+      "fileId": "f9960abb773b0d70af1ee4cd8fbe6b386d65"
+    },
+    "/gallery/event-38.jpg": {
+      "fileId": "3e403ff361e3737281693888f4b34fb2d652"
+    },
+    "/gallery/event-39.jpg": {
+      "fileId": "8b68bf3fd044fc925d6ad0b5f6c2cd9cb293"
+    },
+    "/gallery/event-4.jpg": {
+      "fileId": "08577bfbfad39e48bd824686b96860f1c33d"
+    },
+    "/gallery/event-40.jpg": {
+      "fileId": "058a8320796a10d4ee708310011cafe20e65"
+    },
+    "/gallery/event-41.jpg": {
+      "fileId": "92240ed617e8de6473ff2f9b97eb0af1efe7"
+    },
+    "/gallery/event-42.jpg": {
+      "fileId": "141bbb7bbbe62206739de57c73008e48280c"
+    },
+    "/gallery/event-43.jpg": {
+      "fileId": "f0ab1a123b3be6045ba97821720768bba1ce"
+    },
+    "/gallery/event-44.jpg": {
+      "fileId": "1288a0828d8ff2e2b7ebd9cb29571135d34f"
+    },
+    "/gallery/event-45.jpg": {
+      "fileId": "e112d96a943950975438ef2d3a4c18018dc2"
+    },
+    "/gallery/event-46.jpg": {
+      "fileId": "7d736906646e7bfd44f0bfa97ef623ecc2b5"
+    },
+    "/gallery/event-47.jpg": {
+      "fileId": "f19431f5c7f2e7b8400f190786d169767ae2"
+    },
+    "/gallery/event-48.jpg": {
+      "fileId": "e36f23668baa3aa08d6d5ceb283bc56efcb1"
+    },
+    "/gallery/event-49.jpg": {
+      "fileId": "dd8b50ad05e1a01f4af7291c1f71aeced1d6"
+    },
+    "/gallery/event-5.jpg": {
+      "fileId": "8faedfc5098e2f7bddc4da332d31bed21f30"
+    },
+    "/gallery/event-50.jpg": {
+      "fileId": "ce24e88ee183f6f99f1b313f95db25cc15f3"
+    },
+    "/gallery/event-6.jpg": {
+      "fileId": "99d4032762819ca4793ab7f8d97e72eee5ff"
+    },
+    "/gallery/event-7.jpg": {
+      "fileId": "6de106fb600ff362f90e4e98033c9b7d5157"
+    },
+    "/gallery/event-8.jpg": {
+      "fileId": "8066ba811861a72536939526a2089d96c1a3"
+    },
+    "/gallery/event-9.jpg": {
+      "fileId": "999c163d13db12fb8d662e0aee1fbaa559e0"
+    },
+    "/gallery/events/copilot-dev-days/01.jpg": {
+      "fileId": "8bf32f14fd16f182e9590f14ae13999171ec"
+    },
+    "/gallery/events/copilot-dev-days/02.jpg": {
+      "fileId": "971511bceb421870bbf51d77c73a9c454285"
+    },
+    "/gallery/events/copilot-dev-days/03.jpg": {
+      "fileId": "81cecfe0929cd44c3bca74719ed7feca8951"
+    },
+    "/gallery/events/copilot-dev-days/04.jpg": {
+      "fileId": "ccf3f24f766e99c7498d3d1150a275efadba"
+    },
+    "/gallery/events/copilot-dev-days/05.jpg": {
+      "fileId": "840c0ab9fdb0a04700c498e16e0120c7143f"
+    },
+    "/gallery/events/copilot-dev-days/06.jpg": {
+      "fileId": "d16d9fb5903637703a331943456205f20827"
+    },
+    "/gallery/events/copilot-dev-days/07.jpg": {
+      "fileId": "49fde90ccff82878d50a82abcbba5bdea9dd"
+    },
+    "/gallery/events/copilot-dev-days/08.jpg": {
+      "fileId": "89428a4b24490cae8aaeab3974fb8df01068"
+    },
+    "/gallery/events/cursor-cafe/01.jpg": {
+      "fileId": "30d11b57950a9203f6247aba834faf0b3b13"
+    },
+    "/gallery/events/cursor-cafe/02.jpg": {
+      "fileId": "dbc02c3abd561d0f95a5ac7b42b592efed9d"
+    },
+    "/gallery/events/cursor-cafe/03.jpg": {
+      "fileId": "fc8edfc9a711f5a5c1b62639adebdfd08070"
+    },
+    "/gallery/events/cursor-cafe/04.jpg": {
+      "fileId": "e64688b758290f4ff3ee7421b61e693cbe31"
+    },
+    "/gallery/events/cursor-cafe/05.jpg": {
+      "fileId": "4569bee73a4538cc1a713edaebc2739fb688"
+    },
+    "/gallery/events/cursor-cafe/06.jpg": {
+      "fileId": "0ea576a493b3744b437ea5dd635cf4167dd3"
+    },
+    "/gallery/events/cursor-cafe/07.jpg": {
+      "fileId": "5c1d305f314ec5466453b3f28efc66a1c28e"
+    },
+    "/gallery/events/cursor-meetup-april/01.jpg": {
+      "fileId": "87404cd211ab43e5f78e4cfb2bb964ae6fb6"
+    },
+    "/gallery/events/cursor-meetup-april/02.jpg": {
+      "fileId": "769b6042a901c15ab8daf43bd3d5004597fb"
+    },
+    "/gallery/events/cursor-meetup-april/03.jpg": {
+      "fileId": "4f609588432a53b779b37e4826a0af3ade86"
+    },
+    "/gallery/events/cursor-meetup-april/04.jpg": {
+      "fileId": "bb33918b60dd7fb74222cded36bd020ac47f"
+    },
+    "/gallery/events/cursor-meetup-april/05.jpg": {
+      "fileId": "08ecc81b57d0927790a400142fabf4c5305b"
+    },
+    "/gallery/events/cursor-meetup-april/06.jpg": {
+      "fileId": "ade55a87d145bb791cd86d996234ca20b42a"
+    },
+    "/gallery/events/cursor-meetup-april/07.jpg": {
+      "fileId": "eabd61e228041ca9ce88ab527ebeb0e12b59"
+    },
+    "/gallery/events/cursor-meetup-april/08.jpg": {
+      "fileId": "c6489ecade958ad44ce923dc4f100e15e784"
+    },
+    "/gallery/events/cursor-meetup-builder-series/01.jpg": {
+      "fileId": "42248e4ed652ad57a511d83857b49456845e"
+    },
+    "/gallery/events/cursor-meetup-builder-series/02.jpg": {
+      "fileId": "b5ac01f7686aaa7bf10bedbfb51c73958b26"
+    },
+    "/gallery/events/cursor-meetup-builder-series/03.jpg": {
+      "fileId": "ff500dd3382a51f76448f17aef9328320b8a"
+    },
+    "/gallery/events/cursor-meetup-builder-series/04.jpg": {
+      "fileId": "8f625fb9dce1d620d8b8d91ddd9280cd462d"
+    },
+    "/gallery/events/cursor-meetup-builder-series/05.jpg": {
+      "fileId": "584cc4a751c46b3e92f6d3a0ec3c7e29d143"
+    },
+    "/gallery/events/cursor-meetup-builder-series/06.jpg": {
+      "fileId": "e2969a4a8a67840181a31678c43e8396ab5c"
+    },
+    "/gallery/events/cursor-meetup-builder-series/07.jpg": {
+      "fileId": "b5b61ceaac8626be2833a05f63fb4cbe09e3"
+    },
+    "/gallery/events/cursor-meetup-builder-series/08.jpg": {
+      "fileId": "2eaefe6de07d5abe42f5e99ce3a2796d3db4"
+    },
+    "/gallery/events/cursor-meetup-builder-series/img-20260721-101337.jpg": {
+      "fileId": "b3cce13bd05606c3d05e4e5b4941b7711446"
+    },
+    "/gallery/events/cursor-meetup-builder-series/img-wa0011.jpg": {
+      "fileId": "bcfd9d4ae64a773c0ac28cd2976d4d61ec97"
+    },
+    "/gallery/events/exhibitions/01.jpg": {
+      "fileId": "a3a6f33e80726c09cb37c7e3eb941573d65e"
+    },
+    "/gallery/events/exhibitions/02.jpg": {
+      "fileId": "e4421f213d3c9a26643646ddea3b844eb705"
+    },
+    "/gallery/events/exhibitions/03.jpg": {
+      "fileId": "56e10698b2aa9178fe215a8f3227d97de138"
+    },
+    "/gallery/events/exhibitions/04.jpg": {
+      "fileId": "5db1d61fc32e20653eaf2973f8395429c94c"
+    },
+    "/gallery/events/exhibitions/05.jpg": {
+      "fileId": "b9b7bde52adbf5e03447c77d70a171e30a48"
+    },
+    "/gallery/events/exhibitions/06.jpg": {
+      "fileId": "6a02e11855e3f974e08db9bfe7878050d3d4"
+    },
+    "/gallery/events/exhibitions/07.jpg": {
+      "fileId": "5e3d897a32cdc11caa11121e235bd77f5929"
+    },
+    "/gallery/events/exhibitions/08.jpg": {
+      "fileId": "d74663224dc97a8a4a05eee02db7964e4f85"
+    },
+    "/gallery/events/microsoft-localhost/01.jpg": {
+      "fileId": "1f5ee1e4e5791d4594cfaeba1ea9de7dd2f9"
+    },
+    "/gallery/events/microsoft-localhost/02.jpg": {
+      "fileId": "b1aeb6a7bbe1a0b65d69ebcda6db4c79642b"
+    },
+    "/gallery/events/microsoft-localhost/03.jpg": {
+      "fileId": "2ee7627c4d27fb5b976782e1f6ef4b830ce0"
+    },
+    "/gallery/events/microsoft-localhost/04.jpg": {
+      "fileId": "8b0a75bc20382e5096c90f9a7d6a5b3c91bf"
+    },
+    "/gallery/events/microsoft-localhost/05.jpg": {
+      "fileId": "86aa1d932834cb01d354186ea38b8443fb01"
+    },
+    "/gallery/events/microsoft-localhost/06.jpg": {
+      "fileId": "0edc1ec7ef607a2f170f305b06f57065a9ae"
+    },
+    "/gallery/events/microsoft-localhost/07.jpg": {
+      "fileId": "dd1f1b5eaabc966740af05160069e1500c5b"
+    },
+    "/gallery/events/microsoft-localhost/08.jpg": {
+      "fileId": "faa83c7eb2780b89ae7331a01f8d85173b82"
+    },
+    "/gallery/events/phantom-meetup/01.jpg": {
+      "fileId": "45c41e7213582991b5e8063a061b180f52cd"
+    },
+    "/gallery/events/phantom-meetup/02.jpg": {
+      "fileId": "407cb69d43554bdf405c835e119f60f37496"
+    },
+    "/gallery/events/phantom-meetup/03.jpg": {
+      "fileId": "0468997bf28f806aae9d19f2307b4be151ec"
+    },
+    "/gallery/events/phantom-meetup/04.jpg": {
+      "fileId": "c8b629267d0880a877025687759980d95177"
+    },
+    "/gallery/events/phantom-meetup/05.jpg": {
+      "fileId": "a2ea34b8c23c878577481364fce6389b6a33"
+    },
+    "/gallery/events/phantom-meetup/06.jpg": {
+      "fileId": "be7dd08f100ab88f180070730d5ff724510a"
+    },
+    "/gallery/events/phantom-meetup/07.jpg": {
+      "fileId": "8e7ef619488357d0ff03f0c2702aae5a7036"
+    },
+    "/gallery/events/phantom-meetup/08.jpg": {
+      "fileId": "7df9935dd0d2e51b3629d83500389895193b"
+    },
+    "/gallery/events/sherlock-3-0/01.jpg": {
+      "fileId": "ecff01812bce7593270991f7e994a86faaf8"
+    },
+    "/gallery/events/sherlock-3-0/02.jpg": {
+      "fileId": "558865e6d2fc39ca465448ff15f540fbedc8"
+    },
+    "/gallery/events/sherlock-3-0/03.jpg": {
+      "fileId": "add56416dbab34f4e1f33c91a6517124e560"
+    },
+    "/gallery/events/sherlock-3-0/04.png": {
+      "fileId": "f284458e52550956145689d8193883c27539"
+    },
+    "/gallery/events/sherlock-3-0/05.jpg": {
+      "fileId": "8f6ee13d43ddf94d916591b19ce0e89d11d1"
+    },
+    "/gallery/events/sherlock-3-0/06.jpg": {
+      "fileId": "e7a2db9dbcb9e6ff15d9307c6b99e8077968"
+    },
+    "/gallery/events/sherlock-3-0/07.jpg": {
+      "fileId": "d953b4064f2646ef06187e3dad04bf379dc8"
+    },
+    "/gallery/events/sherlock-3-0/08.jpg": {
+      "fileId": "530e2464273b7de000e1b38ef7344cdf96ed"
+    },
+    "/gallery/project-1.jpeg": {
+      "fileId": "0bfa020e9196fdc6ea43ec69755994302942"
+    },
+    "/gallery/team-1.jpeg": {
+      "fileId": "f18dc6a42eae03f092fa5e293ff5a7d2ba51"
+    },
+    "/gallery/team-2.jpeg": {
+      "fileId": "d481c06f3890c331189efe76cf8f8e7f790b"
+    },
+    "/gallery/team-3.jpeg": {
+      "fileId": "94b1e9814ea04fb70a645cfac713648856a3"
+    },
+    "/gallery/team-4.jpeg": {
+      "fileId": "5701690b086ce56772b0254e991b5a02f7ae"
+    },
+    "/gallery/team-5.jpeg": {
+      "fileId": "27e0a561d4ed32a43b777ae1d227867b55a1"
+    },
+    "/gallery/team-6.jpeg": {
+      "fileId": "3a1bd90617d76eefec1fbe682bbebd3e9b92"
+    },
+    "/gallery/team-7.jpeg": {
+      "fileId": "85b06b19c6d3f225bbca53df437df164f5fd"
+    },
+    "/images/achievements/1.jpg": {
+      "fileId": "749e7955331a0208d3e7ff2d2ff26e6b02f4"
+    },
+    "/images/achievements/10.jpg": {
+      "fileId": "316f9f6fee020ec66f987f0602f8756c3654"
+    },
+    "/images/achievements/11.jpg": {
+      "fileId": "aab78dc04ac588a85d4d98be11b67cd7f350"
+    },
+    "/images/achievements/12.jpg": {
+      "fileId": "8b85b35f193fbbd18c46269f715eca3e7125"
+    },
+    "/images/achievements/2.jpg": {
+      "fileId": "740a5962a8993da644dd74d6041b6fa7d7d0"
+    },
+    "/images/achievements/3.jpeg": {
+      "fileId": "70c83df95b25abe5836721d03aed2906d11a"
+    },
+    "/images/achievements/4.jpeg": {
+      "fileId": "df2b3eeca47586841ef9ce2185ac4024ab9f"
+    },
+    "/images/achievements/5.jpeg": {
+      "fileId": "f1346a6d660bca3a35e95775feeba2a0f95c"
+    },
+    "/images/achievements/6.jpeg": {
+      "fileId": "038872932a2122ffc15cbe1be50b133e09e0"
+    },
+    "/images/achievements/7.jpg": {
+      "fileId": "d7fb55227b9b28a4451390d7e02c7f811087"
+    },
+    "/images/achievements/8.jpg": {
+      "fileId": "725dad57d5db2d2cb001dd2d119de8bb0a2d"
+    },
+    "/images/achievements/9.jpg": {
+      "fileId": "46a058d303cd375b7c8c139c3585b680a7f3"
+    },
+    "/images/achievements/aurora-2026-agentic-ai/01.jpg": {
+      "fileId": "28e3e8e169b1a9f61c1b770769f78801d124"
+    },
+    "/images/achievements/aurora-2026-agentic-ai/02.jpg": {
+      "fileId": "ae4b49b81813cc9d08c749d52a0bb83d64c6"
+    },
+    "/images/achievements/aurora-2026-agentic-ai/03.jpg": {
+      "fileId": "23088a5b83812ee63002ca2666c4e96a507e"
+    },
+    "/images/achievements/aurora-2026-agentic-ai/04.jpg": {
+      "fileId": "5e9890d0872c230645ff493a189a7fc44b97"
+    },
+    "/images/achievements/aurora-2026-agentic-ai/05.jpg": {
+      "fileId": "9cc655a0db8fcc891527df04e2304393103c"
+    },
+    "/images/achievements/aurora-2026-agentic-ai/06.jpg": {
+      "fileId": "8694ea750413f60ca2b4640ec56f23a14fd2"
+    },
+    "/images/achievements/aurora-2026-agentic-ai/07.jpg": {
+      "fileId": "b00579cfc6fbd97cce8e756819948fe4fa22"
+    },
+    "/images/achievements/aurora-2026-agentic-ai/08.jpg": {
+      "fileId": "983d8943ead0aa3131397bb65ddc50dcc741"
+    },
+    "/images/achievements/cursor-buildathon-2026-n8n/01.jpg": {
+      "fileId": "5648e11d9ef54fa67e546b5d1867d101cec8"
+    },
+    "/images/achievements/cursor-buildathon-2026-n8n/02.jpg": {
+      "fileId": "fce1d844584882db82607df46126904189b1"
+    },
+    "/images/achievements/cursor-buildathon-2026-n8n/03.jpg": {
+      "fileId": "c0507af8a32923de631d0c954b088fb122ea"
+    },
+    "/images/achievements/cursor-buildathon-2026-n8n/04.jpg": {
+      "fileId": "0112503fc871e38c034cb05f25730946eab5"
+    },
+    "/images/achievements/cursor-buildathon-2026-n8n/05.jpg": {
+      "fileId": "13dd2820ca510ab8485923ae8c4f344c169d"
+    },
+    "/images/achievements/cursor-buildathon-2026-n8n/06.jpg": {
+      "fileId": "8ff30ca1b8e60272fddddb283b423372c4cd"
+    },
+    "/images/achievements/cursor-buildathon-2026-n8n/07.jpg": {
+      "fileId": "1a8e28cc24fbc08bba0c8daaea4a18e31971"
+    },
+    "/images/achievements/cursor-buildathon-2026-n8n/08.jpg": {
+      "fileId": "ec253ce9627ef7c1ce1cc5e43ba02a43b489"
+    },
+    "/images/achievements/idealize-aiesec-mini-competition-winner/01.jpg": {
+      "fileId": "93505550814632a759595001cac394bdba90"
+    },
+    "/images/achievements/idealize-aiesec-mini-competition-winner/02.png": {
+      "fileId": "5340f0cb3dedd9ab4f4b7f021b8ebe653ca6"
+    },
+    "/images/achievements/ieee-open-week-2026-logic-sprint/01.jpg": {
+      "fileId": "da8c8532f0f8af24ccc77c387707bdf8b38c"
+    },
+    "/images/achievements/ieee-open-week-2026-logic-sprint/02.jpg": {
+      "fileId": "a1468352267e78cf76e7566e3b5cf51492dd"
+    },
+    "/images/achievements/ieee-open-week-2026-logic-sprint/03.jpg": {
+      "fileId": "4f3e489d4f7710bce37993318123ab9c4ebc"
+    },
+    "/images/achievements/ieee-open-week-2026-logic-sprint/04.jpg": {
+      "fileId": "744b94c45f766a3ccf817ffade275fd7d53f"
+    },
+    "/images/achievements/ieee-open-week-2026-logic-sprint/05.jpg": {
+      "fileId": "b2ab71221e741d0009aa7db1fefc8dda9fdf"
+    },
+    "/images/achievements/ieee-open-week-2026-logic-sprint/06.jpg": {
+      "fileId": "c25e581968e3870733efda670e0554b534b1"
+    },
+    "/images/achievements/ieee-open-week-2026-logic-sprint/07.jpg": {
+      "fileId": "b3fd4c92e4b835451638c0a247bb0dfc756f"
+    },
+    "/images/achievements/proxy-maze-2026-finalist/01.jpg": {
+      "fileId": "9e72743813e2c498757d50f27f180af1d38e"
+    },
+    "/images/achievements/proxy-maze-2026-finalist/02.jpg": {
+      "fileId": "c05e86577a408c122ee5f149dcce8a80d29d"
+    },
+    "/images/achievements/proxy-maze-2026-finalist/03.jpg": {
+      "fileId": "a7dd76fd1dec31dff5efe081775263303cd8"
+    },
+    "/images/achievements/proxy-maze-2026-finalist/04.jpg": {
+      "fileId": "5fa2d8df120b4b447210885dd2a8d783704c"
+    },
+    "/images/achievements/proxy-maze-2026-finalist/05.jpg": {
+      "fileId": "4fef8b4e0790df30b296d79ec4bac9c9b759"
+    },
+    "/images/achievements/proxy-maze-2026-finalist/06.jpg": {
+      "fileId": "04a74987f8a173df5fa284ceaaad2027f13d"
+    },
+    "/images/achievements/proxy-maze-2026-finalist/07.jpg": {
+      "fileId": "c75f3f0b3bd20fde44c52ef12241ac42bb66"
+    },
+    "/images/achievements/proxy-maze-2026-finalist/08.jpg": {
+      "fileId": "c6b976eff9e8b7156fe9351315c70a9ef4ac"
+    },
+    "/images/achievements/road-to-legacy-2025-second-runners-up/01.jpg": {
+      "fileId": "540a76681c2ceeb19eb9a1cc9599e4810c6c"
+    },
+    "/images/achievements/road-to-legacy-2025-second-runners-up/02.jpg": {
+      "fileId": "9702ee0473f9c3787e908b94ad4f4f58bee4"
+    },
+    "/images/achievements/road-to-legacy-2025-second-runners-up/03.jpg": {
+      "fileId": "50402108b0c33ea904068e23535581a6d880"
+    },
+    "/images/achievements/road-to-legacy-2025-second-runners-up/04.jpg": {
+      "fileId": "00666192c133e1d41c1e0af2fff90cb49bd1"
+    },
+    "/images/achievements/road-to-legacy-2025-second-runners-up/05.jpg": {
+      "fileId": "42edd2107f116e8fee27289d220621805ac4"
+    },
+    "/images/achievements/road-to-legacy-2025-second-runners-up/06.jpg": {
+      "fileId": "bd4b3bcdf1908d8cb2aba79c4d182729c3ec"
+    },
+    "/images/achievements/road-to-legacy-2025-second-runners-up/07.jpg": {
+      "fileId": "0719e6bf6060c51ecef4aa39f6e48ac8035a"
+    },
+    "/images/achievements/road-to-legacy-2025-second-runners-up/08.jpg": {
+      "fileId": "629e6346153f993bc813d2f755f3b5a516a4"
+    },
+    "/images/achievements/robogames-2026-university-finalist/01.jpg": {
+      "fileId": "afc1bfe02f0b92f04770740baeca8e2cff00"
+    },
+    "/images/achievements/robogames-2026-university-finalist/02.jpg": {
+      "fileId": "589d9da0945c159d578a495b4b080dd17273"
+    },
+    "/images/achievements/robogames-2026-university-finalist/03.jpg": {
+      "fileId": "d953c764418105ea51f4a41fcd3ccc69bece"
+    },
+    "/images/achievements/robogames-2026-university-finalist/04.jpg": {
+      "fileId": "93b3193f77de0820adabd3006b15cbbeb854"
+    },
+    "/images/achievements/robogames-2026-university-finalist/05.jpg": {
+      "fileId": "aec2b9658d25340df16e936b1c54ca89d79a"
+    },
+    "/images/achievements/robogames-2026-university-finalist/06.jpg": {
+      "fileId": "c3e46bce050b4a90691bb62fbd33773cbfb2"
+    },
+    "/images/achievements/robogames-2026-university-finalist/07.jpg": {
+      "fileId": "a6a504f50f1f535e2db495a4cc98069fe9ca"
+    },
+    "/images/achievements/robogames-2026-university-finalist/08.jpg": {
+      "fileId": "69a0fe7e21ec9a52e4c8ac007060c208f6b7"
+    },
+    "/images/achievements/roboroarz-international-2026-finalist/01.jpg": {
+      "fileId": "b8780d691dc6a35d57677326e467bc62e88d"
+    },
+    "/images/achievements/roboroarz-international-2026-finalist/02.jpg": {
+      "fileId": "c2960fed5aeeb4d0ca4813415e52eb48ddfb"
+    },
+    "/images/achievements/roboroarz-international-2026-finalist/03.jpg": {
+      "fileId": "787c67ec7f6b7f60449b00155f8582fd9299"
+    },
+    "/images/achievements/roboroarz-international-2026-finalist/04.jpg": {
+      "fileId": "11b258d36fa11494a80795614d86d79e577a"
+    },
+    "/images/achievements/roboroarz-international-2026-finalist/05.jpg": {
+      "fileId": "62814699d8ea8ac9100a2fab25e3c32ff2d3"
+    },
+    "/images/achievements/roboroarz-international-2026-finalist/06.jpg": {
+      "fileId": "9be05f713581f40f711508dc16279df63b31"
+    },
+    "/images/achievements/roboroarz-international-2026-finalist/08.jpg": {
+      "fileId": "e8fdcaed12d047f5eb11ce8d0347bc47bc5f"
+    },
+    "/images/achievements/xeynergy-mini-competition/01.jpg": {
+      "fileId": "012b1932ac3c45294d439fc165b4e56864a5"
+    },
+    "/images/achievements/xeynergy-mini-competition/02.jpg": {
+      "fileId": "f63ea3bc68690c0b6d64f478325aa8b6ebb9"
+    },
+    "/images/achievements/xeynergy-mini-competition/03.jpg": {
+      "fileId": "6c21cab26f0a93b063ddb231b63005adb95e"
+    },
+    "/images/achievements/xeynergy-mini-competition/04.jpg": {
+      "fileId": "1b27eb361b9f8041685c99231a30dec86e8b"
+    },
+    "/images/banner/banner.png": {
+      "fileId": "f0aafa1d627ce5e2ac2ad6fd8f2539b74ab8"
+    },
+    "/images/blog/bfg-website-screenshot.png": {
+      "fileId": "3ddbf6137d622ac3f79ba284ac1e20b1c493"
+    },
+    "/images/blog/css-for-beginner.jpg": {
+      "fileId": "4ab16a0b5fc88acee3920f82cf43f6c73105"
+    },
+    "/images/blog/git-panic-bfg-repo-cleaner.png": {
+      "fileId": "bc2807cc2eaf5dac5a0d41d8d10f68e1838d"
+    },
+    "/images/blog/how-to-secure-the-github-developer-pack-2fa.png": {
+      "fileId": "5a723e5492ace15b6c1ea25fd45e8c984f91"
+    },
+    "/images/blog/how-to-secure-the-github-developer-pack-application-form.png": {
+      "fileId": "18c92d7ba3d1b81da86f5b27f5bde1a4e35e"
+    },
+    "/images/blog/how-to-secure-the-github-developer-pack-billing-address.png": {
+      "fileId": "e6f72978ae7e3e7a8b243405d2dd94aa4baa"
+    },
+    "/images/blog/how-to-secure-the-github-developer-pack-education-home.png": {
+      "fileId": "36bd204700840de6c363d4f4a920fcd846bf"
+    },
+    "/images/blog/how-to-secure-the-github-developer-pack-proof-upload.png": {
+      "fileId": "2cd605301f73f908dbb183c2151896ec6879"
+    },
+    "/images/blog/how-to-secure-the-github-developer-pack-rejection.png": {
+      "fileId": "e79c6e3a3a6aa845f2738c89cdb0e8bcedd0"
+    },
+    "/images/blog/how-to-secure-the-github-developer-pack-share-location.png": {
+      "fileId": "e29509c1cddceec901f95124eda1e8a8259b"
+    },
+    "/images/blog/how-to-secure-the-github-developer-pack.png": {
+      "fileId": "66023ba34f33800201c3ae4158ec65651254"
+    },
+    "/images/blog/html-content-model.jpg": {
+      "fileId": "a04b83f3733329bb1cfc992324e63abbb848"
+    },
+    "/images/blog/html-for-beginner.jpg": {
+      "fileId": "aa65f6394c045bd360abfea7326ada900274"
+    },
+    "/images/blog/html-forms.jpg": {
+      "fileId": "677ada88f5fe76c1fa9dd3247742778d267e"
+    },
+    "/images/blog/html-hyperlink.jpg": {
+      "fileId": "1f0d9044943c0e61410e5b91f15a78e26888"
+    },
+    "/images/blog/html-images.jpg": {
+      "fileId": "4b868b7ca258473965220d45d98764e2dd1a"
+    },
+    "/images/blog/html-tables.jpg": {
+      "fileId": "ce889cddd3401fa3737987c800db2229d16d"
+    },
+    "/images/blog/rkk-vishva-kumar.jpeg": {
+      "fileId": "845ea7537318ec6e9894ff6215759be29bd5"
+    },
+    "/images/blog/tantalum-project-the-hardware-platform-i-wanted-to-use-1.jpeg": {
+      "fileId": "fec0eb86922ed207b4d26098d74e2782aca4"
+    },
+    "/images/blog/tantalum-project-the-hardware-platform-i-wanted-to-use-2.jpeg": {
+      "fileId": "56f4a077ece0fff9ec67732668f19b23db4c"
+    },
+    "/images/blog/tantalum-project-the-hardware-platform-i-wanted-to-use-3.jpeg": {
+      "fileId": "560b819ab39a19a1215a12992527422385d6"
+    },
+    "/images/blog/tantalum-project-the-hardware-platform-i-wanted-to-use.png": {
+      "fileId": "97f0c827b035fb36a45232e585aa12e3ece8"
+    },
+    "/images/blog/when-our-google-form-broke-we-learned-the-real-fix-was-the-link-not-the-form.png": {
+      "fileId": "323eec0b4d4233fe1109938cd6d0cade084c"
+    },
+    "/images/events/deploy-spring/banner.png": {
+      "fileId": "b8b835e6106bea3b731b2933374b148e02a3"
+    },
+    "/images/events/deploy-spring/logo.png": {
+      "fileId": "cd3c8645b56fedeae2aa964ea4441d385e51"
+    },
+    "/images/events/mazex/gallery/footer-section.png": {
+      "fileId": "083c0b592e29c09899be9e868971ab1416d2"
+    },
+    "/images/events/mazex/gallery/hero-section.png": {
+      "fileId": "f7b15217d8c23580da52b06f962aa31bfa64"
+    },
+    "/images/events/mazex/gallery/official-partners-section.png": {
+      "fileId": "f3312f4bb865fb3b6e5cc3277620d25c9866"
+    },
+    "/images/events/mazex/logo.png": {
+      "fileId": "e2f61784f41c29368121f35115c029483a33"
+    },
+    "/images/events/mazex/og-image.jpg": {
+      "fileId": "1aa7f9c8e275a8e441c9e0e305b873124bd5"
+    },
+    "/images/events/octwave/banner.png": {
+      "fileId": "62260a32fa94228326ddb8fc9c35bb2d4a19"
+    },
+    "/images/projects/centurion/banner.png": {
+      "fileId": "2542b553bef3530f7651bc2abd5f78a3dce5"
+    },
+    "/images/projects/centurion/logo.png": {
+      "fileId": "0cde9bfa884e507c5d66b3663d28f6542cc7"
+    },
+    "/images/projects/centurion/mission-log.jpg": {
+      "fileId": "371de368bc943f1dc8b59126b4d20c75ea18"
+    },
+    "/images/projects/defense-panel/banner.png": {
+      "fileId": "c7d1a7e9cff18354b1ef55bb75434b1ea280"
+    },
+    "/images/projects/diss-master/banner.png": {
+      "fileId": "d564e86a10a66dff7368ce454e77fdfad7d1"
+    },
+    "/images/projects/ieee-sb-uom-website/banner-light.png": {
+      "fileId": "152cad184b47481841e271ecab08fac6a47f"
+    },
+    "/images/projects/ieee-sb-uom-website/banner.png": {
+      "fileId": "1abdd3c7b893844a609abe75cad32501e4b2"
+    },
+    "/images/projects/mazex/banner.png": {
+      "fileId": "cc92aa60654ec5b147491d9247e5eeaa1446"
+    },
+    "/images/projects/meta-scribe/banner.png": {
+      "fileId": "e900e32877a92b5196aee1ce85cb13259be3"
+    },
+    "/images/projects/nexus-os/banner.png": {
+      "fileId": "a9e001469ebb9f7b8bb3b20a4c78f7b02976"
+    },
+    "/images/projects/nothing-dialer-1/banner-2.png": {
+      "fileId": "14d6490cd89d48565e6509088e8ea7880bfe"
+    },
+    "/images/projects/nothing-dialer-1/banner-3.png": {
+      "fileId": "c4b23fa1c9ed4eed7d1bca693248fd332812"
+    },
+    "/images/projects/nothing-dialer-1/banner-4.png": {
+      "fileId": "9aa4ec9033b31a7628f262958e8325958cb8"
+    },
+    "/images/projects/octwave-3-0/banner.png": {
+      "fileId": "7438521dd867889e487f3a2df2024d242fbb"
+    },
+    "/images/projects/octwave-3-0/og-image.png": {
+      "fileId": "549f80b1c04e93cd9de974177ee9bddf724c"
+    },
+    "/images/projects/origami/banner.png": {
+      "fileId": "5d3a8ad724952c7fa75771c3a5ef06214b6a"
+    },
+    "/images/projects/sonar-code-editor/banner-1.png": {
+      "fileId": "3102db6e3a03b6ddf04adbec2cc1fc69d31e"
+    },
+    "/images/projects/sonar-code-editor/banner-2.png": {
+      "fileId": "f0e7609b1c2df859f49e9908998830d50007"
+    },
+    "/images/projects/sonar-code-editor/banner-3.png": {
+      "fileId": "46d8170915692c7bb52bf23835a6d40b198a"
+    },
+    "/images/projects/sonar-code-editor/banner-4.png": {
+      "fileId": "f2060d0aa6dc74db487c2a4e963da1c3b28d"
+    },
+    "/images/projects/sonar-code-editor/banner-5.png": {
+      "fileId": "e6d3a009fe87cbeec707cb13783850b4a36c"
+    },
+    "/images/projects/sonar-code-editor/banner-6.png": {
+      "fileId": "5c23eb2b1341637fb9e4677f11b33d3ddd57"
+    },
+    "/images/projects/sonar-code-editor/banner-light-2.png": {
+      "fileId": "68b628738d9a38ad1b0e44a860239de11d5a"
+    },
+    "/images/projects/sonar-code-editor/banner-light-3.png": {
+      "fileId": "c3b18fe3101a1344d6e52946980a1e73346e"
+    },
+    "/images/projects/sonar-code-editor/banner-light.png": {
+      "fileId": "402b6dbcb5f586d057f86ce20f1d451be2d0"
+    },
+    "/images/projects/sonar-code-editor/banner-new-light.png": {
+      "fileId": "607781c178e9dccbf814c5bc4c0f076027bd"
+    },
+    "/images/projects/sonar-code-editor/banner-new.png": {
+      "fileId": "1d050f9a5baf3eb36adcc01eddcc5af47f5e"
+    },
+    "/images/projects/tantalum/ai-assistant.jpeg": {
+      "fileId": "7bf661aeaa43eeba257002ee4763711aa66d"
+    },
+    "/images/projects/tantalum/banner.png": {
+      "fileId": "2014a112331bec651192e0c856f2549f2bab"
+    },
+    "/images/projects/tantalum/mobile-1.jpeg": {
+      "fileId": "af3932696f6f3700a5b31b9b47e3202c59ab"
+    },
+    "/images/projects/tantalum/mobile-2.jpeg": {
+      "fileId": "b292111e9342a2a442ea5ecb332a1502b4c8"
+    },
+    "/images/projects/tantalum/ota-updates.jpeg": {
+      "fileId": "8393c39611005e960523d9c34a5fe74a8e32"
+    },
+    "/images/projects/what-should-i-build/banner-dark-v2.png": {
+      "fileId": "20a2194f80304fad74dc2905c56d8fb6d4de"
+    },
+    "/images/projects/what-should-i-build/banner-light-v2.png": {
+      "fileId": "d367c363914a7079166a6e9e50ac633b7abc"
+    },
+    "/logo/knurdz-icon-light.png": {
+      "fileId": "4841be7f7e9eb45e183972733bf369d3db9e"
+    },
+    "/logo/knurdz-icon-light.svg": {
+      "fileId": "5810e27cab5f16a890c16c5247fb7f8fa5e5"
+    },
+    "/logo/knurdz-icon.png": {
+      "fileId": "7adfa2d6d8bd0fd63d922c1cc7df7060e9be"
+    },
+    "/logo/knurdz-icon.svg": {
+      "fileId": "b479de5e807ea620b3cdb05537ca825b98aa"
+    },
+    "/logo/knurdz-logo-horizontal-bg.png": {
+      "fileId": "69e29f112da7fc0c112a4d22827478d5d914"
+    },
+    "/logo/knurdz-logo-horizontal-light-bg.png": {
+      "fileId": "22430a4234df0ade542f2eb144b07a45ef73"
+    },
+    "/logo/knurdz-logo-horizontal-light.png": {
+      "fileId": "a723b32b94c33f35434012ead5a4e83b88f5"
+    },
+    "/logo/knurdz-logo-horizontal-light.svg": {
+      "fileId": "2d05b4baa3a8c65ca3235d3bf5180d52b573"
+    },
+    "/logo/knurdz-logo-horizontal.png": {
+      "fileId": "bf027bfa3041ca15e24b830b0107b91be810"
+    },
+    "/logo/knurdz-logo-horizontal.svg": {
+      "fileId": "faf1770c730234f8137f879cd328f20aa5bf"
+    },
+    "/partner-logos/IEEE-WIE-removebg-preview.png": {
+      "fileId": "cf321e61ea89e784a9d211e1e3fe9c9a782a"
+    },
+    "/partner-logos/IEEE_IAS.webp": {
+      "fileId": "6020898e0d28ac501dc1b160ffa987f0222a"
+    },
+    "/partner-logos/IEEE_RAS_logo_4C_stacked-HiRes.fw.webp": {
+      "fileId": "bcbaca69291adda521556baf3ef70c4a24b0"
+    },
+    "/partner-logos/brainvave.webp": {
+      "fileId": "eb22bf7ef4e3039891bddf9dcfef8f3eadb7"
+    },
+    "/partner-logos/ieeesblogo-blue.webp": {
+      "fileId": "99c3fc12adbb5cb73a76412784b4573a3020"
+    },
+    "/partner-logos/leo-uom-transparent.png": {
+      "fileId": "2ef770fd2d3e462276e9b7eade698a3d7e5a"
+    },
+    "/partner-logos/leo-uom.jpeg": {
+      "fileId": "13b77515fcf59fb6a1f416a153b3687fcdf9"
+    },
+    "/partner-logos/uom-itfac-logo-on-dark.png": {
+      "fileId": "3b43a78d86867b5a8bece6151a3c2fd0a825"
+    },
+    "/partner-logos/uom-itfac-logo.png": {
+      "fileId": "b66cdb8463b69bc36ab5de6eb223a8cb685f"
+    },
+    "/team/BhasiluEgodawatte.jpeg": {
+      "fileId": "ed4311adbbfd61054498884da4ad850eecda"
+    },
+    "/team/Kavee-ginty.jpg": {
+      "fileId": "5b7ec42f8a9c9ecab6daf0ae9a5899f5759a"
+    },
+    "/team/rkvishwa.png": {
+      "fileId": "2c4648341b08d32631d0c5a7513947edfefd"
+    }
+  }
+}
