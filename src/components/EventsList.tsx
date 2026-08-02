@@ -41,7 +41,7 @@ export default function EventsList({ events }: { events: EventData[] }) {
                   event.status === "upcoming" ? "opacity-80" : ""
                 }`}
                 sizes="(max-width: 768px) 100vw, 1280px"
-                priority={event.slug === "deploy-spring"}
+                priority={event.slug === "deploy-sprint"}
               />
             </div>
             <div

@@ -80,10 +80,10 @@ linkඑකක් \_blank එක්ක open කරනකොට, බලන අය�
 
 CSS එක්ක linkවල විවිධ states වෙනස් කරන්න පුළුවන්:
 
--   a:link — සාමාන්ය link(බලලා නැති ඒවා).
--   a:visited — visited ලින්ක්.
--   a:hover — mouse එක උඩ තියනකොට.
--   a:active — click කරන මොහොතේ.
+-   a:link: සාමාන්ය link(බලලා නැති ඒවා).
+-   a:visited: visited ලින්ක්.
+-   a:hover: mouse එක උඩ තියනකොට.
+-   a:active: click කරන මොහොතේ.
 
 a:link {  
     color: blue;  

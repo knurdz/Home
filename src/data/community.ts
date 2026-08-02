@@ -29,10 +29,10 @@ export const protocols: Protocol[] = [
 ];
 
 export const communityStats: CommunityStat[] = [
-  { number: "12+", label: "Projects Delivered" },
-  { number: "13+", label: "Community Members" },
-  { number: "2+", label: "Events Hosted & Partnered" },
-  { number: "6+", label: "Competition Placements" },
+  { number: "20+", label: "Projects Delivered" },
+  { number: "16+", label: "Community Members" },
+  { number: "5+", label: "Events Hosted & Partnered" },
+  { number: "20+", label: "Competition Placements" },
 ];
 
 export interface CommunityValue {

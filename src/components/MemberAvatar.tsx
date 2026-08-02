@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import { useEffect, useMemo, useState } from "react";
-import { Member } from "@/data/members";
+import { Member, withMemberImageVersion } from "@/data/members";
 
 interface MemberAvatarProps {
     member: Member;
@@ -24,20 +24,23 @@ export default function MemberAvatar({ member, priority = false }: MemberAvatarP
     const slug = getSlug();
     const imageSources = useMemo(() => {
         const sources: string[] = [];
+        const add = (path: string) => {
+            const versioned = withMemberImageVersion(member, path);
+            if (!sources.includes(versioned)) {
+                sources.push(versioned);
+            }
+        };
         if (member.image.startsWith("/")) {
-            sources.push(member.image);
+            add(member.image);
         }
         for (const ext of TEAM_IMAGE_EXTENSIONS) {
-            const path = `/team/${slug}.${ext}`;
-            if (!sources.includes(path)) {
-                sources.push(path);
-            }
+            add(`/team/${slug}.${ext}`);
         }
-        if (member.image && !member.image.startsWith("/") && !sources.includes(member.image)) {
-            sources.push(member.image);
+        if (member.image && !member.image.startsWith("/")) {
+            add(member.image);
         }
         return sources;
-    }, [member.image, slug]);
+    }, [member, slug]);
 
     const [sourceIndex, setSourceIndex] = useState(0);
     const [hasError, setHasError] = useState(false);

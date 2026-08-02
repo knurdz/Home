@@ -42,8 +42,8 @@ Form එකක තියෙන වැදගත් කොටස් ටිකක�
 
 ### 2\. Selection Elements
 
--   Radio buttons: <input type=”radio” name=”gender” value=”male”> එක option එකක් විතරක් select කරන්න පුළුවන් (උදා: Gender — Male/Female).
--   Checkboxes: <input type=”checkbox” name=”vehicle” value=”bike”> Multiple options select කරන්න යොදාගන්නවා (උදා: Hobbies — Coding, Reading).
+-   Radio buttons: <input type=”radio” name=”gender” value=”male”> එක option එකක් විතරක් select කරන්න පුළුවන් (උදා: Gender: Male/Female).
+-   Checkboxes: <input type=”checkbox” name=”vehicle” value=”bike”> Multiple options select කරන්න යොදාගන්නවා (උදා: Hobbies: Coding, Reading).
 -   Dropdown lists: <select> සහ <option> tags යොදාගෙන. උදාහරණයක්:
 
 <select name="country">  
@@ -96,7 +96,7 @@ Example Form
 
 Form එකක තියෙන elements වල name attribute එක ගොඩක් වැදගත්. ඒකෙන් server එකට data යවනවා.
 
-උදා: <input type=”text” name=”username”> — “username” කියන name එකෙන් තමයි data යවන්නෙ.
+උදා: <input type=”text” name=”username”>: “username” කියන name එකෙන් තමයි data යවන්නෙ.
 
 -   action: Form data යවන්න ඕන තැන (URL එක).
 -   method: Data යවන විදිහ (GET හෝ POST).
@@ -115,7 +115,7 @@ Form එක submit කරනකොට required fields fill කරලා නැ�
 
 Forms හදනකොට මේ ටික මතක තියාගන්න:
 
--   Labels යොදාගන්න: <label for=”id”> — Accessibility වැඩි වෙනවා, users ලට ලේසි වෙනවා.
+-   Labels යොදාගන්න: <label for=”id”>: Accessibility වැඩි වෙනවා, users ලට ලේසි වෙනවා.
 -   Fieldsets යොදාගන්න: Related fields group කරන්න <fieldset> tag එක යොදාගන්න. උදා:
 
 <fieldset>  

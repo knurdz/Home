@@ -31,6 +31,6 @@ Traditional PaaS offerings optimize for generic deployments but lag behind how t
 
 ## Status
 
-**Upcoming** — core platform architecture in progress on `main`. Public access and documentation will follow initial release.
+**Upcoming**: core platform architecture in progress on `main`. Public access and documentation will follow initial release.
 
 ---

@@ -11,6 +11,16 @@ export interface Project {
 export const projects: Project[] = [
   // ── Featured Projects ──────────────────────────────────────────────────────
   {
+    name: "Tantalum",
+    slug: "tantalum",
+    branch: "main",
+    commit: "a7f937a",
+    description:
+      "Local-first Electron Arduino IDE with board detection, built-in Git, OTA deployment, snapshot recovery, cloud sync, and an agentic AI assistant—plus Web admin and Android field provisioning.",
+    tags: ["Desktop App", "IoT", "AI", "Developer Tool"],
+    upcoming: false,
+  },
+  {
     name: "Sonar Code Editor",
     slug: "sonar-code-editor",
     branch: "production",
@@ -36,7 +46,7 @@ export const projects: Project[] = [
     branch: "main",
     commit: "b8f2c31",
     description:
-      "Official website for the IEEE Student Branch, University of Moratuwa — showcasing chapters, events, and community engagement for 1,000+ members. Built by Knurdz as web partner.",
+      "Official website for the IEEE Student Branch, University of Moratuwa: showcasing chapters, events, and community engagement for 1,000+ members. Built by Knurdz as web partner.",
     tags: ["Web App", "Education", "Community"],
     upcoming: false,
   },
@@ -58,6 +68,26 @@ export const projects: Project[] = [
     description:
       "Full-stack event platform for MazeX 1.0, an island-wide inter-university Micromouse competition with customizable organizer back-office and cloud infrastructure. Built and hosted by Knurdz as web partner for IEEE RAS & WIE, University of Moratuwa.",
     tags: ["Web App", "Event Platform", "Robotics"],
+    upcoming: false,
+  },
+  {
+    name: "OctWave 3.0",
+    slug: "octwave-3-0",
+    branch: "main",
+    commit: "3ac7feb",
+    description:
+      "Official website for OctWave 3.0, Sri Lanka's premier undergraduate AI and Machine Learning competition. Built and hosted by Knurdz as web partner for IEEE IAS, University of Moratuwa.",
+    tags: ["Web App", "Event Platform", "AI / ML"],
+    upcoming: false,
+  },
+  {
+    name: "Centurion",
+    slug: "centurion",
+    branch: "main",
+    commit: "c2d57cb",
+    description:
+      "Transparent, auditable platform for allocating industry-sponsored software projects to student teams through structured voting and server-side spin-draw events. Built for FIT Semester Project allocation at University of Moratuwa.",
+    tags: ["Web App", "Education", "Event Platform"],
     upcoming: false,
   },
   {
@@ -118,7 +148,7 @@ export const projects: Project[] = [
     branch: "development",
     commit: "d2e4f8a",
     description:
-      "A unified platform for IEEE Student Branch volunteer coordination, event operations, registrations, and committee workflows — built for student branches that outgrow spreadsheets.",
+      "A unified platform for IEEE Student Branch volunteer coordination, event operations, registrations, and committee workflows: built for student branches that outgrow spreadsheets.",
     tags: ["Web App", "Event Platform", "Education"],
     upcoming: true,
   },
@@ -140,16 +170,6 @@ export const projects: Project[] = [
     description:
       "Metal is a high-performance, AI-Native Platform-as-a-Service (PaaS) that revolutionizes how students and developers build for the cloud.",
     tags: ["PaaS", "Infrastructure"],
-    upcoming: true,
-  },
-  {
-    name: "Arduino Remote",
-    slug: "arduino-remote",
-    branch: "development/alpha",
-    commit: "4b8e1c5",
-    description:
-      "Aruido IDE built from scratch powered Arduino CLI with inbuilt cloud based OTA updates and remote debugging.",
-    tags: ["Desktop", "IoT"],
     upcoming: true,
   },
 ];

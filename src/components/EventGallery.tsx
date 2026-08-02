@@ -5,7 +5,11 @@ import { useCallback, useEffect, useState } from "react";
 import GalleryNavArrow, {
   GalleryPreviewMobileNav,
 } from "@/components/GalleryNavArrow";
-import type { EventGalleryItem, EventStatus } from "@/lib/event-types";
+import type {
+  EventGalleryItem,
+  EventGallerySection,
+  EventStatus,
+} from "@/lib/event-types";
 import { showGalleryComingSoonPlaceholders } from "@/lib/event-types";
 
 const BLUR_DATA_URL =
@@ -14,6 +18,7 @@ const BLUR_DATA_URL =
 interface EventGalleryProps {
   eventName: string;
   images: EventGalleryItem[];
+  sections?: EventGallerySection[];
   status: EventStatus;
 }
 
@@ -51,6 +56,35 @@ function ComingSoonCard({ index }: { index: number }) {
           #{String(index + 1).padStart(2, "0")}
         </div>
       </div>
+    </div>
+  );
+}
+
+function SectionHeading({ title }: { title: string }) {
+  return (
+    <h3 className="text-lg sm:text-xl font-semibold mono-font text-foreground mb-4 sm:mb-5 leading-snug">
+      {title}
+    </h3>
+  );
+}
+
+function FacebookEmbed({ embed }: { embed: NonNullable<EventGallerySection["embed"]> }) {
+  const height = embed.height ?? 480;
+
+  return (
+    <div className="w-full max-w-lg mx-auto rounded-xl overflow-hidden border border-border bg-card shadow-md">
+      <iframe
+        src={embed.src}
+        title={embed.title ?? "Facebook embed"}
+        width="500"
+        height={height}
+        className="w-full border-0"
+        style={{ border: "none", overflow: "hidden", minHeight: height }}
+        scrolling="no"
+        allowFullScreen
+        allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
+        loading="lazy"
+      />
     </div>
   );
 }
@@ -143,17 +177,30 @@ function GalleryImageCard({
 export default function EventGallery({
   eventName,
   images,
+  sections,
   status,
 }: EventGalleryProps) {
+  const sectionImages =
+    sections?.flatMap((section) => section.images ?? []) ?? [];
+  const displayImages = sections?.length ? sectionImages : images;
+
   const [imageLoading, setImageLoading] = useState<Record<string, boolean>>({});
   const [previewIndex, setPreviewIndex] = useState<number | null>(null);
 
-  const hasImages = images.length > 0;
-  const showComingSoonCard = showGalleryComingSoonPlaceholders(status);
+  const hasSections = Boolean(sections?.length);
+  const hasImages = displayImages.length > 0;
+  const hasSectionContent = sections?.some(
+    (section) =>
+      section.embed ||
+      (section.images?.length ?? 0) > 0 ||
+      section.comingSoon,
+  );
+  const showComingSoonCard =
+    !hasSections && showGalleryComingSoonPlaceholders(status);
   const previewImage =
-    previewIndex !== null ? images[previewIndex] ?? null : null;
+    previewIndex !== null ? displayImages[previewIndex] ?? null : null;
   const isFirstImage = previewIndex === 0;
-  const isLastImage = previewIndex === images.length - 1;
+  const isLastImage = previewIndex === displayImages.length - 1;
 
   const openPreview = useCallback((index: number) => {
     setPreviewIndex(index);
@@ -171,9 +218,9 @@ export default function EventGallery({
 
   const goToNext = useCallback(() => {
     setPreviewIndex((current) =>
-      current !== null && current < images.length - 1 ? current + 1 : current
+      current !== null && current < displayImages.length - 1 ? current + 1 : current
     );
-  }, [images.length]);
+  }, [displayImages.length]);
 
   useEffect(() => {
     if (previewIndex === null) return;
@@ -183,7 +230,7 @@ export default function EventGallery({
         closePreview();
       } else if (event.key === "ArrowLeft" && previewIndex > 0) {
         goToPrevious();
-      } else if (event.key === "ArrowRight" && previewIndex < images.length - 1) {
+      } else if (event.key === "ArrowRight" && previewIndex < displayImages.length - 1) {
         goToNext();
       }
     };
@@ -195,7 +242,80 @@ export default function EventGallery({
       document.body.style.overflow = "";
       window.removeEventListener("keydown", handleKeyDown);
     };
-  }, [previewIndex, images.length, closePreview, goToPrevious, goToNext]);
+  }, [previewIndex, displayImages.length, closePreview, goToPrevious, goToNext]);
+
+  if (hasSections) {
+    if (!hasSectionContent) return null;
+
+    return (
+      <>
+        <section className="mt-8 sm:mt-10 pt-6 sm:pt-8 border-t border-border overflow-hidden">
+          <GalleryHeader eventName={eventName} />
+
+          <div className="space-y-10 sm:space-y-12 max-w-3xl mx-auto">
+            {sections!.map((section, sectionIndex) => {
+              let imageOffset = 0;
+              for (let i = 0; i < sectionIndex; i++) {
+                imageOffset += sections![i].images?.length ?? 0;
+              }
+
+              return (
+                <div key={section.id}>
+                  <SectionHeading title={section.title} />
+
+                  {section.embed && <FacebookEmbed embed={section.embed} />}
+
+                  {(section.images?.length ?? 0) > 0 && (
+                    <div
+                      className={`grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4 md:gap-5 px-0 sm:px-1 ${
+                        section.embed ? "mt-5 sm:mt-6" : ""
+                      }`}
+                    >
+                      {section.images!.map((image, index) => {
+                        const globalIndex = imageOffset + index;
+                        return (
+                          <GalleryImageCard
+                            key={image.id}
+                            image={image}
+                            index={globalIndex}
+                            isLoading={imageLoading[image.id] !== false}
+                            onOpen={() => openPreview(globalIndex)}
+                            onLoaded={() =>
+                              setImageLoading((prev) => ({
+                                ...prev,
+                                [image.id]: false,
+                              }))
+                            }
+                          />
+                        );
+                      })}
+                    </div>
+                  )}
+
+                  {section.comingSoon && (
+                    <ComingSoonCard index={sectionIndex} />
+                  )}
+                </div>
+              );
+            })}
+          </div>
+        </section>
+
+        {previewImage && previewIndex !== null && (
+          <GalleryPreviewModal
+            previewImage={previewImage}
+            previewIndex={previewIndex}
+            imageCount={displayImages.length}
+            isFirstImage={isFirstImage}
+            isLastImage={isLastImage}
+            onClose={closePreview}
+            onPrevious={goToPrevious}
+            onNext={goToNext}
+          />
+        )}
+      </>
+    );
+  }
 
   if (!hasImages && !showComingSoonCard) return null;
 
@@ -228,108 +348,141 @@ export default function EventGallery({
       </section>
 
       {previewImage && previewIndex !== null && (
-        <div
-          className="fixed inset-0 z-200 flex items-end sm:items-center justify-center bg-background/95 backdrop-blur-sm p-0 sm:p-4 md:px-20 md:py-8"
-          onClick={closePreview}
-          role="dialog"
-          aria-modal="true"
-          aria-label={`Image preview, ${previewIndex + 1} of ${images.length}`}
-        >
-          <button
-            type="button"
-            onClick={(e) => {
-              e.stopPropagation();
-              closePreview();
-            }}
-            className="group absolute top-3 right-3 sm:top-4 sm:right-4 md:top-6 md:right-6 z-102 min-h-11 min-w-11 p-2.5 sm:p-3 rounded-full bg-card/90 border border-border text-foreground hover:bg-red-500 hover:border-red-500 hover:text-white active:opacity-90 transition-all shadow-lg touch-manipulation"
-            aria-label="Close preview"
-          >
-            <svg
-              className="w-5 h-5 sm:w-6 sm:h-6 stroke-current group-hover:stroke-white mx-auto"
-              fill="none"
-              viewBox="0 0 24 24"
-              aria-hidden
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth={2}
-                d="M6 18L18 6M6 6l12 12"
-              />
-            </svg>
-          </button>
-
-          <div
-            className="relative w-full sm:max-w-6xl max-h-[92dvh] sm:max-h-[85vh] md:max-h-[90vh]"
-            onClick={(e) => e.stopPropagation()}
-          >
-            {images.length > 1 && (
-              <>
-                <GalleryNavArrow
-                  direction="prev"
-                  disabled={isFirstImage}
-                  onClick={goToPrevious}
-                />
-                <GalleryNavArrow
-                  direction="next"
-                  disabled={isLastImage}
-                  onClick={goToNext}
-                />
-              </>
-            )}
-
-            <div className="relative bg-card border-0 sm:border border-border rounded-t-2xl sm:rounded-xl overflow-hidden shadow-2xl flex flex-col max-h-[92dvh] sm:max-h-[85vh] md:max-h-[90vh]">
-              <div className="relative flex-1 min-h-[40dvh] sm:min-h-0 w-full bg-black/5 flex items-center justify-center overflow-hidden">
-                <Image
-                  key={previewImage.id}
-                  src={previewImage.src}
-                  alt={previewImage.alt}
-                  width={1920}
-                  height={1080}
-                  quality={95}
-                  className="w-full h-full object-contain max-h-[60dvh] sm:max-h-[70vh] md:max-h-[85vh] p-0 sm:px-14 md:px-4 sm:py-4 md:py-0"
-                  priority
-                />
-              </div>
-
-              <div className="shrink-0 p-4 sm:p-5 md:p-8 bg-card border-t border-border sm:border-none md:absolute md:bottom-0 md:left-0 md:right-0 md:bg-linear-to-t md:from-black/90 md:via-black/50 md:to-transparent md:border-none">
-                <div className="flex flex-wrap items-center gap-2 sm:gap-3 mb-2">
-                  <span className="inline-block px-2 py-0.5 rounded text-[10px] sm:text-xs mono-font bg-green-500/20 text-green-500 border border-green-500/30">
-                    {previewImage.category}
-                  </span>
-                  <span className="text-[10px] sm:text-xs mono-font text-muted md:text-gray-300">
-                    {new Date(previewImage.date).toLocaleDateString("en-US", {
-                      year: "numeric",
-                      month: "long",
-                      day: "numeric",
-                    })}
-                  </span>
-                  {images.length > 1 && (
-                    <span className="ml-auto text-[10px] sm:text-xs mono-font text-muted md:text-gray-300 tabular-nums">
-                      {previewIndex + 1} / {images.length}
-                    </span>
-                  )}
-                </div>
-                <h3 className="text-base sm:text-lg md:text-2xl font-bold mono-font text-foreground md:text-white mb-1.5 sm:mb-2 leading-snug break-words">
-                  {previewImage.title}
-                </h3>
-                <p className="text-muted text-xs sm:text-sm md:text-gray-200 leading-relaxed line-clamp-4 sm:line-clamp-none">
-                  {previewImage.description}
-                </p>
-
-                {images.length > 1 && (
-                  <GalleryPreviewMobileNav
-                    isFirstImage={isFirstImage}
-                    isLastImage={isLastImage}
-                    onPrevious={goToPrevious}
-                    onNext={goToNext}
-                  />
-                )}
-              </div>
-            </div>
-          </div>
-        </div>
+        <GalleryPreviewModal
+          previewImage={previewImage}
+          previewIndex={previewIndex}
+          imageCount={displayImages.length}
+          isFirstImage={isFirstImage}
+          isLastImage={isLastImage}
+          onClose={closePreview}
+          onPrevious={goToPrevious}
+          onNext={goToNext}
+        />
       )}
     </>
+  );
+}
+
+function GalleryPreviewModal({
+  previewImage,
+  previewIndex,
+  imageCount,
+  isFirstImage,
+  isLastImage,
+  onClose,
+  onPrevious,
+  onNext,
+}: {
+  previewImage: EventGalleryItem;
+  previewIndex: number;
+  imageCount: number;
+  isFirstImage: boolean;
+  isLastImage: boolean;
+  onClose: () => void;
+  onPrevious: () => void;
+  onNext: () => void;
+}) {
+  return (
+    <div
+      className="fixed inset-0 z-200 flex items-end sm:items-center justify-center bg-background/95 backdrop-blur-sm p-0 sm:p-4 md:px-20 md:py-8"
+      onClick={onClose}
+      role="dialog"
+      aria-modal="true"
+      aria-label={`Image preview, ${previewIndex + 1} of ${imageCount}`}
+    >
+      <button
+        type="button"
+        onClick={(e) => {
+          e.stopPropagation();
+          onClose();
+        }}
+        className="group absolute top-3 right-3 sm:top-4 sm:right-4 md:top-6 md:right-6 z-102 min-h-11 min-w-11 p-2.5 sm:p-3 rounded-full bg-card/90 border border-border text-foreground hover:bg-red-500 hover:border-red-500 hover:text-white active:opacity-90 transition-all shadow-lg touch-manipulation"
+        aria-label="Close preview"
+      >
+        <svg
+          className="w-5 h-5 sm:w-6 sm:h-6 stroke-current group-hover:stroke-white mx-auto"
+          fill="none"
+          viewBox="0 0 24 24"
+          aria-hidden
+        >
+          <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth={2}
+            d="M6 18L18 6M6 6l12 12"
+          />
+        </svg>
+      </button>
+
+      <div
+        className="relative w-full sm:max-w-6xl max-h-[92dvh] sm:max-h-[85vh] md:max-h-[90vh]"
+        onClick={(e) => e.stopPropagation()}
+      >
+        {imageCount > 1 && (
+          <>
+            <GalleryNavArrow
+              direction="prev"
+              disabled={isFirstImage}
+              onClick={onPrevious}
+            />
+            <GalleryNavArrow
+              direction="next"
+              disabled={isLastImage}
+              onClick={onNext}
+            />
+          </>
+        )}
+
+        <div className="relative bg-card border-0 sm:border border-border rounded-t-2xl sm:rounded-xl overflow-hidden shadow-2xl flex flex-col max-h-[92dvh] sm:max-h-[85vh] md:max-h-[90vh]">
+          <div className="relative flex-1 min-h-[40dvh] sm:min-h-0 w-full bg-black/5 flex items-center justify-center overflow-hidden">
+            <Image
+              key={previewImage.id}
+              src={previewImage.src}
+              alt={previewImage.alt}
+              width={1920}
+              height={1080}
+              quality={95}
+              className="w-full h-full object-contain max-h-[60dvh] sm:max-h-[70vh] md:max-h-[85vh] p-0 sm:px-14 md:px-4 sm:py-4 md:py-0"
+              priority
+            />
+          </div>
+
+          <div className="shrink-0 p-4 sm:p-5 md:p-8 bg-card border-t border-border sm:border-none md:absolute md:bottom-0 md:left-0 md:right-0 md:bg-linear-to-t md:from-black/90 md:via-black/50 md:to-transparent md:border-none">
+            <div className="flex flex-wrap items-center gap-2 sm:gap-3 mb-2">
+              <span className="inline-block px-2 py-0.5 rounded text-[10px] sm:text-xs mono-font bg-green-500/20 text-green-500 border border-green-500/30">
+                {previewImage.category}
+              </span>
+              <span className="text-[10px] sm:text-xs mono-font text-muted md:text-gray-300">
+                {new Date(previewImage.date).toLocaleDateString("en-US", {
+                  year: "numeric",
+                  month: "long",
+                  day: "numeric",
+                })}
+              </span>
+              {imageCount > 1 && (
+                <span className="ml-auto text-[10px] sm:text-xs mono-font text-muted md:text-gray-300 tabular-nums">
+                  {previewIndex + 1} / {imageCount}
+                </span>
+              )}
+            </div>
+            <h3 className="text-base sm:text-lg md:text-2xl font-bold mono-font text-foreground md:text-white mb-1.5 sm:mb-2 leading-snug break-words">
+              {previewImage.title}
+            </h3>
+            <p className="text-muted text-xs sm:text-sm md:text-gray-200 leading-relaxed line-clamp-4 sm:line-clamp-none">
+              {previewImage.description}
+            </p>
+
+            {imageCount > 1 && (
+              <GalleryPreviewMobileNav
+                isFirstImage={isFirstImage}
+                isLastImage={isLastImage}
+                onPrevious={onPrevious}
+                onNext={onNext}
+              />
+            )}
+          </div>
+        </div>
+      </div>
+    </div>
   );
 }

@@ -2,7 +2,25 @@ import type { NextConfig } from 'next'
 
 const nextConfig: NextConfig = {
   reactStrictMode: true,
+  async redirects() {
+    return [
+      {
+        source: '/events/deploy-spring',
+        destination: '/events/deploy-sprint',
+        permanent: true,
+      },
+    ]
+  },
   images: {
+    localPatterns: [
+      {
+        pathname: '/team/**',
+      },
+      {
+        pathname: '/**',
+        search: '',
+      },
+    ],
     remotePatterns: [
       {
         protocol: 'https',

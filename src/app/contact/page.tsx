@@ -64,13 +64,13 @@ export default function ContactPage() {
               <span className="text-green-500">.</span>
             </h1>
             <p className="mt-3 sm:mt-4 text-base sm:text-xl text-muted max-w-xl mx-auto lg:mx-0">
-              Open a new issue — let&apos;s build something together.
+              Open a new issue. Let&apos;s build something together.
             </p>
           </div>
 
           <div className="grid lg:grid-cols-5 gap-8 sm:gap-12">
 
-            {/* Left — Info Panel */}
+            {/* Left: Info Panel */}
             <div className="lg:col-span-2 space-y-6">
 
               {/* Connection info card */}
@@ -102,7 +102,7 @@ export default function ContactPage() {
               </div>
             </div>
 
-            {/* Right — Contact Form */}
+            {/* Right: Contact Form */}
             <div className="lg:col-span-3">
               <div className="bg-card border border-border rounded-lg overflow-hidden">
                 {/* Terminal title bar */}

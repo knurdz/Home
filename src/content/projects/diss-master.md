@@ -14,9 +14,9 @@ commit: "da34852"
 
 ## Overview
 
-Diss-Master is a real-time multiplayer word game inspired by **Codenames**, the beloved board game designed by Vlaada Chvátil and published by Czech Games Edition. It brings the entire Codenames experience to the browser — no physical cards, no app store, no account required. Create a room, share a link, and start playing in under 30 seconds.
+Diss-Master is a real-time multiplayer word game inspired by **Codenames**, the beloved board game designed by Vlaada Chvátil and published by Czech Games Edition. It brings the entire Codenames experience to the browser: no physical cards, no app store, no account required. Create a room, share a link, and start playing in under 30 seconds.
 
-The game supports up to 8 players across two teams, with a dedicated Spymaster view and an Operative view rendered simultaneously — all kept in perfect sync via Appwrite Realtime.
+The game supports up to 8 players across two teams, with a dedicated Spymaster view and an Operative view rendered simultaneously, all kept in perfect sync via Appwrite Realtime.
 
 ## The Problem
 
@@ -24,7 +24,7 @@ Physical Codenames requires cards, setup, and everyone in the same room. Diss-Ma
 
 ## Gameplay
 
-Two teams of players compete to identify their secret words on a shared grid. One player per team — the **Spymaster** — can see which words belong to which team. They give one-word clues to guide their teammates (Operatives) to guess the right words while avoiding the opposing team's words and the deadly **Assassin** word.
+Two teams of players compete to identify their secret words on a shared grid. One player per team, the **Spymaster**, can see which words belong to which team. They give one-word clues to guide their teammates (Operatives) to guess the right words while avoiding the opposing team's words and the deadly **Assassin** word.
 
 The first team to correctly identify all their words wins.
 

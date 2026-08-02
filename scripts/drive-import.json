@@ -1,0 +1,180 @@
+{
+  "rootFolderId": "1sxNrTihlapLLri6rffmqbXMQVc5P7XUW",
+  "defaultLimit": 8,
+  "defaultAbout": 4,
+  "achievements": [
+    {
+      "folderId": "1IdZVA6ZcTMQEXO-0VUPqPPz7yw5JIz0I",
+      "slug": "aurora-2026-agentic-ai",
+      "title": "Aurora 2026",
+      "date": "2026-07-07",
+      "category": "Competition",
+      "tags": ["competition", "ai", "aurora"]
+    },
+    {
+      "folderId": "1Lnr6Fy4Xz1F7Q5qv9Yj_E3v2vFY0sddc",
+      "slug": "cursor-buildathon-2026-n8n",
+      "title": "Cursor 24H Buildathon 2026",
+      "date": "2026-05-17",
+      "category": "Hackathon",
+      "tags": ["hackathon", "cursor", "buildathon"]
+    },
+    {
+      "folderId": "1NfrMeeJusurE1iWKp8uefMm8MxfJDSfi",
+      "slug": "idealize-aiesec-mini-competition-winner",
+      "title": "IDEALIZE by AIESEC",
+      "date": "2026-06-01",
+      "category": "Competition",
+      "tags": ["competition", "idealize", "aiesec"]
+    },
+    {
+      "folderId": "1Zu2X8WwZx8x4sjgnw5mGZ81cSlw9INDA",
+      "slug": "ieee-open-week-2026-logic-sprint",
+      "title": "IEEE Open Week 2026: Logic Sprint",
+      "date": "2026-06-02",
+      "category": "Competition",
+      "tags": ["competition", "ieee", "logic-sprint"]
+    },
+    {
+      "folderId": "1ezMTAP2TkfXPLz0Z2Sh2s5y4JFmdWivR",
+      "slug": "proxy-maze-2026-finalist",
+      "title": "Proxy Maze '26",
+      "date": "2026-07-14",
+      "category": "Hackathon",
+      "tags": ["hackathon", "proxymaze", "competition"]
+    },
+    {
+      "folderId": "1nnRvP4Bg9J_eX73DCCQLoMpwed9GYSUv",
+      "slug": "robogames-2026-university-finalist",
+      "title": "IESL RoboGames 25/26",
+      "date": "2026-04-26",
+      "category": "Competition",
+      "tags": ["competition", "robotics", "university"]
+    },
+    {
+      "folderId": "1o8MxPunMfu0eRG7ElxaxJPhvU4tipKKt",
+      "slug": "roboroarz-international-2026-finalist",
+      "title": "RoboRoarZ International",
+      "date": "2026-07-08",
+      "category": "Robotics",
+      "tags": ["robotics", "competition", "roboroarz"]
+    },
+    {
+      "folderId": "1tLToi3ymbGr6El1RTqHHePBSnTcwdt-H",
+      "slug": "road-to-legacy-2025-second-runners-up",
+      "title": "Road to Legacy 2.0",
+      "date": "2025-05-31",
+      "category": "Conference",
+      "tags": ["conference", "road-to-legacy", "competition"]
+    },
+    {
+      "folderId": "1wBB-wUMXv8b5A7VrU346lKOemaANsj2p",
+      "slug": "xeynergy-mini-competition",
+      "title": "Xeynergy Mini Competition",
+      "date": "2026-03-06",
+      "category": "Awareness Session",
+      "tags": ["competition", "ai", "xeynergy"]
+    }
+  ],
+  "aboutOnly": [
+    {
+      "folderId": "1rsiwHqIe1L4-JR0qgeLC6h1VFOwOp3RZ",
+      "key": "sherlock-3-0",
+      "title": "Sherlock 3.0",
+      "description": "Organized by IEEE WIE, SHErlock 3.0 is an immersive, team-based challenge centered on logic, intuition, and investigative thinking.",
+      "date": "2026-02-07",
+      "category": "Event",
+      "tags": ["workshop", "technology", "community"]
+    }
+  ],
+  "events": [
+    {
+      "folderId": "1WJrn-tNXFpl-sxWLdN9BOfiu87Il0T2D",
+      "key": "copilot-dev-days",
+      "title": "Github Copilot Dev Days Colombo",
+      "description": "Hosted by Microsoft and GitHub: hands-on Copilot in VS Code, CLI workflows, and AI-assisted development.",
+      "date": "2026-03-30",
+      "category": "Workshop",
+      "tags": ["workshop", "ai", "development"]
+    },
+    {
+      "folderId": "1dKbipfFBNlCaJTHNAqitTbTJCA6glMeM",
+      "key": "cursor-cafe",
+      "title": "Cursor Cafe",
+      "description": "A high-energy meetup focused on builder culture and developer productivity with the Cursor IDE.",
+      "date": "2026-01-24",
+      "category": "Workshop",
+      "tags": ["workshop", "cursor", "community"]
+    },
+    {
+      "folderId": "18dQ8togeIzNd_90KpwgniwUMZUoJdIyU",
+      "key": "cursor-meetup-april",
+      "title": "Cursor Meetup Colombo",
+      "description": "First Cursor community meetup in Sri Lanka with Nick Miller — talks, live demos, and networking.",
+      "date": "2026-04-09",
+      "category": "Meetup",
+      "tags": ["meetup", "cursor", "community"]
+    },
+    {
+      "folderId": "19hQa2CFDNCaDKS5CfyBswjORkQOl8JWF",
+      "key": "cursor-meetup-builder-series",
+      "title": "Cursor Meetup Colombo — Builder Series",
+      "description": "Live product demos from Buildathon teams, builder stories, and Q&A at DHPL Auditorium.",
+      "date": "2026-07-18",
+      "category": "Meetup",
+      "tags": ["cursor", "meetup", "pitch"]
+    },
+    {
+      "folderId": "11AtMc1f6G2di4usxQcejZ8UkduiLjL6e",
+      "key": "exhibitions",
+      "title": "Exhibitions",
+      "description": "Knurdz community showcases and exhibition moments.",
+      "date": "2026-03-01",
+      "category": "Event",
+      "tags": ["community", "exhibition"]
+    },
+    {
+      "folderId": "1mkvCbJDsjUf60wn_9wpDcZq1FjrZtktr",
+      "key": "microsoft-localhost",
+      "title": "Microsoft localhost",
+      "description": "Community session with Microsoft localhost Colombo.",
+      "date": "2026-02-15",
+      "category": "Workshop",
+      "tags": ["workshop", "microsoft", "community"]
+    },
+    {
+      "folderId": "1-A7Pd0MXhdU_8-qfK9CsZ9mUa3V3FKdD",
+      "key": "phantom-meetup",
+      "title": "Phantom Series P01",
+      "description": "Hosted by UnicornX: youth-led startup pitching and expert learning session.",
+      "date": "2026-04-30",
+      "category": "Conference",
+      "tags": ["conference", "startup", "pitching"]
+    }
+  ],
+  "deploySprint": [
+    {
+      "folderId": "1qNpYQh-N5-19nkLpZNhsJ9nozHklhnuN",
+      "sectionId": "bootcamp-album",
+      "destDir": "public/events/deploy-sprint/bootcamp",
+      "title": "Deploy Sprint bootcamp",
+      "description": "Mandatory on-campus DevOps bootcamp for Deploy Sprint at the University of Moratuwa.",
+      "date": "2026-07-05",
+      "category": "Workshop",
+      "replaceEmbed": true,
+      "limit": 8,
+      "about": 4
+    },
+    {
+      "folderId": "1EEzWBcze3mLYBmZsSMGZtyECO8ONrjvi",
+      "sectionId": "finale-album",
+      "destDir": "public/events/deploy-sprint/finale",
+      "title": "Deploy Sprint finale",
+      "description": "Feature rollout finale: release cycles, live cloud deploys, and judging on campus.",
+      "date": "2026-07-19",
+      "category": "Hackathon",
+      "limit": 8,
+      "about": 4
+    }
+  ]
+}

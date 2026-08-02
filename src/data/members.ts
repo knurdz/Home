@@ -4,23 +4,41 @@ export interface Member {
   role: string;
   bio: string;
   image: string;
+  /** Bump when replacing a local `/team/` photo so browsers fetch the new file. */
+  imageVersion?: number;
   github?: string;
   linkedin?: string;
+}
+
+export function getMemberGithubUsername(member: Member): string | undefined {
+  if (!member.github) return undefined;
+  const parts = member.github.split("/").filter(Boolean);
+  return parts[parts.length - 1];
+}
+
+/** Appends cache-bust query for local member photos. */
+export function withMemberImageVersion(member: Member, src: string): string {
+  if (!src.startsWith("/") || member.imageVersion == null) {
+    return src;
+  }
+  const joiner = src.includes("?") ? "&" : "?";
+  return `${src}${joiner}v=${member.imageVersion}`;
 }
 
 export const members: Member[] = [
   {
     name: "RKK Vishva Kumar",
     nickname: "RVK",
-    role: "Knurdz Contributor",
+    role: "President",
     bio: "",
-    image: "https://github.com/rkvishwa.png",
+    image: "/team/rkvishwa.png",
+    imageVersion: 1,
     github: "https://github.com/rkvishwa",
     linkedin: "https://www.linkedin.com/in/rkk-vishva/"
   },
   {
     name: "Sadeepa N Herath",
-    role: "Knurdz Contributor",
+    role: "Vice President",
     bio: "",
     image: "https://github.com/SadeepaNHerath.png",
     github: "https://github.com/SadeepaNHerath",
@@ -28,7 +46,7 @@ export const members: Member[] = [
   },
   {
     name: "Kasun Kumara",
-    role: "Knurdz Contributor",
+    role: "People & Operations Lead",
     bio: "",
     image: "https://github.com/Kasun-Kumara.png",
     github: "https://github.com/Kasun-Kumara",
@@ -36,7 +54,7 @@ export const members: Member[] = [
   },
   {
     name: "Praveen R",
-    role: "Knurdz Contributor",
+    role: "Outreach Lead",
     bio: "",
     image: "https://github.com/Praveen-R-2518.png",
     github: "https://github.com/Praveen-R-2518",
@@ -44,7 +62,7 @@ export const members: Member[] = [
   },
   {
     name: "Thesaru Praneeth",
-    role: "Knurdz Contributor",
+    role: "Events Coordinator Lead",
     bio: "",
     image: "https://github.com/Thesaru-p.png",
     github: "https://github.com/Thesaru-p",
@@ -52,7 +70,7 @@ export const members: Member[] = [
   },
   {
     name: "Harsha Silva",
-    role: "Knurdz Contributor",
+    role: "Treasurer",
     bio: "",
     image: "https://github.com/harshasilva.png",
     github: "https://github.com/harshasilva",
@@ -60,7 +78,7 @@ export const members: Member[] = [
   },
   {
     name: "Senuka Deneth",
-    role: "Knurdz Contributor",
+    role: "Photo, Video & Assets Lead",
     bio: "",
     image: "https://github.com/Senuka-Deneth.png",
     github: "https://github.com/Senuka-Deneth",
@@ -68,7 +86,7 @@ export const members: Member[] = [
   },
   {
     name: "Bhasilu Egodawatte",
-    role: "Knurdz Contributor",
+    role: "Software Lead",
     bio: "",
     image: "/team/BhasiluEgodawatte.jpeg",
     github: "https://github.com/BhasiluEgodawatte",
@@ -76,7 +94,7 @@ export const members: Member[] = [
   },
   {
     name: "Vinuth Karunathilaka",
-    role: "Knurdz Contributor",
+    role: "Projects Lead",
     bio: "",
     image: "https://github.com/VinuthKarunathilaka.png",
     github: "https://github.com/VinuthKarunathilaka",
@@ -84,7 +102,7 @@ export const members: Member[] = [
   },
   {
     name: "Kaveesha Ginodh",
-    role: "Knurdz Contributor",
+    role: "Hardware & IoT Lead",
     bio: "",
     image: "/team/Kavee-ginty.jpg",
     github: "https://github.com/Kavee-ginty",
@@ -92,7 +110,7 @@ export const members: Member[] = [
   },
   {
     name: "Ashen Tharindu",
-    role: "Knurdz Contributor",
+    role: "Design Lead",
     bio: "",
     image: "https://github.com/Azriel-prog.png",
     github: "https://github.com/Azriel-prog",
@@ -100,7 +118,7 @@ export const members: Member[] = [
   },
   {
     name: "Praveen Fernando",
-    role: "Knurdz Contributor",
+    role: "Partnerships Lead",
     bio: "",
     image: "https://github.com/ARSPFdo-2004.png",
     github: "https://github.com/ARSPFdo-2004",
@@ -108,11 +126,35 @@ export const members: Member[] = [
   },
   {
     name: "Mahinsa Waththegedara",
-    role: "Knurdz Contributor",
+    role: "Media Lead",
     bio: "",
     image: "https://github.com/Mahinsa-Wattegedara.png",
     github: "https://github.com/Mahinsa-Wattegedara",
     linkedin: "https://www.linkedin.com/in/mahinsa-waththegedara-28b7b335a/"
+  },
+  {
+    name: "Madhura Ravishan Abeywickrama",
+    role: "Technical Content Lead",
+    bio: "",
+    image: "https://github.com/Madhuravishan.png",
+    github: "https://github.com/Madhuravishan",
+    linkedin: "https://www.linkedin.com/in/madhuraravishan"
+  },
+  {
+    name: "Neleesha Peiris",
+    role: "Logistics Lead",
+    bio: "",
+    image: "https://github.com/nelee25.png",
+    github: "https://github.com/nelee25",
+    linkedin: "https://www.linkedin.com/in/neleesha-peiris-43b503319"
+  },
+  {
+    name: "Dimanya Perera",
+    role: "Member Experience Lead",
+    bio: "",
+    image: "https://github.com/Dimanya-Perera.png",
+    github: "https://github.com/Dimanya-Perera",
+    linkedin: "https://www.linkedin.com/in/dimanya-perera-072308416"
   }
 ];
 

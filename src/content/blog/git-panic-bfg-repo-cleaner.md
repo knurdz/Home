@@ -1,7 +1,7 @@
 ---
 title: "The Git Panic: How to Scrub Your History with BFG Repo-Cleaner"
 date: "2026-04-13"
-description: "Accidentally committed secrets to Git? Learn how to rewrite history safely with BFG Repo-Cleaner — faster and simpler than raw git filter-branch."
+description: "Accidentally committed secrets to Git? Learn how to rewrite history safely with BFG Repo-Cleaner: faster and simpler than raw git filter-branch."
 author: "RKK Vishva Kumar"
 authorImage: "/images/blog/rkk-vishva-kumar.jpeg"
 order: 1
@@ -14,7 +14,7 @@ sourceUrl: "https://medium.com/linkit-intecs/the-git-panic-how-to-scrub-your-his
 readTime: "4 min read"
 ---
 
-Have you ever committed a secret file — maybe an API key, a password, or a `.env` file — and felt that immediate sinking feeling the moment you realized it?
+Have you ever committed a secret file, maybe an API key, a password, or a `.env` file, and felt that immediate sinking feeling the moment you realized it?
 
 The common mistake is to simply delete the file and commit again. But here's the problem: Git is designed to remember everything. Even if the file is gone in your latest version, it's still sitting in your history. Anyone who clones your repo or browses your GitHub/GitLab commits can find it with just a few clicks. If that repo is public, your secrets are effectively out in the world.
 

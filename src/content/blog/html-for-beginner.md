@@ -33,11 +33,11 @@ HTML භාවිතා කරන්නේ tags කියන විශේෂ ල
 
 HTML ගැන කතා කරද්දී, එයාගේ ඉතිහාසයත් ටිකක් බලමු:
 
-1.  HTML 1.0 (1993) — මුල්ම වෙබ් පිටු හැදුවේ මේකෙන්. ඉතාම සරලයි, තොරතුරු බෙදාගන්න විතරයි.
-2.  HTML 2.0 (1995) — නව විශේෂාංග එකතු වුණා, මූලික ඒවා වැඩිදියුණු කළා.
+1.  HTML 1.0 (1993): මුල්ම වෙබ් පිටු හැදුවේ මේකෙන්. ඉතාම සරලයි, තොරතුරු බෙදාගන්න විතරයි.
+2.  HTML 2.0 (1995): නව විශේෂාංග එකතු වුණා, මූලික ඒවා වැඩිදියුණු කළා.
 3.  HTML 3.0 (1995)– තවත් බලවත් වුණා, නමුත් බ්රව්සර්වල වේගය අඩු වුණා.
-4.  HTML 4.01 (1999) — HTML5 එන්න කලින් ගොඩක් ජනප්රිය වුණ සංස්කරණය.
-5.  HTML 5 (2012) — HTML 4.01 වැඩිදියුණු කරපු, නවීන වෙබ් අඩවි හදන්න භාවිතා වෙන එක.
+4.  HTML 4.01 (1999): HTML5 එන්න කලින් ගොඩක් ජනප්රිය වුණ සංස්කරණය.
+5.  HTML 5 (2012): HTML 4.01 වැඩිදියුණු කරපු, නවීන වෙබ් අඩවි හදන්න භාවිතා වෙන එක.
 
 HTML කියන්නේ අපේ ගෙදර හදන කෑම වගේ. කාලයත් එක්ක රස වැඩි කරලා, වඩා හොඳ ඒවා හැදුවා වගේ තමයි HTMLත් වැඩිදියුණු වුණේ.
 
@@ -45,13 +45,13 @@ HTML කියන්නේ අපේ ගෙදර හදන කෑම වගේ.
 
 HTML tags කියන්නේ angle brackets (< සහ >) ඇතුළේ ලියන විශේෂ වචන. බොහෝ tags වල ආරම්භයක් (opening tag) සහ අවසානයක් (closing tag) තියෙනවා. උදාහරණයක් විදිහට:
 
--   <html> සහ </html> — මුළු ලේඛනයම ඇතුළත් වෙනවා.
--   <body> සහ </body> — වෙබ් පිටුවේ දිස්වන අන්තර්ගතය ලියන තැන.
+-   <html> සහ </html>: මුළු ලේඛනයම ඇතුළත් වෙනවා.
+-   <body> සහ </body>: වෙබ් පිටුවේ දිස්වන අන්තර්ගතය ලියන තැන.
 
 නමුත්, සමහර tags වල අවසානයක් නැහැ. ඒවාට කියන්නේ self-closing tags. උදාහරණ:
 
--   <br> — text බිඳීමක් (line break) දානවා.
--   <img> — රූපයක් එකතු කරනවා.
+-   <br>: text බිඳීමක් (line break) දානවා.
+-   <img>: රූපයක් එකතු කරනවා.
 
 මේ tags ලියනවා කියන්නේ වාක්යකට විරාම ලකුණු දානවා වගේ. ඒකෙන් තමයි වෙබ් පිටුවට හැඩයක් එන්නේ.
 
@@ -67,10 +67,10 @@ Attributes කියන්නේ tags වලට ටිකක් වැඩිප�
 
 දැන් අපි බලමු HTML5 ලේඛනයක් හදන්නේ කොහොමද කියලා. ඒකට මේ ටික ඕන:
 
-1.  <!DOCTYPE html> — මේකෙන් කියනවා “මේක HTML5 document එකක්” කියලා.
-2.  <html> tag — මුළු ලේඛනයම ඇතුළත් වෙන මූලික tag එක.
-3.  <head> කොටස — වෙබ් පිටුව ගැන තොරතුරු (metadata), මාතෘකාව (title), styles, scripts එහෙම ලියන තැන.
-4.  <body> කොටස — වෙබ් පිටුවේ දිස්වන දේවල් (මාතෘකා, text, රූප) ලියන තැන.
+1.  <!DOCTYPE html>: මේකෙන් කියනවා “මේක HTML5 document එකක්” කියලා.
+2.  <html> tag: මුළු ලේඛනයම ඇතුළත් වෙන මූලික tag එක.
+3.  <head> කොටස: වෙබ් පිටුව ගැන තොරතුරු (metadata), මාතෘකාව (title), styles, scripts එහෙම ලියන තැන.
+4.  <body> කොටස: වෙබ් පිටුවේ දිස්වන දේවල් (මාතෘකා, text, රූප) ලියන තැන.
 
 මේක ටිකක් විස්තර කරන්නම්:
 
@@ -117,7 +117,7 @@ HTML සහ CSS භාවිතය අතර වෙනස
 
 සාමාන්යයෙන් <header> එකේ තියෙන්නේ:
 
--   මාතෘකා (<h1> — <h6>)
+-   මාතෘකා (<h1>: <h6>)
 -   ලාංඡනය (logo) හෝ ලස්සන icon එකක්
 -   කර්තෘ තොරතුරු (authorship info)
 
@@ -158,7 +158,7 @@ Example Headers
 
 Example Footers
 
-### HTML Headings (<h1> — <h6>)
+### HTML Headings (<h1>: <h6>)
 
 වෙබ් පිටුවක මාතෘකා (titles) සහ උපමාතෘකා (subtitles) දාන්න තමයි HTML headings භාවිතා කරන්නේ. මේවා ලියන්නේ <h1> සිට <h6> දක්වා tags වලින්. ඒ කියන්නේ <h1> තමයි වැදගත්ම, ලොකුම මාතෘකාව. <h6> තමයි ඒ තරම් වැදගත් නැති, පොඩිම එක.
 
@@ -180,8 +180,8 @@ Heading Tags
 
 ### 1\. Bold සහ important text
 
--   <b> — text bold කරනවා, ඒත් වැඩි වැදගත්කමක් නැති විදිහට.
--   <strong> — text bold කරනවා වගේම වැදගත්කමත් එකතු කරනවා (SEO සහ screen readers මේක හඳුනාගන්නවා).
+-   <b>: text bold කරනවා, ඒත් වැඩි වැදගත්කමක් නැති විදිහට.
+-   <strong>: text bold කරනවා වගේම වැදගත්කමත් එකතු කරනවා (SEO සහ screen readers මේක හඳුනාගන්නවා).
 
 උදාහරණය:
 
@@ -196,8 +196,8 @@ Bold & Strong
 
 ### 2\. Italic සහ emphasized text
 
--   <i> — text _italic_ කරනවා (හැඩයට විතරයි).
--   <em> — text _italic_ කරනවා සහ අවධාරණයත් එකතු කරනවා (SEO වලටත් හොඳයි).
+-   <i>: text _italic_ කරනවා (හැඩයට විතරයි).
+-   <em>: text _italic_ කරනවා සහ අවධාරණයත් එකතු කරනවා (SEO වලටත් හොඳයි).
 
 උදාහරණය:
 
@@ -212,7 +212,7 @@ Italic කියන්නේ text ටිකක් ඇඹුල් වෙලා �
 
 ### 3\. Highlight කළ text
 
--   <mark> — text highlight කරනවා (සාමාන්යයෙන් කහ පාටින්).
+-   <mark>: text highlight කරනවා (සාමාන්යයෙන් කහ පාටින්).
 
 උදාහරණය:
 
@@ -226,7 +226,7 @@ highlight
 
 ### 4\. පොඩි text
 
--   <small> — text පොඩි අකුරෙන් පෙන්වනවා.
+-   <small>: text පොඩි අකුරෙන් පෙන්වනවා.
 
 උදාහරණය:
 
@@ -240,8 +240,8 @@ Copyright වගේ ටිකක් පොඩි දෙයක් ලියන්
 
 ### 5\. මකා දැමූ සහ එකතු කළ text
 
--   <del> — මකා දැමූ text පෙන්වනවා (ඉරක් ඇඳලා).
--   <ins> — එකතු කළ text පෙන්වනවා (යටින් ඉරක් ඇඳලා).
+-   <del>: මකා දැමූ text පෙන්වනවා (ඉරක් ඇඳලා).
+-   <ins>: එකතු කළ text පෙන්වනවා (යටින් ඉරක් ඇඳලා).
 
 උදාහරණය:
 
@@ -256,8 +256,8 @@ Deleted & Inserted
 
 ### 6\. Superscript සහ Subscript text
 
--   <sup> — Superscript (උඩු අකුරු, උදා: ගණිත exponent).
--   <sub> — Subscript (යටි අකුරු, උදා: රසායනික සූත්ර).
+-   <sup>: Superscript (උඩු අකුරු, උදා: ගණිත exponent).
+-   <sub>: Subscript (යටි අකුරු, උදා: රසායනික සූත්ර).
 
 උදාහරණය:
 
@@ -327,8 +327,8 @@ Unordered Lists
 
 Description lists යොදාගන්නේ වචනයක් හෝ යෙදුමක් (term) එකක් සහ ඒකේ විස්තරය (description) පෙන්වන්න. උදාහරණයක් විදිහට, වචනාර්ථ දෙන glossary එකක් හදනවා වගේ. මේකේ tags දෙකක් තියෙනවා:
 
--   <dt> — Term එක (වචනය)
--   <dd> — Description එක (විස්තරය)
+-   <dt>: Term එක (වචනය)
+-   <dd>: Description එක (විස්තරය)
 
 ### උදාහරණය:
 
@@ -563,9 +563,9 @@ HTML Table භාවිතා වෙන්නේ දත්ත ලස්සනට
 
 HTML table එකක main parts තුනක් තියෙනවා:
 
-1.  වගු පේළි (<tr>) — එක row එකක් හදනවා.
-2.  වගු දත්ත (<td>) — එක එක cells වල data තියෙනවා.
-3.  වගු ශීර්ෂ (<th>) — තීරුවල headings දෙනවා (bold සහ center වෙනවා).
+1.  වගු පේළි (<tr>): එක row එකක් හදනවා.
+2.  වගු දත්ත (<td>): එක එක cells වල data තියෙනවා.
+3.  වගු ශීර්ෂ (<th>): තීරුවල headings දෙනවා (bold සහ center වෙනවා).
 
 අපි බලමු basic table එකක් කොහොමද හදන්නේ කියලා.
 
@@ -621,8 +621,8 @@ Caption එක table එකට උඩින් එනවා. ලස්සනය�
 
 අපිට table එකේ cells තිරස් අතට (horizontally) සහ සිරස් අතට (vertically) එකතු කරන්න පුළුවන්. ඒකට යෝදාගන්නේ:
 
--   colspan — තීරු එකතු කරනවා.
--   rowspan — පේළි එකතු කරනවා.
+-   colspan: තීරු එකතු කරනවා.
+-   rowspan: පේළි එකතු කරනවා.
 
 <table border="1">  
   <tr>  
@@ -686,11 +686,11 @@ Without CSS
 
 With CSS
 
--   width: 50%; — Table එකේ පළල 50% කරනවා.
--   border-collapse: collapse; — Borders අතර ඉඩ ඉවත් කරනවා.
--   padding: 8px; — Cells ඇතුළේ ඉඩ දෙනවා (ලේසියෙන් කියවන්න).
--   text-align: center; — Text මැදට ගන්නවා.
--   background-color: #f2f2f2; — Headers වලට light gray color එකක් දෙනවා.
+-   width: 50%;: Table එකේ පළල 50% කරනවා.
+-   border-collapse: collapse;: Borders අතර ඉඩ ඉවත් කරනවා.
+-   padding: 8px;: Cells ඇතුළේ ඉඩ දෙනවා (ලේසියෙන් කියවන්න).
+-   text-align: center;: Text මැදට ගන්නවා.
+-   background-color: #f2f2f2;: Headers වලට light gray color එකක් දෙනවා.
 
 දැනට CSS ගැන දන්නැත්තම් ලොකුවට හිතන්න එපා ඉස්සරහට ඒ ගැන ඉගෙනගමු.
 
@@ -711,8 +711,8 @@ Table එකේ පළල සහ පිහිටීම වෙනස් කරන
 
 Table Alignment
 
--   width=”80%” — Table එක 80% පළලට ගන්නවා. (page size එකෙන් 80%)
--   align=”center” — Table එක page එකේ මැදට ගන්නවා.
+-   width=”80%”: Table එක 80% පළලට ගන්නවා. (page size එකෙන් 80%)
+-   align=”center”: Table එක page එකේ මැදට ගන්නවා.
 
 Note: මේ attributes work වුණත්, modern web design වලදී CSS යෝදාගන්නවා තමයි best (උදා: margin: 0 auto;).
 
@@ -807,8 +807,8 @@ Form එකක තියෙන වැදගත් කොටස් ටිකක�
 
 ### 2\. Selection Elements
 
--   Radio buttons: <input type=”radio” name=”gender” value=”male”> එක option එකක් විතරක් select කරන්න පුළුවන් (උදා: Gender — Male/Female).
--   Checkboxes: <input type=”checkbox” name=”vehicle” value=”bike”> Multiple options select කරන්න යොදාගන්නවා (උදා: Hobbies — Coding, Reading).
+-   Radio buttons: <input type=”radio” name=”gender” value=”male”> එක option එකක් විතරක් select කරන්න පුළුවන් (උදා: Gender: Male/Female).
+-   Checkboxes: <input type=”checkbox” name=”vehicle” value=”bike”> Multiple options select කරන්න යොදාගන්නවා (උදා: Hobbies: Coding, Reading).
 -   Dropdown lists: <select> සහ <option> tags යොදාගෙන. උදාහරණයක්:
 
 <select name="country">  
@@ -861,7 +861,7 @@ Example Form
 
 Form එකක තියෙන elements වල name attribute එක ගොඩක් වැදගත්. ඒකෙන් server එකට data යවනවා.
 
-උදා: <input type=”text” name=”username”> — “username” කියන name එකෙන් තමයි data යවන්නෙ.
+උදා: <input type=”text” name=”username”>: “username” කියන name එකෙන් තමයි data යවන්නෙ.
 
 -   action: Form data යවන්න ඕන තැන (URL එක).
 -   method: Data යවන විදිහ (GET හෝ POST).
@@ -880,7 +880,7 @@ Form එක submit කරනකොට required fields fill කරලා නැ�
 
 Forms හදනකොට මේ ටික මතක තියාගන්න:
 
--   Labels යොදාගන්න: <label for=”id”> — Accessibility වැඩි වෙනවා, users ලට ලේසි වෙනවා.
+-   Labels යොදාගන්න: <label for=”id”>: Accessibility වැඩි වෙනවා, users ලට ලේසි වෙනවා.
 -   Fieldsets යොදාගන්න: Related fields group කරන්න <fieldset> tag එක යොදාගන්න. උදා:
 
 <fieldset>  
@@ -1033,10 +1033,10 @@ linkඑකක් \_blank එක්ක open කරනකොට, බලන අය�
 
 CSS එක්ක linkවල විවිධ states වෙනස් කරන්න පුළුවන්:
 
--   a:link — සාමාන්ය link(බලලා නැති ඒවා).
--   a:visited — visited ලින්ක්.
--   a:hover — mouse එක උඩ තියනකොට.
--   a:active — click කරන මොහොතේ.
+-   a:link: සාමාන්ය link(බලලා නැති ඒවා).
+-   a:visited: visited ලින්ක්.
+-   a:hover: mouse එක උඩ තියනකොට.
+-   a:active: click කරන මොහොතේ.
 
 a:link {  
     color: blue;  

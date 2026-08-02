@@ -8,7 +8,7 @@ const projects = [
   { slug: "mazex", url: "https://mazex.knurdz.org" },
   { slug: "what-should-i-build", url: "https://whatshouldibuild.knurdz.org" },
   { slug: "defense-panel", url: "https://defense-panel-two.vercel.app/" },
-  { slug: "nexus-os", url: "https://roaring-mooncake-e0698a.netlify.app/" },
+  { slug: "nexus-os", url: "https://nexusos.knurdz.org/" },
   { slug: "diss-master", url: "https://diss-master.knurdz.org" },
   { slug: "meta-scribe", url: "https://meta-scribe.vercel.app/" },
 ];

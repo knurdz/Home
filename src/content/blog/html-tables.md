@@ -21,9 +21,9 @@ readTime: "5 min read"
 
 HTML table එකක main parts තුනක් තියෙනවා:
 
-1.  වගු පේළි (<tr>) — එක row එකක් හදනවා.
-2.  වගු දත්ත (<td>) — එක එක cells වල data තියෙනවා.
-3.  වගු ශීර්ෂ (<th>) — තීරුවල headings දෙනවා (bold සහ center වෙනවා).
+1.  වගු පේළි (<tr>): එක row එකක් හදනවා.
+2.  වගු දත්ත (<td>): එක එක cells වල data තියෙනවා.
+3.  වගු ශීර්ෂ (<th>): තීරුවල headings දෙනවා (bold සහ center වෙනවා).
 
 අපි බලමු basic table එකක් කොහොමද හදන්නේ කියලා.
 
@@ -79,8 +79,8 @@ Caption එක table එකට උඩින් එනවා. ලස්සනය�
 
 අපිට table එකේ cells තිරස් අතට (horizontally) සහ සිරස් අතට (vertically) එකතු කරන්න පුළුවන්. ඒකට යෝදාගන්නේ:
 
--   colspan — තීරු එකතු කරනවා.
--   rowspan — පේළි එකතු කරනවා.
+-   colspan: තීරු එකතු කරනවා.
+-   rowspan: පේළි එකතු කරනවා.
 
 <table border="1">  
   <tr>  
@@ -144,12 +144,12 @@ without CSS
 
 With CSS
 
-width: 50%; — Table එකේ පළල 50% කරනවා.
+width: 50%;: Table එකේ පළල 50% කරනවා.
 
--   border-collapse: collapse; — Borders අතර ඉඩ ඉවත් කරනවා.
--   padding: 8px; — Cells ඇතුළේ ඉඩ දෙනවා (ලේසියෙන් කියවන්න).
--   text-align: center; — Text මැදට ගන්නවා.
--   background-color: #f2f2f2; — Headers වලට light gray color එකක් දෙනවා.
+-   border-collapse: collapse;: Borders අතර ඉඩ ඉවත් කරනවා.
+-   padding: 8px;: Cells ඇතුළේ ඉඩ දෙනවා (ලේසියෙන් කියවන්න).
+-   text-align: center;: Text මැදට ගන්නවා.
+-   background-color: #f2f2f2;: Headers වලට light gray color එකක් දෙනවා.
 
 දැනට CSS ගැන දන්නැත්තම් ලොකුවට හිතන්න එපා ඉස්සරහට ඒ ගැන ඉගෙනගමු.
 
@@ -170,8 +170,8 @@ Table එකේ පළල සහ පිහිටීම වෙනස් කරන
 
 Table Alignment
 
--   width=”80%” — Table එක 80% පළලට ගන්නවා. (page size එකෙන් 80%)
--   align=”center” — Table එක page එකේ මැදට ගන්නවා.
+-   width=”80%”: Table එක 80% පළලට ගන්නවා. (page size එකෙන් 80%)
+-   align=”center”: Table එක page එකේ මැදට ගන්නවා.
 
 Note: මේ attributes work වුණත්, modern web design වලදී CSS යෝදාගන්නවා තමයි best (උදා: margin: 0 auto;).
 

@@ -10,8 +10,28 @@ export interface EventGalleryItem {
   category: string;
 }
 
+export interface EventGalleryEmbed {
+  src: string;
+  title?: string;
+  height?: number;
+}
+
+export interface EventGallerySection {
+  id: string;
+  title: string;
+  embed?: EventGalleryEmbed;
+  images?: EventGalleryItem[];
+  comingSoon?: boolean;
+}
+
 export interface OrganizerModule {
   title: string;
+  description: string;
+}
+
+export interface ProgramPhase {
+  title: string;
+  date?: string;
   description: string;
 }
 
@@ -40,11 +60,13 @@ export interface EventMatter {
   infrastructure?: string;
   collaboration?: string[];
   plannedHighlights?: string[];
+  programPhases?: ProgramPhase[];
   statusNote: string;
   partnershipQuote?: string;
   partnershipQuoteAttribution?: string;
   status: EventStatus;
   gallery?: EventGalleryItem[];
+  gallerySections?: EventGallerySection[];
 }
 
 export type EventData = EventMatter & {

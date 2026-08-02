@@ -46,6 +46,11 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
+                <Link href="/team" className="hover:text-foreground transition-colors">
+                  team.md
+                </Link>
+              </li>
+              <li>
                 <Link href="/join-us" className="hover:text-foreground transition-colors">
                   join_community.md
                 </Link>
@@ -68,6 +73,11 @@ export default function Footer() {
               <li>
                 <Link href="/about" className="hover:text-foreground transition-colors">
                   about
+                </Link>
+              </li>
+              <li>
+                <Link href="/team" className="hover:text-foreground transition-colors">
+                  team
                 </Link>
               </li>
               <li>

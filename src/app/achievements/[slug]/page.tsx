@@ -7,6 +7,7 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import ScrollIndicator from "@/components/ScrollIndicator";
 import AchievementHeroBanner from "@/components/AchievementHeroBanner";
+import AchievementGallery from "@/components/AchievementGallery";
 import ReadingFontScope from "@/components/ReadingFontScope";
 import BlogFontSelector, { BlogFontRoot } from "@/components/BlogFontSelector";
 import {
@@ -166,6 +167,13 @@ export default async function AchievementDetailPage({ params }: PageProps) {
               </ReactMarkdown>
               </div>
             </ReadingFontScope>
+
+            {frontmatter.gallery && frontmatter.gallery.length > 0 && (
+              <AchievementGallery
+                achievementTitle={frontmatter.title}
+                images={frontmatter.gallery}
+              />
+            )}
 
             <div className="flex flex-col sm:flex-row flex-wrap gap-3 sm:gap-4 pt-8 sm:pt-10 mt-8 sm:mt-10 border-t border-border">
               <Link

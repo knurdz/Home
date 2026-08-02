@@ -4,6 +4,16 @@ import matter from "gray-matter";
 
 const CONTENT_DIR = path.join(process.cwd(), "src/content/achievements");
 
+export interface AchievementGalleryItem {
+  id: string;
+  title: string;
+  description: string;
+  src: string;
+  alt: string;
+  date: string;
+  category: string;
+}
+
 export interface AchievementMatter {
   title: string;
   date: string;
@@ -11,8 +21,9 @@ export interface AchievementMatter {
   image?: string;
   category?: string;
   order: number;
+  gallery?: AchievementGalleryItem[];
   imagePosition?: "top" | "center" | "bottom";
-  /** Custom object-position, e.g. "50% 32%" — overrides imagePosition when set */
+  /** Custom object-position, e.g. "50% 32%": overrides imagePosition when set */
   imageObjectPosition?: string;
   imageFit?: "cover" | "contain";
   imageWidth?: number;

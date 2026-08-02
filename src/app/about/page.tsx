@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import Image from "next/image";
-import { useState, useRef, useEffect, useCallback } from "react";
+import { useState, useEffect, useCallback } from "react";
 import ScrollIndicator from "@/components/ScrollIndicator";
 import Navbar from "@/components/Navbar";
 import BannerSlider from "@/components/BannerSlider";
@@ -10,10 +10,7 @@ import Footer from "@/components/Footer";
 import GalleryNavArrow, {
   GalleryPreviewMobileNav,
 } from "@/components/GalleryNavArrow";
-import { members, Member } from "@/data/members";
 import { communityStats, vision, mission, alwaysBuildingLine } from "@/data/community";
-import MemberAvatar from "@/components/MemberAvatar";
-import TeamMemberPreview from "@/components/TeamMemberPreview";
 import StatCard from "@/components/StatCard";
 import ValuesSection from "@/components/ValuesSection";
 import ProtocolsSection from "@/components/ProtocolsSection";
@@ -44,11 +41,9 @@ const allGalleryImages: GalleryItem[] = unsortedGalleryImages.sort((a, b) => {
 });
 
 export default function AboutPage() {
-  const [activeMember, setActiveMember] = useState<Member | null>(null);
   const [filter, setFilter] = useState<GalleryFilter>("all");
   const [imageLoading, setImageLoading] = useState<Record<string, boolean>>({});
   const [previewIndex, setPreviewIndex] = useState<number | null>(null);
-  const scrollContainerRef = useRef<HTMLDivElement>(null);
 
   const filteredImages =
     filter === "all"
@@ -81,17 +76,6 @@ export default function AboutPage() {
         : current
     );
   }, [filteredImages.length]);
-
-  const scroll = (direction: 'left' | 'right') => {
-    if (scrollContainerRef.current) {
-        const scrollAmount = 400; // Adjust scroll distance
-        const currentScroll = scrollContainerRef.current.scrollLeft;
-        scrollContainerRef.current.scrollTo({
-            left: direction === 'left' ? currentScroll - scrollAmount : currentScroll + scrollAmount,
-            behavior: 'smooth'
-        });
-    }
-  };
 
   useEffect(() => {
     setPreviewIndex(null);
@@ -207,167 +191,6 @@ export default function AboutPage() {
       </section>
 
       <ProtocolsSection />
-
-      {/* Team Members Section */}
-      <section id="team" className="relative py-12 sm:py-16 md:py-20 px-4 sm:px-6 bg-background-alt">
-        <div className="container mx-auto max-w-7xl">
-          <div className="text-center mb-10 sm:mb-12 md:mb-16">
-            <span className="px-4 py-2 rounded border border-border text-muted text-sm mono-font inline-block mb-4 sm:mb-6">
-              $ git log --contributors
-            </span>
-            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mono-font mb-3 sm:mb-4 text-foreground">
-              Meet Our <span className="text-faded">Team</span>
-            </h2>
-            <p className="text-base sm:text-lg md:text-xl text-muted max-w-2xl mx-auto px-1">
-              The talented individuals making it all happen
-            </p>
-          </div>
-
-          <div className="relative group/timeline">
-             {/* Scroll Controls */}
-             {/* Desktop Scroll Controls */}
-             <div className="hidden md:flex justify-between w-full px-4 md:px-12 mb-2 mt-8 z-30 pointer-events-none sticky left-0">
-                 <button 
-                    onClick={() => scroll('left')}
-                    className="p-3 rounded-full bg-card border border-border text-foreground hover:bg-green-500 hover:border-green-500 transition-all pointer-events-auto shadow-lg"
-                    aria-label="Scroll left"
-                 >
-                    <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
-                    </svg>
-                 </button>
-
-                 <button 
-                    onClick={() => scroll('right')}
-                    className="p-3 rounded-full bg-card border border-border text-foreground hover:bg-green-500 hover:border-green-500 transition-all pointer-events-auto shadow-lg"
-                    aria-label="Scroll right"
-                 >
-                    <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                    </svg>
-                 </button>
-             </div>
-
-            {/* Desktop Timeline View */}
-            <div ref={scrollContainerRef} className="hidden md:flex relative w-full overflow-x-auto min-h-125 items-center scroll-smooth">
-              <div className="flex items-center min-w-max px-20 relative pt-32 pb-40">
-                  {/* Central Horizontal Line */}
-                  <div className="absolute top-1/2 left-0 right-0 h-0.5 bg-linear-to-r from-transparent via-green-500/50 to-transparent transform -translate-y-1/2" />
-                  
-                  {members.map((member, index) => (
-                      <div key={member.name} className="relative mx-8 md:mx-16 group">
-                          
-                          {/* Card Component - Alternating Top/Bottom */}
-                          <div 
-                              className={`absolute left-1/2 transform -translate-x-1/2 w-72 md:w-80 transition-all duration-300 z-20 group-hover:z-30 group-hover:scale-105 ${
-                                  index % 2 === 0 
-                                      ? 'bottom-[calc(100%+3rem)] mb-0 origin-bottom' 
-                                      : 'top-[calc(100%+3rem)] mt-0 origin-top'
-                              }`}
-                              onClick={() => setActiveMember(member)}
-                          >
-                              <div className="bg-card/90 backdrop-blur-xl border border-border rounded-xl p-5 group-hover:border-green-500 transition-colors duration-300 relative overflow-visible shadow-xl group-hover:shadow-[0_0_20px_rgba(34,197,94,0.2)]">
-                                  {/* Decorative Tech Elements */}
-                                  <div className="absolute top-0 right-0 p-3 opacity-20 pointer-events-none text-[10px] font-mono text-green-500 text-right leading-tight">
-                                      {`ID: ${index.toString().padStart(3, '0')}\nUSR: ${member.nickname ?? member.name.split(' ')[0].toUpperCase()}`}
-                                  </div>
-                                
-                                <h3 className="text-xl font-bold text-foreground mb-1 mono-font">{member.name}</h3>
-                                <div className="text-green-500 text-xs mono-font mb-3 flex items-center gap-2">
-                                    <span className="w-1.5 h-1.5 rounded-full bg-green-500 animate-pulse" />
-                                    {member.role}
-                                </div>
-
-                                {member.bio && (
-                                    <p className="text-muted text-xs leading-relaxed mb-4 line-clamp-3">
-                                        {member.bio}
-                                    </p>
-                                )}
-
-                                <div className="flex gap-3 pt-3 border-t border-border">
-                                    {member.github && (
-                                        <a href={member.github} target="_blank" rel="noreferrer" className="text-muted hover:text-foreground transition-colors text-xs mono-font flex items-center gap-1.5">
-                                            <svg className="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
-                                            GH
-                                        </a>
-                                    )}
-                                    {member.linkedin && (
-                                        <a href={member.linkedin} target="_blank" rel="noreferrer" className="text-muted hover:text-foreground transition-colors text-xs mono-font flex items-center gap-1.5">
-                                            <svg className="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
-                                            LI
-                                        </a>
-                                    )}
-                                </div>
-                            </div>
-                            
-                            {/* Connector Line */}
-                            <div className={`absolute left-1/2 transform -translate-x-1/2 w-0.5 h-12 bg-linear-to-b from-green-500/50 to-transparent ${
-                                index % 2 === 0 ? '-bottom-12 bg-linear-to-t' : '-top-12'
-                            }`} />
-                        </div>
-
-                        {/* The Node (Image) */}
-                        <div 
-                            className="relative z-10 w-16 h-16 md:w-20 md:h-20 rounded-full border-4 border-background-alt bg-card overflow-hidden shadow-[0_0_15px_rgba(34,197,94,0.4)] group-hover:scale-125 group-hover:border-green-400 group-hover:shadow-[0_0_25px_rgba(34,197,94,0.6)] transition-all duration-300 group-node cursor-pointer"
-                            onClick={() => setActiveMember(member)}
-                            role="button"
-                            aria-label={`View details for ${member.name}`}
-                        >
-                            <div className="relative w-full h-full"> 
-                                <MemberAvatar member={member} />
-                            </div>
-                        </div>
-
-                    </div>
-                ))}
-            </div>
-          </div>
-          </div>
-
-          {/* Mobile Grid View */}
-          <div className="md:hidden grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6 mt-6 sm:mt-8">
-            {members.map((member, index) => (
-              <div 
-                key={member.name} 
-                className="bg-card/90 backdrop-blur-xl border border-border rounded-xl overflow-hidden shadow-lg hover:border-green-500 transition-colors duration-300"
-              >
-                  <div className="flex flex-col items-center p-5 sm:p-6 text-center">
-                    <div className="relative w-24 h-24 mb-4 rounded-full border-4 border-green-500/20 overflow-hidden shadow-lg">
-                        <MemberAvatar member={member} />
-                    </div>
-                    
-                    <h3 className="text-xl font-bold text-foreground mb-1 mono-font">{member.name}</h3>
-                    <div className="text-green-500 text-sm mono-font mb-4 flex items-center justify-center gap-2">
-                        <span className="w-1.5 h-1.5 rounded-full bg-green-500 animate-pulse" />
-                        {member.role}
-                    </div>
-
-                    {member.bio && (
-                        <p className="text-muted text-sm leading-relaxed mb-6 line-clamp-3">
-                            {member.bio}
-                        </p>
-                    )}
-
-                    <div className="flex justify-center gap-4 w-full pt-4 border-t border-border">
-                        {member.github && (
-                            <a href={member.github} target="_blank" rel="noreferrer" className="text-muted hover:text-foreground transition-colors text-sm mono-font flex items-center gap-2 px-3 py-1 rounded-md hover:bg-white/5">
-                                <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
-                                GH
-                            </a>
-                        )}
-                        {member.linkedin && (
-                            <a href={member.linkedin} target="_blank" rel="noreferrer" className="text-muted hover:text-foreground transition-colors text-sm mono-font flex items-center gap-2 px-3 py-1 rounded-md hover:bg-white/5">
-                                <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
-                                LI
-                            </a>
-                        )}
-                    </div>
-                  </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
 
       {/* Gallery Section */}
       <section className="relative py-12 sm:py-16 md:py-20 px-4 sm:px-6">
@@ -506,16 +329,16 @@ export default function AboutPage() {
               </p>
               <div className="flex flex-col sm:flex-row flex-wrap gap-3 sm:gap-4 justify-center mono-font text-sm">
                 <Link
-                  href="/contact"
+                  href="/team"
                   className="px-6 sm:px-10 py-3.5 sm:py-5 rounded bg-foreground text-background hover:opacity-90 transition-all font-bold text-center"
                 >
-                  git init collaboration
+                  meet the team
                 </Link>
                 <Link
-                  href="/#projects"
+                  href="/contact"
                   className="px-6 sm:px-10 py-3.5 sm:py-5 rounded border-2 border-border hover:border-foreground transition-all font-bold text-foreground text-center"
                 >
-                  explore projects
+                  git init collaboration
                 </Link>
               </div>
             </div>
@@ -525,9 +348,6 @@ export default function AboutPage() {
 
       {/* Footer */}
       <Footer />
-
-      {/* Team Member Preview */}
-      <TeamMemberPreview member={activeMember} onClose={() => setActiveMember(null)} />
 
       {/* Image Preview Modal */}
       {previewImage && previewIndex !== null && (

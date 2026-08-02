@@ -2,13 +2,16 @@
 
 import Image from "next/image";
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
-import { bannerSlides, type BannerSlide } from "@/data/banners";
+import { bannerSlides, badgeConfig, type BannerSlide } from "@/data/banners";
 
-const AUTO_PLAY_MS = 5500;
-const TRANSITION_MS = 600;
+const AUTO_PLAY_MS = 3000;
+const TRANSITION_MS = 350;
 
-const slideAspectBase =
+const slideAspectDefault =
   "aspect-[3/2] sm:aspect-[2/1] md:aspect-[11/4] lg:aspect-3/1";
+
+const slideAspectEmbedded =
+  "aspect-[16/10] sm:aspect-[2/1] lg:aspect-auto lg:min-h-[22rem] xl:min-h-[26rem] lg:h-full";
 
 function buildExtendedSlides(slides: BannerSlide[]): BannerSlide[] {
   if (slides.length <= 1) return slides;
@@ -16,13 +19,15 @@ function buildExtendedSlides(slides: BannerSlide[]): BannerSlide[] {
 }
 
 function SlideContent({ slide }: { slide: BannerSlide }) {
+  const badge = badgeConfig[slide.badge];
+
   return (
     <>
       <div
         className="absolute inset-0"
         style={
           {
-            "--banner-object-pos": slide.objectPosition ?? "center 54%",
+            "--banner-object-pos": slide.objectPosition ?? "center 58%",
           } as React.CSSProperties
         }
       >
@@ -36,26 +41,51 @@ function SlideContent({ slide }: { slide: BannerSlide }) {
         />
       </div>
 
-      <div className="banner-slider-scrim-main absolute inset-x-0 bottom-0 pointer-events-none" />
-      <div className="banner-slider-scrim-base absolute inset-x-0 bottom-0 pointer-events-none" />
+      <div
+        className="banner-slider-scrim-subtle absolute inset-0 pointer-events-none"
+        aria-hidden
+      />
 
-      <div className="absolute inset-x-0 bottom-0 flex flex-col justify-end px-4 sm:px-8 md:px-14 pb-4 sm:pb-7 md:pb-10">
-        <h2 className="banner-slider-title text-lg sm:text-2xl md:text-3xl font-bold mono-font max-w-3xl leading-snug sm:leading-tight">
-          {slide.title}
-        </h2>
-        <p className="banner-slider-desc mt-1.5 sm:mt-2 md:mt-3 text-xs sm:text-sm md:text-base max-w-2xl leading-relaxed line-clamp-2 md:line-clamp-none">
-          {slide.description}
-        </p>
+      <div className="absolute inset-x-0 top-0 flex justify-start px-4 sm:px-6 md:px-8 pt-3 sm:pt-5 md:pt-6 z-10">
+        <span
+          className={`px-3 py-1 rounded border text-[10px] sm:text-xs mono-font ${badge.className}`}
+        >
+          {badge.command}
+        </span>
+      </div>
+
+      <div className="absolute inset-x-0 bottom-0 z-10 px-4 sm:px-6 md:px-8 pb-4 sm:pb-6 md:pb-8">
+        <div
+          className="banner-slider-scrim-caption absolute inset-x-0 bottom-0 pointer-events-none"
+          aria-hidden
+        />
+        <div className="relative">
+          <h2 className="banner-slider-title text-base sm:text-xl md:text-2xl font-bold mono-font max-w-3xl leading-snug sm:leading-tight">
+            {slide.title}
+          </h2>
+          <p className="banner-slider-desc mt-1 sm:mt-2 text-xs sm:text-sm max-w-2xl leading-relaxed line-clamp-2">
+            {slide.description}
+          </p>
+        </div>
       </div>
     </>
   );
 }
 
-export default function BannerSlider() {
+type BannerSliderProps = {
+  embedded?: boolean;
+  className?: string;
+};
+
+export default function BannerSlider({
+  embedded = false,
+  className = "",
+}: BannerSliderProps) {
+  const slideAspectBase = embedded ? slideAspectEmbedded : slideAspectDefault;
   const slides = bannerSlides;
   const uniqueImageCount = useMemo(
     () => new Set(slides.map((s) => s.image)).size,
-    [slides]
+    [slides],
   );
   const isCarousel = uniqueImageCount > 1;
   const extended = isCarousel ? buildExtendedSlides(slides) : slides;
@@ -90,7 +120,7 @@ export default function BannerSlider() {
     if (!isCarousel || isPaused) return;
 
     const prefersReducedMotion = window.matchMedia(
-      "(prefers-reduced-motion: reduce)"
+      "(prefers-reduced-motion: reduce)",
     ).matches;
     if (prefersReducedMotion) return;
 
@@ -123,94 +153,107 @@ export default function BannerSlider() {
         ? 0
         : activeIndex - 1;
 
+  const pauseHandlers = isCarousel
+    ? {
+        onMouseEnter: () => setIsPaused(true),
+        onMouseLeave: () => setIsPaused(false),
+        onFocusCapture: () => setIsPaused(true),
+        onBlurCapture: (e: React.FocusEvent) => {
+          if (!e.currentTarget.contains(e.relatedTarget as Node)) {
+            setIsPaused(false);
+          }
+        },
+      }
+    : {};
+
+  const sliderInner = (
+    <div
+      className={`banner-slider relative overflow-hidden rounded-xl border border-border bg-card shadow-[0_1px_0_var(--border)] ${embedded ? "h-full min-h-[inherit]" : ""} ${className}`.trim()}
+      {...pauseHandlers}
+    >
+      {isCarousel ? (
+        <div
+          ref={trackRef}
+          className="flex h-full"
+          style={{
+            transform: `translateX(-${activeIndex * 100}%)`,
+            transition: isTransitioning
+              ? `transform ${TRANSITION_MS}ms cubic-bezier(0.4, 0, 0.2, 1)`
+              : "none",
+          }}
+        >
+          {extended.map((slide, index) => (
+            <article
+              key={`${slide.id}-${index}`}
+              className={`relative min-w-full ${slideAspectBase}`}
+              aria-hidden={index !== activeIndex ? true : undefined}
+            >
+              <SlideContent slide={slide} />
+            </article>
+          ))}
+        </div>
+      ) : (
+        <article className={`relative ${slideAspectBase}`}>
+          <SlideContent slide={slides[0]} />
+        </article>
+      )}
+
+      {isCarousel && (
+        <>
+          <div className="absolute bottom-0 left-0 right-0 h-0.5 bg-border">
+            <div
+              key={`${dotIndex}-${isPaused}`}
+              className="h-full bg-green-500 origin-left"
+              style={{
+                animation: isPaused
+                  ? "none"
+                  : `banner-progress ${AUTO_PLAY_MS}ms linear forwards`,
+                width: isPaused
+                  ? `${((dotIndex + 1) / realCount) * 100}%`
+                  : undefined,
+              }}
+            />
+          </div>
+
+          <div
+            className="absolute bottom-3 right-3 sm:bottom-4 sm:right-5 flex items-center gap-2"
+            role="tablist"
+            aria-label="Banner slides"
+          >
+            {slides.map((slide, i) => (
+              <button
+                key={slide.id}
+                type="button"
+                role="tab"
+                aria-selected={i === dotIndex}
+                aria-label={`Go to slide ${i + 1}: ${slide.title}`}
+                onClick={() => goTo(i + 1)}
+                className={`h-2 rounded-full transition-all duration-300 ${
+                  i === dotIndex
+                    ? "w-6 bg-green-500"
+                    : "w-2 bg-white/40 hover:bg-white/60"
+                }`}
+              />
+            ))}
+          </div>
+        </>
+      )}
+    </div>
+  );
+
+  if (embedded) {
+    return (
+      <div aria-label="Community announcements and highlights">{sliderInner}</div>
+    );
+  }
+
   return (
     <section
       aria-label="Community announcements and highlights"
       className="pt-site-header md:pt-site-header-md px-4 sm:px-6"
-      {...(isCarousel
-        ? {
-            onMouseEnter: () => setIsPaused(true),
-            onMouseLeave: () => setIsPaused(false),
-            onFocusCapture: () => setIsPaused(true),
-            onBlurCapture: (e: React.FocusEvent) => {
-              if (!e.currentTarget.contains(e.relatedTarget as Node)) {
-                setIsPaused(false);
-              }
-            },
-          }
-        : {})}
+      {...pauseHandlers}
     >
-      <div className="container mx-auto max-w-7xl">
-        <div className="banner-slider relative overflow-hidden rounded-lg border border-border bg-card shadow-[0_1px_0_var(--border)]">
-          {isCarousel ? (
-            <div
-              ref={trackRef}
-              className="flex"
-              style={{
-                transform: `translateX(-${activeIndex * 100}%)`,
-                transition: isTransitioning
-                  ? `transform ${TRANSITION_MS}ms cubic-bezier(0.4, 0, 0.2, 1)`
-                  : "none",
-              }}
-            >
-              {extended.map((slide, index) => (
-                <article
-                  key={`${slide.id}-${index}`}
-                  className={`relative min-w-full ${slideAspectBase}`}
-                  aria-hidden={index !== activeIndex ? true : undefined}
-                >
-                  <SlideContent slide={slide} />
-                </article>
-              ))}
-            </div>
-          ) : (
-            <article className={`relative ${slideAspectBase}`}>
-              <SlideContent slide={slides[0]} />
-            </article>
-          )}
-
-          {isCarousel && (
-            <>
-              <div className="absolute bottom-0 left-0 right-0 h-0.5 bg-border">
-                <div
-                  key={`${dotIndex}-${isPaused}`}
-                  className="h-full bg-green-500 origin-left"
-                  style={{
-                    animation: isPaused
-                      ? "none"
-                      : `banner-progress ${AUTO_PLAY_MS}ms linear forwards`,
-                    width: isPaused
-                      ? `${((dotIndex + 1) / realCount) * 100}%`
-                      : undefined,
-                  }}
-                />
-              </div>
-
-              <div
-                className="absolute bottom-4 right-4 sm:bottom-5 sm:right-6 flex items-center gap-2"
-                role="tablist"
-                aria-label="Banner slides"
-              >
-                {slides.map((slide, i) => (
-                  <button
-                    key={slide.id}
-                    type="button"
-                    role="tab"
-                    aria-selected={i === dotIndex}
-                    aria-label={`Go to slide ${i + 1}: ${slide.title}`}
-                    onClick={() => goTo(i + 1)}
-                    className={`h-2 rounded-full transition-all duration-300 ${
-                      i === dotIndex
-                        ? "w-6 bg-green-500"
-                        : "w-2 bg-white/40 hover:bg-white/60"
-                    }`}
-                  />
-                ))}
-              </div>
-            </>
-          )}
-        </div>
-      </div>
+      <div className="container mx-auto max-w-7xl">{sliderInner}</div>
     </section>
   );
 }

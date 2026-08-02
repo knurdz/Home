@@ -2,11 +2,10 @@
 
 import Link from "next/link";
 import ThemeToggle from "@/components/ThemeToggle";
-import JoinCommunityBanner from "@/components/JoinCommunityBanner";
 import { useEffect, useRef, useState } from "react";
 
 interface NavbarProps {
-  activePage?: "home" | "projects" | "partners" | "about" | "achievements" | "events" | "blog" | "contact" | "join-us";
+  activePage?: "home" | "projects" | "partners" | "about" | "team" | "achievements" | "events" | "blog" | "contact" | "join-us";
 }
 
 export default function Navbar({ activePage }: NavbarProps) {
@@ -27,13 +26,11 @@ export default function Navbar({ activePage }: NavbarProps) {
     if (!header) return;
 
     const syncHeaderMetrics = () => {
-      const banner = header.firstElementChild;
-      if (banner) {
-        document.documentElement.style.setProperty(
-          "--join-banner-height",
-          `${banner.getBoundingClientRect().height}px`,
-        );
-      }
+      const banner = header.querySelector(".join-community-banner");
+      document.documentElement.style.setProperty(
+        "--join-banner-height",
+        banner ? `${banner.getBoundingClientRect().height}px` : "0px",
+      );
       document.documentElement.style.setProperty(
         "--site-header-height",
         `${header.getBoundingClientRect().height}px`,
@@ -51,7 +48,6 @@ export default function Navbar({ activePage }: NavbarProps) {
   return (
     <>
       <header ref={headerRef} className="fixed top-0 inset-x-0 z-50 flex flex-col">
-        <JoinCommunityBanner />
         <nav className="w-full bg-background backdrop-blur-xl shadow-[0_1px_0_var(--border)]">
         <div className="container mx-auto max-w-7xl min-w-0 px-4 sm:px-6 py-3 sm:py-4 flex items-center justify-between relative">
           <Link
@@ -115,6 +111,14 @@ export default function Navbar({ activePage }: NavbarProps) {
               } hover:text-foreground transition-colors mono-font text-sm`}
             >
               /blog
+            </Link>
+            <Link
+              href="/team"
+              className={`${
+                activePage === "team" ? "text-foreground" : "text-muted"
+              } hover:text-foreground transition-colors mono-font text-sm`}
+            >
+              /team
             </Link>
             <Link
               href="/about"
@@ -261,6 +265,22 @@ export default function Navbar({ activePage }: NavbarProps) {
           </Link>
           
           <Link
+            href="/team"
+            onClick={() => setIsMenuOpen(false)}
+            className={`group py-3 px-4 rounded-lg transition-all duration-200 mono-font flex items-center justify-between ${
+              activePage === "team" 
+                ? "bg-foreground text-background" 
+                : "text-foreground hover:bg-muted/10 border border-transparent hover:border-border"
+            }`}
+          >
+            <span className="flex items-center gap-3">
+              <span className={`text-xs ${activePage === "team" ? "text-background/60" : "text-muted"}`}>06.</span> 
+              /team
+            </span>
+            {activePage === "team" && <span className="text-xs">●</span>}
+          </Link>
+
+          <Link
             href="/about"
             onClick={() => setIsMenuOpen(false)}
             className={`group py-3 px-4 rounded-lg transition-all duration-200 mono-font flex items-center justify-between ${
@@ -270,7 +290,7 @@ export default function Navbar({ activePage }: NavbarProps) {
             }`}
           >
             <span className="flex items-center gap-3">
-              <span className={`text-xs ${activePage === "about" ? "text-background/60" : "text-muted"}`}>06.</span> 
+              <span className={`text-xs ${activePage === "about" ? "text-background/60" : "text-muted"}`}>07.</span> 
               /about
             </span>
             {activePage === "about" && <span className="text-xs">●</span>}

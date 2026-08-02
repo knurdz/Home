@@ -8,7 +8,11 @@
       "alt": "Event 1",
       "date": "2026-02-07",
       "category": "Event",
-      "tags": ["workshop", "technology", "community"]
+      "tags": [
+        "workshop",
+        "technology",
+        "community"
+      ]
     },
     {
       "id": "event-2",
@@ -18,7 +22,11 @@
       "alt": "Event 2",
       "date": "2026-02-07",
       "category": "Competition",
-      "tags": ["meetup", "networking", "community"]
+      "tags": [
+        "meetup",
+        "networking",
+        "community"
+      ]
     },
     {
       "id": "event-2b",
@@ -28,7 +36,11 @@
       "alt": "Event 2B",
       "date": "2026-03-06",
       "category": "Awareness Session",
-      "tags": ["meetup", "networking", "community"]
+      "tags": [
+        "meetup",
+        "networking",
+        "community"
+      ]
     },
     {
       "id": "event-3",
@@ -38,7 +50,11 @@
       "alt": "Event 3",
       "date": "2026-01-24",
       "category": "Workshop",
-      "tags": ["hackathon", "coding", "competition"]
+      "tags": [
+        "hackathon",
+        "coding",
+        "competition"
+      ]
     },
     {
       "id": "event-20",
@@ -48,7 +64,11 @@
       "alt": "Event 4",
       "date": "2026-01-24",
       "category": "Workshop",
-      "tags": ["workshop", "learning", "skills"]
+      "tags": [
+        "workshop",
+        "learning",
+        "skills"
+      ]
     },
     {
       "id": "event-4",
@@ -58,7 +78,11 @@
       "alt": "Event 4",
       "date": "2026-01-24",
       "category": "Workshop",
-      "tags": ["workshop", "learning", "skills"]
+      "tags": [
+        "workshop",
+        "learning",
+        "skills"
+      ]
     },
     {
       "id": "event-21",
@@ -68,7 +92,11 @@
       "alt": "Event 5",
       "date": "2025-05-31",
       "category": "Conference",
-      "tags": ["conference", "tech", "innovation"]
+      "tags": [
+        "conference",
+        "tech",
+        "innovation"
+      ]
     },
     {
       "id": "event-5",
@@ -78,7 +106,11 @@
       "alt": "Event 5",
       "date": "2025-05-31",
       "category": "Conference",
-      "tags": ["conference", "tech", "innovation"]
+      "tags": [
+        "conference",
+        "tech",
+        "innovation"
+      ]
     },
     {
       "id": "event-6",
@@ -88,57 +120,81 @@
       "alt": "Google I/O Extended Sri Lanka 2025",
       "date": "2026-02-15",
       "category": "Workshop",
-      "tags": ["workshop", "learning", "development"]
+      "tags": [
+        "workshop",
+        "learning",
+        "development"
+      ]
     },
     {
       "id": "event-7",
       "title": "Vibeflow AI Hackathon",
-      "description": "A snapshot of the intense 6-hour sprint at vibeflow.stemlink.online. Our team dove headfirst into the future of development, leveraging LLMs, autonomous agents, and advanced automation to build a functional full-stack solution under immense time pressure. Beyond the code, it was a deep dive into how AI is fundamentally reshaping modern workflows—turning rapid prototyping into real-time execution. An unforgettable experience of speed, synergy, and pushing the boundaries of what’s possible",
+      "description": "A snapshot of the intense 6-hour sprint at vibeflow.stemlink.online. Our team dove headfirst into the future of development, leveraging LLMs, autonomous agents, and advanced automation to build a functional full-stack solution under immense time pressure. Beyond the code, it was a deep dive into how AI is fundamentally reshaping modern workflows, turning rapid prototyping into real-time execution. An unforgettable experience of speed, synergy, and pushing the boundaries of what’s possible",
       "src": "/gallery/event-7.jpg",
       "alt": "Event 7",
       "date": "2025-07-19",
       "category": "Hackathon",
-      "tags": ["hackathon", "coding", "innovation"]
+      "tags": [
+        "hackathon",
+        "coding",
+        "innovation"
+      ]
     },
     {
       "id": "event-8",
       "title": "Vibeflow AI Hackathon",
-      "description": "A snapshot of the intense 6-hour sprint at vibeflow.stemlink.online. Our team dove headfirst into the future of development, leveraging LLMs, autonomous agents, and advanced automation to build a functional full-stack solution under immense time pressure. Beyond the code, it was a deep dive into how AI is fundamentally reshaping modern workflows—turning rapid prototyping into real-time execution. An unforgettable experience of speed, synergy, and pushing the boundaries of what’s possible",
+      "description": "A snapshot of the intense 6-hour sprint at vibeflow.stemlink.online. Our team dove headfirst into the future of development, leveraging LLMs, autonomous agents, and advanced automation to build a functional full-stack solution under immense time pressure. Beyond the code, it was a deep dive into how AI is fundamentally reshaping modern workflows, turning rapid prototyping into real-time execution. An unforgettable experience of speed, synergy, and pushing the boundaries of what’s possible",
       "src": "/gallery/event-8.jpg",
       "alt": "Event 8",
       "date": "2025-07-19",
       "category": "Meetup",
-      "tags": ["meetup", "community", "networking"]
+      "tags": [
+        "meetup",
+        "community",
+        "networking"
+      ]
     },
     {
       "id": "event-9",
       "title": "The AI Revolution: Live at the National AI Expo 2025",
-      "description": "A reflective look back at an incredible day at Monarch Imperial for the National AI Expo. From witnessing cutting-edge AI-driven solutions to connecting with the brilliant minds—students and industry veterans alike—shaping Sri Lanka’s tech landscape, the energy was undeniable. This wasn't just an exhibition; it was a testament to the fact that AI is no longer a 'future' concept—it is the operating system of the present. As innovators, the responsibility is ours to steer this technology toward meaningful impact",
+      "description": "A reflective look back at an incredible day at Monarch Imperial for the National AI Expo. From witnessing cutting-edge AI-driven solutions to connecting with the brilliant minds, students and industry veterans alike, shaping Sri Lanka’s tech landscape, the energy was undeniable. This wasn't just an exhibition; it was a testament to the fact that AI is no longer a 'future' concept, it is the operating system of the present. As innovators, the responsibility is ours to steer this technology toward meaningful impact",
       "src": "/gallery/event-9.jpg",
       "alt": "Event 9",
       "date": "2025-09-29",
       "category": "Conference",
-      "tags": ["conference", "technology", "keynote"]
+      "tags": [
+        "conference",
+        "technology",
+        "keynote"
+      ]
     },
     {
       "id": "event-10",
       "title": "J’pura Expedition 2.0",
-      "description": "University of Sri Jayewardenepura. J’pura Expedition 2.0 provided a deep dive into the practical side of innovation—from mastering advanced prompting techniques to identifying actionable business opportunities in the age of robotics and automation. A massive thank you to the speakers, including Dr. Ruchira Wijesena and Malinda Alahakoon, for moving beyond theory and sparking a vision for how we can shape modern lifestyles. Events like these, organized by the IEEE IES Student Branch, are the catalysts for the next wave of Sri Lankan entrepreneurs.",
+      "description": "University of Sri Jayewardenepura. J’pura Expedition 2.0 provided a deep dive into the practical side of innovation, from mastering advanced prompting techniques to identifying actionable business opportunities in the age of robotics and automation. A massive thank you to the speakers, including Dr. Ruchira Wijesena and Malinda Alahakoon, for moving beyond theory and sparking a vision for how we can shape modern lifestyles. Events like these, organized by the IEEE IES Student Branch, are the catalysts for the next wave of Sri Lankan entrepreneurs.",
       "src": "/gallery/event-10.jpg",
       "alt": "Event 10",
       "date": "2025-05-03",
       "category": "Workshop",
-      "tags": ["workshop", "hands-on", "learning"]
+      "tags": [
+        "workshop",
+        "hands-on",
+        "learning"
+      ]
     },
     {
       "id": "event-11",
       "title": "Microsoft Student Champs",
-      "description": "A day of deep technical immersion at the Microsoft Sri Lanka office for the Student Champs Seasonal Special. From architecting high-performance PySpark ETL pipelines in Azure Synapse to orchestrating containerized solutions with Azure Kubernetes Service (AKS), the sessions were a masterclass in modern cloud infrastructure. Witnessing Azure AI Studio in action—specifically the live build of a RAG chatbot—bridged the gap between theoretical AI and real-world execution. Beyond the demos, the true value lay in the high-level networking with fellow innovators, all driven by the transformative power of the Azure ecosystem.",
+      "description": "A day of deep technical immersion at the Microsoft Sri Lanka office for the Student Champs Seasonal Special. From architecting high-performance PySpark ETL pipelines in Azure Synapse to orchestrating containerized solutions with Azure Kubernetes Service (AKS), the sessions were a masterclass in modern cloud infrastructure. Witnessing Azure AI Studio in action, specifically the live build of a RAG chatbot, bridged the gap between theoretical AI and real-world execution. Beyond the demos, the true value lay in the high-level networking with fellow innovators, all driven by the transformative power of the Azure ecosystem.",
       "src": "/gallery/event-11.jpg",
       "alt": "Event 11",
       "date": "2026-01-20",
       "category": "Hackathon",
-      "tags": ["hackathon", "competition", "coding"]
+      "tags": [
+        "hackathon",
+        "competition",
+        "coding"
+      ]
     },
     {
       "id": "event-12",
@@ -148,57 +204,81 @@
       "alt": "Event 12",
       "date": "2025-02-11",
       "category": "Meetup",
-      "tags": ["meetup", "discussion", "community"]
+      "tags": [
+        "meetup",
+        "discussion",
+        "community"
+      ]
     },
     {
       "id": "event-13",
       "title": "National AI Expo-2025",
-      "description": "A reflective look back at an incredible day at Monarch Imperial for the National AI Expo. From witnessing cutting-edge AI-driven solutions to connecting with the brilliant minds—students and industry veterans alike—shaping Sri Lanka’s tech landscape, the energy was undeniable. This wasn't just an exhibition; it was a testament to the fact that AI is no longer a 'future' concept—it is the operating system of the present. As innovators, the responsibility is ours to steer this technology toward meaningful impact.",
+      "description": "A reflective look back at an incredible day at Monarch Imperial for the National AI Expo. From witnessing cutting-edge AI-driven solutions to connecting with the brilliant minds, students and industry veterans alike, shaping Sri Lanka’s tech landscape, the energy was undeniable. This wasn't just an exhibition; it was a testament to the fact that AI is no longer a 'future' concept, it is the operating system of the present. As innovators, the responsibility is ours to steer this technology toward meaningful impact.",
       "src": "/gallery/event-13.jpg",
       "alt": "Event 13",
       "date": "2025-09-29",
       "category": "Conference",
-      "tags": ["conference", "presentation", "tech"]
+      "tags": [
+        "conference",
+        "presentation",
+        "tech"
+      ]
     },
     {
       "id": "event-19",
       "title": "FInnC'25",
-      "description": "The FInnC'25 On-Site Workshop successfully wrapped up at the University of Moratuwa, bringing a high-energy, hands-on approach to the future of the Internet of Things. In collaboration with RoboticGen, participants moved beyond the screen to prototype real-world IoT devices using OBOPLAY—a cutting-edge innovation designed for seamless integration. Under the expert guidance of Odil Janandith and Sahas Eashan, the session bridged the gap between raw hardware and intelligent automation, proving that the next generation of Sri Lankan engineers is ready to build the physical backbone of the digital world.",
+      "description": "The FInnC'25 On-Site Workshop successfully wrapped up at the University of Moratuwa, bringing a high-energy, hands-on approach to the future of the Internet of Things. In collaboration with RoboticGen, participants moved beyond the screen to prototype real-world IoT devices using OBOPLAY, a cutting-edge innovation designed for seamless integration. Under the expert guidance of Odil Janandith and Sahas Eashan, the session bridged the gap between raw hardware and intelligent automation, proving that the next generation of Sri Lankan engineers is ready to build the physical backbone of the digital world.",
       "src": "/gallery/event-19.jpg",
       "alt": "Event 14",
       "date": "2025-09-29",
       "category": "Workshop",
-      "tags": ["workshop", "tutorial", "skills"]
+      "tags": [
+        "workshop",
+        "tutorial",
+        "skills"
+      ]
     },
     {
       "id": "event-14",
       "title": "FInnC'25",
-      "description": "The FInnC'25 On-Site Workshop successfully wrapped up at the University of Moratuwa, bringing a high-energy, hands-on approach to the future of the Internet of Things. In collaboration with RoboticGen, participants moved beyond the screen to prototype real-world IoT devices using OBOPLAY—a cutting-edge innovation designed for seamless integration. Under the expert guidance of Odil Janandith and Sahas Eashan, the session bridged the gap between raw hardware and intelligent automation, proving that the next generation of Sri Lankan engineers is ready to build the physical backbone of the digital world.",
+      "description": "The FInnC'25 On-Site Workshop successfully wrapped up at the University of Moratuwa, bringing a high-energy, hands-on approach to the future of the Internet of Things. In collaboration with RoboticGen, participants moved beyond the screen to prototype real-world IoT devices using OBOPLAY, a cutting-edge innovation designed for seamless integration. Under the expert guidance of Odil Janandith and Sahas Eashan, the session bridged the gap between raw hardware and intelligent automation, proving that the next generation of Sri Lankan engineers is ready to build the physical backbone of the digital world.",
       "src": "/gallery/event-14.jpg",
       "alt": "Event 14",
       "date": "2026-01-05",
       "category": "Workshop",
-      "tags": ["workshop", "tutorial", "skills"]
+      "tags": [
+        "workshop",
+        "tutorial",
+        "skills"
+      ]
     },
     {
       "id": "event-15",
       "title": "Design with Purpose: Team Probex at Industry Minds",
-      "description": "A defining milestone for Team Probex at the Industry Minds PRE-LAUNCH. After an intense sprint of sleepless nights and relentless iteration, our vision for 'WE CARE' earned the award for Best UI in the final presentation. Beyond the aesthetics, this project was a challenge in engineering empathy and user-centric logic under pressure. A massive thank you to my dedicated teammates and the academic panel for their guidance—together, we proved that great design is the bridge between a complex problem and a meaningful solution.",
+      "description": "A defining milestone for Team Probex at the Industry Minds PRE-LAUNCH. After an intense sprint of sleepless nights and relentless iteration, our vision for 'WE CARE' earned the award for Best UI in the final presentation. Beyond the aesthetics, this project was a challenge in engineering empathy and user-centric logic under pressure. A massive thank you to my dedicated teammates and the academic panel for their guidance, together, we proved that great design is the bridge between a complex problem and a meaningful solution.",
       "src": "/gallery/event-15.jpg",
       "alt": "Event 15",
       "date": "2025-12-30",
       "category": "Meetup",
-      "tags": ["meetup", "year-end", "celebration"]
+      "tags": [
+        "meetup",
+        "year-end",
+        "celebration"
+      ]
     },
     {
       "id": "event-16",
       "title": "Design with Purpose: Team Probex at Industry Minds",
-      "description": "A defining milestone for Team Probex at the Industry Minds PRE-LAUNCH. After an intense sprint of sleepless nights and relentless iteration, our vision for 'WE CARE' earned the award for Best UI in the final presentation. Beyond the aesthetics, this project was a challenge in engineering empathy and user-centric logic under pressure. A massive thank you to my dedicated teammates and the academic panel for their guidance—together, we proved that great design is the bridge between a complex problem and a meaningful solution.",
+      "description": "A defining milestone for Team Probex at the Industry Minds PRE-LAUNCH. After an intense sprint of sleepless nights and relentless iteration, our vision for 'WE CARE' earned the award for Best UI in the final presentation. Beyond the aesthetics, this project was a challenge in engineering empathy and user-centric logic under pressure. A massive thank you to my dedicated teammates and the academic panel for their guidance, together, we proved that great design is the bridge between a complex problem and a meaningful solution.",
       "src": "/gallery/event-16.jpg",
       "alt": "Event 16",
       "date": "2025-12-25",
       "category": "Conference",
-      "tags": ["conference", "innovation", "future"]
+      "tags": [
+        "conference",
+        "innovation",
+        "future"
+      ]
     },
     {
       "id": "event-17",
@@ -208,7 +288,11 @@
       "alt": "Event 17",
       "date": "2025-07-21",
       "category": "Hackathon",
-      "tags": ["hackathon", "final", "showcase"]
+      "tags": [
+        "hackathon",
+        "final",
+        "showcase"
+      ]
     },
     {
       "id": "event-18",
@@ -218,7 +302,11 @@
       "alt": "Event 18",
       "date": "2025-12-15",
       "category": "Workshop",
-      "tags": ["workshop", "closing", "review"]
+      "tags": [
+        "workshop",
+        "closing",
+        "review"
+      ]
     },
     {
       "id": "event-22",
@@ -228,7 +316,11 @@
       "alt": "Event 22",
       "date": "2025-03-05",
       "category": "Awareness Session",
-      "tags": ["meetup", "community", "networking"]
+      "tags": [
+        "meetup",
+        "community",
+        "networking"
+      ]
     },
     {
       "id": "event-23",
@@ -238,7 +330,11 @@
       "alt": "Event 23",
       "date": "2025-02-10",
       "category": "Workshop",
-      "tags": ["meetup", "community", "networking"]
+      "tags": [
+        "meetup",
+        "community",
+        "networking"
+      ]
     },
     {
       "id": "event-24",
@@ -248,7 +344,11 @@
       "alt": "GitHub Copilot Dev Days Colombo 24",
       "date": "2026-03-30",
       "category": "Workshop",
-      "tags": ["workshop", "ai", "development"]
+      "tags": [
+        "workshop",
+        "ai",
+        "development"
+      ]
     },
     {
       "id": "event-25",
@@ -258,7 +358,11 @@
       "alt": "GitHub Copilot Dev Days Colombo 25",
       "date": "2026-03-30",
       "category": "Workshop",
-      "tags": ["workshop", "ai", "development"]
+      "tags": [
+        "workshop",
+        "ai",
+        "development"
+      ]
     },
     {
       "id": "event-26",
@@ -268,7 +372,11 @@
       "alt": "GitHub Copilot Dev Days Colombo 26",
       "date": "2026-03-30",
       "category": "Workshop",
-      "tags": ["workshop", "ai", "development"]
+      "tags": [
+        "workshop",
+        "ai",
+        "development"
+      ]
     },
     {
       "id": "event-27",
@@ -278,7 +386,11 @@
       "alt": "GitHub Copilot Dev Days Colombo 27",
       "date": "2026-03-30",
       "category": "Workshop",
-      "tags": ["workshop", "ai", "development"]
+      "tags": [
+        "workshop",
+        "ai",
+        "development"
+      ]
     },
     {
       "id": "event-28",
@@ -288,7 +400,11 @@
       "alt": "Cursor Meetup Colombo 28",
       "date": "2026-04-09",
       "category": "Meetup",
-      "tags": ["meetup", "community", "networking"]
+      "tags": [
+        "meetup",
+        "community",
+        "networking"
+      ]
     },
     {
       "id": "event-29",
@@ -298,7 +414,11 @@
       "alt": "Cursor Meetup Colombo 29",
       "date": "2026-04-09",
       "category": "Meetup",
-      "tags": ["meetup", "community", "networking"]
+      "tags": [
+        "meetup",
+        "community",
+        "networking"
+      ]
     },
     {
       "id": "event-30",
@@ -308,7 +428,11 @@
       "alt": "Cursor Meetup Colombo 30",
       "date": "2026-04-09",
       "category": "Meetup",
-      "tags": ["meetup", "community", "networking"]
+      "tags": [
+        "meetup",
+        "community",
+        "networking"
+      ]
     },
     {
       "id": "event-31",
@@ -318,7 +442,11 @@
       "alt": "Phantom Series P01 31",
       "date": "2026-04-30",
       "category": "Conference",
-      "tags": ["conference", "startup", "pitching"]
+      "tags": [
+        "conference",
+        "startup",
+        "pitching"
+      ]
     },
     {
       "id": "event-32",
@@ -328,7 +456,11 @@
       "alt": "Phantom Series P01 32",
       "date": "2026-04-30",
       "category": "Conference",
-      "tags": ["conference", "startup", "pitching"]
+      "tags": [
+        "conference",
+        "startup",
+        "pitching"
+      ]
     },
     {
       "id": "event-33",
@@ -338,7 +470,11 @@
       "alt": "Cursor 24hr Buildathon 33",
       "date": "2026-05-16",
       "category": "Competition",
-      "tags": ["competition", "hackathon", "ai"]
+      "tags": [
+        "competition",
+        "hackathon",
+        "ai"
+      ]
     },
     {
       "id": "event-34",
@@ -348,7 +484,11 @@
       "alt": "Cursor 24hr Buildathon 34",
       "date": "2026-05-16",
       "category": "Competition",
-      "tags": ["competition", "hackathon", "ai"]
+      "tags": [
+        "competition",
+        "hackathon",
+        "ai"
+      ]
     },
     {
       "id": "event-35",
@@ -358,7 +498,11 @@
       "alt": "Cursor 24hr Buildathon 35",
       "date": "2026-05-16",
       "category": "Competition",
-      "tags": ["competition", "hackathon", "ai"]
+      "tags": [
+        "competition",
+        "hackathon",
+        "ai"
+      ]
     },
     {
       "id": "event-36",
@@ -368,7 +512,11 @@
       "alt": "Cursor 24hr Buildathon 36",
       "date": "2026-05-16",
       "category": "Competition",
-      "tags": ["competition", "hackathon", "ai"]
+      "tags": [
+        "competition",
+        "hackathon",
+        "ai"
+      ]
     },
     {
       "id": "event-37",
@@ -378,7 +526,11 @@
       "alt": "Cursor 24hr Buildathon 37",
       "date": "2026-05-16",
       "category": "Competition",
-      "tags": ["competition", "hackathon", "ai"]
+      "tags": [
+        "competition",
+        "hackathon",
+        "ai"
+      ]
     },
     {
       "id": "event-38",
@@ -388,7 +540,11 @@
       "alt": "IESL RoboGames 25/26 university category image 38",
       "date": "2026-04-26",
       "category": "Competition",
-      "tags": ["competition", "robotics", "university"]
+      "tags": [
+        "competition",
+        "robotics",
+        "university"
+      ]
     },
     {
       "id": "event-39",
@@ -398,7 +554,11 @@
       "alt": "IESL RoboGames 25/26 university category image 39",
       "date": "2026-04-26",
       "category": "Competition",
-      "tags": ["competition", "robotics", "university"]
+      "tags": [
+        "competition",
+        "robotics",
+        "university"
+      ]
     },
     {
       "id": "event-40",
@@ -408,7 +568,11 @@
       "alt": "IESL RoboGames 25/26 university category image 40",
       "date": "2026-04-26",
       "category": "Competition",
-      "tags": ["competition", "robotics", "university"]
+      "tags": [
+        "competition",
+        "robotics",
+        "university"
+      ]
     },
     {
       "id": "event-41",
@@ -418,7 +582,11 @@
       "alt": "IESL RoboGames 25/26 university category image 41",
       "date": "2026-04-26",
       "category": "Competition",
-      "tags": ["competition", "robotics", "university"]
+      "tags": [
+        "competition",
+        "robotics",
+        "university"
+      ]
     },
     {
       "id": "event-42",
@@ -428,51 +596,1619 @@
       "alt": "IESL RoboGames 25/26 university category image 42",
       "date": "2026-04-26",
       "category": "Competition",
-      "tags": ["competition", "robotics", "university"]
+      "tags": [
+        "competition",
+        "robotics",
+        "university"
+      ]
+    },
+    {
+      "id": "event-47",
+      "title": "Proxy Maze '26",
+      "description": "Team Knurdz at the Proxy Maze '26 finale after advancing through the top 25 and top 8, receiving the Most Popular Team award at Torch Proxies' university hackathon.",
+      "src": "/gallery/event-47.jpg",
+      "alt": "Proxy Maze '26",
+      "date": "2026-07-14",
+      "category": "Hackathon",
+      "tags": [
+        "hackathon",
+        "proxymaze",
+        "competition"
+      ]
+    },
+    {
+      "id": "event-48",
+      "title": "Aurora 2026",
+      "description": "Team Knurdz Neural among the top 10 finalists in the Agentic AI Challenge at Aurora 2026, Sri Lanka's premier university computing conference.",
+      "src": "/gallery/event-48.jpg",
+      "alt": "Aurora 2026",
+      "date": "2026-07-07",
+      "category": "Competition",
+      "tags": [
+        "competition",
+        "ai",
+        "aurora"
+      ]
+    },
+    {
+      "id": "event-49",
+      "title": "RoboRoarZ International",
+      "description": "Two Knurdz teams at the RoboRoarZ International tertiary league finale, competing on Smorphi reconfigurable robotics alongside universities across Asia and the Middle East.",
+      "src": "/gallery/event-49.jpg",
+      "alt": "RoboRoarZ International",
+      "date": "2026-07-08",
+      "category": "Robotics",
+      "tags": [
+        "robotics",
+        "competition",
+        "roboroarz"
+      ]
+    },
+    {
+      "id": "event-50",
+      "title": "Cursor Meetup Colombo — Builder Series pitch",
+      "description": "Team Knurdz pitching Nexus OS at Cursor Meetup Colombo: The Builder Series at DHPL Auditorium — live product demo and Q&A with the Cursor Colombo community.",
+      "src": "/gallery/event-50.jpg",
+      "alt": "Cursor Meetup Colombo — Builder Series pitch",
+      "date": "2026-07-18",
+      "category": "Meetup",
+      "tags": [
+        "cursor",
+        "meetup",
+        "pitch",
+        "nexus-os"
+      ]
+    },
+    {
+      "title": "Aurora 2026",
+      "description": "Team Knurdz Neural reached the top 7 among overall Sri Lanka inter-university teams as a finalist in Aurora 2026's Agentic AI Challenge at the University of Sri Jayewardenepura.",
+      "src": "/images/achievements/aurora-2026-agentic-ai/01.jpg",
+      "alt": "Aurora 2026 01",
+      "date": "2026-07-07",
+      "category": "Competition",
+      "tags": [
+        "competition",
+        "ai",
+        "aurora"
+      ],
+      "id": "event-51"
+    },
+    {
+      "title": "Aurora 2026",
+      "description": "Team Knurdz Neural reached the top 7 among overall Sri Lanka inter-university teams as a finalist in Aurora 2026's Agentic AI Challenge at the University of Sri Jayewardenepura.",
+      "src": "/images/achievements/aurora-2026-agentic-ai/02.jpg",
+      "alt": "Aurora 2026 02",
+      "date": "2026-07-07",
+      "category": "Competition",
+      "tags": [
+        "competition",
+        "ai",
+        "aurora"
+      ],
+      "id": "event-52"
+    },
+    {
+      "title": "Aurora 2026",
+      "description": "Team Knurdz Neural reached the top 7 among overall Sri Lanka inter-university teams as a finalist in Aurora 2026's Agentic AI Challenge at the University of Sri Jayewardenepura.",
+      "src": "/images/achievements/aurora-2026-agentic-ai/03.jpg",
+      "alt": "Aurora 2026 03",
+      "date": "2026-07-07",
+      "category": "Competition",
+      "tags": [
+        "competition",
+        "ai",
+        "aurora"
+      ],
+      "id": "event-53"
+    },
+    {
+      "title": "Aurora 2026",
+      "description": "Team Knurdz Neural reached the top 7 among overall Sri Lanka inter-university teams as a finalist in Aurora 2026's Agentic AI Challenge at the University of Sri Jayewardenepura.",
+      "src": "/images/achievements/aurora-2026-agentic-ai/04.jpg",
+      "alt": "Aurora 2026 04",
+      "date": "2026-07-07",
+      "category": "Competition",
+      "tags": [
+        "competition",
+        "ai",
+        "aurora"
+      ],
+      "id": "event-54"
+    },
+    {
+      "title": "Cursor 24H Buildathon 2026",
+      "description": "Team Knurdz 3.0 won the n8n partner track at Sri Lanka's Cursor Colombo 24 Hour Buildathon with Nexus OS, after 24 hours of building at Royal-MAS Arena.",
+      "src": "/images/achievements/cursor-buildathon-2026-n8n/01.jpg",
+      "alt": "Cursor 24H Buildathon 2026 01",
+      "date": "2026-05-17",
+      "category": "Hackathon",
+      "tags": [
+        "hackathon",
+        "cursor",
+        "buildathon"
+      ],
+      "id": "event-55"
+    },
+    {
+      "title": "Cursor 24H Buildathon 2026",
+      "description": "Team Knurdz 3.0 won the n8n partner track at Sri Lanka's Cursor Colombo 24 Hour Buildathon with Nexus OS, after 24 hours of building at Royal-MAS Arena.",
+      "src": "/images/achievements/cursor-buildathon-2026-n8n/02.jpg",
+      "alt": "Cursor 24H Buildathon 2026 02",
+      "date": "2026-05-17",
+      "category": "Hackathon",
+      "tags": [
+        "hackathon",
+        "cursor",
+        "buildathon"
+      ],
+      "id": "event-56"
+    },
+    {
+      "title": "Cursor 24H Buildathon 2026",
+      "description": "Team Knurdz 3.0 won the n8n partner track at Sri Lanka's Cursor Colombo 24 Hour Buildathon with Nexus OS, after 24 hours of building at Royal-MAS Arena.",
+      "src": "/images/achievements/cursor-buildathon-2026-n8n/03.jpg",
+      "alt": "Cursor 24H Buildathon 2026 03",
+      "date": "2026-05-17",
+      "category": "Hackathon",
+      "tags": [
+        "hackathon",
+        "cursor",
+        "buildathon"
+      ],
+      "id": "event-57"
+    },
+    {
+      "title": "Cursor 24H Buildathon 2026",
+      "description": "Team Knurdz 3.0 won the n8n partner track at Sri Lanka's Cursor Colombo 24 Hour Buildathon with Nexus OS, after 24 hours of building at Royal-MAS Arena.",
+      "src": "/images/achievements/cursor-buildathon-2026-n8n/04.jpg",
+      "alt": "Cursor 24H Buildathon 2026 04",
+      "date": "2026-05-17",
+      "category": "Hackathon",
+      "tags": [
+        "hackathon",
+        "cursor",
+        "buildathon"
+      ],
+      "id": "event-58"
+    },
+    {
+      "title": "IDEALIZE by AIESEC",
+      "description": "Team Knurdz won the IDEALIZE mini competition by AIESEC in University of Moratuwa: the Agentic AI & MCP challenge alongside Sri Lanka's island-wide mobile and web development programme.",
+      "src": "/images/achievements/idealize-aiesec-mini-competition-winner/01.jpg",
+      "alt": "IDEALIZE by AIESEC 01",
+      "date": "2026-06-01",
+      "category": "Competition",
+      "tags": [
+        "competition",
+        "idealize",
+        "aiesec"
+      ],
+      "id": "event-59"
+    },
+    {
+      "title": "IDEALIZE by AIESEC",
+      "description": "Team Knurdz won the IDEALIZE mini competition by AIESEC in University of Moratuwa: the Agentic AI & MCP challenge alongside Sri Lanka's island-wide mobile and web development programme.",
+      "src": "/images/achievements/idealize-aiesec-mini-competition-winner/02.png",
+      "alt": "IDEALIZE by AIESEC 02",
+      "date": "2026-06-01",
+      "category": "Competition",
+      "tags": [
+        "competition",
+        "idealize",
+        "aiesec"
+      ],
+      "id": "event-60"
+    },
+    {
+      "title": "IEEE Open Week 2026: Logic Sprint",
+      "description": "Knurdz members claimed 1st, 2nd, and 3rd on the Logic Sprint leaderboard at IEEE Open Week 2026: a four-day challenge hosted by the IEEE Student Branch, University of Moratuwa.",
+      "src": "/images/achievements/ieee-open-week-2026-logic-sprint/01.jpg",
+      "alt": "IEEE Open Week 2026: Logic Sprint 01",
+      "date": "2026-06-02",
+      "category": "Competition",
+      "tags": [
+        "competition",
+        "ieee",
+        "logic-sprint"
+      ],
+      "id": "event-61"
+    },
+    {
+      "title": "IEEE Open Week 2026: Logic Sprint",
+      "description": "Knurdz members claimed 1st, 2nd, and 3rd on the Logic Sprint leaderboard at IEEE Open Week 2026: a four-day challenge hosted by the IEEE Student Branch, University of Moratuwa.",
+      "src": "/images/achievements/ieee-open-week-2026-logic-sprint/02.jpg",
+      "alt": "IEEE Open Week 2026: Logic Sprint 02",
+      "date": "2026-06-02",
+      "category": "Competition",
+      "tags": [
+        "competition",
+        "ieee",
+        "logic-sprint"
+      ],
+      "id": "event-62"
+    },
+    {
+      "title": "IEEE Open Week 2026: Logic Sprint",
+      "description": "Knurdz members claimed 1st, 2nd, and 3rd on the Logic Sprint leaderboard at IEEE Open Week 2026: a four-day challenge hosted by the IEEE Student Branch, University of Moratuwa.",
+      "src": "/images/achievements/ieee-open-week-2026-logic-sprint/03.jpg",
+      "alt": "IEEE Open Week 2026: Logic Sprint 03",
+      "date": "2026-06-02",
+      "category": "Competition",
+      "tags": [
+        "competition",
+        "ieee",
+        "logic-sprint"
+      ],
+      "id": "event-63"
+    },
+    {
+      "title": "IEEE Open Week 2026: Logic Sprint",
+      "description": "Knurdz members claimed 1st, 2nd, and 3rd on the Logic Sprint leaderboard at IEEE Open Week 2026: a four-day challenge hosted by the IEEE Student Branch, University of Moratuwa.",
+      "src": "/images/achievements/ieee-open-week-2026-logic-sprint/04.jpg",
+      "alt": "IEEE Open Week 2026: Logic Sprint 04",
+      "date": "2026-06-02",
+      "category": "Competition",
+      "tags": [
+        "competition",
+        "ieee",
+        "logic-sprint"
+      ],
+      "id": "event-64"
+    },
+    {
+      "title": "Proxy Maze '26",
+      "description": "Team Knurdz reached the Proxy Maze '26 finale after advancing through the top 25 and top 8, and won the Most Popular Team award: Torch Proxies' 14-week university hackathon for proxy-based innovation.",
+      "src": "/images/achievements/proxy-maze-2026-finalist/01.jpg",
+      "alt": "Proxy Maze '26 01",
+      "date": "2026-07-14",
+      "category": "Hackathon",
+      "tags": [
+        "hackathon",
+        "proxymaze",
+        "competition"
+      ],
+      "id": "event-65"
+    },
+    {
+      "title": "Proxy Maze '26",
+      "description": "Team Knurdz reached the Proxy Maze '26 finale after advancing through the top 25 and top 8, and won the Most Popular Team award: Torch Proxies' 14-week university hackathon for proxy-based innovation.",
+      "src": "/images/achievements/proxy-maze-2026-finalist/02.jpg",
+      "alt": "Proxy Maze '26 02",
+      "date": "2026-07-14",
+      "category": "Hackathon",
+      "tags": [
+        "hackathon",
+        "proxymaze",
+        "competition"
+      ],
+      "id": "event-66"
+    },
+    {
+      "title": "Proxy Maze '26",
+      "description": "Team Knurdz reached the Proxy Maze '26 finale after advancing through the top 25 and top 8, and won the Most Popular Team award: Torch Proxies' 14-week university hackathon for proxy-based innovation.",
+      "src": "/images/achievements/proxy-maze-2026-finalist/03.jpg",
+      "alt": "Proxy Maze '26 03",
+      "date": "2026-07-14",
+      "category": "Hackathon",
+      "tags": [
+        "hackathon",
+        "proxymaze",
+        "competition"
+      ],
+      "id": "event-67"
+    },
+    {
+      "title": "Proxy Maze '26",
+      "description": "Team Knurdz reached the Proxy Maze '26 finale after advancing through the top 25 and top 8, and won the Most Popular Team award: Torch Proxies' 14-week university hackathon for proxy-based innovation.",
+      "src": "/images/achievements/proxy-maze-2026-finalist/04.jpg",
+      "alt": "Proxy Maze '26 04",
+      "date": "2026-07-14",
+      "category": "Hackathon",
+      "tags": [
+        "hackathon",
+        "proxymaze",
+        "competition"
+      ],
+      "id": "event-68"
+    },
+    {
+      "title": "IESL RoboGames 25/26",
+      "description": "Team Knurdz was selected among the top teams in the IESL RoboGames University Category: Sri Lanka's undergraduate robotics challenge at the University of Moratuwa.",
+      "src": "/images/achievements/robogames-2026-university-finalist/01.jpg",
+      "alt": "IESL RoboGames 25/26 01",
+      "date": "2026-04-26",
+      "category": "Competition",
+      "tags": [
+        "competition",
+        "robotics",
+        "university"
+      ],
+      "id": "event-69"
+    },
+    {
+      "title": "IESL RoboGames 25/26",
+      "description": "Team Knurdz was selected among the top teams in the IESL RoboGames University Category: Sri Lanka's undergraduate robotics challenge at the University of Moratuwa.",
+      "src": "/images/achievements/robogames-2026-university-finalist/02.jpg",
+      "alt": "IESL RoboGames 25/26 02",
+      "date": "2026-04-26",
+      "category": "Competition",
+      "tags": [
+        "competition",
+        "robotics",
+        "university"
+      ],
+      "id": "event-70"
+    },
+    {
+      "title": "IESL RoboGames 25/26",
+      "description": "Team Knurdz was selected among the top teams in the IESL RoboGames University Category: Sri Lanka's undergraduate robotics challenge at the University of Moratuwa.",
+      "src": "/images/achievements/robogames-2026-university-finalist/03.jpg",
+      "alt": "IESL RoboGames 25/26 03",
+      "date": "2026-04-26",
+      "category": "Competition",
+      "tags": [
+        "competition",
+        "robotics",
+        "university"
+      ],
+      "id": "event-71"
+    },
+    {
+      "title": "IESL RoboGames 25/26",
+      "description": "Team Knurdz was selected among the top teams in the IESL RoboGames University Category: Sri Lanka's undergraduate robotics challenge at the University of Moratuwa.",
+      "src": "/images/achievements/robogames-2026-university-finalist/04.jpg",
+      "alt": "IESL RoboGames 25/26 04",
+      "date": "2026-04-26",
+      "category": "Competition",
+      "tags": [
+        "competition",
+        "robotics",
+        "university"
+      ],
+      "id": "event-72"
+    },
+    {
+      "title": "RoboRoarZ International",
+      "description": "Two Knurdz teams reached the finale at RoboRoarZ International in the tertiary league: a design-centred Smorphi robotics competition with teams from universities and polytechnics across Asia and the Middle East.",
+      "src": "/images/achievements/roboroarz-international-2026-finalist/01.jpg",
+      "alt": "RoboRoarZ International 01",
+      "date": "2026-07-08",
+      "category": "Robotics",
+      "tags": [
+        "robotics",
+        "competition",
+        "roboroarz"
+      ],
+      "id": "event-73"
+    },
+    {
+      "title": "RoboRoarZ International",
+      "description": "Two Knurdz teams reached the finale at RoboRoarZ International in the tertiary league: a design-centred Smorphi robotics competition with teams from universities and polytechnics across Asia and the Middle East.",
+      "src": "/images/achievements/roboroarz-international-2026-finalist/02.jpg",
+      "alt": "RoboRoarZ International 02",
+      "date": "2026-07-08",
+      "category": "Robotics",
+      "tags": [
+        "robotics",
+        "competition",
+        "roboroarz"
+      ],
+      "id": "event-74"
+    },
+    {
+      "title": "RoboRoarZ International",
+      "description": "Two Knurdz teams reached the finale at RoboRoarZ International in the tertiary league: a design-centred Smorphi robotics competition with teams from universities and polytechnics across Asia and the Middle East.",
+      "src": "/images/achievements/roboroarz-international-2026-finalist/03.jpg",
+      "alt": "RoboRoarZ International 03",
+      "date": "2026-07-08",
+      "category": "Robotics",
+      "tags": [
+        "robotics",
+        "competition",
+        "roboroarz"
+      ],
+      "id": "event-75"
+    },
+    {
+      "title": "RoboRoarZ International",
+      "description": "Two Knurdz teams reached the finale at RoboRoarZ International in the tertiary league: a design-centred Smorphi robotics competition with teams from universities and polytechnics across Asia and the Middle East.",
+      "src": "/images/achievements/roboroarz-international-2026-finalist/04.jpg",
+      "alt": "RoboRoarZ International 04",
+      "date": "2026-07-08",
+      "category": "Robotics",
+      "tags": [
+        "robotics",
+        "competition",
+        "roboroarz"
+      ],
+      "id": "event-76"
+    },
+    {
+      "title": "Road to Legacy 2.0",
+      "description": "Team Knurdz placed 2nd runners-up at Road to Legacy 2.0 and won the inter-university mini competition: a cross-campus meetup and flagship event linking UOM, UOC, and USJ first-year IT undergraduates.",
+      "src": "/images/achievements/road-to-legacy-2025-second-runners-up/01.jpg",
+      "alt": "Road to Legacy 2.0 01",
+      "date": "2025-05-31",
+      "category": "Conference",
+      "tags": [
+        "conference",
+        "road-to-legacy",
+        "competition"
+      ],
+      "id": "event-77"
+    },
+    {
+      "title": "Road to Legacy 2.0",
+      "description": "Team Knurdz placed 2nd runners-up at Road to Legacy 2.0 and won the inter-university mini competition: a cross-campus meetup and flagship event linking UOM, UOC, and USJ first-year IT undergraduates.",
+      "src": "/images/achievements/road-to-legacy-2025-second-runners-up/02.jpg",
+      "alt": "Road to Legacy 2.0 02",
+      "date": "2025-05-31",
+      "category": "Conference",
+      "tags": [
+        "conference",
+        "road-to-legacy",
+        "competition"
+      ],
+      "id": "event-78"
+    },
+    {
+      "title": "Road to Legacy 2.0",
+      "description": "Team Knurdz placed 2nd runners-up at Road to Legacy 2.0 and won the inter-university mini competition: a cross-campus meetup and flagship event linking UOM, UOC, and USJ first-year IT undergraduates.",
+      "src": "/images/achievements/road-to-legacy-2025-second-runners-up/03.jpg",
+      "alt": "Road to Legacy 2.0 03",
+      "date": "2025-05-31",
+      "category": "Conference",
+      "tags": [
+        "conference",
+        "road-to-legacy",
+        "competition"
+      ],
+      "id": "event-79"
+    },
+    {
+      "title": "Road to Legacy 2.0",
+      "description": "Team Knurdz placed 2nd runners-up at Road to Legacy 2.0 and won the inter-university mini competition: a cross-campus meetup and flagship event linking UOM, UOC, and USJ first-year IT undergraduates.",
+      "src": "/images/achievements/road-to-legacy-2025-second-runners-up/04.jpg",
+      "alt": "Road to Legacy 2.0 04",
+      "date": "2025-05-31",
+      "category": "Conference",
+      "tags": [
+        "conference",
+        "road-to-legacy",
+        "competition"
+      ],
+      "id": "event-80"
+    },
+    {
+      "title": "Xeynergy Mini Competition",
+      "description": "Team Knurdz competed at the Xeynergy Mini Competition: a fast-paced build challenge hosted by Xeynergy, focused on AI-assisted development, creativity, and teamwork.",
+      "src": "/images/achievements/xeynergy-mini-competition/01.jpg",
+      "alt": "Xeynergy Mini Competition 01",
+      "date": "2026-03-06",
+      "category": "Awareness Session",
+      "tags": [
+        "competition",
+        "ai",
+        "xeynergy"
+      ],
+      "id": "event-81"
+    },
+    {
+      "title": "Xeynergy Mini Competition",
+      "description": "Team Knurdz competed at the Xeynergy Mini Competition: a fast-paced build challenge hosted by Xeynergy, focused on AI-assisted development, creativity, and teamwork.",
+      "src": "/images/achievements/xeynergy-mini-competition/02.jpg",
+      "alt": "Xeynergy Mini Competition 02",
+      "date": "2026-03-06",
+      "category": "Awareness Session",
+      "tags": [
+        "competition",
+        "ai",
+        "xeynergy"
+      ],
+      "id": "event-82"
+    },
+    {
+      "title": "Xeynergy Mini Competition",
+      "description": "Team Knurdz competed at the Xeynergy Mini Competition: a fast-paced build challenge hosted by Xeynergy, focused on AI-assisted development, creativity, and teamwork.",
+      "src": "/images/achievements/xeynergy-mini-competition/03.jpg",
+      "alt": "Xeynergy Mini Competition 03",
+      "date": "2026-03-06",
+      "category": "Awareness Session",
+      "tags": [
+        "competition",
+        "ai",
+        "xeynergy"
+      ],
+      "id": "event-83"
+    },
+    {
+      "title": "Xeynergy Mini Competition",
+      "description": "Team Knurdz competed at the Xeynergy Mini Competition: a fast-paced build challenge hosted by Xeynergy, focused on AI-assisted development, creativity, and teamwork.",
+      "src": "/images/achievements/xeynergy-mini-competition/04.jpg",
+      "alt": "Xeynergy Mini Competition 04",
+      "date": "2026-03-06",
+      "category": "Awareness Session",
+      "tags": [
+        "competition",
+        "ai",
+        "xeynergy"
+      ],
+      "id": "event-84"
+    },
+    {
+      "title": "Sherlock 3.0",
+      "description": "Organized by IEEE WIE, SHErlock 3.0 is an immersive, team-based challenge centered on logic, intuition, and investigative thinking.",
+      "src": "/gallery/events/sherlock-3-0/01.jpg",
+      "alt": "Sherlock 3.0 01",
+      "date": "2026-02-07",
+      "category": "Event",
+      "tags": [
+        "workshop",
+        "technology",
+        "community"
+      ],
+      "id": "event-85"
+    },
+    {
+      "title": "Sherlock 3.0",
+      "description": "Organized by IEEE WIE, SHErlock 3.0 is an immersive, team-based challenge centered on logic, intuition, and investigative thinking.",
+      "src": "/gallery/events/sherlock-3-0/02.jpg",
+      "alt": "Sherlock 3.0 02",
+      "date": "2026-02-07",
+      "category": "Event",
+      "tags": [
+        "workshop",
+        "technology",
+        "community"
+      ],
+      "id": "event-86"
+    },
+    {
+      "title": "Sherlock 3.0",
+      "description": "Organized by IEEE WIE, SHErlock 3.0 is an immersive, team-based challenge centered on logic, intuition, and investigative thinking.",
+      "src": "/gallery/events/sherlock-3-0/03.jpg",
+      "alt": "Sherlock 3.0 03",
+      "date": "2026-02-07",
+      "category": "Event",
+      "tags": [
+        "workshop",
+        "technology",
+        "community"
+      ],
+      "id": "event-87"
+    },
+    {
+      "title": "Sherlock 3.0",
+      "description": "Organized by IEEE WIE, SHErlock 3.0 is an immersive, team-based challenge centered on logic, intuition, and investigative thinking.",
+      "src": "/gallery/events/sherlock-3-0/04.png",
+      "alt": "Sherlock 3.0 04",
+      "date": "2026-02-07",
+      "category": "Event",
+      "tags": [
+        "workshop",
+        "technology",
+        "community"
+      ],
+      "id": "event-88"
+    },
+    {
+      "title": "Github Copilot Dev Days Colombo",
+      "description": "Hosted by Microsoft and GitHub: hands-on Copilot in VS Code, CLI workflows, and AI-assisted development.",
+      "src": "/gallery/events/copilot-dev-days/01.jpg",
+      "alt": "Github Copilot Dev Days Colombo 01",
+      "date": "2026-03-30",
+      "category": "Workshop",
+      "tags": [
+        "workshop",
+        "ai",
+        "development"
+      ],
+      "id": "event-89"
+    },
+    {
+      "title": "Github Copilot Dev Days Colombo",
+      "description": "Hosted by Microsoft and GitHub: hands-on Copilot in VS Code, CLI workflows, and AI-assisted development.",
+      "src": "/gallery/events/copilot-dev-days/02.jpg",
+      "alt": "Github Copilot Dev Days Colombo 02",
+      "date": "2026-03-30",
+      "category": "Workshop",
+      "tags": [
+        "workshop",
+        "ai",
+        "development"
+      ],
+      "id": "event-90"
+    },
+    {
+      "title": "Github Copilot Dev Days Colombo",
+      "description": "Hosted by Microsoft and GitHub: hands-on Copilot in VS Code, CLI workflows, and AI-assisted development.",
+      "src": "/gallery/events/copilot-dev-days/03.jpg",
+      "alt": "Github Copilot Dev Days Colombo 03",
+      "date": "2026-03-30",
+      "category": "Workshop",
+      "tags": [
+        "workshop",
+        "ai",
+        "development"
+      ],
+      "id": "event-91"
+    },
+    {
+      "title": "Github Copilot Dev Days Colombo",
+      "description": "Hosted by Microsoft and GitHub: hands-on Copilot in VS Code, CLI workflows, and AI-assisted development.",
+      "src": "/gallery/events/copilot-dev-days/04.jpg",
+      "alt": "Github Copilot Dev Days Colombo 04",
+      "date": "2026-03-30",
+      "category": "Workshop",
+      "tags": [
+        "workshop",
+        "ai",
+        "development"
+      ],
+      "id": "event-92"
+    },
+    {
+      "title": "Cursor Cafe",
+      "description": "A high-energy meetup focused on builder culture and developer productivity with the Cursor IDE.",
+      "src": "/gallery/events/cursor-cafe/01.jpg",
+      "alt": "Cursor Cafe 01",
+      "date": "2026-01-24",
+      "category": "Workshop",
+      "tags": [
+        "workshop",
+        "cursor",
+        "community"
+      ],
+      "id": "event-93"
+    },
+    {
+      "title": "Cursor Cafe",
+      "description": "A high-energy meetup focused on builder culture and developer productivity with the Cursor IDE.",
+      "src": "/gallery/events/cursor-cafe/02.jpg",
+      "alt": "Cursor Cafe 02",
+      "date": "2026-01-24",
+      "category": "Workshop",
+      "tags": [
+        "workshop",
+        "cursor",
+        "community"
+      ],
+      "id": "event-94"
+    },
+    {
+      "title": "Cursor Cafe",
+      "description": "A high-energy meetup focused on builder culture and developer productivity with the Cursor IDE.",
+      "src": "/gallery/events/cursor-cafe/03.jpg",
+      "alt": "Cursor Cafe 03",
+      "date": "2026-01-24",
+      "category": "Workshop",
+      "tags": [
+        "workshop",
+        "cursor",
+        "community"
+      ],
+      "id": "event-95"
+    },
+    {
+      "title": "Cursor Cafe",
+      "description": "A high-energy meetup focused on builder culture and developer productivity with the Cursor IDE.",
+      "src": "/gallery/events/cursor-cafe/04.jpg",
+      "alt": "Cursor Cafe 04",
+      "date": "2026-01-24",
+      "category": "Workshop",
+      "tags": [
+        "workshop",
+        "cursor",
+        "community"
+      ],
+      "id": "event-96"
+    },
+    {
+      "title": "Cursor Meetup Colombo",
+      "description": "First Cursor community meetup in Sri Lanka with Nick Miller — talks, live demos, and networking.",
+      "src": "/gallery/events/cursor-meetup-april/01.jpg",
+      "alt": "Cursor Meetup Colombo 01",
+      "date": "2026-04-09",
+      "category": "Meetup",
+      "tags": [
+        "meetup",
+        "cursor",
+        "community"
+      ],
+      "id": "event-97"
+    },
+    {
+      "title": "Cursor Meetup Colombo",
+      "description": "First Cursor community meetup in Sri Lanka with Nick Miller — talks, live demos, and networking.",
+      "src": "/gallery/events/cursor-meetup-april/02.jpg",
+      "alt": "Cursor Meetup Colombo 02",
+      "date": "2026-04-09",
+      "category": "Meetup",
+      "tags": [
+        "meetup",
+        "cursor",
+        "community"
+      ],
+      "id": "event-98"
+    },
+    {
+      "title": "Cursor Meetup Colombo",
+      "description": "First Cursor community meetup in Sri Lanka with Nick Miller — talks, live demos, and networking.",
+      "src": "/gallery/events/cursor-meetup-april/03.jpg",
+      "alt": "Cursor Meetup Colombo 03",
+      "date": "2026-04-09",
+      "category": "Meetup",
+      "tags": [
+        "meetup",
+        "cursor",
+        "community"
+      ],
+      "id": "event-99"
+    },
+    {
+      "title": "Cursor Meetup Colombo",
+      "description": "First Cursor community meetup in Sri Lanka with Nick Miller — talks, live demos, and networking.",
+      "src": "/gallery/events/cursor-meetup-april/04.jpg",
+      "alt": "Cursor Meetup Colombo 04",
+      "date": "2026-04-09",
+      "category": "Meetup",
+      "tags": [
+        "meetup",
+        "cursor",
+        "community"
+      ],
+      "id": "event-100"
+    },
+    {
+      "title": "Cursor Meetup Colombo — Builder Series",
+      "description": "Live product demos from Buildathon teams, builder stories, and Q&A at DHPL Auditorium.",
+      "src": "/gallery/events/cursor-meetup-builder-series/01.jpg",
+      "alt": "Cursor Meetup Colombo — Builder Series 01",
+      "date": "2026-07-18",
+      "category": "Meetup",
+      "tags": [
+        "cursor",
+        "meetup",
+        "pitch"
+      ],
+      "id": "event-101"
+    },
+    {
+      "title": "Cursor Meetup Colombo — Builder Series",
+      "description": "Live product demos from Buildathon teams, builder stories, and Q&A at DHPL Auditorium.",
+      "src": "/gallery/events/cursor-meetup-builder-series/02.jpg",
+      "alt": "Cursor Meetup Colombo — Builder Series 02",
+      "date": "2026-07-18",
+      "category": "Meetup",
+      "tags": [
+        "cursor",
+        "meetup",
+        "pitch"
+      ],
+      "id": "event-102"
+    },
+    {
+      "title": "Cursor Meetup Colombo — Builder Series",
+      "description": "Live product demos from Buildathon teams, builder stories, and Q&A at DHPL Auditorium.",
+      "src": "/gallery/events/cursor-meetup-builder-series/03.jpg",
+      "alt": "Cursor Meetup Colombo — Builder Series 03",
+      "date": "2026-07-18",
+      "category": "Meetup",
+      "tags": [
+        "cursor",
+        "meetup",
+        "pitch"
+      ],
+      "id": "event-103"
+    },
+    {
+      "title": "Cursor Meetup Colombo — Builder Series",
+      "description": "Live product demos from Buildathon teams, builder stories, and Q&A at DHPL Auditorium.",
+      "src": "/gallery/events/cursor-meetup-builder-series/04.jpg",
+      "alt": "Cursor Meetup Colombo — Builder Series 04",
+      "date": "2026-07-18",
+      "category": "Meetup",
+      "tags": [
+        "cursor",
+        "meetup",
+        "pitch"
+      ],
+      "id": "event-104"
+    },
+    {
+      "title": "Cursor Meetup Colombo — Builder Series",
+      "description": "Live product demos from Buildathon teams, builder stories, and Q&A at DHPL Auditorium.",
+      "src": "/gallery/events/cursor-meetup-builder-series/img-wa0011.jpg",
+      "alt": "Cursor Meetup Colombo — Builder Series (IMG-WA0011)",
+      "date": "2026-07-18",
+      "category": "Meetup",
+      "tags": [
+        "cursor",
+        "meetup",
+        "pitch"
+      ],
+      "id": "event-126"
+    },
+    {
+      "title": "Cursor Meetup Colombo — Builder Series",
+      "description": "Live product demos from Buildathon teams, builder stories, and Q&A at DHPL Auditorium.",
+      "src": "/gallery/events/cursor-meetup-builder-series/img-20260721-101337.jpg",
+      "alt": "Cursor Meetup Colombo — Builder Series pitch",
+      "date": "2026-07-18",
+      "category": "Meetup",
+      "tags": [
+        "cursor",
+        "meetup",
+        "pitch"
+      ],
+      "id": "event-127"
+    },
+    {
+      "title": "Exhibitions",
+      "description": "Knurdz community showcases and exhibition moments.",
+      "src": "/gallery/events/exhibitions/01.jpg",
+      "alt": "Exhibitions 01",
+      "date": "2026-03-01",
+      "category": "Event",
+      "tags": [
+        "community",
+        "exhibition"
+      ],
+      "id": "event-105"
+    },
+    {
+      "title": "Exhibitions",
+      "description": "Knurdz community showcases and exhibition moments.",
+      "src": "/gallery/events/exhibitions/02.jpg",
+      "alt": "Exhibitions 02",
+      "date": "2026-03-01",
+      "category": "Event",
+      "tags": [
+        "community",
+        "exhibition"
+      ],
+      "id": "event-106"
+    },
+    {
+      "title": "Exhibitions",
+      "description": "Knurdz community showcases and exhibition moments.",
+      "src": "/gallery/events/exhibitions/03.jpg",
+      "alt": "Exhibitions 03",
+      "date": "2026-03-01",
+      "category": "Event",
+      "tags": [
+        "community",
+        "exhibition"
+      ],
+      "id": "event-107"
+    },
+    {
+      "title": "Exhibitions",
+      "description": "Knurdz community showcases and exhibition moments.",
+      "src": "/gallery/events/exhibitions/04.jpg",
+      "alt": "Exhibitions 04",
+      "date": "2026-03-01",
+      "category": "Event",
+      "tags": [
+        "community",
+        "exhibition"
+      ],
+      "id": "event-108"
+    },
+    {
+      "title": "Microsoft localhost",
+      "description": "Community session with Microsoft localhost Colombo.",
+      "src": "/gallery/events/microsoft-localhost/01.jpg",
+      "alt": "Microsoft localhost 01",
+      "date": "2026-02-15",
+      "category": "Workshop",
+      "tags": [
+        "workshop",
+        "microsoft",
+        "community"
+      ],
+      "id": "event-109"
+    },
+    {
+      "title": "Microsoft localhost",
+      "description": "Community session with Microsoft localhost Colombo.",
+      "src": "/gallery/events/microsoft-localhost/02.jpg",
+      "alt": "Microsoft localhost 02",
+      "date": "2026-02-15",
+      "category": "Workshop",
+      "tags": [
+        "workshop",
+        "microsoft",
+        "community"
+      ],
+      "id": "event-110"
+    },
+    {
+      "title": "Microsoft localhost",
+      "description": "Community session with Microsoft localhost Colombo.",
+      "src": "/gallery/events/microsoft-localhost/03.jpg",
+      "alt": "Microsoft localhost 03",
+      "date": "2026-02-15",
+      "category": "Workshop",
+      "tags": [
+        "workshop",
+        "microsoft",
+        "community"
+      ],
+      "id": "event-111"
+    },
+    {
+      "title": "Microsoft localhost",
+      "description": "Community session with Microsoft localhost Colombo.",
+      "src": "/gallery/events/microsoft-localhost/04.jpg",
+      "alt": "Microsoft localhost 04",
+      "date": "2026-02-15",
+      "category": "Workshop",
+      "tags": [
+        "workshop",
+        "microsoft",
+        "community"
+      ],
+      "id": "event-112"
+    },
+    {
+      "title": "Phantom Series P01",
+      "description": "Hosted by UnicornX: youth-led startup pitching and expert learning session.",
+      "src": "/gallery/events/phantom-meetup/01.jpg",
+      "alt": "Phantom Series P01 01",
+      "date": "2026-04-30",
+      "category": "Conference",
+      "tags": [
+        "conference",
+        "startup",
+        "pitching"
+      ],
+      "id": "event-113"
+    },
+    {
+      "title": "Phantom Series P01",
+      "description": "Hosted by UnicornX: youth-led startup pitching and expert learning session.",
+      "src": "/gallery/events/phantom-meetup/02.jpg",
+      "alt": "Phantom Series P01 02",
+      "date": "2026-04-30",
+      "category": "Conference",
+      "tags": [
+        "conference",
+        "startup",
+        "pitching"
+      ],
+      "id": "event-114"
+    },
+    {
+      "title": "Phantom Series P01",
+      "description": "Hosted by UnicornX: youth-led startup pitching and expert learning session.",
+      "src": "/gallery/events/phantom-meetup/03.jpg",
+      "alt": "Phantom Series P01 03",
+      "date": "2026-04-30",
+      "category": "Conference",
+      "tags": [
+        "conference",
+        "startup",
+        "pitching"
+      ],
+      "id": "event-115"
+    },
+    {
+      "title": "Phantom Series P01",
+      "description": "Hosted by UnicornX: youth-led startup pitching and expert learning session.",
+      "src": "/gallery/events/phantom-meetup/04.jpg",
+      "alt": "Phantom Series P01 04",
+      "date": "2026-04-30",
+      "category": "Conference",
+      "tags": [
+        "conference",
+        "startup",
+        "pitching"
+      ],
+      "id": "event-116"
+    },
+    {
+      "title": "Deploy Sprint bootcamp",
+      "description": "Mandatory on-campus DevOps bootcamp for Deploy Sprint at the University of Moratuwa.",
+      "src": "/events/deploy-sprint/bootcamp/01.jpeg",
+      "alt": "Deploy Sprint bootcamp 01",
+      "date": "2026-07-05",
+      "category": "Workshop",
+      "tags": [
+        "devops",
+        "deploy-sprint",
+        "hackathon"
+      ],
+      "id": "event-117"
+    },
+    {
+      "title": "Deploy Sprint bootcamp",
+      "description": "Mandatory on-campus DevOps bootcamp for Deploy Sprint at the University of Moratuwa.",
+      "src": "/events/deploy-sprint/bootcamp/02.jpg",
+      "alt": "Deploy Sprint bootcamp 02",
+      "date": "2026-07-05",
+      "category": "Workshop",
+      "tags": [
+        "devops",
+        "deploy-sprint",
+        "hackathon"
+      ],
+      "id": "event-118"
+    },
+    {
+      "title": "Deploy Sprint bootcamp",
+      "description": "Mandatory on-campus DevOps bootcamp for Deploy Sprint at the University of Moratuwa.",
+      "src": "/events/deploy-sprint/bootcamp/knurdz-ds26-091.jpg",
+      "alt": "Deploy Sprint bootcamp — knurdz-ds26-091",
+      "date": "2026-07-05",
+      "category": "Workshop",
+      "tags": [
+        "devops",
+        "deploy-sprint",
+        "hackathon"
+      ],
+      "id": "event-128"
+    },
+    {
+      "title": "Deploy Sprint bootcamp",
+      "description": "Mandatory on-campus DevOps bootcamp for Deploy Sprint at the University of Moratuwa.",
+      "src": "/events/deploy-sprint/bootcamp/knurdz-ds26-042.jpg",
+      "alt": "Deploy Sprint bootcamp — knurdz-ds26-042",
+      "date": "2026-07-05",
+      "category": "Workshop",
+      "tags": [
+        "devops",
+        "deploy-sprint",
+        "hackathon"
+      ],
+      "id": "event-129"
+    },
+    {
+      "title": "Deploy Sprint finale",
+      "description": "Feature rollout finale: release cycles, live cloud deploys, and judging on campus.",
+      "src": "/events/deploy-sprint/finale/img-5030.jpg",
+      "alt": "Deploy Sprint finale — IMG 5030",
+      "date": "2026-07-19",
+      "category": "Hackathon",
+      "tags": [
+        "devops",
+        "deploy-sprint",
+        "hackathon"
+      ],
+      "id": "event-121"
+    },
+    {
+      "title": "Deploy Sprint finale",
+      "description": "Feature rollout finale: release cycles, live cloud deploys, and judging on campus.",
+      "src": "/events/deploy-sprint/finale/img-4763.jpg",
+      "alt": "Deploy Sprint finale — IMG 4763",
+      "date": "2026-07-19",
+      "category": "Hackathon",
+      "tags": [
+        "devops",
+        "deploy-sprint",
+        "hackathon"
+      ],
+      "id": "event-122"
+    },
+    {
+      "title": "Deploy Sprint finale",
+      "description": "Feature rollout finale: release cycles, live cloud deploys, and judging on campus.",
+      "src": "/events/deploy-sprint/finale/img-4736.jpg",
+      "alt": "Deploy Sprint finale — IMG 4736",
+      "date": "2026-07-19",
+      "category": "Hackathon",
+      "tags": [
+        "devops",
+        "deploy-sprint",
+        "hackathon"
+      ],
+      "id": "event-123"
+    },
+    {
+      "title": "Deploy Sprint finale",
+      "description": "Feature rollout finale: release cycles, live cloud deploys, and judging on campus.",
+      "src": "/events/deploy-sprint/finale/img-4810.jpg",
+      "alt": "Deploy Sprint finale — IMG 4810",
+      "date": "2026-07-19",
+      "category": "Hackathon",
+      "tags": [
+        "devops",
+        "deploy-sprint",
+        "hackathon"
+      ],
+      "id": "event-124"
+    },
+    {
+      "title": "Deploy Sprint finale",
+      "description": "Feature rollout finale: release cycles, live cloud deploys, and judging on campus.",
+      "src": "/events/deploy-sprint/finale/img-5020.jpg",
+      "alt": "Deploy Sprint finale — IMG 5020",
+      "date": "2026-07-19",
+      "category": "Hackathon",
+      "tags": [
+        "devops",
+        "deploy-sprint",
+        "hackathon"
+      ],
+      "id": "event-125"
+    },
+    {
+      "title": "OCTAII live build",
+      "description": "Collaborative breadboard sessions wiring registers, decoders, and datapath logic toward an 8-bit CPU.",
+      "src": "/events/octaii/gallery/07.jpg",
+      "alt": "OCTAII live build — workshop bench",
+      "date": "2025-08-28",
+      "category": "Workshop",
+      "tags": [
+        "octaii",
+        "hardware",
+        "workshop"
+      ],
+      "id": "event-130"
+    },
+    {
+      "title": "OCTAII live build",
+      "description": "Hands-on digital logic and CPU building blocks during the August 2025 live-build series.",
+      "src": "/events/octaii/gallery/05.jpg",
+      "alt": "OCTAII live build — breadboard assembly",
+      "date": "2025-08-28",
+      "category": "Workshop",
+      "tags": [
+        "octaii",
+        "hardware",
+        "workshop"
+      ],
+      "id": "event-131"
+    },
+    {
+      "title": "OCTAII workshop",
+      "description": "Knurdz workshop sessions on logic gates, storage, and control paths for the 8-bit CPU program.",
+      "src": "/events/octaii/gallery/08.jpg",
+      "alt": "OCTAII workshop — September 2025",
+      "date": "2025-09-07",
+      "category": "Workshop",
+      "tags": [
+        "octaii",
+        "hardware",
+        "workshop"
+      ],
+      "id": "event-132"
+    },
+    {
+      "title": "OCTAII workshop",
+      "description": "Community hardware program culminating in a live 8-bit CPU build at the University of Moratuwa.",
+      "src": "/events/octaii/gallery/01.jpg",
+      "alt": "OCTAII workshop — group session",
+      "date": "2025-09-10",
+      "category": "Workshop",
+      "tags": [
+        "octaii",
+        "hardware",
+        "workshop"
+      ],
+      "id": "event-133"
+    },
+    {
+      "title": "OCTAII Workshop",
+      "description": "Hands-on digital-logic workshop during the OCTAII program.",
+      "src": "/events/octaii/gallery/02.jpg",
+      "alt": "OCTAII photo 02",
+      "date": "2025-09-10",
+      "category": "Workshop",
+      "tags": [
+        "octaii",
+        "hardware",
+        "workshop"
+      ],
+      "id": "event-134"
+    },
+    {
+      "title": "OCTAII Live Build",
+      "description": "Breadboard and bench work during the OCTAII 8-bit CPU live build.",
+      "src": "/events/octaii/gallery/03.jpg",
+      "alt": "OCTAII photo 03",
+      "date": "2025-08-28",
+      "category": "Workshop",
+      "tags": [
+        "octaii",
+        "hardware",
+        "workshop"
+      ],
+      "id": "event-135"
+    },
+    {
+      "title": "OCTAII Live Build",
+      "description": "Breadboard and bench work during the OCTAII 8-bit CPU live build.",
+      "src": "/events/octaii/gallery/04.jpg",
+      "alt": "OCTAII photo 04",
+      "date": "2025-08-28",
+      "category": "Workshop",
+      "tags": [
+        "octaii",
+        "hardware",
+        "workshop"
+      ],
+      "id": "event-136"
+    },
+    {
+      "title": "OCTAII Live Build",
+      "description": "Breadboard and bench work during the OCTAII 8-bit CPU live build.",
+      "src": "/events/octaii/gallery/06.jpg",
+      "alt": "OCTAII photo 06",
+      "date": "2025-08-28",
+      "category": "Workshop",
+      "tags": [
+        "octaii",
+        "hardware",
+        "workshop"
+      ],
+      "id": "event-137"
+    },
+    {
+      "title": "OCTAII Workshop",
+      "description": "Hands-on digital-logic workshop during the OCTAII program.",
+      "src": "/events/octaii/gallery/09.jpg",
+      "alt": "OCTAII photo 09",
+      "date": "2025-09-07",
+      "category": "Workshop",
+      "tags": [
+        "octaii",
+        "hardware",
+        "workshop"
+      ],
+      "id": "event-138"
+    },
+    {
+      "title": "OCTAII Workshop",
+      "description": "Hands-on digital-logic workshop during the OCTAII program.",
+      "src": "/events/octaii/gallery/10.jpg",
+      "alt": "OCTAII photo 10",
+      "date": "2025-09-10",
+      "category": "Workshop",
+      "tags": [
+        "octaii",
+        "hardware",
+        "workshop"
+      ],
+      "id": "event-139"
+    },
+    {
+      "title": "OCTAII Workshop",
+      "description": "Hands-on digital-logic workshop during the OCTAII program.",
+      "src": "/events/octaii/gallery/11.jpg",
+      "alt": "OCTAII photo 11",
+      "date": "2025-09-14",
+      "category": "Workshop",
+      "tags": [
+        "octaii",
+        "hardware",
+        "workshop"
+      ],
+      "id": "event-140"
+    },
+    {
+      "title": "OCTAII Workshop",
+      "description": "Hands-on digital-logic workshop during the OCTAII program.",
+      "src": "/events/octaii/gallery/12.jpg",
+      "alt": "OCTAII photo 12",
+      "date": "2025-09-14",
+      "category": "Workshop",
+      "tags": [
+        "octaii",
+        "hardware",
+        "workshop"
+      ],
+      "id": "event-141"
+    },
+    {
+      "title": "OCTAII Workshop",
+      "description": "Hands-on digital-logic workshop during the OCTAII program.",
+      "src": "/events/octaii/gallery/13.jpg",
+      "alt": "OCTAII photo 13",
+      "date": "2025-09-14",
+      "category": "Workshop",
+      "tags": [
+        "octaii",
+        "hardware",
+        "workshop"
+      ],
+      "id": "event-142"
+    },
+    {
+      "title": "OCTAII Workshop",
+      "description": "Hands-on digital-logic workshop during the OCTAII program.",
+      "src": "/events/octaii/gallery/14.jpg",
+      "alt": "OCTAII photo 14",
+      "date": "2025-09-14",
+      "category": "Workshop",
+      "tags": [
+        "octaii",
+        "hardware",
+        "workshop"
+      ],
+      "id": "event-143"
+    },
+    {
+      "title": "OCTAII Workshop",
+      "description": "Hands-on digital-logic workshop during the OCTAII program.",
+      "src": "/events/octaii/gallery/15.jpg",
+      "alt": "OCTAII photo 15",
+      "date": "2025-09-14",
+      "category": "Workshop",
+      "tags": [
+        "octaii",
+        "hardware",
+        "workshop"
+      ],
+      "id": "event-144"
+    },
+    {
+      "title": "OCTAII Workshop",
+      "description": "Hands-on digital-logic workshop during the OCTAII program.",
+      "src": "/events/octaii/gallery/16.jpg",
+      "alt": "OCTAII photo 16",
+      "date": "2025-09-09",
+      "category": "Workshop",
+      "tags": [
+        "octaii",
+        "hardware",
+        "workshop"
+      ],
+      "id": "event-145"
+    },
+    {
+      "title": "OCTAII Workshop",
+      "description": "Hands-on digital-logic workshop during the OCTAII program.",
+      "src": "/events/octaii/gallery/17.jpg",
+      "alt": "OCTAII photo 17",
+      "date": "2025-09-10",
+      "category": "Workshop",
+      "tags": [
+        "octaii",
+        "hardware",
+        "workshop"
+      ],
+      "id": "event-146"
+    },
+    {
+      "title": "OCTAII Workshop",
+      "description": "Hands-on digital-logic workshop during the OCTAII program.",
+      "src": "/events/octaii/gallery/18.jpg",
+      "alt": "OCTAII photo 18",
+      "date": "2025-09-10",
+      "category": "Workshop",
+      "tags": [
+        "octaii",
+        "hardware",
+        "workshop"
+      ],
+      "id": "event-147"
+    },
+    {
+      "title": "OCTAII Workshop",
+      "description": "Hands-on digital-logic workshop during the OCTAII program.",
+      "src": "/events/octaii/gallery/19.jpg",
+      "alt": "OCTAII photo 19",
+      "date": "2025-09-10",
+      "category": "Workshop",
+      "tags": [
+        "octaii",
+        "hardware",
+        "workshop"
+      ],
+      "id": "event-148"
+    },
+    {
+      "title": "OCTAII Workshop",
+      "description": "Hands-on digital-logic workshop during the OCTAII program.",
+      "src": "/events/octaii/gallery/20.jpg",
+      "alt": "OCTAII photo 20",
+      "date": "2025-09-10",
+      "category": "Workshop",
+      "tags": [
+        "octaii",
+        "hardware",
+        "workshop"
+      ],
+      "id": "event-149"
+    },
+    {
+      "title": "OCTAII Workshop",
+      "description": "Hands-on digital-logic workshop during the OCTAII program.",
+      "src": "/events/octaii/gallery/21.jpg",
+      "alt": "OCTAII photo 21",
+      "date": "2025-09-13",
+      "category": "Workshop",
+      "tags": [
+        "octaii",
+        "hardware",
+        "workshop"
+      ],
+      "id": "event-150"
+    },
+    {
+      "title": "OCTAII Workshop",
+      "description": "Hands-on digital-logic workshop during the OCTAII program.",
+      "src": "/events/octaii/gallery/22.jpg",
+      "alt": "OCTAII photo 22",
+      "date": "2025-09-13",
+      "category": "Workshop",
+      "tags": [
+        "octaii",
+        "hardware",
+        "workshop"
+      ],
+      "id": "event-151"
+    },
+    {
+      "title": "OCTAII Workshop",
+      "description": "Hands-on digital-logic workshop during the OCTAII program.",
+      "src": "/events/octaii/gallery/23.jpg",
+      "alt": "OCTAII photo 23",
+      "date": "2025-09-13",
+      "category": "Workshop",
+      "tags": [
+        "octaii",
+        "hardware",
+        "workshop"
+      ],
+      "id": "event-152"
+    },
+    {
+      "title": "OCTAII Workshop",
+      "description": "Hands-on digital-logic workshop during the OCTAII program.",
+      "src": "/events/octaii/gallery/24.jpg",
+      "alt": "OCTAII photo 24",
+      "date": "2025-09-13",
+      "category": "Workshop",
+      "tags": [
+        "octaii",
+        "hardware",
+        "workshop"
+      ],
+      "id": "event-153"
+    },
+    {
+      "title": "OCTAII Workshop",
+      "description": "Hands-on digital-logic workshop during the OCTAII program.",
+      "src": "/events/octaii/gallery/25.jpg",
+      "alt": "OCTAII photo 25",
+      "date": "2025-09-13",
+      "category": "Workshop",
+      "tags": [
+        "octaii",
+        "hardware",
+        "workshop"
+      ],
+      "id": "event-154"
+    },
+    {
+      "title": "OCTAII Workshop",
+      "description": "Hands-on digital-logic workshop during the OCTAII program.",
+      "src": "/events/octaii/gallery/26.jpg",
+      "alt": "OCTAII photo 26",
+      "date": "2025-09-13",
+      "category": "Workshop",
+      "tags": [
+        "octaii",
+        "hardware",
+        "workshop"
+      ],
+      "id": "event-155"
+    },
+    {
+      "title": "OCTAII Workshop",
+      "description": "Hands-on digital-logic workshop during the OCTAII program.",
+      "src": "/events/octaii/gallery/27.jpg",
+      "alt": "OCTAII photo 27",
+      "date": "2025-09-13",
+      "category": "Workshop",
+      "tags": [
+        "octaii",
+        "hardware",
+        "workshop"
+      ],
+      "id": "event-156"
+    },
+    {
+      "title": "OCTAII Workshop",
+      "description": "Hands-on digital-logic workshop during the OCTAII program.",
+      "src": "/events/octaii/gallery/28.jpg",
+      "alt": "OCTAII photo 28",
+      "date": "2025-09-13",
+      "category": "Workshop",
+      "tags": [
+        "octaii",
+        "hardware",
+        "workshop"
+      ],
+      "id": "event-157"
+    },
+    {
+      "title": "OCTAII Workshop",
+      "description": "Hands-on digital-logic workshop during the OCTAII program.",
+      "src": "/events/octaii/gallery/29.jpg",
+      "alt": "OCTAII photo 29",
+      "date": "2025-09-13",
+      "category": "Workshop",
+      "tags": [
+        "octaii",
+        "hardware",
+        "workshop"
+      ],
+      "id": "event-158"
+    },
+    {
+      "title": "OCTAII Workshop",
+      "description": "Hands-on digital-logic workshop during the OCTAII program.",
+      "src": "/events/octaii/gallery/30.jpg",
+      "alt": "OCTAII photo 30",
+      "date": "2025-09-13",
+      "category": "Workshop",
+      "tags": [
+        "octaii",
+        "hardware",
+        "workshop"
+      ],
+      "id": "event-159"
     }
   ],
   "projects": [
     {
       "id": "project-gallery-1",
       "title": "Sonar Code Editor Launch",
-      "description": "A new chapter for code quality at UoM. Capturing the moment Sonar made its official debut at the Faculty of Information Technology, University of Moratuwa. From a vision of building a more secure, proctored, and collaborative coding environment to seeing it live in the hands of our fellow undergraduates—this initial launch is just the beginning.",
+      "description": "A new chapter for code quality at UoM. Capturing the moment Sonar made its official debut at the Faculty of Information Technology, University of Moratuwa. From a vision of building a more secure, proctored, and collaborative coding environment to seeing it live in the hands of our fellow undergraduates, this initial launch is just the beginning.",
       "src": "/gallery/project-1.jpeg",
       "alt": "Project showcase 1",
       "date": "2026-03-11",
       "category": "Development",
-      "tags": ["workshop", "learning", "development"]
+      "tags": [
+        "workshop",
+        "learning",
+        "development"
+      ]
     }
   ],
   "team": [
     {
       "id": "team-gallery-1",
       "title": "Pre-Launch Prep at UoM IT",
-      "description": "A glimpse into the final hours before Sonar hits the Faculty of IT at UoM. There’s something special about these sessions—the intense focus, the sound of mechanical keyboards, and the shared mission of building something from scratch. From debugging the last few edge cases to refining the proctoring logic, our team is making sure everything is mission-ready for the University of Moratuwa.",
+      "description": "A glimpse into the final hours before Sonar hits the Faculty of IT at UoM. There’s something special about these sessions, the intense focus, the sound of mechanical keyboards, and the shared mission of building something from scratch. From debugging the last few edge cases to refining the proctoring logic, our team is making sure everything is mission-ready for the University of Moratuwa.",
       "src": "/gallery/team-1.jpeg",
       "alt": "Team working together",
       "date": "2026-03-10",
       "category": "Team Culture",
-      "tags": ["team", "collaboration"]
+      "tags": [
+        "team",
+        "collaboration"
+      ]
     },
     {
       "id": "team-gallery-2",
       "title": "The Sonar Development Sessions",
-      "description": "Another session, another milestone. We’re constantly iterating on Sonar to make sure the initial launch at UoM is nothing short of excellent. From refining the installer to optimizing the editor's performance—the grind never stops. We can’t wait to show the IT Faculty what we’ve been building",
+      "description": "Another session, another milestone. We’re constantly iterating on Sonar to make sure the initial launch at UoM is nothing short of excellent. From refining the installer to optimizing the editor's performance, the grind never stops. We can’t wait to show the IT Faculty what we’ve been building",
       "src": "/gallery/team-2.jpeg",
       "alt": "Team event",
       "date": "2026-03-05",
       "category": "Team Culture",
-      "tags": ["team", "event"]
+      "tags": [
+        "team",
+        "event"
+      ]
     },
     {
       "id": "team-gallery-3",
       "title": "The Sonar Development Sessions",
-      "description": "This session was all about the 'bug hunt'—tracking down those elusive glitches in the proctoring engine and ensuring the Electron core is rock solid. It’s a cycle of break, fix, and repeat until Sonar is as resilient as the students who will use it. We're refining every detail at the UoM IT Faculty to ensure a seamless experience on day one.",
+      "description": "This session was all about the 'bug hunt', tracking down those elusive glitches in the proctoring engine and ensuring the Electron core is rock solid. It’s a cycle of break, fix, and repeat until Sonar is as resilient as the students who will use it. We're refining every detail at the UoM IT Faculty to ensure a seamless experience on day one.",
       "src": "/gallery/team-3.jpeg",
       "alt": "Team workspace",
       "date": "2026-02-28",
       "category": "Team Culture",
-      "tags": ["team", "workspace"]
+      "tags": [
+        "team",
+        "workspace"
+      ]
     },
     {
       "id": "team-gallery-4",
@@ -482,7 +2218,10 @@
       "alt": "Team collaboration",
       "date": "2026-02-20",
       "category": "Team Culture",
-      "tags": ["team", "collaboration"]
+      "tags": [
+        "team",
+        "collaboration"
+      ]
     },
     {
       "id": "team-gallery-5",
@@ -492,7 +2231,10 @@
       "alt": "Team activity",
       "date": "2026-02-10",
       "category": "Team Culture",
-      "tags": ["team", "activity"]
+      "tags": [
+        "team",
+        "activity"
+      ]
     },
     {
       "id": "team-gallery-6",
@@ -502,7 +2244,10 @@
       "alt": "Team moment",
       "date": "2026-01-25",
       "category": "Team Culture",
-      "tags": ["team", "culture"]
+      "tags": [
+        "team",
+        "culture"
+      ]
     },
     {
       "id": "team-gallery-7",
@@ -512,7 +2257,10 @@
       "alt": "Team gathering",
       "date": "2026-01-10",
       "category": "Team Culture",
-      "tags": ["team", "gathering"]
+      "tags": [
+        "team",
+        "gathering"
+      ]
     }
   ]
 }

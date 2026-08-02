@@ -29,6 +29,7 @@ const NAV_COMMANDS: Record<string, NavTarget> = {
   partners: { type: "route", path: "/partners" },
   blog: { type: "route", path: "/blog" },
   about: { type: "route", path: "/about" },
+  team: { type: "route", path: "/team" },
   contact: { type: "route", path: "/contact" },
   "join-us": { type: "route", path: "/join-us" },
   footer: { type: "scroll", target: "footer" },

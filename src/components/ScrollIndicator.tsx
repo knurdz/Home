@@ -17,10 +17,10 @@ const DEFAULT_SECTIONS: ScrollSection[] = [
 
 export const HOME_SCROLL_SECTIONS: ScrollSection[] = [
   { label: "home", id: "hero" },
-  { label: "partners", id: "partners" },
-  { label: "projects", id: "projects" },
-  { label: "proof", id: "events" },
   { label: "community", id: "community" },
+  { label: "events", id: "events" },
+  { label: "projects", id: "projects" },
+  { label: "partners", id: "partners" },
   { label: "cta", id: "cta" },
   { label: "footer" },
 ];
@@ -39,7 +39,7 @@ export default function ScrollIndicator({ sections = DEFAULT_SECTIONS }: ScrollI
     () =>
       sections.map((_, index) => {
         if (sections.length === 1) return "50%";
-        // First section (home) at bottom; last section at top — matches line fill direction
+        // First section (home) at bottom; last section at top: matches line fill direction
         const reversedIndex = sections.length - 1 - index;
         return `${(reversedIndex / (sections.length - 1)) * 100}%`;
       }),

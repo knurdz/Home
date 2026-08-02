@@ -29,7 +29,7 @@ export async function POST(request: Request) {
       from: `"Knurdz Contact" <${process.env.SMTP_USER}>`,
       to: process.env.EMAIL_TO,
       replyTo: email,
-      subject: `[Knurdz] ${subject} — from ${name}`,
+      subject: `[Knurdz] ${subject} (from ${name})`,
       html: `
         <div style="font-family:monospace;background:#000;color:#fff;padding:32px;border-radius:8px;max-width:600px;">
           <h2 style="color:#22c55e;margin:0 0 24px;">New Contact Form Submission</h2>

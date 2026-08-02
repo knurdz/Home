@@ -9,6 +9,8 @@ export type {
   EventMatter,
   EventStatus,
   OrganizerModule,
+  ProgramPhase,
+  EventGallerySection,
 } from "@/lib/event-types";
 
 export {

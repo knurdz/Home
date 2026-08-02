@@ -157,7 +157,7 @@ a, button {
 }
 .mono-font { font-family: 'JetBrains Mono', monospace; }
 
-/* Reading font applies to detail body content — not navbar, footer, or font picker chrome */
+/* Reading font applies to detail body content: not navbar, footer, or font picker chrome */
 
 :is(
     .blog-content,
@@ -216,7 +216,7 @@ a, button {
   line-height: 1.75;
 }
 
-/* Mono: slightly smaller body text only — headings keep Tailwind sizes */
+/* Mono: slightly smaller body text only: headings keep Tailwind sizes */
 .reading-font-mono.detail-reading-body :is(p, li),
 .reading-font-mono.blog-feed-excerpt,
 .reading-font-mono.blog-feed-meta {
@@ -422,12 +422,12 @@ body.light ::selection {
     color: #1a1a2e;
 }
 
-/* Strategic partner logo — monochrome in light theme only */
+/* Strategic partner logo: monochrome in light theme only */
 body.light .strategic-partner-logo {
     filter: brightness(0);
 }
 
-/* Partner grid logos — preserve full color in light theme */
+/* Partner grid logos: preserve full color in light theme */
 body.light .partner-logo {
     -webkit-filter: none !important;
     filter: none !important;
@@ -532,7 +532,7 @@ body.light .shadow-black\/20 {
 
 /* ── Light theme: extended contrast fixes ───────────────────────── */
 
-/* 1. Terminal cursor — swap green for indigo */
+/* 1. Terminal cursor: swap green for indigo */
 body.light .blinking-cursor {
     color: #16a34a;
 }
@@ -591,7 +591,7 @@ body.light .group-hover\:border-green-500 {
     border-color: rgba(22, 163, 74, 0.5) !important;
 }
 
-/* 5. git branch dot circles (SVG fill attribute — override via CSS fill) */
+/* 5. git branch dot circles (SVG fill attribute: override via CSS fill) */
 body.light circle[fill="#22c55e"] {
     fill: #16a34a;
 }
@@ -703,7 +703,7 @@ body.light span.text-green-500 {
     color: #16a34a !important;
 }
 
-/* 23. Contact form inputs — light background */
+/* 23. Contact form inputs: light background */
 body.light .bg-background-alt {
     background-color: var(--background-alt);
     color: var(--foreground);
@@ -995,87 +995,57 @@ body.light .join-banner-btn:hover {
   background-color: #f4f4f5 !important;
 }
 
-/* Banner slider — keep dark photo overlay in both themes */
-.banner-slider-scrim-main {
-  height: 72%;
+.banner-slider-scrim-subtle {
   background: linear-gradient(
-    to top,
-    rgba(0, 0, 0, 0.96) 0%,
-    rgba(0, 0, 0, 0.78) 32%,
-    rgba(0, 0, 0, 0.48) 56%,
-    transparent 100%
+    to bottom,
+    rgba(0, 0, 0, 0.14) 0%,
+    transparent 28%,
+    transparent 62%,
+    rgba(0, 0, 0, 0.06) 100%
   );
 }
-.banner-slider-scrim-base {
-  height: 9.5rem;
+.banner-slider-scrim-caption {
+  height: 7.5rem;
   background: linear-gradient(
     to top,
-    rgba(0, 0, 0, 0.92) 0%,
+    rgba(0, 0, 0, 0.78) 0%,
+    rgba(0, 0, 0, 0.52) 42%,
+    rgba(0, 0, 0, 0.22) 72%,
     transparent 100%
   );
 }
 @media (min-width: 640px) {
-  .banner-slider-scrim-main {
-    height: 87%;
-  }
-  .banner-slider-scrim-base {
-    height: 11.5rem;
+  .banner-slider-scrim-caption {
+    height: 8.5rem;
   }
 }
 @media (min-width: 768px) {
-  .banner-slider-scrim-main {
-    height: 95%;
+  .banner-slider-scrim-caption {
+    height: 9.5rem;
     background: linear-gradient(
       to top,
-      rgba(0, 0, 0, 0.95) 0%,
-      rgba(0, 0, 0, 0.85) 30%,
-      rgba(0, 0, 0, 0.6) 55%,
-      rgba(0, 0, 0, 0.28) 75%,
-      transparent 100%
-    );
-  }
-  .banner-slider-scrim-base {
-    height: 15.5rem;
-  }
-}
-@media (min-width: 1024px) {
-  .banner-slider-scrim-main {
-    height: 96%;
-    background: linear-gradient(
-      to top,
-      rgba(0, 0, 0, 0.97) 0%,
-      rgba(0, 0, 0, 0.91) 24%,
-      rgba(0, 0, 0, 0.78) 44%,
-      rgba(0, 0, 0, 0.55) 60%,
-      rgba(0, 0, 0, 0.32) 74%,
-      transparent 100%
-    );
-  }
-  .banner-slider-scrim-base {
-    height: 13rem;
-    background: linear-gradient(
-      to top,
-      rgba(0, 0, 0, 0.95) 0%,
-      rgba(0, 0, 0, 0.45) 55%,
+      rgba(0, 0, 0, 0.82) 0%,
+      rgba(0, 0, 0, 0.55) 38%,
+      rgba(0, 0, 0, 0.2) 68%,
       transparent 100%
     );
   }
 }
 .banner-slider-image {
-  object-position: center 42%;
+  object-position: center 48%;
 }
 @media (min-width: 768px) {
   .banner-slider-image {
-    object-position: var(--banner-object-pos, center 54%);
+    object-position: var(--banner-object-pos, center 58%);
   }
 }
 .banner-slider-title {
   color: #ffffff;
-  text-shadow: 0 1px 12px rgba(0, 0, 0, 0.45);
+  text-shadow: 0 1px 14px rgba(0, 0, 0, 0.55);
 }
 .banner-slider-desc {
-  color: rgba(255, 255, 255, 0.82);
-  text-shadow: 0 1px 8px rgba(0, 0, 0, 0.35);
+  color: rgba(255, 255, 255, 0.88);
+  text-shadow: 0 1px 10px rgba(0, 0, 0, 0.45);
 }
 
 /* Blog markdown code blocks */
@@ -1134,5 +1104,42 @@ body.light .blog-content code.rounded-md {
 
 .blog-content .blog-code-block pre::-webkit-scrollbar-track {
   background: transparent;
+}
+
+/* Home page */
+.home-hero-grid {
+  background-image:
+    linear-gradient(var(--grid-color) 1px, transparent 1px),
+    linear-gradient(90deg, var(--grid-color) 1px, transparent 1px);
+  background-size: 48px 48px;
+  mask-image: linear-gradient(to bottom, black 0%, transparent 85%);
+  opacity: 0.45;
+}
+
+.home-welcome-panel {
+  background:
+    linear-gradient(145deg, rgba(34, 197, 94, 0.06) 0%, transparent 55%),
+    var(--card);
+}
+
+.home-cta-panel {
+  background:
+    linear-gradient(135deg, rgba(34, 197, 94, 0.08) 0%, transparent 45%),
+    var(--card);
+}
+
+.home-cta-glow {
+  background: radial-gradient(
+    ellipse 80% 60% at 100% 0%,
+    rgba(34, 197, 94, 0.12),
+    transparent 70%
+  );
+}
+
+.scrollbar-none {
+  scrollbar-width: none;
+}
+.scrollbar-none::-webkit-scrollbar {
+  display: none;
 }
 

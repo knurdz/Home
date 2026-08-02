@@ -30,6 +30,6 @@ Students juggle fragmented tools for messaging, scheduling, marketplace listings
 
 ## Status
 
-**Upcoming** — in active development on the `feature/marketplace` branch. Detail page and public launch coming soon.
+**Upcoming**: in active development on the `feature/marketplace` branch. Detail page and public launch coming soon.
 
 ---

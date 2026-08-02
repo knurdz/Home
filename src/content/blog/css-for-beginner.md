@@ -149,9 +149,9 @@ p {
     font-size: 1.2rem;  /\* root element එකට සාපේක්ෂව \*/  
 }
 
--   **px** — fixed size එකක්, screen size එක වෙනස් වුණත් ඒකම තියෙනවා.
--   **em** — parent element එකේ size එකට සාපේක්ෂව change වෙනවා.
--   **rem** — root element (සාමාන්යයෙන් <html>) size එකට සාපේක්ෂව, responsive designs වලට හොඳයි.
+-   **px**: fixed size එකක්, screen size එක වෙනස් වුණත් ඒකම තියෙනවා.
+-   **em**: parent element එකේ size එකට සාපේක්ෂව change වෙනවා.
+-   **rem**: root element (සාමාන්යයෙන් <html>) size එකට සාපේක්ෂව, responsive designs වලට හොඳයි.
 
 **Try This:** <p> tag එකක font-size 20px කරලා බලන්න. ඊට පස්සේ 1.5em කරලා වෙනස බලන්න!
 
@@ -165,9 +165,9 @@ p {
     font-weight: 600;       /\*custom\*/  
 }
 
--   **normal** — සාමාන්ය (400).
--   **bold** — bold text (700).
--   **100 සිට 900** — විවිධ weight levels තෝරාගන්න පුළුවන්.
+-   **normal**: සාමාන්ය (400).
+-   **bold**: bold text (700).
+-   **100 සිට 900**: විවිධ weight levels තෝරාගන්න පුළුවන්.
 
 **Try This:** <p> tag එකකට bold font-weight දාලා බලන්න. text එක බර වෙනවා!
 
@@ -186,10 +186,10 @@ p {
     color: rgba(255, 0, 0, 0.5);  
 }
 
--   By name — red, blue වගේ.
--   By Hex Code — #FF0000 (රතු).
--   **RGB** — numbers වලින් (255, 0, 0).
--   **RGBA** — opacity එක්ක (0–1).
+-   By name: red, blue වගේ.
+-   By Hex Code: #FF0000 (රතු).
+-   **RGB**: numbers වලින් (255, 0, 0).
+-   **RGBA**: opacity එක්ක (0–1).
 
 **Try This:** <p> tag එකකට color: blue දාලා බලන්න. RGB වලින් රතු කරලත් බලන්න!
 
@@ -219,9 +219,9 @@ div {
     padding: 10px 20px 15px 25px; /\* උඩ, දකුණ, පහළ, වම \*/  
 }
 
--   **value එකක්** — සියලු පැතිවලට same padding එක.
--   **Value දෙකක්** — උඩ/පහළ, වම/දකුණ.
--   **Value හතරක්** — උඩ, දකුණ, පහළ, වම.
+-   **value එකක්**: සියලු පැතිවලට same padding එක.
+-   **Value දෙකක්**: උඩ/පහළ, වම/දකුණ.
+-   **Value හතරක්**: උඩ, දකුණ, පහළ, වම.
 
 #### 2\. Margin
 
@@ -233,7 +233,7 @@ div {
     margin: 10px 20px 15px 25px; /\* උඩ, දකුණ, පහළ, වම \*/  
 }
 
--   margin: 10px auto; — element එක horizontally center කරනවා.
+-   margin: 10px auto;: element එක horizontally center කරනවා.
 
 #### 3\. Border
 
@@ -245,8 +245,8 @@ div {
     border-style: dashed;        /\* වෙනස් බෝඩර් ස්ටයිල් \*/  
 }
 
--   border — width, style, color එකතු කරනවා.
--   border-radius — corners වටකුරු කරනවා.
+-   border: width, style, color එකතු කරනවා.
+-   border-radius: corners වටකුරු කරනවා.
 
 **Try This:** <div> එකකට padding: 20px, margin: 20px, border: 2px solid red දාලා browser එකේ open කරලා බලන්න. Values change කරලා වෙනස බලන්න!
 
@@ -528,9 +528,9 @@ img {
     display: block;  
 }
 
--   **max-width: 100%;** — Image එක container එකෙන් එළියට යන්නේ නැහැ. Screen එකට ගැළපෙනවා.
--   **height: auto;** — Image එකේ height එක aspect ratio එක රැකගෙන adjust වෙනවා.
--   **display: block;** — Image එක block element එකක් විදිහට පෙන්වනවා.
+-   **max-width: 100%;**: Image එක container එකෙන් එළියට යන්නේ නැහැ. Screen එකට ගැළපෙනවා.
+-   **height: auto;**: Image එකේ height එක aspect ratio එක රැකගෙන adjust වෙනවා.
+-   **display: block;**: Image එක block element එකක් විදිහට පෙන්වනවා.
 
 ### CSS Transformations
 

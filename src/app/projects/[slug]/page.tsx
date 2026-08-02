@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
+import type { Element } from "hast";
 import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
 import { getProjectBySlug, getAllProjectSlugs } from "@/lib/projects";
@@ -10,6 +11,25 @@ import React from 'react'
 
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+
+function isElement(node: unknown): node is Element {
+  return (
+    typeof node === "object" &&
+    node !== null &&
+    "type" in node &&
+    (node as Element).type === "element"
+  );
+}
+
+function paragraphShouldUnwrap(node: unknown) {
+  if (!isElement(node) || node.tagName !== "p") return false;
+  const child = node.children[0];
+  return (
+    node.children.length === 1 &&
+    isElement(child) &&
+    (child.tagName === "img" || child.tagName === "pre")
+  );
+}
 
 interface ArchitectureBox {
   title: string;
@@ -261,11 +281,16 @@ export default async function ProjectPage({ params }: PageProps) {
                   {children}
                 </h3>
               ),
-              p: ({ children }) => (
-                <p className="text-muted leading-relaxed mb-5 text-lg">
-                  {children}
-                </p>
-              ),
+              p: ({ node, children }) => {
+                if (paragraphShouldUnwrap(node)) {
+                  return <>{children}</>;
+                }
+                return (
+                  <p className="text-muted leading-relaxed mb-5 text-lg">
+                    {children}
+                  </p>
+                );
+              },
               code: ({ children, className }) => {
                 const isInline = !className;
                 return isInline ? (

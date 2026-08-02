@@ -27,5 +27,20 @@
     "website": "https://edu.ieee.org/lk-uomwie/",
     "description": "IEEE Women in Engineering (WIE) is a global network of IEEE members and volunteers dedicated to promoting women engineers and scientists.",
     "projects": []
+  },
+  {
+    "name": "IEEE IAS SBC, University of Moratuwa",
+    "logo": "/partner-logos/IEEE_IAS.webp",
+    "website": "https://ias.uom.lk/",
+    "description": "The IEEE Industry Applications Society Student Branch Chapter at the University of Moratuwa advances the theory and practice of electrical and electronic engineering through lectures, events, and community-focused engineering solutions.",
+    "projects": []
+  },
+  {
+    "name": "Batch 24, Faculty of Information Technology, University of Moratuwa",
+    "logo": "/partner-logos/uom-itfac-logo-on-dark.png",
+    "logoLight": "/partner-logos/uom-itfac-logo.png",
+    "website": "https://uom.lk/itfac",
+    "description": "Batch 24 of the Faculty of Information Technology at the University of Moratuwa: undergraduates from Sri Lanka's first dedicated IT faculty in the national university system, with programmes in IT, IT & Management, and Artificial Intelligence.",
+    "projects": []
   }
 ]

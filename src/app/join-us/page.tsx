@@ -44,7 +44,7 @@ export default function JoinUsPage() {
                 </h2>
                 <p className="text-muted text-sm leading-relaxed max-w-xl mx-auto">
                   We&apos;re not accepting new applications at the moment. This intake cycle has reached
-                  its capacity — check back soon for the next opportunity to join Knurdz.
+                  its capacity. Check back soon for the next opportunity to join Knurdz.
                 </p>
               </div>
             </div>

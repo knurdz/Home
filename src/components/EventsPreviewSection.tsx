@@ -54,7 +54,7 @@ export default function EventsPreviewSection({ events }: { events: EventData[] }
             >
               <PreviewCardImage
                 src={event.image}
-                priority={event.slug === "deploy-spring"}
+                priority={event.slug === "deploy-sprint"}
                 className={event.status === "upcoming" ? "opacity-80" : ""}
               />
 

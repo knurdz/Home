@@ -1,0 +1,68 @@
+{
+  "items": [
+    {
+      "url": "https://www.facebook.com/permalink.php?story_fbid=pfbid02vq34Dn6FeZV2b16Yviy4q45YWXEyxfPYbcQTyhxBzYjDmPmndGhJLtTJfexjeHgcl&id=61579574973113",
+      "title": "Deploy Sprint bootcamp",
+      "description": "Mandatory on-campus DevOps bootcamp for Deploy Sprint: Git branching, Docker, GitHub Secrets, and cloud deploy workflows with University of Moratuwa undergraduates.",
+      "date": "2026-07-05",
+      "category": "Workshop",
+      "tags": ["devops", "hackathon", "deploy-sprint", "community"]
+    },
+    {
+      "localPath": "public/banner/bootcamp-group-pic.jpg",
+      "title": "Deploy Sprint bootcamp",
+      "description": "Knurdz × Leo Club builders at the Deploy Sprint hands-on bootcamp on campus at the University of Moratuwa.",
+      "date": "2026-07-05",
+      "category": "Workshop",
+      "tags": ["devops", "hackathon", "deploy-sprint", "community"]
+    },
+    {
+      "localPath": "public/events/deploy-sprint/online-workshop-1.jpg",
+      "title": "Deploy Sprint online workshop",
+      "description": "Industry-led GitHub Actions session with Deploy Sprint teams ahead of the virtual qualifier.",
+      "date": "2026-07-01",
+      "category": "Workshop",
+      "tags": ["devops", "github-actions", "deploy-sprint"]
+    },
+    {
+      "localPath": "public/events/deploy-sprint/online-workshop-2.jpg",
+      "title": "Deploy Sprint online workshop",
+      "description": "Hands-on walkthrough during the Deploy Sprint virtual workshop for UoM undergraduate teams.",
+      "date": "2026-07-01",
+      "category": "Workshop",
+      "tags": ["devops", "github-actions", "deploy-sprint"]
+    },
+    {
+      "localPath": "public/images/achievements/7.jpg",
+      "title": "Proxy Maze '26",
+      "description": "Team Knurdz at the Proxy Maze '26 finale after advancing through the top 25 and top 8, receiving the Most Popular Team award at Torch Proxies' university hackathon.",
+      "date": "2026-07-14",
+      "category": "Hackathon",
+      "tags": ["hackathon", "proxymaze", "competition"]
+    },
+    {
+      "localPath": "public/images/achievements/8.jpg",
+      "title": "Aurora 2026",
+      "description": "Team Knurdz Neural among the top 10 finalists in the Agentic AI Challenge at Aurora 2026, Sri Lanka's premier university computing conference.",
+      "date": "2026-07-07",
+      "category": "Competition",
+      "tags": ["competition", "ai", "aurora"]
+    },
+    {
+      "localPath": "public/images/achievements/9.jpg",
+      "title": "RoboRoarZ International",
+      "description": "Two Knurdz teams at the RoboRoarZ International tertiary league finale, competing on Smorphi reconfigurable robotics alongside universities across Asia and the Middle East.",
+      "date": "2026-07-08",
+      "category": "Robotics",
+      "tags": ["robotics", "competition", "roboroarz"]
+    },
+    {
+      "url": "https://www.linkedin.com/posts/praveen-r-b374612aa_nexusos-knurdz-cursor-activity-7485652721933443072-Hou-",
+      "title": "Cursor Meetup Colombo — Builder Series pitch",
+      "description": "Team Knurdz pitching Nexus OS at Cursor Meetup Colombo: The Builder Series at DHPL Auditorium — live product demo and Q&A with the Cursor Colombo community.",
+      "date": "2026-07-18",
+      "category": "Meetup",
+      "tags": ["cursor", "meetup", "pitch", "nexus-os"]
+    }
+  ]
+}

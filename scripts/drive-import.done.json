@@ -1,0 +1,912 @@
+{
+  "files": {
+    "1HbLW0sh7bjNdkbBUIUW7JSkqBBcvWstt": {
+      "publicSrc": "/images/achievements/aurora-2026-agentic-ai/01.jpg",
+      "dest": "/Users/rk_vishva/Documents/Projects/Knurdz/home/public/images/achievements/aurora-2026-agentic-ai/01.jpg",
+      "driveName": "Copy of 746590603_1327856339470458_1763489632297350243_n.jpg",
+      "importedAt": "2026-08-02T14:42:33.865Z",
+      "aboutEventId": "event-51"
+    },
+    "1aa9tFTElQQLUhyAyyF2ElPZONhU9btzF": {
+      "publicSrc": "/images/achievements/aurora-2026-agentic-ai/02.jpg",
+      "dest": "/Users/rk_vishva/Documents/Projects/Knurdz/home/public/images/achievements/aurora-2026-agentic-ai/02.jpg",
+      "driveName": "Copy of FB_IMG_1784799787260.jpg",
+      "importedAt": "2026-08-02T14:42:35.350Z",
+      "aboutEventId": "event-52"
+    },
+    "1xYWMiBtow2GZJ6_VXFqP102F9YhHJa0B": {
+      "publicSrc": "/images/achievements/aurora-2026-agentic-ai/03.jpg",
+      "dest": "/Users/rk_vishva/Documents/Projects/Knurdz/home/public/images/achievements/aurora-2026-agentic-ai/03.jpg",
+      "driveName": "Copy of FB_IMG_1784800126932.jpg",
+      "importedAt": "2026-08-02T14:42:37.036Z",
+      "aboutEventId": "event-53"
+    },
+    "1QX4n-dbs6uig7_mck96toOoHOzNX22WA": {
+      "publicSrc": "/images/achievements/aurora-2026-agentic-ai/04.jpg",
+      "dest": "/Users/rk_vishva/Documents/Projects/Knurdz/home/public/images/achievements/aurora-2026-agentic-ai/04.jpg",
+      "driveName": "Copy of img_1_1784865977969.jpg",
+      "importedAt": "2026-08-02T14:42:38.409Z",
+      "aboutEventId": "event-54"
+    },
+    "1g1qrEK4JdHQmhsPSmoO6iT2uEoBF07fs": {
+      "publicSrc": "/images/achievements/aurora-2026-agentic-ai/05.jpg",
+      "dest": "/Users/rk_vishva/Documents/Projects/Knurdz/home/public/images/achievements/aurora-2026-agentic-ai/05.jpg",
+      "driveName": "Copy of IMG_20260718_092238693.jpg",
+      "importedAt": "2026-08-02T14:42:41.643Z"
+    },
+    "1VOzgXIIX5ie8VnYjpUNGPNzqVFDtBSYx": {
+      "publicSrc": "/images/achievements/aurora-2026-agentic-ai/06.jpg",
+      "dest": "/Users/rk_vishva/Documents/Projects/Knurdz/home/public/images/achievements/aurora-2026-agentic-ai/06.jpg",
+      "driveName": "Copy of PXL_20260718_043415451~2.jpg",
+      "importedAt": "2026-08-02T14:42:43.416Z"
+    },
+    "1G33NksBj71O7uU1QUW80TLs8QM5pa3PL": {
+      "publicSrc": "/images/achievements/aurora-2026-agentic-ai/07.jpg",
+      "dest": "/Users/rk_vishva/Documents/Projects/Knurdz/home/public/images/achievements/aurora-2026-agentic-ai/07.jpg",
+      "driveName": "Copy of PXL_20260718_044149622~2.jpg",
+      "importedAt": "2026-08-02T14:42:45.776Z"
+    },
+    "1qoerrd2HI9LQiad3v8eZZ7wm7RfUTGc8": {
+      "publicSrc": "/images/achievements/aurora-2026-agentic-ai/08.jpg",
+      "dest": "/Users/rk_vishva/Documents/Projects/Knurdz/home/public/images/achievements/aurora-2026-agentic-ai/08.jpg",
+      "driveName": "Copy of PXL_20260718_073053882~2.jpg",
+      "importedAt": "2026-08-02T14:42:47.246Z"
+    },
+    "1P9VTOLByyK8Zb_Le1DcokDCP-HPI9VCI": {
+      "publicSrc": "/images/achievements/cursor-buildathon-2026-n8n/01.jpg",
+      "dest": "/Users/rk_vishva/Documents/Projects/Knurdz/home/public/images/achievements/cursor-buildathon-2026-n8n/01.jpg",
+      "driveName": "Copy of binara.events-003.jpg",
+      "importedAt": "2026-08-02T14:42:49.645Z",
+      "aboutEventId": "event-55"
+    },
+    "14SSZF_r26hcj0U-FY7qCgGdeXZVAdhgY": {
+      "publicSrc": "/images/achievements/cursor-buildathon-2026-n8n/02.jpg",
+      "dest": "/Users/rk_vishva/Documents/Projects/Knurdz/home/public/images/achievements/cursor-buildathon-2026-n8n/02.jpg",
+      "driveName": "Copy of binara.events-062.jpg",
+      "importedAt": "2026-08-02T14:42:51.089Z",
+      "aboutEventId": "event-56"
+    },
+    "1Ef5xFxypbTzVCPOKEq3hw1VKNCdJvsxQ": {
+      "publicSrc": "/images/achievements/cursor-buildathon-2026-n8n/03.jpg",
+      "dest": "/Users/rk_vishva/Documents/Projects/Knurdz/home/public/images/achievements/cursor-buildathon-2026-n8n/03.jpg",
+      "driveName": "Copy of binara.events-139.jpg",
+      "importedAt": "2026-08-02T14:42:52.495Z",
+      "aboutEventId": "event-57"
+    },
+    "1dq08aNLLw554u8k7V23KYND78G_ASvTu": {
+      "publicSrc": "/images/achievements/cursor-buildathon-2026-n8n/04.jpg",
+      "dest": "/Users/rk_vishva/Documents/Projects/Knurdz/home/public/images/achievements/cursor-buildathon-2026-n8n/04.jpg",
+      "driveName": "Copy of binara.events-142.jpg",
+      "importedAt": "2026-08-02T14:42:53.954Z",
+      "aboutEventId": "event-58"
+    },
+    "1wec0X7XW0D0_NZcfHNfDZOuXatxTkHiU": {
+      "publicSrc": "/images/achievements/cursor-buildathon-2026-n8n/05.jpg",
+      "dest": "/Users/rk_vishva/Documents/Projects/Knurdz/home/public/images/achievements/cursor-buildathon-2026-n8n/05.jpg",
+      "driveName": "Copy of binara.events-289.jpg",
+      "importedAt": "2026-08-02T14:42:55.563Z"
+    },
+    "1ao6tZtkH_3Ic1aNzLflZJ9gD1zBp42dy": {
+      "publicSrc": "/images/achievements/cursor-buildathon-2026-n8n/06.jpg",
+      "dest": "/Users/rk_vishva/Documents/Projects/Knurdz/home/public/images/achievements/cursor-buildathon-2026-n8n/06.jpg",
+      "driveName": "Copy of DSC01889.jpg",
+      "importedAt": "2026-08-02T14:42:57.457Z"
+    },
+    "12lm_Qw65abRrhbyNumfyx367FJCJEFcF": {
+      "publicSrc": "/images/achievements/cursor-buildathon-2026-n8n/07.jpg",
+      "dest": "/Users/rk_vishva/Documents/Projects/Knurdz/home/public/images/achievements/cursor-buildathon-2026-n8n/07.jpg",
+      "driveName": "Copy of IMG_20260516_152635370.jpg",
+      "importedAt": "2026-08-02T14:42:59.310Z"
+    },
+    "1vkyT_85W3RIgJFZglmS7jYueTpATESrb": {
+      "publicSrc": "/images/achievements/cursor-buildathon-2026-n8n/08.jpg",
+      "dest": "/Users/rk_vishva/Documents/Projects/Knurdz/home/public/images/achievements/cursor-buildathon-2026-n8n/08.jpg",
+      "driveName": "Copy of IMG_20260516_204719922.jpg",
+      "importedAt": "2026-08-02T14:43:01.328Z"
+    },
+    "14CpFSK9c54T_bXdUTxZld3yQF5LEM1J-": {
+      "publicSrc": "/images/achievements/idealize-aiesec-mini-competition-winner/01.jpg",
+      "dest": "/Users/rk_vishva/Documents/Projects/Knurdz/home/public/images/achievements/idealize-aiesec-mini-competition-winner/01.jpg",
+      "driveName": "Copy of IMG-20260714-WA0062.jpg",
+      "importedAt": "2026-08-02T14:43:03.276Z",
+      "aboutEventId": "event-59"
+    },
+    "1iirYpI3pHgVgwjzGoxYmREckZohHR_yw": {
+      "publicSrc": "/images/achievements/idealize-aiesec-mini-competition-winner/02.png",
+      "dest": "/Users/rk_vishva/Documents/Projects/Knurdz/home/public/images/achievements/idealize-aiesec-mini-competition-winner/02.png",
+      "driveName": "Copy of Screenshot_20260714-194417.png",
+      "importedAt": "2026-08-02T14:43:04.804Z",
+      "aboutEventId": "event-60"
+    },
+    "1gMD9Tkf67Jm72yz95-KuYl_JM4CBSS4t": {
+      "publicSrc": "/images/achievements/ieee-open-week-2026-logic-sprint/01.jpg",
+      "dest": "/Users/rk_vishva/Documents/Projects/Knurdz/home/public/images/achievements/ieee-open-week-2026-logic-sprint/01.jpg",
+      "driveName": "Copy of IMG_20260506_181512208.jpg",
+      "importedAt": "2026-08-02T14:43:07.077Z",
+      "aboutEventId": "event-61"
+    },
+    "1SOp7lM9Ep9U59lzuEzYSik49o3bv3TXJ": {
+      "publicSrc": "/images/achievements/ieee-open-week-2026-logic-sprint/02.jpg",
+      "dest": "/Users/rk_vishva/Documents/Projects/Knurdz/home/public/images/achievements/ieee-open-week-2026-logic-sprint/02.jpg",
+      "driveName": "Copy of IMG_20260506_181515724.jpg",
+      "importedAt": "2026-08-02T14:43:08.861Z",
+      "aboutEventId": "event-62"
+    },
+    "1sEA7emDK4Wxks5ugZmy4GPbgmn4O_KmI": {
+      "publicSrc": "/images/achievements/ieee-open-week-2026-logic-sprint/03.jpg",
+      "dest": "/Users/rk_vishva/Documents/Projects/Knurdz/home/public/images/achievements/ieee-open-week-2026-logic-sprint/03.jpg",
+      "driveName": "Copy of IMG_20260506_184928317.jpg",
+      "importedAt": "2026-08-02T14:43:10.540Z",
+      "aboutEventId": "event-63"
+    },
+    "1RVZEklNJn6oS4dhZ8DWRvB9yZBWXxEEp": {
+      "publicSrc": "/images/achievements/ieee-open-week-2026-logic-sprint/04.jpg",
+      "dest": "/Users/rk_vishva/Documents/Projects/Knurdz/home/public/images/achievements/ieee-open-week-2026-logic-sprint/04.jpg",
+      "driveName": "Copy of IMG_20260506_184937644.jpg",
+      "importedAt": "2026-08-02T14:43:12.442Z",
+      "aboutEventId": "event-64"
+    },
+    "1zFjHjGinfvTTn0ZOAjtjoCcdNb1HrLA0": {
+      "publicSrc": "/images/achievements/ieee-open-week-2026-logic-sprint/05.jpg",
+      "dest": "/Users/rk_vishva/Documents/Projects/Knurdz/home/public/images/achievements/ieee-open-week-2026-logic-sprint/05.jpg",
+      "driveName": "Copy of IMG-20260416-WA0025.jpg",
+      "importedAt": "2026-08-02T14:43:14.129Z"
+    },
+    "1PTcHzP-I_lfshQcq6ZIJP8PWtMpCNNf3": {
+      "publicSrc": "/images/achievements/ieee-open-week-2026-logic-sprint/06.jpg",
+      "dest": "/Users/rk_vishva/Documents/Projects/Knurdz/home/public/images/achievements/ieee-open-week-2026-logic-sprint/06.jpg",
+      "driveName": "IMG-20260603-WA0071.jpg",
+      "importedAt": "2026-08-02T14:43:16.211Z"
+    },
+    "1V76o2EoH4v9vZ1AdmnlZcCzK-H3biI97": {
+      "publicSrc": "/images/achievements/ieee-open-week-2026-logic-sprint/07.jpg",
+      "dest": "/Users/rk_vishva/Documents/Projects/Knurdz/home/public/images/achievements/ieee-open-week-2026-logic-sprint/07.jpg",
+      "driveName": "IMG-20260603-WA0102(1).jpg",
+      "importedAt": "2026-08-02T14:43:18.100Z"
+    },
+    "1vabdoCQzRxItZ1JH-FOikwV8BDgRDl0q": {
+      "publicSrc": "/images/achievements/proxy-maze-2026-finalist/01.jpg",
+      "dest": "/Users/rk_vishva/Documents/Projects/Knurdz/home/public/images/achievements/proxy-maze-2026-finalist/01.jpg",
+      "driveName": "743609951_1470808585071689_122100745990626751_n.jpg",
+      "importedAt": "2026-08-02T14:43:19.879Z",
+      "aboutEventId": "event-65"
+    },
+    "1dU_gwSya_8zoHMmOF_pbK6MYfqJ286zy": {
+      "publicSrc": "/images/achievements/proxy-maze-2026-finalist/02.jpg",
+      "dest": "/Users/rk_vishva/Documents/Projects/Knurdz/home/public/images/achievements/proxy-maze-2026-finalist/02.jpg",
+      "driveName": "744250920_1470808718405009_6997937344921864426_n.jpg",
+      "importedAt": "2026-08-02T14:43:21.234Z",
+      "aboutEventId": "event-66"
+    },
+    "1JMuGoa3l7xhAbOMGm2FBNhXYIYIBQowQ": {
+      "publicSrc": "/images/achievements/proxy-maze-2026-finalist/03.jpg",
+      "dest": "/Users/rk_vishva/Documents/Projects/Knurdz/home/public/images/achievements/proxy-maze-2026-finalist/03.jpg",
+      "driveName": "744598099_1470807618405119_2019075089810065419_n.jpg",
+      "importedAt": "2026-08-02T14:43:22.926Z",
+      "aboutEventId": "event-67"
+    },
+    "1d9W4Qz-HVwS-W2ZW0D8ZqvbWG3alyTyr": {
+      "publicSrc": "/images/achievements/proxy-maze-2026-finalist/04.jpg",
+      "dest": "/Users/rk_vishva/Documents/Projects/Knurdz/home/public/images/achievements/proxy-maze-2026-finalist/04.jpg",
+      "driveName": "745046137_1470805305072017_4317584554406531859_n.jpg",
+      "importedAt": "2026-08-02T14:43:24.236Z",
+      "aboutEventId": "event-68"
+    },
+    "1IYRfuvj6iGz9JFKv6_fhUJod7sDPQeg8": {
+      "publicSrc": "/images/achievements/proxy-maze-2026-finalist/05.jpg",
+      "dest": "/Users/rk_vishva/Documents/Projects/Knurdz/home/public/images/achievements/proxy-maze-2026-finalist/05.jpg",
+      "driveName": "745282833_1470803375072210_1987203552330884345_n.jpg",
+      "importedAt": "2026-08-02T14:43:25.926Z"
+    },
+    "1c6TaHErvnv2N16vlCA19Fon9mVdek4Oe": {
+      "publicSrc": "/images/achievements/proxy-maze-2026-finalist/06.jpg",
+      "dest": "/Users/rk_vishva/Documents/Projects/Knurdz/home/public/images/achievements/proxy-maze-2026-finalist/06.jpg",
+      "driveName": "745334094_1470808651738349_4694206023628535151_n.jpg",
+      "importedAt": "2026-08-02T14:43:27.353Z"
+    },
+    "1QBelgU-j-H-pbJeSEkAO1bm1X9fGhFiz": {
+      "publicSrc": "/images/achievements/proxy-maze-2026-finalist/07.jpg",
+      "dest": "/Users/rk_vishva/Documents/Projects/Knurdz/home/public/images/achievements/proxy-maze-2026-finalist/07.jpg",
+      "driveName": "745357154_1470803425072205_12011642159184615_n.jpg",
+      "importedAt": "2026-08-02T14:43:28.692Z"
+    },
+    "1TJUvSjHSD6-GN7FO8d9_YulD3hQPjxyI": {
+      "publicSrc": "/images/achievements/proxy-maze-2026-finalist/08.jpg",
+      "dest": "/Users/rk_vishva/Documents/Projects/Knurdz/home/public/images/achievements/proxy-maze-2026-finalist/08.jpg",
+      "driveName": "745700055_1470807415071806_1998158711317484202_n.jpg",
+      "importedAt": "2026-08-02T14:43:30.143Z"
+    },
+    "1Pc_p4QE3XezTplJOYrURfPvKoR2reopA": {
+      "publicSrc": "/images/achievements/robogames-2026-university-finalist/01.jpg",
+      "dest": "/Users/rk_vishva/Documents/Projects/Knurdz/home/public/images/achievements/robogames-2026-university-finalist/01.jpg",
+      "driveName": "Copy of FB_IMG_1782461068284.jpg",
+      "importedAt": "2026-08-02T14:43:32.206Z",
+      "aboutEventId": "event-69"
+    },
+    "18tJDeJO8F54iA45xquOE4dlyh5VdC52C": {
+      "publicSrc": "/images/achievements/robogames-2026-university-finalist/02.jpg",
+      "dest": "/Users/rk_vishva/Documents/Projects/Knurdz/home/public/images/achievements/robogames-2026-university-finalist/02.jpg",
+      "driveName": "Copy of IMG_20260426_090220112.jpg",
+      "importedAt": "2026-08-02T14:43:34.659Z",
+      "aboutEventId": "event-70"
+    },
+    "1fdxlSKFtCpSfcMDDLdZ-p6EkDGZRjj3e": {
+      "publicSrc": "/images/achievements/robogames-2026-university-finalist/03.jpg",
+      "dest": "/Users/rk_vishva/Documents/Projects/Knurdz/home/public/images/achievements/robogames-2026-university-finalist/03.jpg",
+      "driveName": "Copy of IMG_20260426_103852495.jpg",
+      "importedAt": "2026-08-02T14:43:36.773Z",
+      "aboutEventId": "event-71"
+    },
+    "1g5SzKfaRDaIASNyrhx4W9nagqzAYo1Jg": {
+      "publicSrc": "/images/achievements/robogames-2026-university-finalist/04.jpg",
+      "dest": "/Users/rk_vishva/Documents/Projects/Knurdz/home/public/images/achievements/robogames-2026-university-finalist/04.jpg",
+      "driveName": "Copy of IMG_20260426_160609262.jpg",
+      "importedAt": "2026-08-02T14:43:38.411Z",
+      "aboutEventId": "event-72"
+    },
+    "1kPt7Jx2WudeQMVc3KwrCSrdLL5r2e0dz": {
+      "publicSrc": "/images/achievements/robogames-2026-university-finalist/05.jpg",
+      "dest": "/Users/rk_vishva/Documents/Projects/Knurdz/home/public/images/achievements/robogames-2026-university-finalist/05.jpg",
+      "driveName": "Copy of IMG_20260426_173211366.jpg",
+      "importedAt": "2026-08-02T14:43:40.837Z"
+    },
+    "1Ee_T2CmIruBuFTret1t7BAXwJ5_Ao2Ln": {
+      "publicSrc": "/images/achievements/robogames-2026-university-finalist/06.jpg",
+      "dest": "/Users/rk_vishva/Documents/Projects/Knurdz/home/public/images/achievements/robogames-2026-university-finalist/06.jpg",
+      "driveName": "Copy of PXL_20260424_100949720.RAW-01.COVER.jpg",
+      "importedAt": "2026-08-02T14:43:42.933Z"
+    },
+    "1lAk5UCd7SgScwU_wa6oW4OBqT8IkkC0_": {
+      "publicSrc": "/images/achievements/robogames-2026-university-finalist/07.jpg",
+      "dest": "/Users/rk_vishva/Documents/Projects/Knurdz/home/public/images/achievements/robogames-2026-university-finalist/07.jpg",
+      "driveName": "Copy of PXL_20260424_102430953.jpg",
+      "importedAt": "2026-08-02T14:43:45.381Z"
+    },
+    "1JMl4ukZYLeg1FUuQ7ZhXCgbWJMPcIaZf": {
+      "publicSrc": "/images/achievements/robogames-2026-university-finalist/08.jpg",
+      "dest": "/Users/rk_vishva/Documents/Projects/Knurdz/home/public/images/achievements/robogames-2026-university-finalist/08.jpg",
+      "driveName": "Copy of PXL_20260424_112951771.jpg",
+      "importedAt": "2026-08-02T14:43:47.288Z"
+    },
+    "1Bn7Iq4G9zGWxebRE65V1X3TLuc8f5o9L": {
+      "publicSrc": "/images/achievements/roboroarz-international-2026-finalist/01.jpg",
+      "dest": "/Users/rk_vishva/Documents/Projects/Knurdz/home/public/images/achievements/roboroarz-international-2026-finalist/01.jpg",
+      "driveName": "755380973_1458356252990680_6803878478989409333_n.jpg",
+      "importedAt": "2026-08-02T14:43:49.277Z",
+      "aboutEventId": "event-73"
+    },
+    "1G7FKoBCJDZTjlBUBYhLctb7RgMu9Gd_i": {
+      "publicSrc": "/images/achievements/roboroarz-international-2026-finalist/02.jpg",
+      "dest": "/Users/rk_vishva/Documents/Projects/Knurdz/home/public/images/achievements/roboroarz-international-2026-finalist/02.jpg",
+      "driveName": "756612815_1459233266236312_2448970389732760618_n.jpg",
+      "importedAt": "2026-08-02T14:43:51.042Z",
+      "aboutEventId": "event-74"
+    },
+    "1WwM0T1nZ3LDyPQiRqA4exZadQDj6IAYo": {
+      "publicSrc": "/images/achievements/roboroarz-international-2026-finalist/03.jpg",
+      "dest": "/Users/rk_vishva/Documents/Projects/Knurdz/home/public/images/achievements/roboroarz-international-2026-finalist/03.jpg",
+      "driveName": "756815030_1459239969568975_3694445217424312396_n.jpg",
+      "importedAt": "2026-08-02T14:43:52.869Z",
+      "aboutEventId": "event-75"
+    },
+    "12z4IU5HIuMTF2AxqgF7w1fhK51m8t5fI": {
+      "publicSrc": "/images/achievements/roboroarz-international-2026-finalist/04.jpg",
+      "dest": "/Users/rk_vishva/Documents/Projects/Knurdz/home/public/images/achievements/roboroarz-international-2026-finalist/04.jpg",
+      "driveName": "757027268_1459236509569321_2993228686075866154_n.jpg",
+      "importedAt": "2026-08-02T14:43:54.515Z",
+      "aboutEventId": "event-76"
+    },
+    "1XEdnri3wKRPBUrHFJ6SofUnfq5DIXi8N": {
+      "publicSrc": "/images/achievements/roboroarz-international-2026-finalist/05.jpg",
+      "dest": "/Users/rk_vishva/Documents/Projects/Knurdz/home/public/images/achievements/roboroarz-international-2026-finalist/05.jpg",
+      "driveName": "758274395_1459233322902973_8610186810240897425_n.jpg",
+      "importedAt": "2026-08-02T14:43:56.269Z"
+    },
+    "1dUUu4VX1ogjagC4Nib1s5Zi55MJgo9lR": {
+      "publicSrc": "/images/achievements/roboroarz-international-2026-finalist/06.jpg",
+      "dest": "/Users/rk_vishva/Documents/Projects/Knurdz/home/public/images/achievements/roboroarz-international-2026-finalist/06.jpg",
+      "driveName": "758288911_1459236682902637_4202745327049477693_n.jpg",
+      "importedAt": "2026-08-02T14:43:58.085Z"
+    },
+    "1J23a_W_jpe4MFF3vVYxllOUf1JqeVDo5": {
+      "publicSrc": "/images/achievements/roboroarz-international-2026-finalist/08.jpg",
+      "dest": "/Users/rk_vishva/Documents/Projects/Knurdz/home/public/images/achievements/roboroarz-international-2026-finalist/08.jpg",
+      "driveName": "Copy of 20260627_101355.jpg",
+      "importedAt": "2026-08-02T14:44:03.136Z"
+    },
+    "1cGoIQ73GA0aAk2Zh9aVnoEUqc6oENm21": {
+      "publicSrc": "/images/achievements/road-to-legacy-2025-second-runners-up/01.jpg",
+      "dest": "/Users/rk_vishva/Documents/Projects/Knurdz/home/public/images/achievements/road-to-legacy-2025-second-runners-up/01.jpg",
+      "driveName": "Copy of IMG_20250531_151423852.jpg",
+      "importedAt": "2026-08-02T14:44:05.448Z",
+      "aboutEventId": "event-77"
+    },
+    "1jNGCwAvvdOwuCsPgfVb8bt0C6PNdkYih": {
+      "publicSrc": "/images/achievements/road-to-legacy-2025-second-runners-up/02.jpg",
+      "dest": "/Users/rk_vishva/Documents/Projects/Knurdz/home/public/images/achievements/road-to-legacy-2025-second-runners-up/02.jpg",
+      "driveName": "Copy of IMG_20250531_151431618.jpg",
+      "importedAt": "2026-08-02T14:44:07.229Z",
+      "aboutEventId": "event-78"
+    },
+    "1C2NCPjSAYvhLR56PXVh_VtofmQO5rART": {
+      "publicSrc": "/images/achievements/road-to-legacy-2025-second-runners-up/03.jpg",
+      "dest": "/Users/rk_vishva/Documents/Projects/Knurdz/home/public/images/achievements/road-to-legacy-2025-second-runners-up/03.jpg",
+      "driveName": "Copy of IMG_20250531_172940950.jpg",
+      "importedAt": "2026-08-02T14:44:09.836Z",
+      "aboutEventId": "event-79"
+    },
+    "1zw5gdk0duYW3F-OhMO7C3e5TAqi0jXpZ": {
+      "publicSrc": "/images/achievements/road-to-legacy-2025-second-runners-up/04.jpg",
+      "dest": "/Users/rk_vishva/Documents/Projects/Knurdz/home/public/images/achievements/road-to-legacy-2025-second-runners-up/04.jpg",
+      "driveName": "Copy of IMG_20250531_173113167.jpg",
+      "importedAt": "2026-08-02T14:44:11.892Z",
+      "aboutEventId": "event-80"
+    },
+    "1Hz96tux34eqkkq9I_PwlVM8nBm04PCWy": {
+      "publicSrc": "/images/achievements/road-to-legacy-2025-second-runners-up/05.jpg",
+      "dest": "/Users/rk_vishva/Documents/Projects/Knurdz/home/public/images/achievements/road-to-legacy-2025-second-runners-up/05.jpg",
+      "driveName": "Copy of IMG-20250531-WA0075.jpg",
+      "importedAt": "2026-08-02T14:44:13.744Z"
+    },
+    "1Srky6exdWeyS3OnW9K12s_DOTpBVPmGS": {
+      "publicSrc": "/images/achievements/road-to-legacy-2025-second-runners-up/06.jpg",
+      "dest": "/Users/rk_vishva/Documents/Projects/Knurdz/home/public/images/achievements/road-to-legacy-2025-second-runners-up/06.jpg",
+      "driveName": "Copy of IMG-20250531-WA0109.jpg",
+      "importedAt": "2026-08-02T14:44:15.658Z"
+    },
+    "1UPcByaf92ckQlcf2UjaK7aizacrZEEr6": {
+      "publicSrc": "/images/achievements/road-to-legacy-2025-second-runners-up/07.jpg",
+      "dest": "/Users/rk_vishva/Documents/Projects/Knurdz/home/public/images/achievements/road-to-legacy-2025-second-runners-up/07.jpg",
+      "driveName": "Copy of IMG-20250531-WA0157(1).jpg",
+      "importedAt": "2026-08-02T14:44:17.381Z"
+    },
+    "1mW3_9pwNZQdTNdkKjAVFKGrMrlsyslYc": {
+      "publicSrc": "/images/achievements/road-to-legacy-2025-second-runners-up/08.jpg",
+      "dest": "/Users/rk_vishva/Documents/Projects/Knurdz/home/public/images/achievements/road-to-legacy-2025-second-runners-up/08.jpg",
+      "driveName": "Copy of IMG-20250531-WA0177(1).jpg",
+      "importedAt": "2026-08-02T14:44:18.727Z"
+    },
+    "1UiSRmiPR5wO-HBA3ITA4nU6H6YW_CgcL": {
+      "publicSrc": "/images/achievements/xeynergy-mini-competition/01.jpg",
+      "dest": "/Users/rk_vishva/Documents/Projects/Knurdz/home/public/images/achievements/xeynergy-mini-competition/01.jpg",
+      "driveName": "Copy of ai__generativeai__machinelearning__xeynergy__micr (1).jpg",
+      "importedAt": "2026-08-02T14:44:20.553Z",
+      "aboutEventId": "event-81"
+    },
+    "1s1h54K-dgBOiuvaQrEN1qpXTLc7MTXk4": {
+      "publicSrc": "/images/achievements/xeynergy-mini-competition/02.jpg",
+      "dest": "/Users/rk_vishva/Documents/Projects/Knurdz/home/public/images/achievements/xeynergy-mini-competition/02.jpg",
+      "driveName": "Copy of ai__generativeai__machinelearning__xeynergy__micr (2).jpg",
+      "importedAt": "2026-08-02T14:44:21.717Z",
+      "aboutEventId": "event-82"
+    },
+    "1t8sDIL-Y3ZyWHhAL4A_SgcrfMcFsJASG": {
+      "publicSrc": "/images/achievements/xeynergy-mini-competition/03.jpg",
+      "dest": "/Users/rk_vishva/Documents/Projects/Knurdz/home/public/images/achievements/xeynergy-mini-competition/03.jpg",
+      "driveName": "Copy of ai__generativeai__machinelearning__xeynergy__micr (3).jpg",
+      "importedAt": "2026-08-02T14:44:23.072Z",
+      "aboutEventId": "event-83"
+    },
+    "19g8MBuDFBNFgoiNSbax0GA_HLQC321cb": {
+      "publicSrc": "/images/achievements/xeynergy-mini-competition/04.jpg",
+      "dest": "/Users/rk_vishva/Documents/Projects/Knurdz/home/public/images/achievements/xeynergy-mini-competition/04.jpg",
+      "driveName": "Copy of ai__generativeai__machinelearning__xeynergy__micr.jpg",
+      "importedAt": "2026-08-02T14:44:24.860Z",
+      "aboutEventId": "event-84"
+    },
+    "1AXzDT3PMNsX6TY9fdKDtCtMQ1rjF7Rx7": {
+      "publicSrc": "/gallery/events/sherlock-3-0/01.jpg",
+      "dest": "/Users/rk_vishva/Documents/Projects/Knurdz/home/public/gallery/events/sherlock-3-0/01.jpg",
+      "driveName": "Copy of img_2_1771666413284.jpg",
+      "importedAt": "2026-08-02T14:44:26.597Z",
+      "aboutEventId": "event-85"
+    },
+    "1smMjMhpEjqYC4is0PSp9sJGaRhqg7rLb": {
+      "publicSrc": "/gallery/events/sherlock-3-0/02.jpg",
+      "dest": "/Users/rk_vishva/Documents/Projects/Knurdz/home/public/gallery/events/sherlock-3-0/02.jpg",
+      "driveName": "Copy of img_3_1771666668963.jpg",
+      "importedAt": "2026-08-02T14:44:27.916Z",
+      "aboutEventId": "event-86"
+    },
+    "1iggZRQ5QLTEUfC_TMhjgYAtT6blxlCwy": {
+      "publicSrc": "/gallery/events/sherlock-3-0/03.jpg",
+      "dest": "/Users/rk_vishva/Documents/Projects/Knurdz/home/public/gallery/events/sherlock-3-0/03.jpg",
+      "driveName": "Copy of img_4_1771666704585.jpg",
+      "importedAt": "2026-08-02T14:44:29.504Z",
+      "aboutEventId": "event-87"
+    },
+    "13YmcMppiaxUNfVbyxiYr-cMa8lFVrvik": {
+      "publicSrc": "/gallery/events/sherlock-3-0/04.png",
+      "dest": "/Users/rk_vishva/Documents/Projects/Knurdz/home/public/gallery/events/sherlock-3-0/04.png",
+      "driveName": "Copy of IMG_3597.png",
+      "importedAt": "2026-08-02T14:44:32.381Z",
+      "aboutEventId": "event-88"
+    },
+    "1k-TzqvSge8Bctsu4KIXDtqSiGfZJTa_2": {
+      "publicSrc": "/gallery/events/sherlock-3-0/05.jpg",
+      "dest": "/Users/rk_vishva/Documents/Projects/Knurdz/home/public/gallery/events/sherlock-3-0/05.jpg",
+      "driveName": "Copy of IMG_20260207_081803470.jpg",
+      "importedAt": "2026-08-02T14:44:34.366Z"
+    },
+    "1JSL5OlSwm22dTBPlY_utc1MEopOVB5gx": {
+      "publicSrc": "/gallery/events/sherlock-3-0/06.jpg",
+      "dest": "/Users/rk_vishva/Documents/Projects/Knurdz/home/public/gallery/events/sherlock-3-0/06.jpg",
+      "driveName": "Copy of IMG_20260207_093406140.jpg",
+      "importedAt": "2026-08-02T14:44:35.899Z"
+    },
+    "1rpQX80grtyhqkz1_GGSkoZwpJX112wrP": {
+      "publicSrc": "/gallery/events/sherlock-3-0/07.jpg",
+      "dest": "/Users/rk_vishva/Documents/Projects/Knurdz/home/public/gallery/events/sherlock-3-0/07.jpg",
+      "driveName": "Copy of IMG_20260207_144954414.jpg",
+      "importedAt": "2026-08-02T14:44:37.649Z"
+    },
+    "1_dl98aScT0lXXJmW0FM3Oy2N1GsOdszX": {
+      "publicSrc": "/gallery/events/sherlock-3-0/08.jpg",
+      "dest": "/Users/rk_vishva/Documents/Projects/Knurdz/home/public/gallery/events/sherlock-3-0/08.jpg",
+      "driveName": "Copy of IMG_20260207_145251983.jpg",
+      "importedAt": "2026-08-02T14:44:39.547Z"
+    },
+    "1SrCLXk38DmVxYEtTvLEjKvFexgdl71eN": {
+      "publicSrc": "/gallery/events/copilot-dev-days/01.jpg",
+      "dest": "/Users/rk_vishva/Documents/Projects/Knurdz/home/public/gallery/events/copilot-dev-days/01.jpg",
+      "driveName": "Copy of IMG_20260330_162422860.jpg",
+      "importedAt": "2026-08-02T14:44:41.648Z",
+      "aboutEventId": "event-89"
+    },
+    "1DPk46i1fX_rPyPv0o3wwRmEadqVnvJ2Q": {
+      "publicSrc": "/gallery/events/copilot-dev-days/02.jpg",
+      "dest": "/Users/rk_vishva/Documents/Projects/Knurdz/home/public/gallery/events/copilot-dev-days/02.jpg",
+      "driveName": "Copy of IMG_20260330_163504932.jpg",
+      "importedAt": "2026-08-02T14:44:43.594Z",
+      "aboutEventId": "event-90"
+    },
+    "1bS_ARL63cvDH01LKVPi8pupZXRecFqIb": {
+      "publicSrc": "/gallery/events/copilot-dev-days/03.jpg",
+      "dest": "/Users/rk_vishva/Documents/Projects/Knurdz/home/public/gallery/events/copilot-dev-days/03.jpg",
+      "driveName": "Copy of IMG_20260330_165925538.jpg",
+      "importedAt": "2026-08-02T14:44:45.779Z",
+      "aboutEventId": "event-91"
+    },
+    "1WxyTuUFBN1HPRoYSZip9pIcb9lqeJi_U": {
+      "publicSrc": "/gallery/events/copilot-dev-days/04.jpg",
+      "dest": "/Users/rk_vishva/Documents/Projects/Knurdz/home/public/gallery/events/copilot-dev-days/04.jpg",
+      "driveName": "Copy of IMG_20260330_165946954.jpg",
+      "importedAt": "2026-08-02T14:44:47.834Z",
+      "aboutEventId": "event-92"
+    },
+    "1gWk3mWePk7S9gNW2JhAzREeRdAv5MFg7": {
+      "publicSrc": "/gallery/events/copilot-dev-days/05.jpg",
+      "dest": "/Users/rk_vishva/Documents/Projects/Knurdz/home/public/gallery/events/copilot-dev-days/05.jpg",
+      "driveName": "Copy of IMG_20260330_183155708.jpg",
+      "importedAt": "2026-08-02T14:44:49.781Z"
+    },
+    "1duEf9UIkV0OW8ea9DC1hqYiUQaYuE7Iw": {
+      "publicSrc": "/gallery/events/copilot-dev-days/06.jpg",
+      "dest": "/Users/rk_vishva/Documents/Projects/Knurdz/home/public/gallery/events/copilot-dev-days/06.jpg",
+      "driveName": "Copy of IMG_20260330_183250718.jpg",
+      "importedAt": "2026-08-02T14:44:52.076Z"
+    },
+    "1L07JgN-r7-GSvVNwnhfyexYikQdDci6Z": {
+      "publicSrc": "/gallery/events/copilot-dev-days/07.jpg",
+      "dest": "/Users/rk_vishva/Documents/Projects/Knurdz/home/public/gallery/events/copilot-dev-days/07.jpg",
+      "driveName": "Copy of IMG_20260330_191824409.jpg",
+      "importedAt": "2026-08-02T14:44:54.195Z"
+    },
+    "1myMDPT323kTciLQfYPX_aNeftAstjh-Q": {
+      "publicSrc": "/gallery/events/copilot-dev-days/08.jpg",
+      "dest": "/Users/rk_vishva/Documents/Projects/Knurdz/home/public/gallery/events/copilot-dev-days/08.jpg",
+      "driveName": "Copy of IMG_20260330_191929596.jpg",
+      "importedAt": "2026-08-02T14:44:55.933Z"
+    },
+    "1mW_AifU5mRiUN6GS0Yacww0gEOhlaVP6": {
+      "publicSrc": "/gallery/events/cursor-cafe/01.jpg",
+      "dest": "/Users/rk_vishva/Documents/Projects/Knurdz/home/public/gallery/events/cursor-cafe/01.jpg",
+      "driveName": "Copy of binara.events-1011 (1).jpg",
+      "importedAt": "2026-08-02T14:44:57.952Z",
+      "aboutEventId": "event-93"
+    },
+    "1jTgEYF0qrxDHzuz9rIiZgk1Hzrdpxd9u": {
+      "publicSrc": "/gallery/events/cursor-cafe/02.jpg",
+      "dest": "/Users/rk_vishva/Documents/Projects/Knurdz/home/public/gallery/events/cursor-cafe/02.jpg",
+      "driveName": "Copy of IMG_20260124_162758388.jpg",
+      "importedAt": "2026-08-02T14:44:59.863Z",
+      "aboutEventId": "event-94"
+    },
+    "1IbuPe5_YEkAkFGA5k3y-3Cpx-BHnITKa": {
+      "publicSrc": "/gallery/events/cursor-cafe/03.jpg",
+      "dest": "/Users/rk_vishva/Documents/Projects/Knurdz/home/public/gallery/events/cursor-cafe/03.jpg",
+      "driveName": "Copy of IMG_20260124_175256217.jpg",
+      "importedAt": "2026-08-02T14:45:01.834Z",
+      "aboutEventId": "event-95"
+    },
+    "17zeD_dYuIzUjToFJwWD4gWj4kLAjcON8": {
+      "publicSrc": "/gallery/events/cursor-cafe/04.jpg",
+      "dest": "/Users/rk_vishva/Documents/Projects/Knurdz/home/public/gallery/events/cursor-cafe/04.jpg",
+      "driveName": "Copy of IMG_20260124_191827875.jpg",
+      "importedAt": "2026-08-02T14:45:04.285Z",
+      "aboutEventId": "event-96"
+    },
+    "18mHi0CQhPLJBW7EklYq_5nparuksgT6k": {
+      "publicSrc": "/gallery/events/cursor-cafe/05.jpg",
+      "dest": "/Users/rk_vishva/Documents/Projects/Knurdz/home/public/gallery/events/cursor-cafe/05.jpg",
+      "driveName": "Copy of IMG_20260124_193901082.jpg",
+      "importedAt": "2026-08-02T14:45:06.183Z"
+    },
+    "1qw-HjsjaZGghvD3yxAcV-rfwlSlokfQX": {
+      "publicSrc": "/gallery/events/cursor-cafe/06.jpg",
+      "dest": "/Users/rk_vishva/Documents/Projects/Knurdz/home/public/gallery/events/cursor-cafe/06.jpg",
+      "driveName": "Copy of IMG_20260124_212157302.jpg",
+      "importedAt": "2026-08-02T14:45:08.075Z"
+    },
+    "1AJ0ecQDelwvCjXlZjUA6E5OJwB-rG2u3": {
+      "publicSrc": "/gallery/events/cursor-cafe/07.jpg",
+      "dest": "/Users/rk_vishva/Documents/Projects/Knurdz/home/public/gallery/events/cursor-cafe/07.jpg",
+      "driveName": "Copy of IMG_20260125_010707093.jpg",
+      "importedAt": "2026-08-02T14:45:10.239Z"
+    },
+    "1yRbUtdx5_EfDGnC6_ta_v7Un1CPq66Oq": {
+      "publicSrc": "/gallery/events/cursor-meetup-april/01.jpg",
+      "dest": "/Users/rk_vishva/Documents/Projects/Knurdz/home/public/gallery/events/cursor-meetup-april/01.jpg",
+      "driveName": "Copy of IMG_20260409_121423404.jpg",
+      "importedAt": "2026-08-02T14:45:12.460Z",
+      "aboutEventId": "event-97"
+    },
+    "1lpKWWUb1bRJ4Y5BtmRvN7G5wsUAVt4H1": {
+      "publicSrc": "/gallery/events/cursor-meetup-april/02.jpg",
+      "dest": "/Users/rk_vishva/Documents/Projects/Knurdz/home/public/gallery/events/cursor-meetup-april/02.jpg",
+      "driveName": "Copy of IMG_20260409_122458007.jpg",
+      "importedAt": "2026-08-02T14:45:14.246Z",
+      "aboutEventId": "event-98"
+    },
+    "1KNjTnheyGPKBanXHL8BDllmjnKiGny_E": {
+      "publicSrc": "/gallery/events/cursor-meetup-april/03.jpg",
+      "dest": "/Users/rk_vishva/Documents/Projects/Knurdz/home/public/gallery/events/cursor-meetup-april/03.jpg",
+      "driveName": "Copy of IMG_20260409_130648418.jpg",
+      "importedAt": "2026-08-02T14:45:16.229Z",
+      "aboutEventId": "event-99"
+    },
+    "13fl_QmsNkCMjy6FApWdMNS0TI3dLn9vI": {
+      "publicSrc": "/gallery/events/cursor-meetup-april/04.jpg",
+      "dest": "/Users/rk_vishva/Documents/Projects/Knurdz/home/public/gallery/events/cursor-meetup-april/04.jpg",
+      "driveName": "Copy of IMG_20260409_133444002.jpg",
+      "importedAt": "2026-08-02T14:45:17.802Z",
+      "aboutEventId": "event-100"
+    },
+    "1vMjVG7SZdyenURYsK355quXR8LQRicgJ": {
+      "publicSrc": "/gallery/events/cursor-meetup-april/05.jpg",
+      "dest": "/Users/rk_vishva/Documents/Projects/Knurdz/home/public/gallery/events/cursor-meetup-april/05.jpg",
+      "driveName": "Copy of IMG_20260409_154455842.jpg",
+      "importedAt": "2026-08-02T14:45:19.459Z"
+    },
+    "1H6c-7X9Sy3CFKd1u7k-faRO844WkUbqu": {
+      "publicSrc": "/gallery/events/cursor-meetup-april/06.jpg",
+      "dest": "/Users/rk_vishva/Documents/Projects/Knurdz/home/public/gallery/events/cursor-meetup-april/06.jpg",
+      "driveName": "Copy of IMG_20260409_154504661.jpg",
+      "importedAt": "2026-08-02T14:45:21.169Z"
+    },
+    "1uHaIdT_HMGV7yqRMA34IxLVvbeP86gtj": {
+      "publicSrc": "/gallery/events/cursor-meetup-april/07.jpg",
+      "dest": "/Users/rk_vishva/Documents/Projects/Knurdz/home/public/gallery/events/cursor-meetup-april/07.jpg",
+      "driveName": "Copy of IMG_20260409_154606791.jpg",
+      "importedAt": "2026-08-02T14:45:23.167Z"
+    },
+    "1lvX_iomuL_OCW3LJ4pOlycGAXIbRNRXo": {
+      "publicSrc": "/gallery/events/cursor-meetup-april/08.jpg",
+      "dest": "/Users/rk_vishva/Documents/Projects/Knurdz/home/public/gallery/events/cursor-meetup-april/08.jpg",
+      "driveName": "Copy of IMG_20260409_155640582~4.jpg",
+      "importedAt": "2026-08-02T14:45:24.579Z"
+    },
+    "1xNSv4Q5m8Y5ZfY5DS5PQdMb4kd_H_UE6": {
+      "publicSrc": "/gallery/events/cursor-meetup-builder-series/01.jpg",
+      "dest": "/Users/rk_vishva/Documents/Projects/Knurdz/home/public/gallery/events/cursor-meetup-builder-series/01.jpg",
+      "driveName": "Copy of binara.events-031.jpg",
+      "importedAt": "2026-08-02T14:45:26.403Z",
+      "aboutEventId": "event-101"
+    },
+    "19kF7xux70l5dcth2ztd31tVT84RC_JiL": {
+      "publicSrc": "/gallery/events/cursor-meetup-builder-series/02.jpg",
+      "dest": "/Users/rk_vishva/Documents/Projects/Knurdz/home/public/gallery/events/cursor-meetup-builder-series/02.jpg",
+      "driveName": "Copy of binara.events-394.jpg",
+      "importedAt": "2026-08-02T14:45:27.959Z",
+      "aboutEventId": "event-102"
+    },
+    "124wIjZpQBJldAf6hAUhBd1UdDq9CGsE1": {
+      "publicSrc": "/gallery/events/cursor-meetup-builder-series/03.jpg",
+      "dest": "/Users/rk_vishva/Documents/Projects/Knurdz/home/public/gallery/events/cursor-meetup-builder-series/03.jpg",
+      "driveName": "Copy of binara.events-540.jpg",
+      "importedAt": "2026-08-02T14:45:29.700Z",
+      "aboutEventId": "event-103"
+    },
+    "1dxpLUpVMEFYcY_faSAoyO1xbXKtU6nBj": {
+      "publicSrc": "/gallery/events/cursor-meetup-builder-series/04.jpg",
+      "dest": "/Users/rk_vishva/Documents/Projects/Knurdz/home/public/gallery/events/cursor-meetup-builder-series/04.jpg",
+      "driveName": "Copy of binara.events-584.jpg",
+      "importedAt": "2026-08-02T14:45:31.328Z",
+      "aboutEventId": "event-104"
+    },
+    "1F-6ZI-cf1WEDP6AO37vfP27QzpD9Q5ex": {
+      "publicSrc": "/gallery/events/cursor-meetup-builder-series/05.jpg",
+      "dest": "/Users/rk_vishva/Documents/Projects/Knurdz/home/public/gallery/events/cursor-meetup-builder-series/05.jpg",
+      "driveName": "Copy of IMG_20260721_101337_916.jpg",
+      "importedAt": "2026-08-02T14:45:32.909Z"
+    },
+    "1Z-6j6wFDuyxToCtnJ-6xPo1G6Kq1owIZ": {
+      "publicSrc": "/gallery/events/cursor-meetup-builder-series/06.jpg",
+      "dest": "/Users/rk_vishva/Documents/Projects/Knurdz/home/public/gallery/events/cursor-meetup-builder-series/06.jpg",
+      "driveName": "Copy of IMG_20260721_101341_214.jpg",
+      "importedAt": "2026-08-02T14:45:34.134Z"
+    },
+    "1FNXw5tozwiQvVUF5z-ft_Zt3KH5WGCva": {
+      "publicSrc": "/gallery/events/cursor-meetup-builder-series/07.jpg",
+      "dest": "/Users/rk_vishva/Documents/Projects/Knurdz/home/public/gallery/events/cursor-meetup-builder-series/07.jpg",
+      "driveName": "Copy of IMG-20260719-WA0007.jpg",
+      "importedAt": "2026-08-02T14:45:35.432Z"
+    },
+    "16xMsh_vCT5yb_XZCXXQu58OGPM56CGRf": {
+      "publicSrc": "/gallery/events/cursor-meetup-builder-series/08.jpg",
+      "dest": "/Users/rk_vishva/Documents/Projects/Knurdz/home/public/gallery/events/cursor-meetup-builder-series/08.jpg",
+      "driveName": "Copy of IMG-20260719-WA0011.jpg",
+      "importedAt": "2026-08-02T14:45:36.963Z"
+    },
+    "1af1o5lH1Jh1yfe10cHqFl0tpdv6psSs8": {
+      "publicSrc": "/gallery/events/exhibitions/01.jpg",
+      "dest": "/Users/rk_vishva/Documents/Projects/Knurdz/home/public/gallery/events/exhibitions/01.jpg",
+      "driveName": "Copy of IMG_20251109_145448475.jpg",
+      "importedAt": "2026-08-02T14:45:39.431Z",
+      "aboutEventId": "event-105"
+    },
+    "1k3f6CuxUtsDKBIBzPJFmk2tXWCX1vA9k": {
+      "publicSrc": "/gallery/events/exhibitions/02.jpg",
+      "dest": "/Users/rk_vishva/Documents/Projects/Knurdz/home/public/gallery/events/exhibitions/02.jpg",
+      "driveName": "Copy of IMG_20251109_150615937.jpg",
+      "importedAt": "2026-08-02T14:45:42.100Z",
+      "aboutEventId": "event-106"
+    },
+    "1FhRBR1w2R8VedH3zJ6wd-wDMCJPqkEbz": {
+      "publicSrc": "/gallery/events/exhibitions/03.jpg",
+      "dest": "/Users/rk_vishva/Documents/Projects/Knurdz/home/public/gallery/events/exhibitions/03.jpg",
+      "driveName": "Copy of IMG_20251109_151042268.jpg",
+      "importedAt": "2026-08-02T14:45:44.322Z",
+      "aboutEventId": "event-107"
+    },
+    "1N8jAEVc_578qbxHW-tEjAEuqoL754Yxo": {
+      "publicSrc": "/gallery/events/exhibitions/04.jpg",
+      "dest": "/Users/rk_vishva/Documents/Projects/Knurdz/home/public/gallery/events/exhibitions/04.jpg",
+      "driveName": "Copy of IMG_20251109_154145616.jpg",
+      "importedAt": "2026-08-02T14:45:46.201Z",
+      "aboutEventId": "event-108"
+    },
+    "140HhEun5ordZY2zp5MF5xMrdjqTNnNu5": {
+      "publicSrc": "/gallery/events/exhibitions/05.jpg",
+      "dest": "/Users/rk_vishva/Documents/Projects/Knurdz/home/public/gallery/events/exhibitions/05.jpg",
+      "driveName": "Copy of IMG_20251109_165507489.jpg",
+      "importedAt": "2026-08-02T14:45:48.558Z"
+    },
+    "1xC9NTup9RTo9zAWiFvXnOB9SLKhCW9LS": {
+      "publicSrc": "/gallery/events/exhibitions/06.jpg",
+      "dest": "/Users/rk_vishva/Documents/Projects/Knurdz/home/public/gallery/events/exhibitions/06.jpg",
+      "driveName": "Copy of IMG_20251109_165716002.jpg",
+      "importedAt": "2026-08-02T14:45:50.343Z"
+    },
+    "1a0nio5nys2SqFlrrAcC8Lj-DsjhffXUR": {
+      "publicSrc": "/gallery/events/exhibitions/07.jpg",
+      "dest": "/Users/rk_vishva/Documents/Projects/Knurdz/home/public/gallery/events/exhibitions/07.jpg",
+      "driveName": "Copy of IMG_20251109_170039329.jpg",
+      "importedAt": "2026-08-02T14:45:52.413Z"
+    },
+    "1Ama1CHt8rQ2PR4E136R6rxjqgpFVZ7Je": {
+      "publicSrc": "/gallery/events/exhibitions/08.jpg",
+      "dest": "/Users/rk_vishva/Documents/Projects/Knurdz/home/public/gallery/events/exhibitions/08.jpg",
+      "driveName": "Copy of IMG_20251109_170308824.jpg",
+      "importedAt": "2026-08-02T14:45:54.262Z"
+    },
+    "1hRTUjzf64fK-YWHT7O8cZ1rbJOuGq9r7": {
+      "publicSrc": "/gallery/events/microsoft-localhost/01.jpg",
+      "dest": "/Users/rk_vishva/Documents/Projects/Knurdz/home/public/gallery/events/microsoft-localhost/01.jpg",
+      "driveName": "Copy of IMG_20260619_075444991.jpg",
+      "importedAt": "2026-08-02T14:45:56.839Z",
+      "aboutEventId": "event-109"
+    },
+    "18h0RUrhd97cjUsRkZsrBJicbWEGdyalY": {
+      "publicSrc": "/gallery/events/microsoft-localhost/02.jpg",
+      "dest": "/Users/rk_vishva/Documents/Projects/Knurdz/home/public/gallery/events/microsoft-localhost/02.jpg",
+      "driveName": "Copy of IMG_20260619_075451559.jpg",
+      "importedAt": "2026-08-02T14:45:58.924Z",
+      "aboutEventId": "event-110"
+    },
+    "1ORYqQ8rHLGZdIIzO5y-j_XPuuLaU6B2X": {
+      "publicSrc": "/gallery/events/microsoft-localhost/03.jpg",
+      "dest": "/Users/rk_vishva/Documents/Projects/Knurdz/home/public/gallery/events/microsoft-localhost/03.jpg",
+      "driveName": "Copy of IMG_20260619_075614967.jpg",
+      "importedAt": "2026-08-02T14:46:00.912Z",
+      "aboutEventId": "event-111"
+    },
+    "1QAd69XVrUajVaErJYcAS0BiSNc0MlcYG": {
+      "publicSrc": "/gallery/events/microsoft-localhost/04.jpg",
+      "dest": "/Users/rk_vishva/Documents/Projects/Knurdz/home/public/gallery/events/microsoft-localhost/04.jpg",
+      "driveName": "Copy of IMG_20260619_093748344.jpg",
+      "importedAt": "2026-08-02T14:46:02.925Z",
+      "aboutEventId": "event-112"
+    },
+    "1KEqNVwA--GsTnqtUJ9blauDZJHLI4jEP": {
+      "publicSrc": "/gallery/events/microsoft-localhost/05.jpg",
+      "dest": "/Users/rk_vishva/Documents/Projects/Knurdz/home/public/gallery/events/microsoft-localhost/05.jpg",
+      "driveName": "Copy of IMG_20260619_103458879.jpg",
+      "importedAt": "2026-08-02T14:46:04.596Z"
+    },
+    "1XEVPP33UjaU85iDdW3PtaRqoZa1F371G": {
+      "publicSrc": "/gallery/events/microsoft-localhost/06.jpg",
+      "dest": "/Users/rk_vishva/Documents/Projects/Knurdz/home/public/gallery/events/microsoft-localhost/06.jpg",
+      "driveName": "Copy of IMG_20260619_105344830.jpg",
+      "importedAt": "2026-08-02T14:46:07.006Z"
+    },
+    "1X0vYjAzcTf5F6gaqcReJaLRdQdvaGG7C": {
+      "publicSrc": "/gallery/events/microsoft-localhost/07.jpg",
+      "dest": "/Users/rk_vishva/Documents/Projects/Knurdz/home/public/gallery/events/microsoft-localhost/07.jpg",
+      "driveName": "Copy of IMG_20260619_113711148.jpg",
+      "importedAt": "2026-08-02T14:46:09.012Z"
+    },
+    "19RyMXNRytxp7Ys42wgq27v7IeQgjKj3u": {
+      "publicSrc": "/gallery/events/microsoft-localhost/08.jpg",
+      "dest": "/Users/rk_vishva/Documents/Projects/Knurdz/home/public/gallery/events/microsoft-localhost/08.jpg",
+      "driveName": "Copy of IMG_20260619_115153718.jpg",
+      "importedAt": "2026-08-02T14:46:10.940Z"
+    },
+    "1Ms_41awsUu0x1MBCIIBxH2Y3frwBb55C": {
+      "publicSrc": "/gallery/events/phantom-meetup/01.jpg",
+      "dest": "/Users/rk_vishva/Documents/Projects/Knurdz/home/public/gallery/events/phantom-meetup/01.jpg",
+      "driveName": "Copy of IMG_20260430_092306502.jpg",
+      "importedAt": "2026-08-02T14:46:13.064Z",
+      "aboutEventId": "event-113"
+    },
+    "11W0A8FDPJjPXaPhdGOIQNmpKoC8ZGhvE": {
+      "publicSrc": "/gallery/events/phantom-meetup/02.jpg",
+      "dest": "/Users/rk_vishva/Documents/Projects/Knurdz/home/public/gallery/events/phantom-meetup/02.jpg",
+      "driveName": "Copy of IMG_20260430_122855817.jpg",
+      "importedAt": "2026-08-02T14:46:14.729Z",
+      "aboutEventId": "event-114"
+    },
+    "1p8va-J9Fny1miTWjVHD2S9uBu6wp-arW": {
+      "publicSrc": "/gallery/events/phantom-meetup/03.jpg",
+      "dest": "/Users/rk_vishva/Documents/Projects/Knurdz/home/public/gallery/events/phantom-meetup/03.jpg",
+      "driveName": "Copy of IMG_20260430_122913337.jpg",
+      "importedAt": "2026-08-02T14:46:16.623Z",
+      "aboutEventId": "event-115"
+    },
+    "1-qTiSpocwM3ZVCojRW5MB07I4n1HUYs-": {
+      "publicSrc": "/gallery/events/phantom-meetup/04.jpg",
+      "dest": "/Users/rk_vishva/Documents/Projects/Knurdz/home/public/gallery/events/phantom-meetup/04.jpg",
+      "driveName": "Copy of IMG-20260430-WA0052.jpg",
+      "importedAt": "2026-08-02T14:46:18.204Z",
+      "aboutEventId": "event-116"
+    },
+    "1v08_nh8KlAnBOgdI_pXhtVnL_gFaNjAn": {
+      "publicSrc": "/gallery/events/phantom-meetup/05.jpg",
+      "dest": "/Users/rk_vishva/Documents/Projects/Knurdz/home/public/gallery/events/phantom-meetup/05.jpg",
+      "driveName": "Copy of PXL_20260430_040752506.jpg",
+      "importedAt": "2026-08-02T14:46:20.090Z"
+    },
+    "1IN9Wxx-MazBgGfjT87VO_AM8ld6x5z6Q": {
+      "publicSrc": "/gallery/events/phantom-meetup/06.jpg",
+      "dest": "/Users/rk_vishva/Documents/Projects/Knurdz/home/public/gallery/events/phantom-meetup/06.jpg",
+      "driveName": "Copy of PXL_20260430_041838386.jpg",
+      "importedAt": "2026-08-02T14:46:22.003Z"
+    },
+    "1Yp0VO6dfseM16A3ST9LQ8WSWdSa_3szI": {
+      "publicSrc": "/gallery/events/phantom-meetup/07.jpg",
+      "dest": "/Users/rk_vishva/Documents/Projects/Knurdz/home/public/gallery/events/phantom-meetup/07.jpg",
+      "driveName": "Copy of PXL_20260430_045616326.jpg",
+      "importedAt": "2026-08-02T14:46:23.809Z"
+    },
+    "1Tl7kjKOxLqkCupZyciyszJKgnnbtJtZm": {
+      "publicSrc": "/gallery/events/phantom-meetup/08.jpg",
+      "dest": "/Users/rk_vishva/Documents/Projects/Knurdz/home/public/gallery/events/phantom-meetup/08.jpg",
+      "driveName": "Copy of PXL_20260430_055850037.jpg",
+      "importedAt": "2026-08-02T14:46:25.975Z"
+    },
+    "1LeihxodQ3-uOHFIfKbUI4ejkHXyg_DGa": {
+      "publicSrc": "/events/deploy-sprint/bootcamp/01.jpeg",
+      "dest": "/Users/rk_vishva/Documents/Projects/Knurdz/home/public/events/deploy-sprint/bootcamp/01.jpeg",
+      "driveName": "1783226406524.jpeg",
+      "importedAt": "2026-08-02T14:46:28.605Z",
+      "aboutEventId": "event-117"
+    },
+    "1P4kbQBiyv7-Msl1qmTOlJUxO8RN32meq": {
+      "publicSrc": "/events/deploy-sprint/bootcamp/02.jpg",
+      "dest": "/Users/rk_vishva/Documents/Projects/Knurdz/home/public/events/deploy-sprint/bootcamp/02.jpg",
+      "driveName": "knurdz-ds26-001",
+      "importedAt": "2026-08-02T14:46:31.963Z",
+      "aboutEventId": "event-118"
+    },
+    "1OBbCznaPQ8HCFj55-Sd8Mpr9g5QFYp7j": {
+      "publicSrc": "/events/deploy-sprint/bootcamp/03.jpg",
+      "dest": "/Users/rk_vishva/Documents/Projects/Knurdz/home/public/events/deploy-sprint/bootcamp/03.jpg",
+      "driveName": "knurdz-ds26-002",
+      "importedAt": "2026-08-02T14:46:35.088Z",
+      "aboutEventId": "event-119"
+    },
+    "1oe3GnMMDHqhIoDXSWfED5ONUsikLa3EH": {
+      "publicSrc": "/events/deploy-sprint/bootcamp/04.jpg",
+      "dest": "/Users/rk_vishva/Documents/Projects/Knurdz/home/public/events/deploy-sprint/bootcamp/04.jpg",
+      "driveName": "knurdz-ds26-003",
+      "importedAt": "2026-08-02T14:46:37.777Z",
+      "aboutEventId": "event-120"
+    },
+    "1iLxnsHrWLLweLIBF6R6C88wG66leJbLf": {
+      "publicSrc": "/events/deploy-sprint/bootcamp/05.jpg",
+      "dest": "/Users/rk_vishva/Documents/Projects/Knurdz/home/public/events/deploy-sprint/bootcamp/05.jpg",
+      "driveName": "knurdz-ds26-004",
+      "importedAt": "2026-08-02T14:46:40.477Z"
+    },
+    "1_p23y4WSZf6EOLrcIKqaXZLKfNhFVRyZ": {
+      "publicSrc": "/events/deploy-sprint/bootcamp/06.jpg",
+      "dest": "/Users/rk_vishva/Documents/Projects/Knurdz/home/public/events/deploy-sprint/bootcamp/06.jpg",
+      "driveName": "knurdz-ds26-005",
+      "importedAt": "2026-08-02T14:46:43.723Z"
+    },
+    "18mDht4OWQWOpl8aKAVAwa5oSq1nQzdhZ": {
+      "publicSrc": "/events/deploy-sprint/bootcamp/07.jpg",
+      "dest": "/Users/rk_vishva/Documents/Projects/Knurdz/home/public/events/deploy-sprint/bootcamp/07.jpg",
+      "driveName": "knurdz-ds26-006",
+      "importedAt": "2026-08-02T14:46:47.227Z"
+    },
+    "1uavJHipWp3Km4K616scUr2VGH90cXwdn": {
+      "publicSrc": "/events/deploy-sprint/bootcamp/08.jpg",
+      "dest": "/Users/rk_vishva/Documents/Projects/Knurdz/home/public/events/deploy-sprint/bootcamp/08.jpg",
+      "driveName": "knurdz-ds26-007",
+      "importedAt": "2026-08-02T14:46:50.451Z"
+    },
+    "1iMqLIFvl-0G954zH64DUThasj-Tiq63c": {
+      "publicSrc": "/events/deploy-sprint/finale/01.jpg",
+      "dest": "/Users/rk_vishva/Documents/Projects/Knurdz/home/public/events/deploy-sprint/finale/01.jpg",
+      "driveName": "Copy of IMG_4619.JPG",
+      "importedAt": "2026-08-02T14:46:53.641Z",
+      "aboutEventId": "event-121"
+    },
+    "1N57X5LbpKFmamrfHqXVE-d-aZxsnGlEt": {
+      "publicSrc": "/events/deploy-sprint/finale/02.jpg",
+      "dest": "/Users/rk_vishva/Documents/Projects/Knurdz/home/public/events/deploy-sprint/finale/02.jpg",
+      "driveName": "Copy of IMG_4621.JPG",
+      "importedAt": "2026-08-02T14:46:56.162Z",
+      "aboutEventId": "event-122"
+    },
+    "1BB4taKSMOkjsxHlEpIDecB8QZQvBKILd": {
+      "publicSrc": "/events/deploy-sprint/finale/03.jpg",
+      "dest": "/Users/rk_vishva/Documents/Projects/Knurdz/home/public/events/deploy-sprint/finale/03.jpg",
+      "driveName": "Copy of IMG_4623.JPG",
+      "importedAt": "2026-08-02T14:46:58.690Z",
+      "aboutEventId": "event-123"
+    },
+    "1AXvh7lqUbwf04M-EpIfGvRT79tnQXMYq": {
+      "publicSrc": "/events/deploy-sprint/finale/04.jpg",
+      "dest": "/Users/rk_vishva/Documents/Projects/Knurdz/home/public/events/deploy-sprint/finale/04.jpg",
+      "driveName": "Copy of IMG_4624.JPG",
+      "importedAt": "2026-08-02T14:47:01.040Z",
+      "aboutEventId": "event-124"
+    },
+    "1Rv1RSJhvOjeE9QEvKrSpe3gTPQ4vKoSm": {
+      "publicSrc": "/events/deploy-sprint/finale/05.jpg",
+      "dest": "/Users/rk_vishva/Documents/Projects/Knurdz/home/public/events/deploy-sprint/finale/05.jpg",
+      "driveName": "Copy of IMG_4629.JPG",
+      "importedAt": "2026-08-02T14:47:03.373Z"
+    },
+    "1tA7UsEsgWdrM3cmPkTJvZ3oqhlWhCcv1": {
+      "publicSrc": "/events/deploy-sprint/finale/06.jpg",
+      "dest": "/Users/rk_vishva/Documents/Projects/Knurdz/home/public/events/deploy-sprint/finale/06.jpg",
+      "driveName": "Copy of IMG_4631.JPG",
+      "importedAt": "2026-08-02T14:47:06.231Z"
+    },
+    "1f-GAApaJSiEK-bvvp-9CFN7xNUciJsuv": {
+      "publicSrc": "/events/deploy-sprint/finale/07.jpg",
+      "dest": "/Users/rk_vishva/Documents/Projects/Knurdz/home/public/events/deploy-sprint/finale/07.jpg",
+      "driveName": "Copy of IMG_4632.JPG",
+      "importedAt": "2026-08-02T14:47:08.861Z"
+    },
+    "1TQ1KRdnl2foWuE-EOI0FfN7Syz4a_S6a": {
+      "publicSrc": "/events/deploy-sprint/finale/08.jpg",
+      "dest": "/Users/rk_vishva/Documents/Projects/Knurdz/home/public/events/deploy-sprint/finale/08.jpg",
+      "driveName": "Copy of IMG_4634.JPG",
+      "importedAt": "2026-08-02T14:47:11.880Z"
+    }
+  }
+}

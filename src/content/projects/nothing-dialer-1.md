@@ -72,7 +72,7 @@ void _triggerGlyphLights(String callState) async {
 
 ## Status
 
-Available on [Google Play](https://play.google.com/store/apps/details?id=com.rkkvishva.nothing_dialer&pcampaignid=web_share). Active development on `feature/mobile` — essential dialing, SIM selection, native `InCallService` integration, and Flutter MethodChannels are implemented. Refining ongoing call glyph synchronizations and the history log interface.
+Available on [Google Play](https://play.google.com/store/apps/details?id=com.rkkvishva.nothing_dialer&pcampaignid=web_share). Active development on `feature/mobile`: essential dialing, SIM selection, native `InCallService` integration, and Flutter MethodChannels are implemented. Refining ongoing call glyph synchronizations and the history log interface.
 
 ## Privacy Policy
 

@@ -13,7 +13,7 @@ license: "MIT"
 
 - [GitHub Repository](https://github.com/rkvishwa/Sonar-Code-Editor)
 - [Webview](https://sonar.knurdz.org/)
-- [Microsoft Store — Windows](https://apps.microsoft.com/detail/9nffn07v94dz?ocid=webpdpshare)
+- [Microsoft Store: Windows](https://apps.microsoft.com/detail/9nffn07v94dz?ocid=webpdpshare)
 - **macOS (Homebrew)**:
 
 ```bash

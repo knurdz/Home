@@ -1,10 +1,10 @@
 ---
-title: "Zero to Agent — 3rd Place Globally"
+title: "Zero to Agent: 3rd Place Globally"
 date: "2026-05-05"
-description: "Knurdz placed third worldwide in Vercel's Zero to Agent build week with Origami — the highest-ranked submission from Sri Lanka in a field led by two international teams."
+description: "Knurdz placed third worldwide in Vercel's Zero to Agent build week with Origami: the highest-ranked submission from Sri Lanka in a field led by two international teams."
 image: "/images/achievements/2.jpg"
 category: "Hackathon"
-order: 2
+order: 6
 ---
 
 ## Result
@@ -21,7 +21,7 @@ Zero to Agent ran **April 24 – May 4, 2026**, bringing together hundreds of bu
 
 ## Origami
 
-Origami turns GitHub repositories, PDFs, and raw text into a live interactive canvas and a v0-powered MVP — reducing the gap between understanding complex source material and shipping a working prototype.
+Origami turns GitHub repositories, PDFs, and raw text into a live interactive canvas and a v0-powered MVP: reducing the gap between understanding complex source material and shipping a working prototype.
 
 Built and deployed on the Vercel stack, the project was recognized for strong use of **v0**, clear product narrative, and a polished live demo.
 

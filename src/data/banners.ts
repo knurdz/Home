@@ -6,28 +6,46 @@ export interface BannerSlide {
   title: string;
   description: string;
   badge: BannerBadge;
-  /** CSS object-position for photo crop, e.g. "center 62%" */
+  /** CSS object-position Y; higher % shifts visible crop upward in the banner */
   objectPosition?: string;
 }
 
 export const bannerSlides: BannerSlide[] = [
   {
+    id: "cover",
+    image: "/banner/cover-image.jpg",
+    title: "Build. Innovate. Together.",
+    description:
+      "Knurdz, a community of creators building from code to silicon and social impact.",
+    badge: "highlight",
+    objectPosition: "center 56%",
+  },
+  {
+    id: "bootcamp",
+    image: "/banner/bootcamp-group-pic.jpg",
+    title: "Knurdz Bootcamp",
+    description:
+      "Hands-on workshops where our community learns, builds, and ships real projects together.",
+    badge: "highlight",
+    objectPosition: "center 52%",
+  },
+  {
     id: "community-highlight-1",
     image: "/banner/community-highlight.jpg",
     title: "Knurdz Community",
     description:
-      "Building open-source projects from code to silicon — join creators shipping real impact.",
+      "Building open-source projects from code to silicon. Join creators shipping real impact.",
     badge: "highlight",
-    objectPosition: "center 54%",
+    objectPosition: "center 62%",
   },
   {
-    id: "announcement-1",
-    image: "/banner/community-highlight.jpg",
-    title: "What's New at Knurdz",
+    id: "community-team",
+    image: "/banner/octaii-team-circle-v2.jpg",
+    title: "One community, many builds",
     description:
-      "Fresh projects, events, and collaborations — stay tuned for the latest from our dev branches.",
-    badge: "announcement",
-    objectPosition: "center 54%",
+      "Students and builders learning side by side — workshops, hackathons, and projects that start on the bench and ship for real.",
+    badge: "highlight",
+    objectPosition: "center 45%",
   },
 ];
 

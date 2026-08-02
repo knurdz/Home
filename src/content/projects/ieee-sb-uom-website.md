@@ -2,7 +2,7 @@
 title: "IEEE Student Branch Website"
 banner: "/images/projects/ieee-sb-uom-website/banner.png"
 bannerLight: "/images/projects/ieee-sb-uom-website/banner-light.png"
-description: "Official website for the IEEE Student Branch, University of Moratuwa — showcasing chapters, events, and community engagement for 1,000+ members. Built by Knurdz as web partner."
+description: "Official website for the IEEE Student Branch, University of Moratuwa: showcasing chapters, events, and community engagement for 1,000+ members. Built by Knurdz as web partner."
 tags: ["Web App", "Education", "Community"]
 branch: "main"
 commit: "b8f2c31"
@@ -14,7 +14,7 @@ commit: "b8f2c31"
 
 ## Overview
 
-The IEEE Student Branch Website is the official web presence for the **IEEE Student Branch, University of Moratuwa** — one of the most active and leading Student Branches in Sri Lanka. The site introduces the branch to prospective members, highlights its chapters and affinity groups, and connects a community of **1,000+ active members** and volunteers with events, initiatives, and opportunities for growth.
+The IEEE Student Branch Website is the official web presence for the **IEEE Student Branch, University of Moratuwa**: one of the most active and leading Student Branches in Sri Lanka. The site introduces the branch to prospective members, highlights its chapters and affinity groups, and connects a community of **1,000+ active members** and volunteers with events, initiatives, and opportunities for growth.
 
 Knurdz delivered the site as **web partner**, giving the Student Branch a modern, engaging platform to communicate its mission and stay connected with the UoM engineering community.
 
@@ -24,12 +24,12 @@ Student branches run on volunteer energy, but outdated or fragmented web presenc
 
 ## Key Features
 
-- **Branch identity and mission** — Clear positioning as a leading IEEE Student Branch focused on innovation, technical excellence, and societal impact
-- **Community at scale** — Highlights active volunteers, annual events, years of experience, and chapters & affinity groups
-- **Member growth narrative** — Emphasis on personal and professional development through initiatives and events
-- **Community engagement** — Dedicated section inviting students to be part of the branch community
-- **Contact and collaboration** — “Let’s Talk” messaging with name, email, and message form for inquiries within 24 hours
-- **Stay connected** — Location (Katubedda, 10400) and branch contact email for ongoing communication
+- **Branch identity and mission**: Clear positioning as a leading IEEE Student Branch focused on innovation, technical excellence, and societal impact
+- **Community at scale**: Highlights active volunteers, annual events, years of experience, and chapters & affinity groups
+- **Member growth narrative**: Emphasis on personal and professional development through initiatives and events
+- **Community engagement**: Dedicated section inviting students to be part of the branch community
+- **Contact and collaboration**: “Let’s Talk” messaging with name, email, and message form for inquiries within 24 hours
+- **Stay connected**: Location (Katubedda, 10400) and branch contact email for ongoing communication
 
 ## Public Experience
 

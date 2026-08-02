@@ -188,6 +188,24 @@ export default async function EventDetailPage({ params }: PageProps) {
                     file storage, and ongoing operations, is provisioned and
                     managed by Knurdz.
                   </>
+                ) : event.platformIntro.includes("octwave.com") ? (
+                  <>
+                    As web partner, Knurdz engineered the public event
+                    experience on{" "}
+                    <Link
+                      href={event.url!}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-green-500 hover:text-green-400 mono-font transition-colors break-all"
+                    >
+                      octwave.com
+                    </Link>
+                    : a single digital home for OctWave 3.0 where students
+                    discover the competition, follow the multi-week timeline,
+                    access workshop recordings, and read rules and committee
+                    contacts. Hosting, deployment, and ongoing site operations
+                    are provisioned and managed by Knurdz.
+                  </>
                 ) : (
                   event.platformIntro
                 )}
@@ -220,6 +238,25 @@ export default async function EventDetailPage({ params }: PageProps) {
                       </li>
                     ))}
                   </ul>
+                </>
+              )}
+
+              {event.programPhases && event.programPhases.length > 0 && (
+                <>
+                  <SectionTitle>Program Roadmap</SectionTitle>
+                  {event.programPhases.map((phase) => (
+                    <div key={phase.title}>
+                      <SubTitle>{phase.title}</SubTitle>
+                      {phase.date && (
+                        <p className="text-xs sm:text-sm mono-font text-green-500/90 mb-2">
+                          {phase.date}
+                        </p>
+                      )}
+                      <p className="text-muted leading-relaxed mb-4 sm:mb-6">
+                        {phase.description}
+                      </p>
+                    </div>
+                  ))}
                 </>
               )}
 
@@ -335,6 +372,7 @@ export default async function EventDetailPage({ params }: PageProps) {
               <EventGallery
                 eventName={event.name}
                 images={event.gallery}
+                sections={event.gallerySections}
                 status={event.status}
               />
 
