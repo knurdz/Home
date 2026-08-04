@@ -2,11 +2,10 @@
 
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { bannerSlides, badgeConfig, type BannerSlide } from "@/data/banners";
-import { staticAssetPreviewUrl } from "@/lib/static-assets";
+import { staticAssetUrl } from "@/lib/static-assets";
 
 const AUTO_PLAY_MS = 3000;
 const TRANSITION_MS = 350;
-const BANNER_IMAGE_WIDTH = 1280;
 
 const slideAspectDefault =
   "aspect-[3/2] sm:aspect-[2/1] md:aspect-[11/4] lg:aspect-3/1";
@@ -38,10 +37,7 @@ function SlideContent({
   imageReloadKey: number;
 }) {
   const badge = badgeConfig[slide.badge];
-  const imageSrc = useMemo(
-    () => staticAssetPreviewUrl(slide.image, BANNER_IMAGE_WIDTH, 85),
-    [slide.image],
-  );
+  const imageSrc = useMemo(() => staticAssetUrl(slide.image), [slide.image]);
 
   return (
     <>

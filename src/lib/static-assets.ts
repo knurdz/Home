@@ -39,7 +39,7 @@ export function staticAssetUrl(localPath: string): string {
   return `${base}/storage/buckets/${cfg.bucketId}/files/${entry.fileId}/view?project=${cfg.projectId}`;
 }
 
-/** Appwrite image preview (resize + cache-friendly) for next/image custom loader */
+/** Appwrite image preview (resize). Uses transformation quota — prefer staticAssetUrl when possible. */
 export function staticAssetPreviewUrl(
   localPath: string,
   width: number,
