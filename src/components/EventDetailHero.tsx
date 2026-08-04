@@ -4,6 +4,7 @@ import { useState } from "react";
 import Image from "next/image";
 import ImagePreviewModal from "@/components/ImagePreviewModal";
 import DetailBannerToolbar from "@/components/DetailBannerToolbar";
+import { useNextAppwriteImageSrc } from "@/lib/use-appwrite-image-fallback";
 import {
   getEventStatusLabel,
   type EventData,
@@ -23,18 +24,24 @@ function statusBadgeClass(status: EventStatus) {
 export default function EventDetailHero({ event }: { event: EventData }) {
   const [previewOpen, setPreviewOpen] = useState(false);
   const isUpcoming = event.status === "upcoming";
+  const { src: heroSrc, onError: onHeroError } = useNextAppwriteImageSrc(
+    event.image,
+    1400,
+    85,
+  );
 
   return (
     <>
       <section className="pt-site-header-exact">
         <div className="relative w-full h-[28vh] min-h-[200px] sm:h-[38vh] sm:min-h-64 md:h-[42vh] lg:h-[48vh] overflow-hidden">
           <Image
-            src={event.image}
+            src={heroSrc}
             alt={`${event.name}, ${event.tagline}`}
             fill
             className={`object-cover ${isUpcoming ? "opacity-85" : ""}`}
             sizes="100vw"
             priority
+            onError={onHeroError}
           />
           <div className="detail-banner-scrim absolute inset-0 pointer-events-none" />
           <DetailBannerToolbar onViewImage={() => setPreviewOpen(true)} />

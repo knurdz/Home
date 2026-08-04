@@ -2,10 +2,7 @@
 
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { bannerSlides, badgeConfig, type BannerSlide } from "@/data/banners";
-import {
-  staticAssetImageUrl,
-  staticAssetUrl,
-} from "@/lib/static-assets";
+import { usePlainAppwriteImageSrc } from "@/lib/use-appwrite-image-fallback";
 
 const AUTO_PLAY_MS = 3000;
 const TRANSITION_MS = 350;
@@ -45,19 +42,12 @@ function SlideContent({
   priorityImage: boolean;
 }) {
   const badge = badgeConfig[slide.badge];
-  const previewSrc = useMemo(
-    () => staticAssetImageUrl(slide.image, BANNER_IMAGE_WIDTH, 82),
-    [slide.image],
+  const { src: imageSrc, onError: onImageError } = usePlainAppwriteImageSrc(
+    slide.image,
+    BANNER_IMAGE_WIDTH,
+    82,
+    imageReloadKey,
   );
-  const fallbackSrc = useMemo(
-    () => staticAssetUrl(slide.image),
-    [slide.image],
-  );
-  const [imageSrc, setImageSrc] = useState(previewSrc);
-
-  useEffect(() => {
-    setImageSrc(previewSrc);
-  }, [previewSrc, imageReloadKey]);
 
   return (
     <>
@@ -78,9 +68,7 @@ function SlideContent({
             decoding="async"
             loading={priorityImage ? "eager" : "lazy"}
             fetchPriority={priorityImage ? "high" : "auto"}
-            onError={() => {
-              if (imageSrc !== fallbackSrc) setImageSrc(fallbackSrc);
-            }}
+            onError={onImageError}
             className="banner-slider-image absolute inset-0 h-full w-full object-cover"
           />
         ) : (

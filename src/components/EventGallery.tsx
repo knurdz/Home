@@ -11,6 +11,7 @@ import type {
   EventStatus,
 } from "@/lib/event-types";
 import { showGalleryComingSoonPlaceholders } from "@/lib/event-types";
+import { useNextAppwriteImageSrc } from "@/lib/use-appwrite-image-fallback";
 
 const BLUR_DATA_URL =
   "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAgGBgcGBQgHBwcJCQgKDBQNDAsLDBkSEw8UHRofHh0aHBwgJC4nICIsIxwcKDcpLDAxNDQ0Hyc5PTgyPC4zNDL/2wBDAQkJCQwLDBgNDRgyIRwhMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjL/wAARCAAIAAoDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAb/xAAUEAEAAAAAAAAAAAAAAAAAAAAA/8QAFQEBAQAAAAAAAAAAAAAAAAAAAAX/xAAUEQEAAAAAAAAAAAAAAAAAAAAA/9oADAMBAAIRAxEAPwCdABmX/9k=";
@@ -102,6 +103,8 @@ function GalleryImageCard({
   onOpen: () => void;
   onLoaded: () => void;
 }) {
+  const { src, onError } = useNextAppwriteImageSrc(image.src, 720, 85);
+
   return (
     <button
       type="button"
@@ -133,7 +136,7 @@ function GalleryImageCard({
           )}
 
           <Image
-            src={image.src}
+            src={src}
             alt={image.alt}
             fill
             sizes="(max-width: 640px) 280px, (max-width: 1024px) 50vw, 360px"
@@ -149,6 +152,10 @@ function GalleryImageCard({
             }`}
             style={{ objectPosition: "center center" }}
             onLoad={onLoaded}
+            onError={() => {
+              onError();
+              onLoaded();
+            }}
           />
 
           <div className="absolute inset-0 bg-linear-to-t from-background/95 via-background/50 to-transparent opacity-100 sm:opacity-0 motion-safe:sm:group-hover:opacity-100 transition-all duration-300 flex items-end pointer-events-none">

@@ -80,6 +80,29 @@ export function staticAssetImageUrl(
   return staticAssetUrl(localPath);
 }
 
+/** HTTPS fallbacks after preview fails (402, timeout). Local path uses Next loader first. */
+export function staticAssetImageFallbacks(
+  localPath: string,
+  width: number,
+  quality = 80,
+): string[] {
+  const key = normalizeAssetPath(localPath);
+  if (!useRemoteStaticAssets() || key.startsWith("http")) return [];
+  if (key.endsWith(".svg")) return [];
+
+  const urls: string[] = [];
+  if (useAppwriteImagePreview()) {
+    if (width > 480) {
+      urls.push(staticAssetPreviewUrl(localPath, 480, Math.min(quality, 75)));
+    }
+    if (width > 320) {
+      urls.push(staticAssetPreviewUrl(localPath, 320, 70));
+    }
+  }
+  urls.push(staticAssetUrl(localPath));
+  return [...new Set(urls)];
+}
+
 export function resolveAssetUrlForMetadata(localPath: string, siteBase: string): string {
   const key = normalizeAssetPath(localPath);
   if (key.startsWith("http://") || key.startsWith("https://")) return key;

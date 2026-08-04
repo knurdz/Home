@@ -1,8 +1,9 @@
 "use client";
 
 import Link from "next/link";
-import Image from "next/image";
 import { useState, useEffect, useCallback } from "react";
+import Image from "next/image";
+import AppwriteGalleryImage from "@/components/AppwriteGalleryImage";
 import ScrollIndicator from "@/components/ScrollIndicator";
 import Navbar from "@/components/Navbar";
 import BannerSlider from "@/components/BannerSlider";
@@ -263,24 +264,20 @@ export default function AboutPage() {
                     )}
 
                     {/* Gallery image - preserving proportions with minimal cropping */}
-                    <Image
+                    <AppwriteGalleryImage
                       src={image.src}
                       alt={image.alt}
-                      fill
-                      sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, (max-width: 1280px) 33vw, 25vw"
-                      quality={85}
-                      loading={index < 8 ? "eager" : "lazy"}
-                      priority={index < 4}
-                      placeholder="blur"
-                      blurDataURL="data:image/jpeg;base64,...(omitted)"
+                      index={index}
+                      isLoading={imageLoading[image.id] !== false}
+                      onLoaded={() =>
+                        setImageLoading((prev) => ({ ...prev, [image.id]: false }))
+                      }
                       className={`transition-all duration-500 ${
                         imageLoading[image.id] !== false
-                          ? 'scale-110 blur-lg object-cover'
-                          : 'scale-100 blur-0 group-hover:scale-105 object-cover'
+                          ? "scale-110 blur-lg object-cover"
+                          : "scale-100 blur-0 group-hover:scale-105 object-cover"
                       }`}
-                      style={{ objectPosition: 'center center' }}
-                      onLoadingComplete={() => setImageLoading(prev => ({ ...prev, [image.id]: false }))}
-                      onLoad={() => setImageLoading(prev => ({ ...prev, [image.id]: false }))}
+                      style={{ objectPosition: "center center" }}
                     />
 
                     {/* Overlay */}

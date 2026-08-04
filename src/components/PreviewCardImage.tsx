@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import { useEffect, useState } from "react";
+import { useNextAppwriteImageSrc } from "@/lib/use-appwrite-image-fallback";
 
 interface PreviewCardImageProps {
   src: string;
@@ -58,14 +59,19 @@ export default function PreviewCardImage({
   }, []);
 
   const imageSrc = theme === "light" && srcLight ? srcLight : src;
+  const { src: resolvedSrc, onError } = useNextAppwriteImageSrc(
+    imageSrc,
+    640,
+    85,
+  );
 
   return (
     <div className="relative w-full aspect-[2/1] overflow-hidden bg-background-alt isolate">
       <div className="absolute inset-0 overflow-hidden">
         {mounted ? (
           <Image
-            key={imageSrc}
-            src={imageSrc}
+            key={resolvedSrc}
+            src={resolvedSrc}
             alt={alt}
             fill
             priority={priority}
@@ -73,6 +79,7 @@ export default function PreviewCardImage({
             sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
             className={`size-full max-w-none object-cover object-center transition-transform duration-500 group-hover:scale-105 ${className}`}
             style={{ objectFit: "cover", objectPosition }}
+            onError={onError}
           />
         ) : null}
       </div>
