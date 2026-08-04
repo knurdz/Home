@@ -40,7 +40,7 @@ export const bannerSlides: BannerSlide[] = [
   },
   {
     id: "community-team",
-    image: "/banner/octaii-team-circle-v2.jpg",
+    image: "/banner/community-team-circle-v3.jpg",
     title: "One community, many builds",
     description:
       "Students and builders learning side by side — workshops, hackathons, and projects that start on the bench and ship for real.",
