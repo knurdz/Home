@@ -1723,5 +1723,20 @@
     "fileId": "af957dfe2b02fa60057c41ac538fcf41b0d0",
     "size": 154570,
     "mtimeMs": 1785848630520.8398
+  },
+  "/banner/community-group-hall-v1.jpg": {
+    "fileId": "49c588ffb9c81d3585559ee679ae2c5374a9",
+    "size": 173811,
+    "mtimeMs": 1785849520048.3638
+  },
+  "/banner/community-team-row-v1.jpg": {
+    "fileId": "59366760aac5cb7e005dea74f2c94f62aacd",
+    "size": 143791,
+    "mtimeMs": 1785849520050.5117
+  },
+  "/banner/community-group-stage-v1.jpg": {
+    "fileId": "ec8f030a4e383d89ca240d22076d6cc9ed8f",
+    "size": 160801,
+    "mtimeMs": 1785850007325.3875
   }
 }

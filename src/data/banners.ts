@@ -27,16 +27,7 @@ export const bannerSlides: BannerSlide[] = [
     description:
       "Hands-on workshops where our community learns, builds, and ships real projects together.",
     badge: "highlight",
-    objectPosition: "center 52%",
-  },
-  {
-    id: "community-highlight-1",
-    image: "/banner/community-highlight.jpg",
-    title: "Knurdz Community",
-    description:
-      "Building open-source projects from code to silicon. Join creators shipping real impact.",
-    badge: "highlight",
-    objectPosition: "center 62%",
+    objectPosition: "center 46%",
   },
   {
     id: "community-team",
@@ -45,7 +36,43 @@ export const bannerSlides: BannerSlide[] = [
     description:
       "Students and builders learning side by side — workshops, hackathons, and projects that start on the bench and ship for real.",
     badge: "highlight",
-    objectPosition: "center 45%",
+    objectPosition: "center 52%",
+  },
+  {
+    id: "community-group-hall",
+    image: "/banner/community-group-hall-v1.jpg",
+    title: "Builders in the room",
+    description:
+      "Full-house meetups where undergraduates, leads, and partners share the same floor and the same mission.",
+    badge: "highlight",
+    objectPosition: "center 50%",
+  },
+  {
+    id: "community-team-row",
+    image: "/banner/community-team-row-v1.jpg",
+    title: "The people who ship with us",
+    description:
+      "Organizers and members who run events, mentor peers, and keep Knurdz moving from idea to deploy.",
+    badge: "highlight",
+    objectPosition: "center 48%",
+  },
+  {
+    id: "community-group-stage",
+    image: "/banner/community-group-stage-v1.jpg",
+    title: "Room full of builders",
+    description:
+      "Stage moments with the wider community — awards, meetups, and everyone who showed up to build together.",
+    badge: "highlight",
+    objectPosition: "center 50%",
+  },
+  {
+    id: "community-highlight-1",
+    image: "/banner/community-highlight.jpg",
+    title: "Knurdz Community",
+    description:
+      "Building open-source projects from code to silicon. Join creators shipping real impact.",
+    badge: "highlight",
+    objectPosition: "center 56%",
   },
 ];
 
