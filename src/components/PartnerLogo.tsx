@@ -1,3 +1,5 @@
+import { staticAssetUrl } from "@/lib/static-assets";
+
 type PartnerLogoProps = {
   src: string;
   srcLight?: string;
@@ -11,16 +13,19 @@ export default function PartnerLogo({
   alt,
   className = "",
 }: PartnerLogoProps) {
-  if (srcLight) {
+  const resolved = staticAssetUrl(src);
+  const resolvedLight = srcLight ? staticAssetUrl(srcLight) : undefined;
+
+  if (resolvedLight) {
     return (
       <>
         <img
-          src={src}
+          src={resolved}
           alt={alt}
           className={`partner-logo logo-dark ${className}`.trim()}
         />
         <img
-          src={srcLight}
+          src={resolvedLight}
           alt={alt}
           className={`partner-logo logo-light ${className}`.trim()}
         />
@@ -30,7 +35,7 @@ export default function PartnerLogo({
 
   return (
     <img
-      src={src}
+      src={resolved}
       alt={alt}
       className={`partner-logo ${className}`.trim()}
     />

@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import ThemeToggle from "@/components/ThemeToggle";
+import BrandLogo from "@/components/BrandLogo";
 import { useEffect, useRef, useState } from "react";
 
 interface NavbarProps {
@@ -50,25 +51,7 @@ export default function Navbar({ activePage }: NavbarProps) {
       <header ref={headerRef} className="fixed top-0 inset-x-0 z-50 flex flex-col">
         <nav className="w-full bg-background backdrop-blur-xl shadow-[0_1px_0_var(--border)]">
         <div className="container mx-auto max-w-7xl min-w-0 px-4 sm:px-6 py-3 sm:py-4 flex items-center justify-between relative">
-          <Link
-            href="/"
-            aria-label="Knurdz home"
-            className="block hover:opacity-80 transition-opacity z-10 relative"
-            onClick={() => setIsMenuOpen(false)}
-          >
-            <img
-              src="/logo/knurdz-logo-horizontal.png"
-              alt=""
-              aria-hidden="true"
-              className="logo-dark block h-11 md:h-12 w-auto transition-transform"
-            />
-            <img
-              src="/logo/knurdz-logo-horizontal-light.png"
-              alt=""
-              aria-hidden="true"
-              className="logo-light block h-11 md:h-12 w-auto transition-transform"
-            />
-          </Link>
+          <BrandLogo onNavigate={() => setIsMenuOpen(false)} />
           
           {/* Desktop Navigation */}
           <div className="hidden lg:flex items-center gap-8">

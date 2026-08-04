@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import BrandLogo from "@/components/BrandLogo";
 
 export default function Footer() {
   const initialCommit = (
@@ -18,20 +19,7 @@ export default function Footer() {
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-12 mb-12">
           {/* Brand */}
           <div className="col-span-2 md:col-span-1 space-y-4">
-            <Link href="/" aria-label="Knurdz home" className="block hover:opacity-80 transition-opacity">
-              <img
-                src="/logo/knurdz-logo-horizontal.png"
-                alt=""
-                aria-hidden="true"
-                className="logo-dark block h-12 w-auto"
-              />
-              <img
-                src="/logo/knurdz-logo-horizontal-light.png"
-                alt=""
-                aria-hidden="true"
-                className="logo-light block h-12 w-auto"
-              />
-            </Link>
+            <BrandLogo className="h-12 w-auto" />
             <p className="text-muted text-sm">
               Engineering the future through code, hardware, and social innovation.
             </p>

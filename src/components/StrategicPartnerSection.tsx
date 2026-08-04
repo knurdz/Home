@@ -1,4 +1,5 @@
 import { strategicPartner } from "@/data/strategic-partner";
+import { staticAssetUrl } from "@/lib/static-assets";
 
 type StrategicPartnerSectionProps = {
   className?: string;
@@ -44,7 +45,7 @@ export default function StrategicPartnerSection({
               <div className="flex justify-center mb-5 sm:mb-8">
                 <div className="p-5 sm:p-8 md:p-10 rounded-xl border border-border bg-background-alt/80 w-full max-w-sm sm:max-w-none sm:w-auto">
                   <img
-                    src={strategicPartner.logo}
+                    src={staticAssetUrl(strategicPartner.logo)}
                     alt={`${strategicPartner.name} logo`}
                     className="strategic-partner-logo h-14 sm:h-20 md:h-28 w-auto max-w-full object-contain mx-auto"
                   />

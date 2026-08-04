@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Space_Grotesk, JetBrains_Mono, Source_Serif_4 } from "next/font/google";
 import { BlogFontProvider } from "@/hooks/useBlogFont";
 import { READING_FONT_INIT_SCRIPT } from "@/lib/blog-font";
+import { resolveAssetUrlForMetadata } from "@/lib/static-assets";
 import "./globals.css";
 
 const spaceGrotesk = Space_Grotesk({
@@ -23,6 +24,10 @@ const sourceSerif = Source_Serif_4({
 });
 
 const BASE_URL = "https://knurdz.org";
+const OG_LOGO = resolveAssetUrlForMetadata(
+  "/logo/knurdz-logo-horizontal-bg.png",
+  BASE_URL,
+);
 
 export const metadata: Metadata = {
   metadataBase: new URL(BASE_URL),
@@ -76,7 +81,7 @@ export const metadata: Metadata = {
     siteName: "Knurdz",
     images: [
       {
-        url: "/logo/knurdz-logo-horizontal-bg.png",
+        url: OG_LOGO,
         width: 600,
         height: 200,
         alt: "Knurdz: Tech Community | Organization",
@@ -92,7 +97,7 @@ export const metadata: Metadata = {
       "From code to silicon and social impact. Explore innovative projects, meet our partners, and join the Knurdz community in building tech that matters.",
     site: "@knurdz_org",
     creator: "@knurdz_org",
-    images: ["/logo/knurdz-logo-horizontal-bg.png"],
+    images: [OG_LOGO],
   },
 };
 
