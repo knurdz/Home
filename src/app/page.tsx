@@ -49,7 +49,7 @@ const organizationJsonLd = {
 
 export default function Home() {
   const events = getAllEvents();
-  const achievements = getAllAchievements().slice(0, 3);
+  const achievements = getAllAchievements().slice(0, 6);
 
   return (
     <>
