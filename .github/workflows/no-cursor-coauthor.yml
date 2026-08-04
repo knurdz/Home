@@ -1,0 +1,37 @@
+name: No Cursor co-author
+
+on:
+  pull_request:
+    branches: [main]
+  push:
+    branches: [main]
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Scan commits for Cursor co-author trailer
+        shell: bash
+        run: |
+          set -euo pipefail
+          chmod +x scripts/check-no-cursor-coauthor.sh
+
+          if [ "${{ github.event_name }}" = "pull_request" ]; then
+            git fetch origin "${{ github.base_ref }}"
+            RANGE="origin/${{ github.base_ref }}..HEAD"
+          else
+            BEFORE="${{ github.event.before }}"
+            AFTER="${{ github.event.after }}"
+            if [ "${BEFORE}" = "0000000000000000000000000000000000000000" ]; then
+              RANGE="${AFTER}"
+            else
+              RANGE="${BEFORE}..${AFTER}"
+            fi
+          fi
+
+          echo "Checking range: ${RANGE}"
+          ./scripts/check-no-cursor-coauthor.sh "${RANGE}"
