@@ -1,11 +1,12 @@
 "use client";
 
-import Image from "next/image";
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { bannerSlides, badgeConfig, type BannerSlide } from "@/data/banners";
+import { staticAssetPreviewUrl } from "@/lib/static-assets";
 
 const AUTO_PLAY_MS = 3000;
 const TRANSITION_MS = 350;
+const BANNER_IMAGE_WIDTH = 1280;
 
 const slideAspectDefault =
   "aspect-[3/2] sm:aspect-[2/1] md:aspect-[11/4] lg:aspect-3/1";
@@ -18,8 +19,29 @@ function buildExtendedSlides(slides: BannerSlide[]): BannerSlide[] {
   return [slides[slides.length - 1], ...slides, slides[0]];
 }
 
-function SlideContent({ slide }: { slide: BannerSlide }) {
+function snapCarouselIndex(
+  index: number,
+  realCount: number,
+  extendedLength: number,
+): number {
+  if (extendedLength <= 1) return index;
+  if (index === extendedLength - 1) return 1;
+  if (index === 0) return realCount;
+  return index;
+}
+
+function SlideContent({
+  slide,
+  imageReloadKey,
+}: {
+  slide: BannerSlide;
+  imageReloadKey: number;
+}) {
   const badge = badgeConfig[slide.badge];
+  const imageSrc = useMemo(
+    () => staticAssetPreviewUrl(slide.image, BANNER_IMAGE_WIDTH, 85),
+    [slide.image],
+  );
 
   return (
     <>
@@ -31,13 +53,14 @@ function SlideContent({ slide }: { slide: BannerSlide }) {
           } as React.CSSProperties
         }
       >
-        <Image
-          src={slide.image}
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img
+          key={`${slide.id}-${imageReloadKey}`}
+          src={imageSrc}
           alt={slide.title}
-          fill
-          priority
-          sizes="(max-width: 640px) 100vw, (max-width: 1024px) 90vw, 1280px"
-          className="banner-slider-image object-cover"
+          decoding="async"
+          fetchPriority="high"
+          className="banner-slider-image absolute inset-0 h-full w-full object-cover"
         />
       </div>
 
@@ -90,12 +113,16 @@ export default function BannerSlider({
   const isCarousel = uniqueImageCount > 1;
   const extended = isCarousel ? buildExtendedSlides(slides) : slides;
   const realCount = slides.length;
+  const extendedLength = extended.length;
 
   const [activeIndex, setActiveIndex] = useState(isCarousel ? 1 : 0);
   const [isTransitioning, setIsTransitioning] = useState(true);
   const [isPaused, setIsPaused] = useState(false);
+  const [imageReloadKey, setImageReloadKey] = useState(0);
   const timerRef = useRef<ReturnType<typeof setInterval> | null>(null);
   const trackRef = useRef<HTMLDivElement>(null);
+  const rootRef = useRef<HTMLDivElement>(null);
+  const tabHiddenRef = useRef(false);
 
   const goTo = useCallback((index: number, animate = true) => {
     setIsTransitioning(animate);
@@ -103,18 +130,36 @@ export default function BannerSlider({
   }, []);
 
   const next = useCallback(() => {
-    goTo(activeIndex + 1);
-  }, [activeIndex, goTo]);
+    setActiveIndex((idx) => idx + 1);
+    setIsTransitioning(true);
+  }, []);
 
   const handleTransitionEnd = useCallback(() => {
     if (!isCarousel) return;
 
-    if (activeIndex === extended.length - 1) {
-      goTo(1, false);
-    } else if (activeIndex === 0) {
-      goTo(realCount, false);
+    setActiveIndex((idx) => {
+      const snapped = snapCarouselIndex(idx, realCount, extendedLength);
+      if (snapped !== idx) {
+        setIsTransitioning(false);
+        return snapped;
+      }
+      return idx;
+    });
+  }, [extendedLength, isCarousel, realCount]);
+
+  const refreshBannerMedia = useCallback(() => {
+    setImageReloadKey((key) => key + 1);
+    if (isCarousel) {
+      setActiveIndex((idx) => {
+        const snapped = snapCarouselIndex(idx, realCount, extendedLength);
+        if (snapped !== idx) {
+          setIsTransitioning(false);
+          return snapped;
+        }
+        return idx;
+      });
     }
-  }, [activeIndex, extended.length, goTo, isCarousel, realCount]);
+  }, [extendedLength, isCarousel, realCount]);
 
   useEffect(() => {
     if (!isCarousel || isPaused) return;
@@ -144,6 +189,35 @@ export default function BannerSlider({
     return () => track.removeEventListener("transitionend", onEnd);
   }, [handleTransitionEnd, isCarousel]);
 
+  useEffect(() => {
+    const onVisibility = () => {
+      if (document.visibilityState === "hidden") {
+        tabHiddenRef.current = true;
+        setIsPaused(true);
+        return;
+      }
+
+      setIsPaused(false);
+      if (tabHiddenRef.current) {
+        tabHiddenRef.current = false;
+        refreshBannerMedia();
+      }
+    };
+
+    const onPageShow = (event: PageTransitionEvent) => {
+      if (event.persisted) {
+        refreshBannerMedia();
+      }
+    };
+
+    document.addEventListener("visibilitychange", onVisibility);
+    window.addEventListener("pageshow", onPageShow);
+    return () => {
+      document.removeEventListener("visibilitychange", onVisibility);
+      window.removeEventListener("pageshow", onPageShow);
+    };
+  }, [refreshBannerMedia]);
+
   if (slides.length === 0) return null;
 
   const dotIndex =
@@ -156,7 +230,9 @@ export default function BannerSlider({
   const pauseHandlers = isCarousel
     ? {
         onMouseEnter: () => setIsPaused(true),
-        onMouseLeave: () => setIsPaused(false),
+        onMouseLeave: () => {
+          if (document.visibilityState === "visible") setIsPaused(false);
+        },
         onFocusCapture: () => setIsPaused(true),
         onBlurCapture: (e: React.FocusEvent) => {
           if (!e.currentTarget.contains(e.relatedTarget as Node)) {
@@ -168,6 +244,7 @@ export default function BannerSlider({
 
   const sliderInner = (
     <div
+      ref={rootRef}
       className={`banner-slider relative overflow-hidden rounded-xl border border-border bg-card shadow-[0_1px_0_var(--border)] ${embedded ? "h-full min-h-[inherit]" : ""} ${className}`.trim()}
       {...pauseHandlers}
     >
@@ -188,13 +265,13 @@ export default function BannerSlider({
               className={`relative min-w-full ${slideAspectBase}`}
               aria-hidden={index !== activeIndex ? true : undefined}
             >
-              <SlideContent slide={slide} />
+              <SlideContent slide={slide} imageReloadKey={imageReloadKey} />
             </article>
           ))}
         </div>
       ) : (
         <article className={`relative ${slideAspectBase}`}>
-          <SlideContent slide={slides[0]} />
+          <SlideContent slide={slides[0]} imageReloadKey={imageReloadKey} />
         </article>
       )}
 
@@ -202,7 +279,7 @@ export default function BannerSlider({
         <>
           <div className="absolute bottom-0 left-0 right-0 h-0.5 bg-border">
             <div
-              key={`${dotIndex}-${isPaused}`}
+              key={`${dotIndex}-${isPaused}-${imageReloadKey}`}
               className="h-full bg-green-500 origin-left"
               style={{
                 animation: isPaused
