@@ -1,7 +1,7 @@
 {
   "bucketId": "site-static",
   "endpoint": "https://sgp.cloud.appwrite.io/v1",
-  "projectId": "697b8f42002a34ba04b3",
+  "projectId": "uom",
   "files": {
     "/banner/bootcamp-group-pic.jpg": {
       "fileId": "c45069090dd846a690d5b03ce4dc58a0b7c1"

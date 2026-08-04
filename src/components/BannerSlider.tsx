@@ -2,10 +2,14 @@
 
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { bannerSlides, badgeConfig, type BannerSlide } from "@/data/banners";
-import { staticAssetUrl } from "@/lib/static-assets";
+import {
+  staticAssetImageUrl,
+  staticAssetUrl,
+} from "@/lib/static-assets";
 
 const AUTO_PLAY_MS = 3000;
 const TRANSITION_MS = 350;
+const BANNER_IMAGE_WIDTH = 1280;
 
 const slideAspectDefault =
   "aspect-[3/2] sm:aspect-[2/1] md:aspect-[11/4] lg:aspect-3/1";
@@ -32,12 +36,28 @@ function snapCarouselIndex(
 function SlideContent({
   slide,
   imageReloadKey,
+  loadImage,
+  priorityImage,
 }: {
   slide: BannerSlide;
   imageReloadKey: number;
+  loadImage: boolean;
+  priorityImage: boolean;
 }) {
   const badge = badgeConfig[slide.badge];
-  const imageSrc = useMemo(() => staticAssetUrl(slide.image), [slide.image]);
+  const previewSrc = useMemo(
+    () => staticAssetImageUrl(slide.image, BANNER_IMAGE_WIDTH, 82),
+    [slide.image],
+  );
+  const fallbackSrc = useMemo(
+    () => staticAssetUrl(slide.image),
+    [slide.image],
+  );
+  const [imageSrc, setImageSrc] = useState(previewSrc);
+
+  useEffect(() => {
+    setImageSrc(previewSrc);
+  }, [previewSrc, imageReloadKey]);
 
   return (
     <>
@@ -49,15 +69,23 @@ function SlideContent({
           } as React.CSSProperties
         }
       >
-        {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img
-          key={`${slide.id}-${imageReloadKey}`}
-          src={imageSrc}
-          alt={slide.title}
-          decoding="async"
-          fetchPriority="high"
-          className="banner-slider-image absolute inset-0 h-full w-full object-cover"
-        />
+        {loadImage ? (
+          // eslint-disable-next-line @next/next/no-img-element
+          <img
+            key={`${slide.id}-${imageReloadKey}-${imageSrc}`}
+            src={imageSrc}
+            alt={slide.title}
+            decoding="async"
+            loading={priorityImage ? "eager" : "lazy"}
+            fetchPriority={priorityImage ? "high" : "auto"}
+            onError={() => {
+              if (imageSrc !== fallbackSrc) setImageSrc(fallbackSrc);
+            }}
+            className="banner-slider-image absolute inset-0 h-full w-full object-cover"
+          />
+        ) : (
+          <div className="absolute inset-0 bg-background-alt" aria-hidden />
+        )}
       </div>
 
       <div
@@ -115,6 +143,9 @@ export default function BannerSlider({
   const [isTransitioning, setIsTransitioning] = useState(true);
   const [isPaused, setIsPaused] = useState(false);
   const [imageReloadKey, setImageReloadKey] = useState(0);
+  const [loadedSlideIndices, setLoadedSlideIndices] = useState<Set<number>>(
+    () => new Set(isCarousel ? [1] : [0]),
+  );
   const timerRef = useRef<ReturnType<typeof setInterval> | null>(null);
   const trackRef = useRef<HTMLDivElement>(null);
   const rootRef = useRef<HTMLDivElement>(null);
@@ -145,6 +176,7 @@ export default function BannerSlider({
 
   const refreshBannerMedia = useCallback(() => {
     setImageReloadKey((key) => key + 1);
+    setLoadedSlideIndices(new Set([activeIndex]));
     if (isCarousel) {
       setActiveIndex((idx) => {
         const snapped = snapCarouselIndex(idx, realCount, extendedLength);
@@ -155,7 +187,20 @@ export default function BannerSlider({
         return idx;
       });
     }
-  }, [extendedLength, isCarousel, realCount]);
+  }, [activeIndex, extendedLength, isCarousel, realCount]);
+
+  useEffect(() => {
+    if (!isCarousel) return;
+    setLoadedSlideIndices((prev) => {
+      const next = new Set(prev);
+      next.add(activeIndex);
+      for (const offset of [-1, 1]) {
+        const i = activeIndex + offset;
+        if (i >= 0 && i < extendedLength) next.add(i);
+      }
+      return next;
+    });
+  }, [activeIndex, extendedLength, isCarousel]);
 
   useEffect(() => {
     if (!isCarousel || isPaused) return;
@@ -261,13 +306,23 @@ export default function BannerSlider({
               className={`relative min-w-full ${slideAspectBase}`}
               aria-hidden={index !== activeIndex ? true : undefined}
             >
-              <SlideContent slide={slide} imageReloadKey={imageReloadKey} />
+              <SlideContent
+                slide={slide}
+                imageReloadKey={imageReloadKey}
+                loadImage={loadedSlideIndices.has(index)}
+                priorityImage={index === activeIndex}
+              />
             </article>
           ))}
         </div>
       ) : (
         <article className={`relative ${slideAspectBase}`}>
-          <SlideContent slide={slides[0]} imageReloadKey={imageReloadKey} />
+          <SlideContent
+            slide={slides[0]}
+            imageReloadKey={imageReloadKey}
+            loadImage
+            priorityImage
+          />
         </article>
       )}
 

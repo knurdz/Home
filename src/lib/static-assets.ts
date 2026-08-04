@@ -22,6 +22,11 @@ export function useRemoteStaticAssets(): boolean {
   return process.env.NEXT_PUBLIC_USE_APPWRITE_STATIC === "1";
 }
 
+/** Use Appwrite /preview when true (smaller payloads). Falls back to /view if preview quota is exceeded. */
+export function useAppwriteImagePreview(): boolean {
+  return process.env.NEXT_PUBLIC_APPWRITE_USE_PREVIEW !== "0";
+}
+
 function manifestEntry(localPath: string): ManifestFile | undefined {
   const key = normalizeAssetPath(localPath);
   return cfg.files[key];
@@ -39,7 +44,7 @@ export function staticAssetUrl(localPath: string): string {
   return `${base}/storage/buckets/${cfg.bucketId}/files/${entry.fileId}/view?project=${cfg.projectId}`;
 }
 
-/** Appwrite image preview (resize). Uses transformation quota — prefer staticAssetUrl when possible. */
+/** Appwrite image preview (resize). Uses transformation quota — prefer staticAssetUrl when preview is disabled or over quota. */
 export function staticAssetPreviewUrl(
   localPath: string,
   width: number,
@@ -61,6 +66,20 @@ export function staticAssetPreviewUrl(
   return `${base}/storage/buckets/${cfg.bucketId}/files/${entry.fileId}/preview?${params}`;
 }
 
+/** Preview when enabled; otherwise full file view. SVG always uses view. */
+export function staticAssetImageUrl(
+  localPath: string,
+  width: number,
+  quality = 80,
+): string {
+  const key = normalizeAssetPath(localPath);
+  if (key.endsWith(".svg")) return staticAssetUrl(localPath);
+  if (useRemoteStaticAssets() && useAppwriteImagePreview()) {
+    return staticAssetPreviewUrl(localPath, width, quality);
+  }
+  return staticAssetUrl(localPath);
+}
+
 export function resolveAssetUrlForMetadata(localPath: string, siteBase: string): string {
   const key = normalizeAssetPath(localPath);
   if (key.startsWith("http://") || key.startsWith("https://")) return key;
@@ -68,4 +87,13 @@ export function resolveAssetUrlForMetadata(localPath: string, siteBase: string):
     return staticAssetUrl(key);
   }
   return `${siteBase.replace(/\/$/, "")}${key}`;
+}
+
+export function appwriteOrigin(): string | null {
+  if (!useRemoteStaticAssets()) return null;
+  try {
+    return new URL(cfg.endpoint).origin;
+  } catch {
+    return null;
+  }
 }

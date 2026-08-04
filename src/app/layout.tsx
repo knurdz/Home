@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { Space_Grotesk, JetBrains_Mono, Source_Serif_4 } from "next/font/google";
 import { BlogFontProvider } from "@/hooks/useBlogFont";
 import { READING_FONT_INIT_SCRIPT } from "@/lib/blog-font";
-import { resolveAssetUrlForMetadata } from "@/lib/static-assets";
+import { resolveAssetUrlForMetadata, appwriteOrigin } from "@/lib/static-assets";
 import "./globals.css";
 
 const spaceGrotesk = Space_Grotesk({
@@ -110,6 +110,8 @@ const websiteJsonLd = {
     "From code to silicon and social impact. A tech community building open-source projects that matter.",
 };
 
+const APPWRITE_ORIGIN = appwriteOrigin();
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -118,6 +120,12 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <head>
+        {APPWRITE_ORIGIN ? (
+          <>
+            <link rel="dns-prefetch" href={APPWRITE_ORIGIN} />
+            <link rel="preconnect" href={APPWRITE_ORIGIN} crossOrigin="" />
+          </>
+        ) : null}
         <script
           dangerouslySetInnerHTML={{ __html: READING_FONT_INIT_SCRIPT }}
         />

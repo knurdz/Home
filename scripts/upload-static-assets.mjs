@@ -4,7 +4,7 @@
  * Env (from .env / .env.local or shell):
  *   APPWRITE_API_KEY          Server API key (required)
  *   APPWRITE_ENDPOINT         default https://sgp.cloud.appwrite.io/v1
- *   APPWRITE_PROJECT_ID       default 697b8f42002a34ba04b3
+ *   APPWRITE_PROJECT_ID       default uom
  *   APPWRITE_STATIC_BUCKET_ID default site-static
  *   DRY_RUN=1                 list actions only
  *   FORCE=1                   re-upload even if manifest matches
@@ -71,13 +71,13 @@ const endpoint =
 const projectId =
   process.env.APPWRITE_PROJECT_ID ??
   process.env.NEXT_PUBLIC_APPWRITE_PROJECT_ID ??
-  "697b8f42002a34ba04b3";
+  "uom";
 const apiKey =
   process.env.APPWRITE_API_KEY ??
   loadKeyFromAppwritePrefs(
     process.env.APPWRITE_PROJECT_ID ??
       process.env.NEXT_PUBLIC_APPWRITE_PROJECT_ID ??
-      "697b8f42002a34ba04b3",
+      "uom",
     process.env.APPWRITE_ENDPOINT ?? "https://sgp.cloud.appwrite.io/v1",
   );
 

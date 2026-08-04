@@ -69,6 +69,7 @@ export default function PreviewCardImage({
             alt={alt}
             fill
             priority={priority}
+            loading={priority ? "eager" : "lazy"}
             sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
             className={`size-full max-w-none object-cover object-center transition-transform duration-500 group-hover:scale-105 ${className}`}
             style={{ objectFit: "cover", objectPosition }}
