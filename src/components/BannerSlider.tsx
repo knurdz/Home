@@ -134,9 +134,9 @@ export default function BannerSlider({
   const [loadedSlideIndices, setLoadedSlideIndices] = useState<Set<number>>(
     () => new Set(isCarousel ? [1] : [0]),
   );
-  const timerRef = useRef<ReturnType<typeof setInterval> | null>(null);
   const trackRef = useRef<HTMLDivElement>(null);
   const rootRef = useRef<HTMLDivElement>(null);
+  const progressBarRef = useRef<HTMLDivElement>(null);
   const tabHiddenRef = useRef(false);
 
   const goTo = useCallback((index: number, animate = true) => {
@@ -190,19 +190,26 @@ export default function BannerSlider({
     });
   }, [activeIndex, extendedLength, isCarousel]);
 
+  // Drive auto-advance off the progress bar's CSS animation so that pausing
+  // (via animation-play-state) also pauses the advance timer. Resuming picks
+  // up exactly where it left off instead of restarting a fresh 3s cycle.
   useEffect(() => {
-    if (!isCarousel || isPaused) return;
+    if (!isCarousel) return;
 
     const prefersReducedMotion = window.matchMedia(
       "(prefers-reduced-motion: reduce)",
     ).matches;
     if (prefersReducedMotion) return;
 
-    timerRef.current = setInterval(next, AUTO_PLAY_MS);
-    return () => {
-      if (timerRef.current) clearInterval(timerRef.current);
+    const el = progressBarRef.current;
+    if (!el) return;
+
+    const onEnd = (e: AnimationEvent) => {
+      if (e.animationName === "banner-progress") next();
     };
-  }, [isCarousel, isPaused, next]);
+    el.addEventListener("animationend", onEnd);
+    return () => el.removeEventListener("animationend", onEnd);
+  }, [isCarousel, next, activeIndex, imageReloadKey]);
 
   useEffect(() => {
     if (!isCarousel) return;
@@ -318,15 +325,12 @@ export default function BannerSlider({
         <>
           <div className="absolute bottom-0 left-0 right-0 h-0.5 bg-border">
             <div
-              key={`${dotIndex}-${isPaused}-${imageReloadKey}`}
+              ref={progressBarRef}
+              key={`${dotIndex}-${imageReloadKey}`}
               className="h-full bg-green-500 origin-left"
               style={{
-                animation: isPaused
-                  ? "none"
-                  : `banner-progress ${AUTO_PLAY_MS}ms linear forwards`,
-                width: isPaused
-                  ? `${((dotIndex + 1) / realCount) * 100}%`
-                  : undefined,
+                animation: `banner-progress ${AUTO_PLAY_MS}ms linear forwards`,
+                animationPlayState: isPaused ? "paused" : "running",
               }}
             />
           </div>
