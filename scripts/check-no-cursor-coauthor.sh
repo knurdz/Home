@@ -9,12 +9,12 @@ if ! git rev-parse --verify "${RANGE}" >/dev/null 2>&1; then
   exit 1
 fi
 
-offending="$(git log "${RANGE}" --format=%H --grep='cursoragent@cursor.com' -i 2>/dev/null || true)"
-if [ -z "${offending}" ]; then
-  if git log "${RANGE}" --format=%B | grep -qE 'cursoragent@cursor\.com'; then
-    offending="$(git log "${RANGE}" --format=%H)"
+offending="$(git log "${RANGE}" --format=%H | while read -r sha; do
+  [ -n "${sha}" ] || continue
+  if git log -1 --format=%B "${sha}" | grep -qE 'cursoragent@cursor\.com'; then
+    echo "${sha}"
   fi
-fi
+done)"
 
 if [ -n "${offending}" ]; then
   echo "ERROR: Cursor co-author trailer found in commit message(s):" >&2
