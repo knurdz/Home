@@ -28,9 +28,14 @@ export const protocols: Protocol[] = [
   { id: "04", text: "Respect the truth enough to speak it plainly." },
 ];
 
+export const teamCounts: CommunityStat[] = [
+  { number: "16+", label: "OC Members" },
+  { number: "200+", label: "Community Members" },
+];
+
 export const communityStats: CommunityStat[] = [
   { number: "20+", label: "Projects Delivered" },
-  { number: "16+", label: "Community Members" },
+  ...teamCounts,
   { number: "5+", label: "Events Hosted & Partnered" },
   { number: "20+", label: "Competition Placements" },
 ];

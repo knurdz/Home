@@ -40,7 +40,8 @@ export const members: Member[] = [
     name: "Sadeepa N Herath",
     role: "Vice President",
     bio: "",
-    image: "https://github.com/SadeepaNHerath.png",
+    image: "/team/SadeepaNHerath.png",
+    imageVersion: 1,
     github: "https://github.com/SadeepaNHerath",
     linkedin: "https://www.linkedin.com/in/sadeepanherath/"
   },
@@ -48,7 +49,8 @@ export const members: Member[] = [
     name: "Kasun Kumara",
     role: "People & Operations Lead",
     bio: "",
-    image: "https://github.com/Kasun-Kumara.png",
+    image: "/team/Kasun-Kumara.png",
+    imageVersion: 1,
     github: "https://github.com/Kasun-Kumara",
     linkedin: "https://www.linkedin.com/in/kasun-kumara-30baaa338/"
   },
@@ -144,7 +146,8 @@ export const members: Member[] = [
     name: "Neleesha Peiris",
     role: "Logistics Lead",
     bio: "",
-    image: "https://github.com/nelee25.png",
+    image: "/team/nelee25.png",
+    imageVersion: 1,
     github: "https://github.com/nelee25",
     linkedin: "https://www.linkedin.com/in/neleesha-peiris-43b503319"
   },
@@ -152,7 +155,8 @@ export const members: Member[] = [
     name: "Dimanya Perera",
     role: "Member Experience Lead",
     bio: "",
-    image: "https://github.com/Dimanya-Perera.png",
+    image: "/team/Dimanya-Perera.png",
+    imageVersion: 1,
     github: "https://github.com/Dimanya-Perera",
     linkedin: "https://www.linkedin.com/in/dimanya-perera-072308416"
   }

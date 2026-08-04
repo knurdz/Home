@@ -14,7 +14,8 @@ const cfg = manifest as StaticAssetsManifest;
 function normalizeAssetPath(path: string): string {
   if (!path) return path;
   if (path.startsWith("http://") || path.startsWith("https://")) return path;
-  return path.startsWith("/") ? path : `/${path}`;
+  const withoutQuery = path.split("?")[0].split("#")[0];
+  return withoutQuery.startsWith("/") ? withoutQuery : `/${withoutQuery}`;
 }
 
 export function useRemoteStaticAssets(): boolean {

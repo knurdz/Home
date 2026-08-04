@@ -175,7 +175,7 @@ export default function AboutPage() {
             </div>
           </div>
 
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-3 sm:gap-4 md:gap-6 mb-2">
+          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-3 sm:gap-4 md:gap-6 mb-2">
             {communityStats.map((stat) => (
               <StatCard
                 key={stat.label}

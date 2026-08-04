@@ -118,7 +118,7 @@ export default function Home() {
       {/* Community Stats */}
       <section className="relative py-12 border-y border-border/50 bg-background-alt px-4 sm:px-6">
         <div className="container mx-auto max-w-7xl">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6">
+          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4 sm:gap-6">
             {communityStats.map((stat) => (
               <StatCard
                 key={stat.label}
