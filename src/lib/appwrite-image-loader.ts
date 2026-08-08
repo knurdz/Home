@@ -14,11 +14,17 @@ export default function appwriteImageLoader({
     return src;
   }
   if (useRemoteStaticAssets()) {
-    const path = src.split("?")[0].split("#")[0];
+    const [pathPart, query = ""] = src.split("?");
+    const path = pathPart.split("#")[0];
+    const version = new URLSearchParams(query).get("v");
+    const withCacheBust = (url: string) =>
+      version
+        ? `${url}${url.includes("?") ? "&" : "?"}v=${encodeURIComponent(version)}`
+        : url;
     if (path.endsWith(".svg")) {
-      return staticAssetUrl(src);
+      return withCacheBust(staticAssetUrl(src));
     }
-    return staticAssetImageUrl(src, width, quality ?? 80);
+    return withCacheBust(staticAssetImageUrl(src, width, quality ?? 80));
   }
   return src;
 }

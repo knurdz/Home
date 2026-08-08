@@ -32,7 +32,7 @@ export const members: Member[] = [
     role: "President",
     bio: "",
     image: "/team/rkvishwa.png",
-    imageVersion: 1,
+    imageVersion: 2,
     github: "https://github.com/rkvishwa",
     linkedin: "https://www.linkedin.com/in/rkk-vishva/"
   },
@@ -41,7 +41,7 @@ export const members: Member[] = [
     role: "Vice President",
     bio: "",
     image: "/team/SadeepaNHerath.png",
-    imageVersion: 1,
+    imageVersion: 2,
     github: "https://github.com/SadeepaNHerath",
     linkedin: "https://www.linkedin.com/in/sadeepanherath/"
   },
@@ -50,7 +50,7 @@ export const members: Member[] = [
     role: "People & Operations Lead",
     bio: "",
     image: "/team/Kasun-Kumara.png",
-    imageVersion: 1,
+    imageVersion: 2,
     github: "https://github.com/Kasun-Kumara",
     linkedin: "https://www.linkedin.com/in/kasun-kumara-30baaa338/"
   },
@@ -107,6 +107,7 @@ export const members: Member[] = [
     role: "Hardware & IoT Lead",
     bio: "",
     image: "/team/Kavee-ginty.jpg",
+    imageVersion: 2,
     github: "https://github.com/Kavee-ginty",
     linkedin: "https://www.linkedin.com/in/kaveesha-ginodh/"
   },
