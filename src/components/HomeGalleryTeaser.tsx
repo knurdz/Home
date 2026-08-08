@@ -1,6 +1,6 @@
-import Image from "next/image";
 import Link from "next/link";
 import galleryData from "@/data/gallery.json";
+import HomeGalleryTileImage from "@/components/HomeGalleryTileImage";
 
 interface GalleryItem {
   id: string;
@@ -77,20 +77,12 @@ function GalleryTile({
       href="/about"
       className={`group relative overflow-hidden rounded-xl border border-border bg-card hover:border-green-500/35 transition-all duration-300 ${className}`}
     >
-      <Image
+      <HomeGalleryTileImage
         src={image.src}
         alt={image.alt}
-        fill
-        sizes="(max-width: 768px) 50vw, 33vw"
-        quality={85}
-        priority={index === 0}
-        loading={index === 0 ? "eager" : "lazy"}
+        index={index}
         className="object-cover transition-transform duration-500 group-hover:scale-105"
-        style={
-          image.objectPosition
-            ? { objectPosition: image.objectPosition }
-            : undefined
-        }
+        objectPosition={image.objectPosition}
       />
       <div className="absolute inset-0 bg-linear-to-t from-background/90 via-background/20 to-transparent" />
       <div className="absolute inset-x-0 bottom-0 p-3 sm:p-4">

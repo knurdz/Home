@@ -1,7 +1,6 @@
 "use client";
 
-import Image from "next/image";
-import { useNextAppwriteImageSrc } from "@/lib/use-appwrite-image-fallback";
+import AppwriteStaticImage from "@/components/AppwriteStaticImage";
 
 type AppwriteGalleryImageProps = {
   src: string;
@@ -22,11 +21,9 @@ export default function AppwriteGalleryImage({
   className = "",
   style,
 }: AppwriteGalleryImageProps) {
-  const { src: resolvedSrc, onError } = useNextAppwriteImageSrc(src, 720, 85);
-
   return (
-    <Image
-      src={resolvedSrc}
+    <AppwriteStaticImage
+      src={src}
       alt={alt}
       fill
       sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 360px"
@@ -37,9 +34,9 @@ export default function AppwriteGalleryImage({
       style={style}
       onLoad={onLoaded}
       onError={() => {
-        onError();
         onLoaded();
       }}
+      fallbackWidth={720}
     />
   );
 }

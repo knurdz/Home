@@ -69,9 +69,13 @@ export const metadata: Metadata = {
   //   google: "YOUR_GSC_VERIFICATION_TOKEN_HERE",
   // },
   icons: {
-    icon: "/favicon.svg",
-    shortcut: "/favicon.svg",
-    apple: "/favicon.svg",
+    icon: [
+      { url: "/favicon.ico", sizes: "48x48" },
+      { url: "/favicon-32.png", sizes: "32x32", type: "image/png" },
+      { url: "/favicon.svg", type: "image/svg+xml" },
+    ],
+    shortcut: "/favicon.ico",
+    apple: "/apple-touch-icon.png",
   },
   openGraph: {
     title: "Knurdz: Tech Community | Organization",
@@ -120,6 +124,13 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <head>
+        <link rel="icon" href="/favicon.ico" sizes="48x48" />
+        <link
+          rel="icon"
+          href="/favicon-32.png"
+          type="image/png"
+          sizes="32x32"
+        />
         {APPWRITE_ORIGIN ? (
           <>
             <link rel="dns-prefetch" href={APPWRITE_ORIGIN} />

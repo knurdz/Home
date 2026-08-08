@@ -1,9 +1,9 @@
 import type { ReactNode } from "react";
 import type { Metadata } from "next";
-import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import EventDetailHero from "@/components/EventDetailHero";
+import EventLogo, { EventPartnerLogo } from "@/components/EventLogo";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import ScrollIndicator from "@/components/ScrollIndicator";
@@ -33,42 +33,6 @@ function SubTitle({ children }: { children: ReactNode }) {
     <h3 className="text-lg sm:text-xl font-semibold mono-font mt-6 sm:mt-8 mb-2 sm:mb-3 text-foreground leading-snug break-words">
       {children}
     </h3>
-  );
-}
-
-function EventLogo({ src, alt }: { src: string; alt: string }) {
-  const isKnurdzIcon = src.includes("knurdz-icon");
-
-  if (isKnurdzIcon) {
-    return (
-      <div className="relative h-16 w-16 sm:h-20 sm:w-20 shrink-0 rounded-lg border border-border bg-black overflow-hidden">
-        <Image
-          src="/logo/knurdz-icon.png"
-          alt={alt}
-          fill
-          className="logo-dark object-cover"
-          sizes="80px"
-        />
-        <Image
-          src="/logo/knurdz-icon-light.png"
-          alt=""
-          aria-hidden
-          fill
-          className="logo-light object-cover"
-          sizes="80px"
-        />
-      </div>
-    );
-  }
-
-  return (
-    <Image
-      src={src}
-      alt={alt}
-      width={88}
-      height={88}
-      className="h-16 w-16 sm:h-20 sm:w-20 shrink-0 object-contain rounded-lg bg-card border border-border p-1.5 sm:p-2"
-    />
   );
 }
 
@@ -137,12 +101,9 @@ export default async function EventDetailPage({ params }: PageProps) {
               <div className="flex items-center gap-2 sm:gap-3 shrink-0">
                 <EventLogo src={event.logo} alt={`${event.name} logo`} />
                 {event.secondaryLogo && (
-                  <Image
+                  <EventPartnerLogo
                     src={event.secondaryLogo}
                     alt="Partner logo"
-                    width={88}
-                    height={88}
-                    className="h-16 w-16 sm:h-20 sm:w-20 object-cover rounded-lg bg-card border border-border"
                   />
                 )}
               </div>

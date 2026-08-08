@@ -2,9 +2,9 @@
  * Upload public/ assets to Appwrite Storage (site-static bucket).
  *
  * Env (from .env / .env.local or shell):
- *   APPWRITE_API_KEY          Server API key (required)
+ *   APPWRITE_API_KEY          Server API key for uom project (required)
  *   APPWRITE_ENDPOINT         default https://sgp.cloud.appwrite.io/v1
- *   APPWRITE_PROJECT_ID       default uom
+ *   NEXT_PUBLIC_APPWRITE_PROJECT_ID  default uom (must match manifest)
  *   APPWRITE_STATIC_BUCKET_ID default site-static
  *   DRY_RUN=1                 list actions only
  *   FORCE=1                   re-upload even if manifest matches
@@ -24,7 +24,13 @@ const PUBLIC_DIR = path.join(ROOT, "public");
 const MANIFEST_PATH = path.join(ROOT, "src/data/static-assets.manifest.json");
 const DONE_PATH = path.join(ROOT, "scripts/static-assets.done.json");
 
-const LOCAL_ONLY = new Set(["favicon.svg"]);
+const LOCAL_ONLY = new Set([
+  "favicon.svg",
+  "favicon.ico",
+  "favicon-16.png",
+  "favicon-32.png",
+  "apple-touch-icon.png",
+]);
 
 const DRY_RUN = process.env.DRY_RUN === "1";
 const FORCE = process.env.FORCE === "1";
@@ -67,19 +73,12 @@ function loadKeyFromAppwritePrefs(projectId, endpoint) {
 }
 
 const endpoint =
-  process.env.APPWRITE_ENDPOINT ?? "https://sgp.cloud.appwrite.io/v1";
-const projectId =
-  process.env.APPWRITE_PROJECT_ID ??
-  process.env.NEXT_PUBLIC_APPWRITE_PROJECT_ID ??
-  "uom";
+  process.env.APPWRITE_ENDPOINT ??
+  process.env.NEXT_PUBLIC_APPWRITE_ENDPOINT ??
+  "https://sgp.cloud.appwrite.io/v1";
+const projectId = process.env.NEXT_PUBLIC_APPWRITE_PROJECT_ID ?? "uom";
 const apiKey =
-  process.env.APPWRITE_API_KEY ??
-  loadKeyFromAppwritePrefs(
-    process.env.APPWRITE_PROJECT_ID ??
-      process.env.NEXT_PUBLIC_APPWRITE_PROJECT_ID ??
-      "uom",
-    process.env.APPWRITE_ENDPOINT ?? "https://sgp.cloud.appwrite.io/v1",
-  );
+  process.env.APPWRITE_API_KEY ?? loadKeyFromAppwritePrefs(projectId, endpoint);
 
 if (!apiKey && !DRY_RUN) {
   console.error(

@@ -1,4 +1,6 @@
-import Image from "next/image";
+"use client";
+
+import AppwriteStaticImage from "@/components/AppwriteStaticImage";
 import { formatDate } from "@/lib/format-date";
 
 interface BlogAuthorProps {
@@ -26,12 +28,13 @@ export default function BlogAuthor({
   return (
     <div className="flex items-center gap-3">
       {image ? (
-        <Image
+        <AppwriteStaticImage
           src={image}
           alt={name}
           width={dimension}
           height={dimension}
           className="rounded-full object-cover shrink-0 border border-border"
+          fallbackWidth={128}
         />
       ) : (
         <div
@@ -49,9 +52,7 @@ export default function BlogAuthor({
         </div>
       )}
       <div className="min-w-0">
-        <p className={`text-foreground font-medium ${nameClass}`}>
-          {name}
-        </p>
+        <p className={`text-foreground font-medium ${nameClass}`}>{name}</p>
         {meta && (
           <p className={`text-muted mt-0.5 ${metaClass}`}>{meta}</p>
         )}

@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { useState, useEffect, useCallback } from "react";
-import Image from "next/image";
+import AppwriteStaticImage from "@/components/AppwriteStaticImage";
 import AppwriteGalleryImage from "@/components/AppwriteGalleryImage";
 import ScrollIndicator from "@/components/ScrollIndicator";
 import Navbar from "@/components/Navbar";
@@ -400,7 +400,7 @@ export default function AboutPage() {
 
             <div className="relative bg-card border-0 sm:border border-border rounded-none sm:rounded-xl overflow-hidden shadow-2xl flex flex-col max-h-[100dvh] sm:max-h-[85vh] md:max-h-[90vh] w-full h-full sm:h-auto">
               <div className="relative flex-1 min-h-0 w-full bg-black/5 flex items-center justify-center overflow-hidden">
-                <Image
+                <AppwriteStaticImage
                   key={previewImage.id}
                   src={previewImage.src}
                   alt={previewImage.alt}
@@ -409,6 +409,7 @@ export default function AboutPage() {
                   quality={95}
                   className="w-full h-full object-contain max-h-[60dvh] sm:max-h-[70vh] md:max-h-[85vh] p-0 sm:px-14 md:px-4 sm:py-4 md:py-0"
                   priority
+                  fallbackWidth={1920}
                 />
               </div>
 

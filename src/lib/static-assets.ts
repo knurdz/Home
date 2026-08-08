@@ -18,13 +18,30 @@ function normalizeAssetPath(path: string): string {
   return withoutQuery.startsWith("/") ? withoutQuery : `/${withoutQuery}`;
 }
 
+let appwritePreviewBlocked = false;
+
+/** Call after a /preview request fails (402 quota, etc.). */
+export function markAppwritePreviewBlocked(): void {
+  appwritePreviewBlocked = true;
+}
+
+export function isAppwritePreviewBlocked(): boolean {
+  return appwritePreviewBlocked;
+}
+
 export function useRemoteStaticAssets(): boolean {
   return process.env.NEXT_PUBLIC_USE_APPWRITE_STATIC === "1";
 }
 
 /** Use Appwrite /preview when true (smaller payloads). Falls back to /view if preview quota is exceeded. */
 export function useAppwriteImagePreview(): boolean {
+  if (appwritePreviewBlocked) return false;
   return process.env.NEXT_PUBLIC_APPWRITE_USE_PREVIEW !== "0";
+}
+
+/** Skip Next loader local path — use HTTPS /view directly (faster when preview is off). */
+export function useDirectAppwriteAssetUrls(): boolean {
+  return useRemoteStaticAssets() && !useAppwriteImagePreview();
 }
 
 function manifestEntry(localPath: string): ManifestFile | undefined {
@@ -60,7 +77,7 @@ export function staticAssetPreviewUrl(
   const base = cfg.endpoint.replace(/\/$/, "");
   const params = new URLSearchParams({
     project: cfg.projectId,
-    width: String(Math.min(Math.max(width, 1), 2000)),
+    width: String(Math.min(Math.max(width, 1), 1200)),
     quality: String(Math.min(Math.max(quality, 1), 100)),
   });
   return `${base}/storage/buckets/${cfg.bucketId}/files/${entry.fileId}/preview?${params}`;
@@ -91,16 +108,8 @@ export function staticAssetImageFallbacks(
   if (key.endsWith(".svg")) return [];
 
   const urls: string[] = [];
-  if (useAppwriteImagePreview()) {
-    if (width > 480) {
-      urls.push(staticAssetPreviewUrl(localPath, 480, Math.min(quality, 75)));
-    }
-    if (width > 320) {
-      urls.push(staticAssetPreviewUrl(localPath, 320, 70));
-    }
-  }
   urls.push(staticAssetUrl(localPath));
-  return [...new Set(urls)];
+  return urls;
 }
 
 export function resolveAssetUrlForMetadata(localPath: string, siteBase: string): string {

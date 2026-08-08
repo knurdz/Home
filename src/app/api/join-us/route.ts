@@ -1,7 +1,5 @@
 import { NextResponse } from "next/server";
 import nodemailer from "nodemailer";
-import { createAdminClient } from "@/lib/appwrite";
-import { ID } from "node-appwrite";
 
 const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 const whatsappPattern = /^07\d{8}$/;
@@ -63,46 +61,19 @@ export async function POST(request: Request) {
 
     const { name, email, whatsapp, about, why } = validation.data;
 
-    // 1. Send to Appwrite Database
-    try {
-      const { databases } = createAdminClient();
-      console.log("Attempting to save to Appwrite:", { 
-        db: process.env.APPWRITE_DATABASE_ID, 
-        coll: process.env.APPWRITE_COLLECTION_ID 
-      });
-      
-      await databases.createDocument(
-        process.env.APPWRITE_DATABASE_ID!,
-        process.env.APPWRITE_COLLECTION_ID!,
-        ID.unique(),
-        {
-          name,
-          email,
-          whatsapp,
-          about,
-          why,
-          submittedAt: new Date().toISOString(),
-        }
-      );
-      console.log("Appwrite storage successful");
-    } catch (appwriteErr: any) {
-      console.error("Appwrite storage error:", appwriteErr.message || appwriteErr);
-      // Optional: return error if DB is critical
-      // return NextResponse.json({ error: `Database error: ${appwriteErr.message}` }, { status: 500 });
-    }
-
-    // 2. Create transporter using your SMTP credentials
-    // Check if SMTP is configured
     if (!process.env.SMTP_HOST || !process.env.SMTP_USER || !process.env.SMTP_PASS) {
       console.log("SMTP not fully configured, skipping email.");
-      return NextResponse.json({ success: true, warning: "Saved to database, but email notification skipped (SMTP not configured)." });
+      return NextResponse.json({
+        success: true,
+        warning: "Email notification skipped (SMTP not configured).",
+      });
     }
 
     try {
       const transporter = nodemailer.createTransport({
         host: process.env.SMTP_HOST,
         port: Number(process.env.SMTP_PORT ?? 587),
-        secure: process.env.SMTP_SECURE === "true", // true for port 465, false for 587
+        secure: process.env.SMTP_SECURE === "true",
         auth: {
           user: process.env.SMTP_USER,
           pass: process.env.SMTP_PASS,
@@ -143,18 +114,23 @@ export async function POST(request: Request) {
         `,
       });
       console.log("Email sent successfully");
-    } catch (emailErr: any) {
-      console.error("Email sending error:", emailErr.message || emailErr);
-      // We still return success: true because the data is in Appwrite
-      return NextResponse.json({ success: true, warning: "Saved to database, but email notification failed." });
+    } catch (emailErr: unknown) {
+      const message =
+        emailErr instanceof Error ? emailErr.message : String(emailErr);
+      console.error("Email sending error:", message);
+      return NextResponse.json({
+        success: true,
+        warning: "Email notification failed.",
+      });
     }
 
     return NextResponse.json({ success: true });
-  } catch (err: any) {
-    console.error("Join Us API critical error:", err.message || err);
+  } catch (err: unknown) {
+    const message = err instanceof Error ? err.message : "Unknown error";
+    console.error("Join Us API critical error:", message);
     return NextResponse.json(
-      { error: `Internal server error: ${err.message || "Unknown error"}` },
-      { status: 500 }
+      { error: `Internal server error: ${message}` },
+      { status: 500 },
     );
   }
 }

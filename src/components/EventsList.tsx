@@ -1,6 +1,6 @@
 "use client";
 
-import Image from "next/image";
+import AppwriteStaticImage from "@/components/AppwriteStaticImage";
 import Link from "next/link";
 import {
   getEventStatusLabel,
@@ -33,7 +33,7 @@ export default function EventsList({ events }: { events: EventData[] }) {
         >
           <div className="relative w-full aspect-[4/3] sm:aspect-[21/9] md:aspect-[2.4/1] bg-background-alt overflow-hidden isolate">
             <div className="absolute inset-0 overflow-hidden">
-              <Image
+              <AppwriteStaticImage
                 src={event.image}
                 alt=""
                 fill
@@ -42,6 +42,7 @@ export default function EventsList({ events }: { events: EventData[] }) {
                 }`}
                 sizes="(max-width: 768px) 100vw, 1280px"
                 priority={event.slug === "deploy-sprint"}
+                fallbackWidth={1280}
               />
             </div>
             <div
@@ -50,20 +51,22 @@ export default function EventsList({ events }: { events: EventData[] }) {
             />
             <div className="absolute bottom-0 left-0 right-0 p-4 sm:p-6 md:p-8 z-10 flex flex-col gap-3 sm:flex-row sm:items-end sm:gap-5 md:gap-6 on-dark-surface">
               <div className="flex items-center gap-2 sm:gap-3 shrink-0">
-                <Image
+                <AppwriteStaticImage
                   src={event.logo}
                   alt=""
                   width={72}
                   height={72}
                   className="h-14 w-14 sm:h-16 sm:w-16 md:h-20 md:w-20 object-contain rounded-lg bg-background/80 backdrop-blur-sm p-1.5 border border-border"
+                  fallbackWidth={160}
                 />
                 {event.secondaryLogo && (
-                  <Image
+                  <AppwriteStaticImage
                     src={event.secondaryLogo}
                     alt=""
                     width={72}
                     height={72}
                     className="h-12 w-12 sm:h-16 sm:w-16 md:h-20 md:w-20 object-cover rounded-lg bg-background/80 backdrop-blur-sm border border-border"
+                    fallbackWidth={160}
                   />
                 )}
               </div>

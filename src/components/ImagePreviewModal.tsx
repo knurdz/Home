@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, type ReactNode } from "react";
-import Image from "next/image";
+import AppwriteStaticImage from "@/components/AppwriteStaticImage";
 
 type ImagePreviewModalProps = {
   open: boolean;
@@ -81,7 +81,7 @@ export default function ImagePreviewModal({
         onClick={(e) => e.stopPropagation()}
       >
         <div className="relative flex-1 min-h-0 w-full bg-black/5 flex items-center justify-center overflow-hidden">
-          <Image
+          <AppwriteStaticImage
             src={src}
             alt={alt}
             width={imageWidth}
@@ -89,6 +89,7 @@ export default function ImagePreviewModal({
             quality={95}
             className="w-full h-full object-contain max-h-[58dvh] sm:max-h-[65dvh] md:max-h-[85vh] p-3 sm:p-4 md:p-0"
             priority
+            fallbackWidth={1920}
           />
         </div>
 

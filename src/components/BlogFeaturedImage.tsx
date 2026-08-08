@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, type CSSProperties } from "react";
-import Image from "next/image";
+import AppwriteStaticImage from "@/components/AppwriteStaticImage";
 import { formatDate } from "@/lib/format-date";
 import type { BlogMatter } from "@/lib/blog";
 import ViewImageButton from "@/components/ViewImageButton";
@@ -32,7 +32,7 @@ export default function BlogFeaturedImage({
         <div className="relative overflow-hidden rounded-lg border border-border bg-background-alt isolate">
           {frontmatter.imageFit === "contain" ? (
             <div className="flex items-center justify-center p-3 sm:p-5 md:p-6">
-              <Image
+              <AppwriteStaticImage
                 src={frontmatter.image}
                 alt={frontmatter.title}
                 width={frontmatter.imageWidth ?? 1200}
@@ -40,11 +40,12 @@ export default function BlogFeaturedImage({
                 className="w-full h-auto max-h-[min(52vh,420px)] sm:max-h-[min(60vh,480px)] md:max-h-[min(70vh,560px)] object-contain"
                 sizes="(max-width: 640px) 100vw, (max-width: 896px) 90vw, 896px"
                 priority
+                fallbackWidth={1200}
               />
             </div>
           ) : (
             <div className="relative w-full aspect-[16/10] sm:aspect-[2/1]">
-              <Image
+              <AppwriteStaticImage
                 src={frontmatter.image}
                 alt={frontmatter.title}
                 fill
@@ -52,6 +53,7 @@ export default function BlogFeaturedImage({
                 style={imageStyle}
                 sizes="(max-width: 896px) 100vw, 896px"
                 priority
+                fallbackWidth={1200}
               />
             </div>
           )}

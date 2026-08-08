@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, type CSSProperties } from "react";
-import Image from "next/image";
+import AppwriteStaticImage from "@/components/AppwriteStaticImage";
 import type { AchievementMatter } from "@/lib/achievements";
 import ImagePreviewModal from "@/components/ImagePreviewModal";
 import DetailBannerToolbar from "@/components/DetailBannerToolbar";
@@ -43,7 +43,7 @@ export default function AchievementHeroBanner({
           <div
             className={`relative w-full ${heroHeightClass} bg-background-alt overflow-hidden isolate flex items-start justify-center p-4 sm:p-8 md:p-12`}
           >
-            <Image
+            <AppwriteStaticImage
               src={frontmatter.image}
               alt={frontmatter.title}
               width={frontmatter.imageWidth ?? 1200}
@@ -51,6 +51,7 @@ export default function AchievementHeroBanner({
               className="max-h-full w-auto max-w-full object-contain object-top"
               sizes="100vw"
               priority
+              fallbackWidth={1920}
             />
             <DetailBannerToolbar onViewImage={() => setPreviewOpen(true)} />
           </div>
@@ -58,7 +59,7 @@ export default function AchievementHeroBanner({
           <div
             className={`relative w-full ${heroHeightClass} overflow-hidden isolate`}
           >
-            <Image
+            <AppwriteStaticImage
               src={frontmatter.image}
               alt={frontmatter.title}
               fill
@@ -66,6 +67,7 @@ export default function AchievementHeroBanner({
               style={imageStyle}
               sizes="100vw"
               priority
+              fallbackWidth={1920}
             />
             <div className="detail-banner-scrim absolute inset-0 z-[1] pointer-events-none" />
             <DetailBannerToolbar onViewImage={() => setPreviewOpen(true)} />

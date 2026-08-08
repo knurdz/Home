@@ -58,7 +58,8 @@ export const members: Member[] = [
     name: "Praveen R",
     role: "Outreach Lead",
     bio: "",
-    image: "https://github.com/Praveen-R-2518.png",
+    image: "/team/Praveen-R-2518.png",
+    imageVersion: 1,
     github: "https://github.com/Praveen-R-2518",
     linkedin: "https://www.linkedin.com/in/praveen-r-b374612aa/"
   },
@@ -66,7 +67,8 @@ export const members: Member[] = [
     name: "Thesaru Praneeth",
     role: "Events Coordinator Lead",
     bio: "",
-    image: "https://github.com/Thesaru-p.png",
+    image: "/team/Thesaru-p.png",
+    imageVersion: 3,
     github: "https://github.com/Thesaru-p",
     linkedin: "https://www.linkedin.com/in/thesaru-p/"
   },
@@ -74,7 +76,8 @@ export const members: Member[] = [
     name: "Harsha Silva",
     role: "Treasurer",
     bio: "",
-    image: "https://github.com/harshasilva.png",
+    image: "/team/harshasilva.png",
+    imageVersion: 1,
     github: "https://github.com/harshasilva",
     linkedin: "https://www.linkedin.com/in/harsha-silva-b59776357/"
   },
@@ -82,7 +85,8 @@ export const members: Member[] = [
     name: "Senuka Deneth",
     role: "Photo, Video & Assets Lead",
     bio: "",
-    image: "https://github.com/Senuka-Deneth.png",
+    image: "/team/Senuka-Deneth.png",
+    imageVersion: 1,
     github: "https://github.com/Senuka-Deneth",
     linkedin: "https://www.linkedin.com/in/senuka-deneth-70937a345/"
   },
@@ -90,7 +94,8 @@ export const members: Member[] = [
     name: "Bhasilu Egodawatte",
     role: "Software Lead",
     bio: "",
-    image: "/team/BhasiluEgodawatte.jpeg",
+    image: "/team/BhasiluEgodawatte.png",
+    imageVersion: 1,
     github: "https://github.com/BhasiluEgodawatte",
     linkedin: "https://www.linkedin.com/in/bhasilu-egodawatte-79bb70367/"
   },
@@ -98,7 +103,8 @@ export const members: Member[] = [
     name: "Vinuth Karunathilaka",
     role: "Projects Lead",
     bio: "",
-    image: "https://github.com/VinuthKarunathilaka.png",
+    image: "/team/VinuthKarunathilaka.png",
+    imageVersion: 1,
     github: "https://github.com/VinuthKarunathilaka",
     linkedin: "https://www.linkedin.com/in/vinuth-karunathilaka-67160334a/"
   },
@@ -107,7 +113,7 @@ export const members: Member[] = [
     role: "Hardware & IoT Lead",
     bio: "",
     image: "/team/Kavee-ginty.jpg",
-    imageVersion: 2,
+    imageVersion: 3,
     github: "https://github.com/Kavee-ginty",
     linkedin: "https://www.linkedin.com/in/kaveesha-ginodh/"
   },
@@ -115,7 +121,8 @@ export const members: Member[] = [
     name: "Ashen Tharindu",
     role: "Design Lead",
     bio: "",
-    image: "https://github.com/Azriel-prog.png",
+    image: "/team/Azriel-prog.png",
+    imageVersion: 1,
     github: "https://github.com/Azriel-prog",
     linkedin: "https://www.linkedin.com/in/ashen-tharindu-041833365/"
   },
@@ -123,7 +130,8 @@ export const members: Member[] = [
     name: "Praveen Fernando",
     role: "Partnerships Lead",
     bio: "",
-    image: "https://github.com/ARSPFdo-2004.png",
+    image: "/team/ARSPFdo-2004.png",
+    imageVersion: 1,
     github: "https://github.com/ARSPFdo-2004",
     linkedin: "https://www.linkedin.com/in/senuka-deneth-70937a345/"
   },
@@ -131,7 +139,8 @@ export const members: Member[] = [
     name: "Mahinsa Waththegedara",
     role: "Media Lead",
     bio: "",
-    image: "https://github.com/Mahinsa-Wattegedara.png",
+    image: "/team/Mahinsa-Wattegedara.png",
+    imageVersion: 1,
     github: "https://github.com/Mahinsa-Wattegedara",
     linkedin: "https://www.linkedin.com/in/mahinsa-waththegedara-28b7b335a/"
   },
@@ -139,7 +148,8 @@ export const members: Member[] = [
     name: "Madhura Ravishan Abeywickrama",
     role: "Technical Content Lead",
     bio: "",
-    image: "https://github.com/Madhuravishan.png",
+    image: "/team/Madhuravishan.png",
+    imageVersion: 1,
     github: "https://github.com/Madhuravishan",
     linkedin: "https://www.linkedin.com/in/madhuraravishan"
   },

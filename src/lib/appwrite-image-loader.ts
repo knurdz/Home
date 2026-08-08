@@ -24,7 +24,7 @@ export default function appwriteImageLoader({
     if (path.endsWith(".svg")) {
       return withCacheBust(staticAssetUrl(src));
     }
-    return withCacheBust(staticAssetImageUrl(src, width, quality ?? 80));
+    return withCacheBust(staticAssetImageUrl(src, Math.min(width, 1200), quality ?? 80));
   }
   return src;
 }

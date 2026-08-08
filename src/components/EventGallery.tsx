@@ -1,6 +1,5 @@
 "use client";
 
-import Image from "next/image";
 import { useCallback, useEffect, useState } from "react";
 import GalleryNavArrow, {
   GalleryPreviewMobileNav,
@@ -11,7 +10,7 @@ import type {
   EventStatus,
 } from "@/lib/event-types";
 import { showGalleryComingSoonPlaceholders } from "@/lib/event-types";
-import { useNextAppwriteImageSrc } from "@/lib/use-appwrite-image-fallback";
+import AppwriteStaticImage from "@/components/AppwriteStaticImage";
 
 const BLUR_DATA_URL =
   "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAgGBgcGBQgHBwcJCQgKDBQNDAsLDBkSEw8UHRofHh0aHBwgJC4nICIsIxwcKDcpLDAxNDQ0Hyc5PTgyPC4zNDL/2wBDAQkJCQwLDBgNDRgyIRwhMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjL/wAARCAAIAAoDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAb/xAAUEAEAAAAAAAAAAAAAAAAAAAAA/8QAFQEBAQAAAAAAAAAAAAAAAAAAAAX/xAAUEQEAAAAAAAAAAAAAAAAAAAAA/9oADAMBAAIRAxEAPwCdABmX/9k=";
@@ -103,8 +102,6 @@ function GalleryImageCard({
   onOpen: () => void;
   onLoaded: () => void;
 }) {
-  const { src, onError } = useNextAppwriteImageSrc(image.src, 720, 85);
-
   return (
     <button
       type="button"
@@ -135,8 +132,8 @@ function GalleryImageCard({
             </div>
           )}
 
-          <Image
-            src={src}
+          <AppwriteStaticImage
+            src={image.src}
             alt={image.alt}
             fill
             sizes="(max-width: 640px) 280px, (max-width: 1024px) 50vw, 360px"
@@ -153,9 +150,9 @@ function GalleryImageCard({
             style={{ objectPosition: "center center" }}
             onLoad={onLoaded}
             onError={() => {
-              onError();
               onLoaded();
             }}
+            fallbackWidth={720}
           />
 
           <div className="absolute inset-0 bg-linear-to-t from-background/95 via-background/50 to-transparent opacity-100 sm:opacity-0 motion-safe:sm:group-hover:opacity-100 transition-all duration-300 flex items-end pointer-events-none">
@@ -442,7 +439,7 @@ function GalleryPreviewModal({
 
         <div className="relative bg-card border-0 sm:border border-border rounded-t-2xl sm:rounded-xl overflow-hidden shadow-2xl flex flex-col max-h-[92dvh] sm:max-h-[85vh] md:max-h-[90vh]">
           <div className="relative flex-1 min-h-[40dvh] sm:min-h-0 w-full bg-black/5 flex items-center justify-center overflow-hidden">
-            <Image
+            <AppwriteStaticImage
               key={previewImage.id}
               src={previewImage.src}
               alt={previewImage.alt}
@@ -451,6 +448,7 @@ function GalleryPreviewModal({
               quality={95}
               className="w-full h-full object-contain max-h-[60dvh] sm:max-h-[70vh] md:max-h-[85vh] p-0 sm:px-14 md:px-4 sm:py-4 md:py-0"
               priority
+              fallbackWidth={1920}
             />
           </div>
 

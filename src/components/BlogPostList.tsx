@@ -1,8 +1,8 @@
 "use client";
 
-import Image from "next/image";
 import Link from "next/link";
 import { useMemo, useState } from "react";
+import AppwriteStaticImage from "@/components/AppwriteStaticImage";
 import {
   SortToolbarIcon,
   ToolbarIconSelect,
@@ -52,13 +52,14 @@ function PostThumbnail({
 
   return (
     <div className={frameClass}>
-      <Image
+      <AppwriteStaticImage
         src={image}
         alt=""
         fill
         className="object-cover transition-transform duration-500 ease-out group-hover:scale-[1.03]"
         sizes="(max-width: 640px) 100vw, 288px"
         priority={priority}
+        fallbackWidth={640}
       />
     </div>
   );
