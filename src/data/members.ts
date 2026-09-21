@@ -67,7 +67,7 @@ export const members: Member[] = [
     name: "Thesaru Praneeth",
     role: "Events Coordinator Lead",
     bio: "",
-    image: "/team/Thesaru-p.png",
+    image: "/team/Thesaru-p.jpeg",
     imageVersion: 3,
     github: "https://github.com/Thesaru-p",
     linkedin: "https://www.linkedin.com/in/thesaru-p/"
